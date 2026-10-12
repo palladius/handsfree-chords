@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""
+Build static bundle for GitHub Pages in docs/.
+Reads all songs in songs/, parses them into static JSON,
+and creates docs/index.html and docs/songs.json.
+"""
+
+import glob
+import json
+import re
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+SONGS_DIR = BASE_DIR / "songs"
+DOCS_DIR = BASE_DIR / "docs"
+DOCS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def parse_frontmatter(yaml_text: str) -> dict:
+    meta = {}
+    for line in yaml_text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if ":" in line:
+            k, v = line.split(":", 1)
+            meta[k.strip()] = v.strip().strip('"').strip("'")
+    return meta
+
+
+def parse_seconds(ts_str):
+    m = re.match(r"(\d+):(\d+(?:\.\d+)?)", ts_str)
+    return int(m.group(1)) * 60 + float(m.group(2)) if m else 0.0
+
+
+def build_docs():
+    all_songs = {}
+    song_list = []
+
+    for f in sorted(SONGS_DIR.glob("*.md")):
+        lines = f.read_text(encoding="utf-8").splitlines()
+        meta = {}
+        tips = ""
+        idx = 0
+        if lines and lines[0].strip() == "---":
+            yaml_lines = []
+            idx = 1
+            while idx < len(lines) and lines[idx].strip() != "---":
+                yaml_lines.append(lines[idx])
+                idx += 1
+            idx += 1
+            meta = parse_frontmatter("\n".join(yaml_lines))
+
+        parsed_lines = []
+        curr_time = 0.0
+        while idx < len(lines):
+            line = lines[idx].rstrip()
+            idx += 1
+            if line.startswith("# 🎵 ") and "title" not in meta:
+                t = line.replace("# 🎵 ", "").strip()
+                if "—" in t:
+                    parts = t.split("—")
+                    meta["title"] = parts[0].strip()
+                    meta["artist"] = parts[1].strip()
+                else:
+                    meta["title"] = t
+
+            if "Piano Tip" in line:
+                m = re.search(r"Piano Tip[s]?:\*\*\s*(.*)", line)
+                if m:
+                    tips = m.group(1).strip()
+
+            if line.startswith("### "):
+                sec_title = line.replace("### ", "").strip()
+                sec_time = None
+                ts_m = re.search(r"\[(\d+:\d+(?:\.\d+)?)\]", sec_title)
+                if ts_m:
+                    sec_time = parse_seconds(ts_m.group(1))
+                    curr_time = sec_time
+                    sec_title = sec_title.replace(ts_m.group(0), "").strip()
+                parsed_lines.append({"type": "section", "content": sec_title, "seconds": sec_time})
+                continue
+
+            if line.startswith("---") or line.startswith(">") or not line.strip():
+                continue
+
+            line_sec = None
+            ts_m = re.match(r"^\[(\d+:\d+(?:\.\d+)?)\]\s*(.*)", line)
+            if ts_m:
+                line_sec = parse_seconds(ts_m.group(1))
+                curr_time = line_sec
+                line = ts_m.group(2)
+            else:
+                curr_time += 6.0
+                line_sec = round(curr_time, 1)
+
+            rendered = re.sub(r"\[(.*?)\]", r'<span class="chord">\1</span>', line)
+            parsed_lines.append({"type": "lyric", "raw": line, "rendered": rendered, "seconds": line_sec})
+
+        song_obj = {
+            "filename": f.name,
+            "meta": meta,
+            "tips": tips,
+            "lines": parsed_lines
+        }
+        all_songs[f.name] = song_obj
+        song_list.append({
+            "filename": f.name,
+            "title": meta.get("title", f.stem),
+            "artist": meta.get("artist", ""),
+            "key": meta.get("original_key", "")
+        })
+
+    # Write songs.json
+    (DOCS_DIR / "songs.json").write_text(json.dumps(all_songs, ensure_ascii=False, indent=2), encoding="utf-8")
+    (DOCS_DIR / "songs_list.json").write_text(json.dumps(song_list, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # Read template and embed or adapt for static hosting
+    template_html = (BASE_DIR / "app" / "templates" / "index.html").read_text(encoding="utf-8")
+
+    # Replace fetch APIs with static JSON logic
+    static_js_logic = """
+    // Static GitHub Pages Data Loading
+    let staticSongsMap = {};
+
+    async function init() {
+      try {
+        const res = await fetch('songs.json');
+        staticSongsMap = await res.json();
+        const select = document.getElementById('songSelect');
+        const songEntries = Object.values(staticSongsMap);
+        select.innerHTML = songEntries.map(s => `<option value="${s.filename}">${s.meta.title || s.filename} (${s.meta.artist || ''})</option>`).join('');
+        if (songEntries.length > 0) {
+          loadSelectedSong();
+        }
+      } catch (e) {
+        console.error("Errore caricamento songs.json:", e);
+      }
+    }
+
+    async function loadSelectedSong() {
+      const filename = document.getElementById('songSelect').value;
+      if (!filename || !staticSongsMap[filename]) return;
+      pause();
+      currentTime = 0;
+      updateTimeDisplay();
+
+      songData = staticSongsMap[filename];
+      renderSong(songData);
+    }
+    """
+
+    # Replace the fetch block in template
+    fetch_pattern = re.compile(r"// Load available songs[\s\S]*?renderSong\(songData\);\s*}", re.MULTILINE)
+    static_html = fetch_pattern.sub(static_js_logic.strip(), template_html)
+
+    (DOCS_DIR / "index.html").write_text(static_html, encoding="utf-8")
+    print(f"✅ GitHub Pages static site generato con successo in docs/ ({len(song_list)} brani)!")
+
+
+if __name__ == "__main__":
+    build_docs()
