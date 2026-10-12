@@ -123,7 +123,10 @@ def validate_spartito(content: str) -> List[Tuple[int, str]]:
         for match in chord_matches:
             raw_chord = match.group(1).strip()
             # Special case: allow empty brackets or known annotations like [?] or [N.C.] (No Chord)
-            if raw_chord.upper() in ["N.C.", "NC", "%", ""]:
+            if raw_chord.upper() in ["N.C.", "NC", "%", "", "?"]:
+                continue
+            # Special case: allow LRC timestamps like [01:23.45] or [01:23]
+            if re.match(r"^\d{1,2}:\d{2}(?:\.\d{1,3})?$", raw_chord):
                 continue
             if not parse_single_chord(raw_chord):
                 errors.append((idx, f"Accordo non valido o non riconosciuto: '[{raw_chord}]'"))

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handsfree-Chords 🎹 Live Player</title>
+  <!-- Load MediaPipe Face Mesh & Camera Utils from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --text: #e0e0e0;
+      --chord: #ffd166;
+      --accent: #06d6a0;
+      --danger: #ef476f;
+      --highlight: #2a2a38;
+      --time: #888899;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Control Bar */
+    header {
+      position: sticky;
+      top: 0;
+      background: #181822;
+      border-bottom: 2px solid #2e2e42;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .song-select {
+      background: var(--card-bg);
+      color: #fff;
+      border: 1px solid #444;
+      font-size: 1.1rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button.btn {
+      background: #2b2b3d;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    button.btn:active { transform: scale(0.96); }
+    button.btn-primary { background: var(--accent); color: #000; }
+    button.btn-jump { background: #3d3d52; }
+
+    .timer-badge {
+      font-family: monospace;
+      font-size: 1.4rem;
+      background: #000;
+      padding: 6px 14px;
+      border-radius: 8px;
+      color: var(--accent);
+      border: 1px solid #333;
+    }
+
+    /* Vision / Cam Widget */
+    .cam-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      background: #0d0d14;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #333;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #555;
+    }
+    .status-dot.active { background: #06d6a0; box-shadow: 0 0 8px #06d6a0; }
+    .status-dot.tilt { background: #ffd166; transform: scale(1.3); }
+
+    /* Main Stage Layout */
+    main {
+      flex: 1;
+      display: flex;
+      position: relative;
+    }
+
+    #lyrics-view {
+      flex: 1;
+      padding: 40px 24px 250px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 2.2;
+      font-size: 1.35rem;
+    }
+
+    .meta-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+    .meta-box h1 { color: #fff; font-size: 1.8rem; margin-bottom: 6px; }
+
+    .section-title {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lyric-line {
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      position: relative;
+    }
+    .lyric-line:hover { background: #1f1f2e; }
+    .lyric-line.active {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .chord {
+      color: var(--chord);
+      font-weight: 800;
+      font-family: monospace;
+      background: rgba(255, 209, 102, 0.12);
+      padding: 2px 5px;
+      border-radius: 4px;
+      margin-right: 1px;
+    }
+
+    .line-time {
+      color: var(--time);
+      font-size: 0.8rem;
+      font-family: monospace;
+      margin-right: 10px;
+      user-select: none;
+    }
+
+    /* Video element hidden or in small corner */
+    #webcam-video {
+      position: fixed;
+      bottom: 12px;
+      right: 12px;
+      width: 140px;
+      height: 105px;
+      border-radius: 8px;
+      border: 2px solid #333;
+      object-fit: cover;
+      transform: scaleX(-1); /* mirror */
+      opacity: 0.7;
+      z-index: 50;
+      background: #000;
+    }
+
+    /* Stage HUD alert */
+    #gesture-alert {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background: rgba(6, 214, 160, 0.9);
+      color: #000;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 20px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.2s ease;
+      z-index: 200;
+      pointer-events: none;
+    }
+    #gesture-alert.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center; gap: 12px;">
+      <select id="songSelect" class="song-select" onchange="loadSelectedSong()">
+        <option value="">Caricamento canzoni...</option>
+      </select>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-jump" onclick="jumpSeconds(-20)" title="Salta indietro 20s">⏪ -20s</button>
+      <button id="playBtn" class="btn btn-primary" onclick="togglePlay()">▶️ Avvia</button>
+      <button class="btn btn-jump" onclick="jumpSeconds(20)" title="Salta avanti 20s">⏩ +20s</button>
+      <div id="timeDisplay" class="timer-badge">00:00</div>
+    </div>
+
+    <div class="cam-status">
+      <div id="camDot" class="status-dot"></div>
+      <span id="camLabel">Cam Offline</span>
+      <button class="btn" style="padding:4px 8px; font-size:0.8rem;" onclick="toggleCamera()">📷 Attiva</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="lyrics-view">
+      <div style="text-align:center; padding: 100px 0; color:#777;">
+        Seleziona un brano dal menu in alto per iniziare 🎹
+      </div>
+    </div>
+  </main>
+
+  <video id="webcam-video" autoplay playsinline muted></video>
+  <div id="gesture-alert">👤 Head Turn: +20s</div>
+
+  <script>
+    let currentTime = 0;
+    let isPlaying = false;
+    let timerInterval = null;
+    let songData = null;
+    let timeAnchors = [];
+
+    // Face Tracking State
+    let faceMesh = null;
+    let camera = null;
+    let camActive = false;
+    let lastGestureTime = 0;
+    const GESTURE_COOLDOWN_MS = 1400;
+
+    // Load available songs
+    async function init() {
+      try {
+        const res = await fetch('/api/songs');
+        const songs = await res.json();
+        const select = document.getElementById('songSelect');
+        select.innerHTML = songs.map(s => `<option value="${s.filename}">${s.title} (${s.artist})</option>`).join('');
+        if (songs.length > 0) {
+          loadSelectedSong();
+        }
+      } catch (e) {
+        console.error("Errore caricamento lista brani:", e);
+      }
+    }
+
+    async function loadSelectedSong() {
+      const filename = document.getElementById('songSelect').value;
+      if (!filename) return;
+      pause();
+      currentTime = 0;
+      updateTimeDisplay();
+
+      const res = await fetch(`/api/song/${filename}`);
+      songData = await res.json();
+      renderSong(songData);
+    }
+
+    function renderSong(data) {
+      const view = document.getElementById('lyrics-view');
+      timeAnchors = [];
+      let html = '';
+
+      // Meta box
+      html += `
+        <div class="meta-box">
+          <h1>${data.meta.title || 'Senza titolo'} — ${data.meta.artist || ''}</h1>
+          <div>🎹 <strong>Tonalità:</strong> ${data.meta.original_key || 'N/D'} | ⏱️ <strong>BPM:</strong> ${data.meta.bpm || '~120'} | <strong>Tempo:</strong> ${data.meta.time_signature || '4/4'}</div>
+          ${data.tips ? `<div style="margin-top:8px; color:var(--chord);">💡 <strong>Piano Tip:</strong> ${data.tips}</div>` : ''}
+        </div>
+      `;
+
+      // Render lines
+      data.lines.forEach((item, idx) => {
+        if (item.type === 'section') {
+          html += `<div class="section-title" id="line-${idx}">${item.content}</div>`;
+        } else if (item.type === 'lyric') {
+          let timeTag = '';
+          if (item.seconds !== null) {
+            timeAnchors.push({ idx, seconds: item.seconds });
+            timeTag = `<span class="line-time">${formatTime(item.seconds)}</span>`;
+          }
+          html += `
+            <div class="lyric-line" id="line-${idx}" onclick="jumpToSecond(${item.seconds || currentTime})">
+              ${timeTag}${item.rendered}
+            </div>
+          `;
+        }
+      });
+
+      view.innerHTML = html;
+    }
+
+    function togglePlay() {
+      if (isPlaying) {
+        pause();
+      } else {
+        play();
+      }
+    }
+
+    function play() {
+      isPlaying = true;
+      document.getElementById('playBtn').innerHTML = '⏸️ Pausa';
+      document.getElementById('playBtn').classList.remove('btn-primary');
+      document.getElementById('playBtn').style.background = '#ef476f';
+
+      const startPerf = performance.now() - (currentTime * 1000);
+      timerInterval = setInterval(() => {
+        currentTime = (performance.now() - startPerf) / 1000;
+        updateTimeDisplay();
+        syncScroll();
+      }, 100);
+    }
+
+    function pause() {
+      isPlaying = false;
+      clearInterval(timerInterval);
+      document.getElementById('playBtn').innerHTML = '▶️ Avvia';
+      document.getElementById('playBtn').classList.add('btn-primary');
+      document.getElementById('playBtn').style.background = '';
+    }
+
+    function jumpSeconds(delta) {
+      currentTime = Math.max(0, currentTime + delta);
+      updateTimeDisplay();
+      syncScroll();
+    }
+
+    function jumpToSecond(sec) {
+      currentTime = sec;
+      updateTimeDisplay();
+      syncScroll();
+    }
+
+    function updateTimeDisplay() {
+      document.getElementById('timeDisplay').innerText = formatTime(currentTime);
+    }
+
+    function formatTime(totalSec) {
+      const m = Math.floor(totalSec / 60);
+      const s = Math.floor(totalSec % 60);
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+
+    function syncScroll() {
+      if (timeAnchors.length === 0) return;
+
+      // Find the current active line
+      let activeAnchor = timeAnchors[0];
+      for (let i = 0; i < timeAnchors.length; i++) {
+        if (currentTime >= timeAnchors[i].seconds) {
+          activeAnchor = timeAnchors[i];
+        } else {
+          break;
+        }
+      }
+
+      // Highlight active line
+      document.querySelectorAll('.lyric-line.active').forEach(el => el.classList.remove('active'));
+      const activeEl = document.getElementById(`line-${activeAnchor.idx}`);
+      if (activeEl) {
+        activeEl.classList.add('active');
+        // Smooth scroll to upper third of viewport
+        const rect = activeEl.getBoundingClientRect();
+        const targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.28);
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+      }
+    }
+
+    // --- Face Tracking / MediaPipe Camera Setup ---
+    async function toggleCamera() {
+      if (camActive) {
+        stopCamera();
+      } else {
+        await startCamera();
+      }
+    }
+
+    async function startCamera() {
+      const videoElement = document.getElementById('webcam-video');
+      document.getElementById('camLabel').innerText = "Caricamento AI...";
+
+      faceMesh = new FaceMesh({
+        locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`
+      });
+
+      faceMesh.setOptions({
+        maxNumFaces: 1,
+        refineLandmarks: false,
+        minDetectionConfidence: 0.5,
+        minTrackingConfidence: 0.5
+      });
+
+      faceMesh.onResults(onFaceResults);
+
+      camera = new Camera(videoElement, {
+        onFrame: async () => {
+          if (camActive) {
+            await faceMesh.send({ image: videoElement });
+          }
+        },
+        width: 320,
+        height: 240
+      });
+
+      await camera.start();
+      camActive = true;
+      document.getElementById('camLabel').innerText = "AI Tracking Attivo";
+      document.getElementById('camDot').classList.add('active');
+    }
+
+    function stopCamera() {
+      if (camera) camera.stop();
+      camActive = false;
+      document.getElementById('camLabel').innerText = "Cam Spenta";
+      document.getElementById('camDot').classList.remove('active', 'tilt');
+    }
+
+    function onFaceResults(results) {
+      if (!results.multiFaceLandmarks || results.multiFaceLandmarks.length === 0) {
+        document.getElementById('camDot').classList.remove('active', 'tilt');
+        return;
+      }
+
+      document.getElementById('camDot').classList.add('active');
+      const landmarks = results.multiFaceLandmarks[0];
+
+      // Key face landmarks:
+      // Nose tip: 1, Left cheek/ear: 234, Right cheek/ear: 454
+      const nose = landmarks[1];
+      const leftEar = landmarks[234];
+      const rightEar = landmarks[454];
+
+      // Head Yaw estimation (lateral head turn):
+      // Ratio of distance (nose to left) vs (nose to right)
+      const distLeft = Math.abs(nose.x - leftEar.x);
+      const distRight = Math.abs(nose.x - rightEar.x);
+      const ratio = distLeft / (distRight + 0.0001);
+
+      const now = performance.now();
+      if (now - lastGestureTime > GESTURE_COOLDOWN_MS) {
+        // Mirrored webcam:
+        // Turning head to USER'S RIGHT makes ratio significantly > 1.8
+        // Turning head to USER'S LEFT makes ratio < 0.55
+        if (ratio > 2.0) {
+          triggerHeadGesture("➡️ Gira a destra (+20s)", 20);
+          lastGestureTime = now;
+        } else if (ratio < 0.5) {
+          triggerHeadGesture("⬅️ Gira a sinistra (-20s)", -20);
+          lastGestureTime = now;
+        }
+      }
+    }
+
+    function triggerHeadGesture(msg, delta) {
+      const alertEl = document.getElementById('gesture-alert');
+      alertEl.innerText = msg;
+      alertEl.classList.add('show');
+      document.getElementById('camDot').classList.add('tilt');
+
+      jumpSeconds(delta);
+
+      setTimeout(() => {
+        alertEl.classList.remove('show');
+        document.getElementById('camDot').classList.remove('tilt');
+      }, 900);
+    }
+
+    // Keyboard Shortcuts for stage
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePlay();
+      } else if (e.code === 'ArrowRight') {
+        jumpSeconds(20);
+      } else if (e.code === 'ArrowLeft') {
+        jumpSeconds(-20);
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>
