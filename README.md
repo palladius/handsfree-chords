@@ -1,6 +1,8 @@
 # 🎶 Handsfree-Chords
 
 > **Hands-free, synchronized chord sheets for musicians (pianists, guitarists & live performers) with auto-scroll and AI face/head tracking.** 🎹🎸✨
+> 
+> 🌐 **Live Demo (Web / Tablet / Mobile):** [https://palladius.github.io/handsfree-chords/](https://palladius.github.io/handsfree-chords/)
 
 Musicians on stage have their hands occupied playing instruments. Turning pages or scrolling screens with fingers disrupts the flow and ruins live performances. 
 
