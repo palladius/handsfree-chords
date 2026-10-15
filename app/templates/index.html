@@ -171,6 +171,27 @@
       gap: 8px;
     }
 
+    .section-desc {
+      color: #8888aa;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: normal;
+      margin-left: 4px;
+    }
+
+    .lyric-note {
+      color: #9999bb;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .bar-line {
+      color: #555577;
+      font-weight: bold;
+      padding: 0 4px;
+      user-select: none;
+    }
+
     .lyric-line {
       padding: 6px 12px;
       border-radius: 8px;
@@ -449,7 +470,11 @@
       // Render lines with live transposed chords
       data.lines.forEach((item, idx) => {
         if (item.type === 'section') {
-          html += `<div class="section-title" id="line-${idx}">${item.content}</div>`;
+          // Format section titles: clean *(Description)* and *Description* into elegant styled span
+          let cleanTitle = item.content
+            .replace(/\*\((.*?)\)\*/g, '<span class="section-desc">($1)</span>')
+            .replace(/\*(.*?)\*/g, '<span class="section-desc">($1)</span>');
+          html += `<div class="section-title" id="line-${idx}">${cleanTitle}</div>`;
         } else if (item.type === 'lyric') {
           let timeTag = '';
           if (item.seconds !== null) {
@@ -457,8 +482,19 @@
             timeTag = `<span class="line-time">${formatTime(item.seconds)}</span>`;
           }
 
-          // Transpose chords in raw line: [Chord]
-          const lineWithTransposedChords = item.raw.replace(/\[(.*?)\]/g, (match, rawChord) => {
+          // 1. Strip raw markdown backticks `
+          let lineContent = item.raw.replace(/`/g, '');
+
+          // 2. Format *italic notes* or *(echoes)* like *(Gloria)*
+          lineContent = lineContent
+            .replace(/\*\((.*?)\)\*/g, '<span class="lyric-note">($1)</span>')
+            .replace(/\*(.*?)\*/g, '<span class="lyric-note">$1</span>');
+
+          // 3. Format bar separators | into elegant visual dividers
+          lineContent = lineContent.replace(/\|/g, '<span class="bar-line">|</span>');
+
+          // 4. Transpose chords [Chord] and render as badges
+          const lineWithTransposedChords = lineContent.replace(/\[(.*?)\]/g, (match, rawChord) => {
             const transposed = transposeChord(rawChord, transposeOffset);
             return `<span class="chord">${transposed}</span>`;
           });
