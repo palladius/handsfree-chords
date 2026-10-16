@@ -82,6 +82,34 @@
       cursor: pointer;
     }
 
+    /* Notation selector group (IT vs EN) */
+    .notation-group {
+      display: flex;
+      align-items: center;
+      background: #252538;
+      border-radius: 8px;
+      border: 1px solid #444;
+      overflow: hidden;
+    }
+    .btn-not {
+      background: transparent;
+      border: none;
+      color: #aaa;
+      padding: 7px 11px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-not:hover { background: #383852; color: #fff; }
+    .btn-not.active {
+      background: var(--accent);
+      color: #000;
+    }
+
     button.btn {
       background: #2b2b3d;
       color: #fff;
@@ -272,6 +300,13 @@
       </select>
     </div>
 
+    <!-- Notation Mode Switcher: IT vs EN -->
+    <div class="notation-group" title="Seleziona notazione accordi: Italiano (DO RE MI) o Inglese (C D E)">
+      <button id="btnNotAuto" class="btn-not active" onclick="setNotationMode('auto')">Auto</button>
+      <button id="btnNotIt" class="btn-not" onclick="setNotationMode('it')">🇮🇹 IT (DO)</button>
+      <button id="btnNotEn" class="btn-not" onclick="setNotationMode('en')">🇬🇧 EN (C)</button>
+    </div>
+
     <!-- Transpose controls -->
     <div class="transpose-group">
       <button class="btn btn-tp" onclick="changeTranspose(-1)" title="Abbassa di 1 semitono">♭ -1</button>
@@ -312,6 +347,19 @@
     let timeAnchors = [];
     let transposeOffset = 0; // Transpose in semitones
 
+    let notationMode = 'auto'; // 'auto', 'it', 'en'
+
+    function setNotationMode(mode) {
+      notationMode = mode;
+      document.querySelectorAll('.btn-not').forEach(b => b.classList.remove('active'));
+      if (mode === 'auto') document.getElementById('btnNotAuto').classList.add('active');
+      if (mode === 'it') document.getElementById('btnNotIt').classList.add('active');
+      if (mode === 'en') document.getElementById('btnNotEn').classList.add('active');
+      if (songData) {
+        renderSong(songData);
+      }
+    }
+
     // --- Musical Transposition & Normalization Engine ---
     // Normalized Chromatic Scales (Italian & English)
     // Enharmonic preference: D# -> Eb (closer to C / standard pianistic flat key)
@@ -341,13 +389,14 @@
       const val = SEMITONE_MAP[upper];
       if (val === undefined) return clean;
 
-      const isItalian = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'].some(r => upper.startsWith(r));
+      const isOriginalItalian = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'].some(r => upper.startsWith(r));
+      const effectiveNotation = notationMode === 'auto' ? (isOriginalItalian ? 'it' : 'en') : notationMode;
+
       const targetVal = (val + semitones + 1200) % 12;
-      return isItalian ? CHROMATIC_ITA[targetVal] : CHROMATIC_ENG[targetVal];
+      return effectiveNotation === 'it' ? CHROMATIC_ITA[targetVal] : CHROMATIC_ENG[targetVal];
     }
 
     function transposeChord(chordStr, semitones) {
-      if (semitones === 0) return chordStr;
       const clean = chordStr.trim();
       if (!clean || clean.toUpperCase() === 'N.C.' || clean === '%') return clean;
 
