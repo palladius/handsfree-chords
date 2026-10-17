@@ -205,6 +205,271 @@
       }
     ]
   },
+  "fliegerlied.md": {
+    "filename": "fliegerlied.md",
+    "meta": {
+      "title": "Fliegerlied (So a schöner Tag)",
+      "artist": "Donikkl"
+    },
+    "tips": "Giro di Do aperto, festoso e irresistibile (`[C] -> [G] -> [Am] -> [F]`). Sul ritornello apri le ottave e tieni gli accordi brillanti sui tasti alti per guidare il coro di tutto il tendone!",
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Fliegerlied (So a schöner Tag) — Donikkl",
+        "rendered": "# 🎵 Fliegerlied (So a schöner Tag) — Donikkl",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C] | [G] | [Am] | [F] |`",
+        "rendered": "`| <span class=\"chord\">C</span> | <span class=\"chord\">G</span> | <span class=\"chord\">Am</span> | <span class=\"chord\">F</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C] | [G] | [Am] | [F] |`",
+        "rendered": "`| <span class=\"chord\">C</span> | <span class=\"chord\">G</span> | <span class=\"chord\">Am</span> | <span class=\"chord\">F</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]I lieg im Gras und schau zum Himmel nauf",
+        "rendered": "<span class=\"chord\">C</span>I lieg im Gras und schau zum Himmel nauf",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]die Sonne scheint und alle Wolken lösen sich auf",
+        "rendered": "<span class=\"chord\">G</span>die Sonne scheint und alle Wolken lösen sich auf",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]die Vögel singen und die Grillen zirpen im Chor",
+        "rendered": "<span class=\"chord\">Am</span>die Vögel singen und die Grillen zirpen im Chor",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]und heut kommt mir die Welt wie ein Wunder vor!",
+        "rendered": "<span class=\"chord\">F</span>und heut kommt mir die Welt wie ein Wunder vor!",
+        "seconds": 42.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Und i zieh meine Schuh aus und [G]lauf auf die Wiesen naus",
+        "rendered": "<span class=\"chord\">Dm</span>Und i zieh meine Schuh aus und <span class=\"chord\">G</span>lauf auf die Wiesen naus",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]und i tanz, und i spring, weil die [G]Freude in mir singt!",
+        "rendered": "<span class=\"chord\">Dm</span>und i tanz, und i spring, weil die <span class=\"chord\">G</span>Freude in mir singt!",
+        "seconds": 54.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO *(Coreografia Oktoberfest: tutti a ballare!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Und ich [C]flieg, flieg, flieg wie ein [G]Flieger",
+        "rendered": "Und ich <span class=\"chord\">C</span>flieg, flieg, flieg wie ein <span class=\"chord\">G</span>Flieger",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "bin so [Am]stark, stark, stark wie ein [F]Tiger",
+        "rendered": "bin so <span class=\"chord\">Am</span>stark, stark, stark wie ein <span class=\"chord\">F</span>Tiger",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und so [C]groß, groß, groß wie 'ne Gi[G]raffe",
+        "rendered": "und so <span class=\"chord\">C</span>groß, groß, groß wie 'ne Gi<span class=\"chord\">G</span>raffe",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "so hoch da[F]oben, [G]oh-oh-[C]oh!",
+        "rendered": "so hoch da<span class=\"chord\">F</span>oben, <span class=\"chord\">G</span>oh-oh-<span class=\"chord\">C</span>oh!",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Und ich [C]spring, spring, spring immer [G]wieder",
+        "rendered": "Und ich <span class=\"chord\">C</span>spring, spring, spring immer <span class=\"chord\">G</span>wieder",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und ich [Am]schwimm, schwimm, schwimm zu dir [F]rüber",
+        "rendered": "und ich <span class=\"chord\">Am</span>schwimm, schwimm, schwimm zu dir <span class=\"chord\">F</span>rüber",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und ich [C]nehm, nehm, nehm dich bei der [G]Hand",
+        "rendered": "und ich <span class=\"chord\">C</span>nehm, nehm, nehm dich bei der <span class=\"chord\">G</span>Hand",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "weil ich dich [F]mag, und weil heut so ein [G]schöner Tag [C]ist!",
+        "rendered": "weil ich dich <span class=\"chord\">F</span>mag, und weil heut so ein <span class=\"chord\">G</span>schöner Tag <span class=\"chord\">C</span>ist!",
+        "seconds": 102.0
+      },
+      {
+        "type": "section",
+        "content": "🎺 LA-LA-LA CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "La, la-la-[C]la-la, la-la-[G]la-la-la!",
+        "rendered": "La, la-la-<span class=\"chord\">C</span>la-la, la-la-<span class=\"chord\">G</span>la-la-la!",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La-la-[Am]la, la-la-[F]la-la!",
+        "rendered": "La-la-<span class=\"chord\">Am</span>la, la-la-<span class=\"chord\">F</span>la-la!",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Heut ist so ein [C]schöner [G]Tag! [C]",
+        "rendered": "Heut ist so ein <span class=\"chord\">C</span>schöner <span class=\"chord\">G</span>Tag! <span class=\"chord\">C</span>",
+        "seconds": 120.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]A kühles Bier und a Brezn in der Hand",
+        "rendered": "<span class=\"chord\">C</span>A kühles Bier und a Brezn in der Hand",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]so feiert man im ganzen Bayernland",
+        "rendered": "<span class=\"chord\">G</span>so feiert man im ganzen Bayernland",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]die Stimmung kocht und alle Leute stehn auf den Bänken",
+        "rendered": "<span class=\"chord\">Am</span>die Stimmung kocht und alle Leute stehn auf den Bänken",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]an morgen will heut keiner von uns denken!",
+        "rendered": "<span class=\"chord\">F</span>an morgen will heut keiner von uns denken!",
+        "seconds": 144.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Und i zieh meine Schuh aus und [G]lauf auf die Wiesen naus",
+        "rendered": "<span class=\"chord\">Dm</span>Und i zieh meine Schuh aus und <span class=\"chord\">G</span>lauf auf die Wiesen naus",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]und i tanz, und i spring, weil die [G]Freude in mir singt!",
+        "rendered": "<span class=\"chord\">Dm</span>und i tanz, und i spring, weil die <span class=\"chord\">G</span>Freude in mir singt!",
+        "seconds": 156.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Und ich [C]flieg, flieg, flieg wie ein [G]Flieger",
+        "rendered": "Und ich <span class=\"chord\">C</span>flieg, flieg, flieg wie ein <span class=\"chord\">G</span>Flieger",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "bin so [Am]stark, stark, stark wie ein [F]Tiger",
+        "rendered": "bin so <span class=\"chord\">Am</span>stark, stark, stark wie ein <span class=\"chord\">F</span>Tiger",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und so [C]groß, groß, groß wie 'ne Gi[G]raffe",
+        "rendered": "und so <span class=\"chord\">C</span>groß, groß, groß wie 'ne Gi<span class=\"chord\">G</span>raffe",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "so hoch da[F]oben, [G]oh-oh-[C]oh!",
+        "rendered": "so hoch da<span class=\"chord\">F</span>oben, <span class=\"chord\">G</span>oh-oh-<span class=\"chord\">C</span>oh!",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Und ich [C]spring, spring, spring immer [G]wieder",
+        "rendered": "Und ich <span class=\"chord\">C</span>spring, spring, spring immer <span class=\"chord\">G</span>wieder",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und ich [Am]schwimm, schwimm, schwimm zu dir [F]rüber",
+        "rendered": "und ich <span class=\"chord\">Am</span>schwimm, schwimm, schwimm zu dir <span class=\"chord\">F</span>rüber",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und ich [C]nehm, nehm, nehm dich bei der [G]Hand",
+        "rendered": "und ich <span class=\"chord\">C</span>nehm, nehm, nehm dich bei der <span class=\"chord\">G</span>Hand",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "weil ich dich [F]mag, und weil heut so ein [G]schöner Tag [C]ist!",
+        "rendered": "weil ich dich <span class=\"chord\">F</span>mag, und weil heut so ein <span class=\"chord\">G</span>schöner Tag <span class=\"chord\">C</span>ist!",
+        "seconds": 204.0
+      },
+      {
+        "type": "section",
+        "content": "🍻 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Weil ich dich [F]mag, und weil heut so ein [G]schöner Tag [C]ist! [G] [C]",
+        "rendered": "Weil ich dich <span class=\"chord\">F</span>mag, und weil heut so ein <span class=\"chord\">G</span>schöner Tag <span class=\"chord\">C</span>ist! <span class=\"chord\">G</span> <span class=\"chord\">C</span>",
+        "seconds": 210.0
+      }
+    ]
+  },
   "gloria.md": {
     "filename": "gloria.md",
     "meta": {
@@ -532,6 +797,278 @@
         "raw": "*(Vamp a sfumare con tema di synth/piano)* 🛑",
         "rendered": "*(Vamp a sfumare con tema di synth/piano)* 🛑",
         "seconds": 270.0
+      }
+    ]
+  },
+  "joana.md": {
+    "filename": "joana.md",
+    "meta": {
+      "title": "Joana (Du geile Sau)",
+      "artist": "Peter Wackel"
+    },
+    "tips": "Basso alternato incalzante alla mano sinistra (G - D) e accordi staccati in levare alla mano destra. Al celebre controcanto urlato della folla (*\"Du geile Sau!\"* e *\"Du Luder!\"*), mantieni il groove solido senza perdere un battito!",
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Joana (Du geile Sau) — Peter Wackel",
+        "rendered": "# 🎵 Joana (Du geile Sau) — Peter Wackel",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [G] | [Em] | [C] | [D] |`",
+        "rendered": "`| <span class=\"chord\">G</span> | <span class=\"chord\">Em</span> | <span class=\"chord\">C</span> | <span class=\"chord\">D</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [G] | [Em] | [C] | [D] |`",
+        "rendered": "`| <span class=\"chord\">G</span> | <span class=\"chord\">Em</span> | <span class=\"chord\">C</span> | <span class=\"chord\">D</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]Ich weiß nicht, wie sie heißt",
+        "rendered": "<span class=\"chord\">G</span>Ich weiß nicht, wie sie heißt",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Em]ich weiß nur, dass sie weiß",
+        "rendered": "<span class=\"chord\">Em</span>ich weiß nur, dass sie weiß",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]was sie mit Männern macht, die man ver[D]gisst",
+        "rendered": "<span class=\"chord\">C</span>was sie mit Männern macht, die man ver<span class=\"chord\">D</span>gisst",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]Sie sah mich einmal an",
+        "rendered": "<span class=\"chord\">G</span>Sie sah mich einmal an",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Em]und zog mich in den Bann",
+        "rendered": "<span class=\"chord\">Em</span>und zog mich in den Bann",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]bis ich mein ganzes Leben um sie [D]riss",
+        "rendered": "<span class=\"chord\">C</span>bis ich mein ganzes Leben um sie <span class=\"chord\">D</span>riss",
+        "seconds": 54.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]Sie braucht kein Versprechen und [Em]sie braucht kein Geld",
+        "rendered": "<span class=\"chord\">Am</span>Sie braucht kein Versprechen und <span class=\"chord\">Em</span>sie braucht kein Geld",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]sie nimmt sich einfach alles, was ihr ge[D]fällt!",
+        "rendered": "<span class=\"chord\">C</span>sie nimmt sich einfach alles, was ihr ge<span class=\"chord\">D</span>fällt!",
+        "seconds": 66.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO *(Sing-along del tendone!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Jo[G]ana! Geboren, um Liebe zu [D]geben",
+        "rendered": "Jo<span class=\"chord\">G</span>ana! Geboren, um Liebe zu <span class=\"chord\">D</span>geben",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "*(Du geile Sau!)*",
+        "rendered": "*(Du geile Sau!)*",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ver[Em]botene Träume er[C]leben",
+        "rendered": "Ver<span class=\"chord\">Em</span>botene Träume er<span class=\"chord\">C</span>leben",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "ohne [D]Fragen an den nächsten [G]Tag! [D]",
+        "rendered": "ohne <span class=\"chord\">D</span>Fragen an den nächsten <span class=\"chord\">G</span>Tag! <span class=\"chord\">D</span>",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Jo[G]ana! Ein Wahnsinn aus Lust und Ver[D]langen",
+        "rendered": "Jo<span class=\"chord\">G</span>ana! Ein Wahnsinn aus Lust und Ver<span class=\"chord\">D</span>langen",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "*(Du Luder!)*",
+        "rendered": "*(Du Luder!)*",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ich [Em]hab mich in deinem Netz ver[C]fangen",
+        "rendered": "Ich <span class=\"chord\">Em</span>hab mich in deinem Netz ver<span class=\"chord\">C</span>fangen",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "weil ich [D]dich so unendlich [G]mag!",
+        "rendered": "weil ich <span class=\"chord\">D</span>dich so unendlich <span class=\"chord\">G</span>mag!",
+        "seconds": 114.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]Sie kommt, wenn es dunkel wird",
+        "rendered": "<span class=\"chord\">G</span>Sie kommt, wenn es dunkel wird",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Em]und geht, bevor der Morgen friert",
+        "rendered": "<span class=\"chord\">Em</span>und geht, bevor der Morgen friert",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]sie lässt mich liegen wie ein nasses [D]Tuch",
+        "rendered": "<span class=\"chord\">C</span>sie lässt mich liegen wie ein nasses <span class=\"chord\">D</span>Tuch",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]Und jeder weiß Bescheid",
+        "rendered": "<span class=\"chord\">G</span>Und jeder weiß Bescheid",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Em]und jeder tut mir leid",
+        "rendered": "<span class=\"chord\">Em</span>und jeder tut mir leid",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]der einmal diese wilde Sünde [D]sucht",
+        "rendered": "<span class=\"chord\">C</span>der einmal diese wilde Sünde <span class=\"chord\">D</span>sucht",
+        "seconds": 150.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]Sie braucht kein Versprechen und [Em]sie braucht kein Geld",
+        "rendered": "<span class=\"chord\">Am</span>Sie braucht kein Versprechen und <span class=\"chord\">Em</span>sie braucht kein Geld",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]sie nimmt sich einfach alles, was ihr ge[D]fällt!",
+        "rendered": "<span class=\"chord\">C</span>sie nimmt sich einfach alles, was ihr ge<span class=\"chord\">D</span>fällt!",
+        "seconds": 162.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Jo[G]ana! Geboren, um Liebe zu [D]geben",
+        "rendered": "Jo<span class=\"chord\">G</span>ana! Geboren, um Liebe zu <span class=\"chord\">D</span>geben",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "*(Du geile Sau!)*",
+        "rendered": "*(Du geile Sau!)*",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ver[Em]botene Träume er[C]leben",
+        "rendered": "Ver<span class=\"chord\">Em</span>botene Träume er<span class=\"chord\">C</span>leben",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "ohne [D]Fragen an den nächsten [G]Tag! [D]",
+        "rendered": "ohne <span class=\"chord\">D</span>Fragen an den nächsten <span class=\"chord\">G</span>Tag! <span class=\"chord\">D</span>",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Jo[G]ana! Ein Wahnsinn aus Lust und Ver[D]langen",
+        "rendered": "Jo<span class=\"chord\">G</span>ana! Ein Wahnsinn aus Lust und Ver<span class=\"chord\">D</span>langen",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "*(Du Luder!)*",
+        "rendered": "*(Du Luder!)*",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ich [Em]hab mich in deinem Netz ver[C]fangen",
+        "rendered": "Ich <span class=\"chord\">Em</span>hab mich in deinem Netz ver<span class=\"chord\">C</span>fangen",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "weil ich [D]dich so unendlich [G]mag!",
+        "rendered": "weil ich <span class=\"chord\">D</span>dich so unendlich <span class=\"chord\">G</span>mag!",
+        "seconds": 210.0
+      },
+      {
+        "type": "section",
+        "content": "🍻 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Weil ich [C]dich so un[D]endlich...",
+        "rendered": "Weil ich <span class=\"chord\">C</span>dich so un<span class=\"chord\">D</span>endlich...",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Jo[G]ana! [D] [G]",
+        "rendered": "Jo<span class=\"chord\">G</span>ana! <span class=\"chord\">D</span> <span class=\"chord\">G</span>",
+        "seconds": 222.0
       }
     ]
   },
@@ -2491,6 +3028,278 @@
         "raw": "`| [F#] [E] | [B] [E] | [F#] |` 🛑",
         "rendered": "`| <span class=\"chord\">F#</span> <span class=\"chord\">E</span> | <span class=\"chord\">B</span> <span class=\"chord\">E</span> | <span class=\"chord\">F#</span> |` 🛑",
         "seconds": 611.0
+      }
+    ]
+  },
+  "wahnsinn.md": {
+    "filename": "wahnsinn.md",
+    "meta": {
+      "title": "Wahnsinn (Hölle, Hölle, Hölle)",
+      "artist": "Wolfgang Petry"
+    },
+    "tips": "Ritmo Schlager dritto a martello con accordi pompati in levare e ottave al basso. Nel ritornello, il break e la pausa prima dell'urlo della folla *\"Hölle, Hölle, Hölle!\"* sono il segreto per far esplodere la birreria!",
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Wahnsinn (Hölle, Hölle, Hölle) — Wolfgang Petry",
+        "rendered": "# 🎵 Wahnsinn (Hölle, Hölle, Hölle) — Wolfgang Petry",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [A] | [G] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">G</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [A] | [G] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">G</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Du siehst mich an und ich seh' weg",
+        "rendered": "<span class=\"chord\">D</span>Du siehst mich an und ich seh' weg",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]ich weiß genau, was du bezweckst",
+        "rendered": "<span class=\"chord\">A</span>ich weiß genau, was du bezweckst",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]du sagst du liebst mich, doch ich [A]glaub dir nicht ein Wort",
+        "rendered": "<span class=\"chord\">G</span>du sagst du liebst mich, doch ich <span class=\"chord\">A</span>glaub dir nicht ein Wort",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Du drehst dich um und gehst hinaus",
+        "rendered": "<span class=\"chord\">D</span>Du drehst dich um und gehst hinaus",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]ich sitz' allein im leeren Haus",
+        "rendered": "<span class=\"chord\">A</span>ich sitz' allein im leeren Haus",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]und denk' an dich, obwohl ich [A]dich vergessen will",
+        "rendered": "<span class=\"chord\">G</span>und denk' an dich, obwohl ich <span class=\"chord\">A</span>dich vergessen will",
+        "seconds": 54.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Ich hab' geglaubt, dass unsre Liebe [F#m]ewig hält",
+        "rendered": "<span class=\"chord\">Bm</span>Ich hab' geglaubt, dass unsre Liebe <span class=\"chord\">F#m</span>ewig hält",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]doch du hast sie zerstört und meine [A]ganze Welt!",
+        "rendered": "<span class=\"chord\">G</span>doch du hast sie zerstört und meine <span class=\"chord\">A</span>ganze Welt!",
+        "seconds": 66.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO *(Wiesn Breakdown: tutti in piedi sui tavoli!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Das ist [D]Wahnsinn!",
+        "rendered": "Das ist <span class=\"chord\">D</span>Wahnsinn!",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Warum schickst du mich in die [A]Hölle? *(Hölle, Hölle, Hölle!)*",
+        "rendered": "Warum schickst du mich in die <span class=\"chord\">A</span>Hölle? *(Hölle, Hölle, Hölle!)*",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Eis[G]kalt lässt du meine Seele er[A]frier'n!",
+        "rendered": "Eis<span class=\"chord\">G</span>kalt lässt du meine Seele er<span class=\"chord\">A</span>frier'n!",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Das ist [D]Wahnsinn!",
+        "rendered": "Das ist <span class=\"chord\">D</span>Wahnsinn!",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Du spielst mit meinen Ge[A]fühlen!",
+        "rendered": "Du spielst mit meinen Ge<span class=\"chord\">A</span>fühlen!",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Und mein [G]Stolz liegt schon längst auf dem [A]Boden vor dir!",
+        "rendered": "Und mein <span class=\"chord\">G</span>Stolz liegt schon längst auf dem <span class=\"chord\">A</span>Boden vor dir!",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Doch ich [G]weiß, dass ich ohne dich nicht [A]leben kann... [D]",
+        "rendered": "Doch ich <span class=\"chord\">G</span>weiß, dass ich ohne dich nicht <span class=\"chord\">A</span>leben kann... <span class=\"chord\">D</span>",
+        "seconds": 108.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Du rufst mich an um Mitternacht",
+        "rendered": "<span class=\"chord\">D</span>Du rufst mich an um Mitternacht",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]hast mich um jeden Schlaf gebracht",
+        "rendered": "<span class=\"chord\">A</span>hast mich um jeden Schlaf gebracht",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]ich sag' \"nie wieder\", doch ich [A]fall' auf dich herein",
+        "rendered": "<span class=\"chord\">G</span>ich sag' \"nie wieder\", doch ich <span class=\"chord\">A</span>fall' auf dich herein",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Du lachst mich aus und legst dann auf",
+        "rendered": "<span class=\"chord\">D</span>Du lachst mich aus und legst dann auf",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]das Schicksal nimmt nun seinen Lauf",
+        "rendered": "<span class=\"chord\">A</span>das Schicksal nimmt nun seinen Lauf",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]und morgen früh werd' ich be[A]reuen, schwach zu sein",
+        "rendered": "<span class=\"chord\">G</span>und morgen früh werd' ich be<span class=\"chord\">A</span>reuen, schwach zu sein",
+        "seconds": 144.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Ich hab' geglaubt, dass unsre Liebe [F#m]ewig hält",
+        "rendered": "<span class=\"chord\">Bm</span>Ich hab' geglaubt, dass unsre Liebe <span class=\"chord\">F#m</span>ewig hält",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]doch du hast sie zerstört und meine [A]ganze Welt!",
+        "rendered": "<span class=\"chord\">G</span>doch du hast sie zerstört und meine <span class=\"chord\">A</span>ganze Welt!",
+        "seconds": 156.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Das ist [D]Wahnsinn!",
+        "rendered": "Das ist <span class=\"chord\">D</span>Wahnsinn!",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Warum schickst du mich in die [A]Hölle? *(Hölle, Hölle, Hölle!)*",
+        "rendered": "Warum schickst du mich in die <span class=\"chord\">A</span>Hölle? *(Hölle, Hölle, Hölle!)*",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Eis[G]kalt lässt du meine Seele er[A]frier'n!",
+        "rendered": "Eis<span class=\"chord\">G</span>kalt lässt du meine Seele er<span class=\"chord\">A</span>frier'n!",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Das ist [D]Wahnsinn!",
+        "rendered": "Das ist <span class=\"chord\">D</span>Wahnsinn!",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Du spielst mit meinen Ge[A]fühlen!",
+        "rendered": "Du spielst mit meinen Ge<span class=\"chord\">A</span>fühlen!",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Und mein [G]Stolz liegt schon längst auf dem [A]Boden vor dir!",
+        "rendered": "Und mein <span class=\"chord\">G</span>Stolz liegt schon längst auf dem <span class=\"chord\">A</span>Boden vor dir!",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Doch ich [G]weiß, dass ich ohne dich nicht [A]leben kann... [D]",
+        "rendered": "Doch ich <span class=\"chord\">G</span>weiß, dass ich ohne dich nicht <span class=\"chord\">A</span>leben kann... <span class=\"chord\">D</span>",
+        "seconds": 198.0
+      },
+      {
+        "type": "section",
+        "content": "🍻 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Das ist [D]Wahnsinn! *(Hölle, Hölle, Hölle!)*",
+        "rendered": "Das ist <span class=\"chord\">D</span>Wahnsinn! *(Hölle, Hölle, Hölle!)*",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Das ist [A]Wahnsinn! *(Eiskalt!)*",
+        "rendered": "Das ist <span class=\"chord\">A</span>Wahnsinn! *(Eiskalt!)*",
+        "seconds": 210.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Und mein [G]Stolz liegt schon längst auf dem [A]Boden vor dir!",
+        "rendered": "Und mein <span class=\"chord\">G</span>Stolz liegt schon längst auf dem <span class=\"chord\">A</span>Boden vor dir!",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Doch ich [G]weiß, dass ich ohne dich nicht [A]leben kann... [D]",
+        "rendered": "Doch ich <span class=\"chord\">G</span>weiß, dass ich ohne dich nicht <span class=\"chord\">A</span>leben kann... <span class=\"chord\">D</span>",
+        "seconds": 222.0
       }
     ]
   },
