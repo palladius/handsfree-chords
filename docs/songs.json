@@ -2301,6 +2301,373 @@
       }
     ]
   },
+  "summer-of-69.md": {
+    "filename": "summer-of-69.md",
+    "meta": {
+      "title": "Summer of '69",
+      "artist": "Bryan Adams",
+      "tags": "rock, pop-rock, 80s, classic-rock, anthem, party",
+      "original_key": "D"
+    },
+    "tips": "Mano destra sul celebre arpeggio/ritmo in ottavi serrati alternando [D] e [A]. Nel bridge modulazione improvvisa sul Fa Maggiore [F] e Sib [Bb] prima della ripartenza a tavoletta!",
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Summer of '69 — Bryan Adams",
+        "rendered": "# 🎵 Summer of '69 — Bryan Adams",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D] | [A] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D] | [A] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]I got my first real six-string",
+        "rendered": "<span class=\"chord\">D</span>I got my first real six-string",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Bought it at the five-and-dime",
+        "rendered": "<span class=\"chord\">A</span>Bought it at the five-and-dime",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Played it till my fingers bled",
+        "rendered": "<span class=\"chord\">D</span>Played it till my fingers bled",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Was the summer of '69",
+        "rendered": "<span class=\"chord\">A</span>Was the summer of '69",
+        "seconds": 42.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Me and some guys from school",
+        "rendered": "<span class=\"chord\">D</span>Me and some guys from school",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Had a band and we tried real hard",
+        "rendered": "<span class=\"chord\">A</span>Had a band and we tried real hard",
+        "seconds": 54.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Jimmy quit, Jody got married",
+        "rendered": "<span class=\"chord\">D</span>Jimmy quit, Jody got married",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Shoulda known we'd never get far",
+        "rendered": "<span class=\"chord\">A</span>Shoulda known we'd never get far",
+        "seconds": 66.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS / CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Oh, when I [A]look back now",
+        "rendered": "<span class=\"chord\">Bm</span>Oh, when I <span class=\"chord\">A</span>look back now",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]That summer seemed to [G]last forever",
+        "rendered": "<span class=\"chord\">D</span>That summer seemed to <span class=\"chord\">G</span>last forever",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]And if I [A]had the choice",
+        "rendered": "<span class=\"chord\">Bm</span>And if I <span class=\"chord\">A</span>had the choice",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Yeah, I'd always [G]wanna be there",
+        "rendered": "<span class=\"chord\">D</span>Yeah, I'd always <span class=\"chord\">G</span>wanna be there",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Those were the [A]best days of my [D]life",
+        "rendered": "<span class=\"chord\">Bm</span>Those were the <span class=\"chord\">A</span>best days of my <span class=\"chord\">D</span>life",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D] | [A] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 102.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Ain't no use in complainin'",
+        "rendered": "<span class=\"chord\">D</span>Ain't no use in complainin'",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]When you got a job to do",
+        "rendered": "<span class=\"chord\">A</span>When you got a job to do",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Spent my evenings down at the drive-in",
+        "rendered": "<span class=\"chord\">D</span>Spent my evenings down at the drive-in",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]And that's when I met you, yeah",
+        "rendered": "<span class=\"chord\">A</span>And that's when I met you, yeah",
+        "seconds": 126.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 CHORUS 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Standin' on your [A]mama's porch",
+        "rendered": "<span class=\"chord\">Bm</span>Standin' on your <span class=\"chord\">A</span>mama's porch",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]You told me that you'd [G]wait forever",
+        "rendered": "<span class=\"chord\">D</span>You told me that you'd <span class=\"chord\">G</span>wait forever",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Oh, and when you [A]held my hand",
+        "rendered": "<span class=\"chord\">Bm</span>Oh, and when you <span class=\"chord\">A</span>held my hand",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]I knew that it was [G]now or never",
+        "rendered": "<span class=\"chord\">D</span>I knew that it was <span class=\"chord\">G</span>now or never",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Those were the [A]best days of my [D]life",
+        "rendered": "<span class=\"chord\">Bm</span>Those were the <span class=\"chord\">A</span>best days of my <span class=\"chord\">D</span>life",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Back in the [D]summer of '69, [A]oh!",
+        "rendered": "Back in the <span class=\"chord\">D</span>summer of '69, <span class=\"chord\">A</span>oh!",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Back in the [D]summer of '69, [A]oh!",
+        "rendered": "Back in the <span class=\"chord\">D</span>summer of '69, <span class=\"chord\">A</span>oh!",
+        "seconds": 168.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE *(Modulazione Rock!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Man, we were killin' time",
+        "rendered": "<span class=\"chord\">F</span>Man, we were killin' time",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "We were [Bb]young and restless, we needed to unwind",
+        "rendered": "We were <span class=\"chord\">Bb</span>young and restless, we needed to unwind",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]I guess nothin' can last forever, [Bb]forever, no!",
+        "rendered": "<span class=\"chord\">C</span>I guess nothin' can last forever, <span class=\"chord\">Bb</span>forever, no!",
+        "seconds": 186.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 GUITAR SOLO / RIFF",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D] | [A] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D] | [A] | [A] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 198.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 4",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]And now the times are changin'",
+        "rendered": "<span class=\"chord\">D</span>And now the times are changin'",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Look at everything that's come and gone",
+        "rendered": "<span class=\"chord\">A</span>Look at everything that's come and gone",
+        "seconds": 210.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Sometimes when I play that old six-string",
+        "rendered": "<span class=\"chord\">D</span>Sometimes when I play that old six-string",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]I think about you, wonder what went wrong",
+        "rendered": "<span class=\"chord\">A</span>I think about you, wonder what went wrong",
+        "seconds": 222.0
+      },
+      {
+        "type": "section",
+        "content": "💥 CHORUS 3 *(Full Energy!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Standin' on your [A]mama's porch",
+        "rendered": "<span class=\"chord\">Bm</span>Standin' on your <span class=\"chord\">A</span>mama's porch",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]You told me that it'd [G]last forever",
+        "rendered": "<span class=\"chord\">D</span>You told me that it'd <span class=\"chord\">G</span>last forever",
+        "seconds": 234.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Oh, and when you [A]held my hand",
+        "rendered": "<span class=\"chord\">Bm</span>Oh, and when you <span class=\"chord\">A</span>held my hand",
+        "seconds": 240.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]I knew that it was [G]now or never",
+        "rendered": "<span class=\"chord\">D</span>I knew that it was <span class=\"chord\">G</span>now or never",
+        "seconds": 246.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Those were the [A]best days of my [D]life",
+        "rendered": "<span class=\"chord\">Bm</span>Those were the <span class=\"chord\">A</span>best days of my <span class=\"chord\">D</span>life",
+        "seconds": 252.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Back in the [D]summer of '69, [A]oh!",
+        "rendered": "Back in the <span class=\"chord\">D</span>summer of '69, <span class=\"chord\">A</span>oh!",
+        "seconds": 258.0
+      },
+      {
+        "type": "lyric",
+        "raw": "It was the [D]summer of '69, [A]oh!",
+        "rendered": "It was the <span class=\"chord\">D</span>summer of '69, <span class=\"chord\">A</span>oh!",
+        "seconds": 264.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Me and my [D]baby in '69, [A]oh!",
+        "rendered": "Me and my <span class=\"chord\">D</span>baby in '69, <span class=\"chord\">A</span>oh!",
+        "seconds": 270.0
+      },
+      {
+        "type": "lyric",
+        "raw": "It was the [D]summer, the summer, the [A]summer of '69!",
+        "rendered": "It was the <span class=\"chord\">D</span>summer, the summer, the <span class=\"chord\">A</span>summer of '69!",
+        "seconds": 276.0
+      },
+      {
+        "type": "section",
+        "content": "🏁 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D] | [A] | [A] |` *(Fade out cantando ad alta voce!)*",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">A</span> |` *(Fade out cantando ad alta voce!)*",
+        "seconds": 282.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Yeah, those were the best days...",
+        "rendered": "<span class=\"chord\">D</span>Yeah, those were the best days...",
+        "seconds": 288.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Back in '69!",
+        "rendered": "<span class=\"chord\">A</span>Back in '69!",
+        "seconds": 294.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [A] | [D] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">A</span> | <span class=\"chord\">D</span> |`",
+        "seconds": 300.0
+      }
+    ]
+  },
   "the-best.md": {
     "filename": "the-best.md",
     "meta": {
