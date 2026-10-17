@@ -9,7 +9,7 @@
     "filename": "fliegerlied.md",
     "title": "Fliegerlied (So a schöner Tag)",
     "artist": "Donikkl",
-    "key": ""
+    "key": "C"
   },
   {
     "filename": "gloria.md",
@@ -21,7 +21,7 @@
     "filename": "joana.md",
     "title": "Joana (Du geile Sau)",
     "artist": "Peter Wackel",
-    "key": ""
+    "key": "G"
   },
   {
     "filename": "love-of-my-life.md",
@@ -63,7 +63,13 @@
     "filename": "wahnsinn.md",
     "title": "Wahnsinn (Hölle, Hölle, Hölle)",
     "artist": "Wolfgang Petry",
-    "key": ""
+    "key": "D"
+  },
+  {
+    "filename": "weiss-der-geier.md",
+    "title": "Weiß der Geier (Tanzbar)",
+    "artist": "Wolfgang Petry",
+    "key": "C"
   },
   {
     "filename": "where-the-streets-have-no-name.md",

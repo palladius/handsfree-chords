@@ -1,8 +1,16 @@
+---
+title: "Wahnsinn (Hölle, Hölle, Hölle)"
+artist: "Wolfgang Petry"
+tags: "oktoberfest, schlager, party, bavaria"
+original_key: "D"
+---
+
 # 🎵 Wahnsinn (Hölle, Hölle, Hölle) — Wolfgang Petry
 
 > **Info brano:**  
 > 🎹 **Tonalità Originale:** Re Maggiore (D)  
 > ⏱️ **Tempo:** 4/4 (~128 BPM)  
+> 🏷️ **Tags:** `#oktoberfest` `#schlager` `#party` `#bavaria`  
 > 🍺 **Oktoberfest Anthem:** La leggendaria canzone di Wolfgang Petry (spesso chiamata "Wahnsinn" o "Svanstig", cioè follia/pazzia pura).  
 > 💡 **Piano Tips:** Ritmo Schlager dritto a martello con accordi pompati in levare e ottave al basso. Nel ritornello, il break e la pausa prima dell'urlo della folla *"Hölle, Hölle, Hölle!"* sono il segreto per far esplodere la birreria!
 

@@ -1,8 +1,16 @@
+---
+title: "Joana (Du geile Sau)"
+artist: "Peter Wackel"
+tags: "oktoberfest, schlager, party, bavaria"
+original_key: "G"
+---
+
 # 🎵 Joana (Du geile Sau) — Peter Wackel
 
 > **Info brano:**  
 > 🎹 **Tonalità Originale:** Sol Maggiore (G)  
 > ⏱️ **Tempo:** 4/4 (~132 BPM)  
+> 🏷️ **Tags:** `#oktoberfest` `#schlager` `#party` `#bavaria`  
 > 🍺 **Oktoberfest Anthem:** Il super classico delle feste della birra bavaresi (Roland Kaiser / Peter Wackel).  
 > 💡 **Piano Tips:** Basso alternato incalzante alla mano sinistra (G - D) e accordi staccati in levare alla mano destra. Al celebre controcanto urlato della folla (*"Du geile Sau!"* e *"Du Luder!"*), mantieni il groove solido senza perdere un battito!
 

@@ -209,7 +209,9 @@
     "filename": "fliegerlied.md",
     "meta": {
       "title": "Fliegerlied (So a schöner Tag)",
-      "artist": "Donikkl"
+      "artist": "Donikkl",
+      "tags": "oktoberfest, schlager, party, bavaria",
+      "original_key": "C"
     },
     "tips": "Giro di Do aperto, festoso e irresistibile (`[C] -> [G] -> [Am] -> [F]`). Sul ritornello apri le ottave e tieni gli accordi brillanti sui tasti alti per guidare il coro di tutto il tendone!",
     "lines": [
@@ -804,7 +806,9 @@
     "filename": "joana.md",
     "meta": {
       "title": "Joana (Du geile Sau)",
-      "artist": "Peter Wackel"
+      "artist": "Peter Wackel",
+      "tags": "oktoberfest, schlager, party, bavaria",
+      "original_key": "G"
     },
     "tips": "Basso alternato incalzante alla mano sinistra (G - D) e accordi staccati in levare alla mano destra. Al celebre controcanto urlato della folla (*\"Du geile Sau!\"* e *\"Du Luder!\"*), mantieni il groove solido senza perdere un battito!",
     "lines": [
@@ -3035,7 +3039,9 @@
     "filename": "wahnsinn.md",
     "meta": {
       "title": "Wahnsinn (Hölle, Hölle, Hölle)",
-      "artist": "Wolfgang Petry"
+      "artist": "Wolfgang Petry",
+      "tags": "oktoberfest, schlager, party, bavaria",
+      "original_key": "D"
     },
     "tips": "Ritmo Schlager dritto a martello con accordi pompati in levare e ottave al basso. Nel ritornello, il break e la pausa prima dell'urlo della folla *\"Hölle, Hölle, Hölle!\"* sono il segreto per far esplodere la birreria!",
     "lines": [
@@ -3300,6 +3306,310 @@
         "raw": "Doch ich [G]weiß, dass ich ohne dich nicht [A]leben kann... [D]",
         "rendered": "Doch ich <span class=\"chord\">G</span>weiß, dass ich ohne dich nicht <span class=\"chord\">A</span>leben kann... <span class=\"chord\">D</span>",
         "seconds": 222.0
+      }
+    ]
+  },
+  "weiss-der-geier.md": {
+    "filename": "weiss-der-geier.md",
+    "meta": {
+      "title": "Weiß der Geier (Tanzbar)",
+      "artist": "Wolfgang Petry",
+      "tags": "oktoberfest, schlager, party, bavaria",
+      "original_key": "C"
+    },
+    "tips": "Tipico beat trascinante di Wolle Petry! Basso pulsante in ottave alla mano sinistra e accordi energici e marcati alla mano destra. Nel ritornello (\"Weiß der Geier...\"), apri il volume sugli accordi aperti `[C] -> [G] -> [Am] -> [F] [G]`.",
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Weiß der Geier (Tanzbar) — Wolfgang Petry",
+        "rendered": "# 🎵 Weiß der Geier (Tanzbar) — Wolfgang Petry",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C] | [G] | [Am] | [F] |`",
+        "rendered": "`| <span class=\"chord\">C</span> | <span class=\"chord\">G</span> | <span class=\"chord\">Am</span> | <span class=\"chord\">F</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C] | [G] | [F]  | [G] |`",
+        "rendered": "`| <span class=\"chord\">C</span> | <span class=\"chord\">G</span> | <span class=\"chord\">F</span>  | <span class=\"chord\">G</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]Ich hab gedacht, das mit uns geht ewig so weiter",
+        "rendered": "<span class=\"chord\">C</span>Ich hab gedacht, das mit uns geht ewig so weiter",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]doch gestern Nacht fiel der Vorhang, die Bühne war leer",
+        "rendered": "<span class=\"chord\">G</span>doch gestern Nacht fiel der Vorhang, die Bühne war leer",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]du packst die Koffer und gehst einfach fort",
+        "rendered": "<span class=\"chord\">Am</span>du packst die Koffer und gehst einfach fort",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]und sagst kein [G]einziges Wort",
+        "rendered": "<span class=\"chord\">F</span>und sagst kein <span class=\"chord\">G</span>einziges Wort",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]Ich sitz' am Tisch und ich starr' in mein kaltes Glas Bier",
+        "rendered": "<span class=\"chord\">C</span>Ich sitz' am Tisch und ich starr' in mein kaltes Glas Bier",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]und frage mich, was um alles in der Welt mach ich hier",
+        "rendered": "<span class=\"chord\">G</span>und frage mich, was um alles in der Welt mach ich hier",
+        "seconds": 54.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]die Lichter brennen, doch in mir wird es dunkel und kalt",
+        "rendered": "<span class=\"chord\">Am</span>die Lichter brennen, doch in mir wird es dunkel und kalt",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]die Tür fällt zu mit Ge[G]walt",
+        "rendered": "<span class=\"chord\">F</span>die Tür fällt zu mit Ge<span class=\"chord\">G</span>walt",
+        "seconds": 66.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Und ich spür' diesen Schmerz tief im Bauch",
+        "rendered": "<span class=\"chord\">Dm</span>Und ich spür' diesen Schmerz tief im Bauch",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]und du weißt ganz genau, ich verzeih' dir das auch!",
+        "rendered": "<span class=\"chord\">G</span>und du weißt ganz genau, ich verzeih' dir das auch!",
+        "seconds": 78.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO *(Tanzbar Groove: tutto il tendone che balla!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Weiß der [C]Geier oder weiß er nicht",
+        "rendered": "Weiß der <span class=\"chord\">C</span>Geier oder weiß er nicht",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "ob man [G]Herzen ungestraft zerbricht!",
+        "rendered": "ob man <span class=\"chord\">G</span>Herzen ungestraft zerbricht!",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ob die [Am]Liebe wirklich Flügel hat",
+        "rendered": "Ob die <span class=\"chord\">Am</span>Liebe wirklich Flügel hat",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "oder [F]ob sie eines [G]Tages schlappmacht!",
+        "rendered": "oder <span class=\"chord\">F</span>ob sie eines <span class=\"chord\">G</span>Tages schlappmacht!",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Weiß der [C]Geier oder weiß er nicht",
+        "rendered": "Weiß der <span class=\"chord\">C</span>Geier oder weiß er nicht",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "warum [G]jeder neue Tag verspricht",
+        "rendered": "warum <span class=\"chord\">G</span>jeder neue Tag verspricht",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "dass man [Am]irgendwann vergessen kann",
+        "rendered": "dass man <span class=\"chord\">Am</span>irgendwann vergessen kann",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und dann [F]fängt das ganze [G]Leben wieder von [C]vorne an!",
+        "rendered": "und dann <span class=\"chord\">F</span>fängt das ganze <span class=\"chord\">G</span>Leben wieder von <span class=\"chord\">C</span>vorne an!",
+        "seconds": 126.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]Ein neuer Morgen, der Nebel zieht über die Stadt",
+        "rendered": "<span class=\"chord\">C</span>Ein neuer Morgen, der Nebel zieht über die Stadt",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]ein grauer Tag, der für mich keine Hoffnung mehr hat",
+        "rendered": "<span class=\"chord\">G</span>ein grauer Tag, der für mich keine Hoffnung mehr hat",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]ich schau' zum Fenster und such' nach 'nem rettenden Stern",
+        "rendered": "<span class=\"chord\">Am</span>ich schau' zum Fenster und such' nach 'nem rettenden Stern",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]doch du bist [G]viel zu weit fern",
+        "rendered": "<span class=\"chord\">F</span>doch du bist <span class=\"chord\">G</span>viel zu weit fern",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]Die Freunde sagen: \"Komm Junge, das geht schon vorbei!\"",
+        "rendered": "<span class=\"chord\">C</span>Die Freunde sagen: \"Komm Junge, das geht schon vorbei!\"",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]doch mir ist alles im Moment so scheißegal und einerlei",
+        "rendered": "<span class=\"chord\">G</span>doch mir ist alles im Moment so scheißegal und einerlei",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]ich will dich wieder, auch wenn ich mich selber belüg'",
+        "rendered": "<span class=\"chord\">Am</span>ich will dich wieder, auch wenn ich mich selber belüg'",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]von dir krieg ich nie ge[G]nug!",
+        "rendered": "<span class=\"chord\">F</span>von dir krieg ich nie ge<span class=\"chord\">G</span>nug!",
+        "seconds": 174.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Und ich spür' diesen Schmerz tief im Bauch",
+        "rendered": "<span class=\"chord\">Dm</span>Und ich spür' diesen Schmerz tief im Bauch",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]und du weißt ganz genau, ich verzeih' dir das auch!",
+        "rendered": "<span class=\"chord\">G</span>und du weißt ganz genau, ich verzeih' dir das auch!",
+        "seconds": 186.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Weiß der [C]Geier oder weiß er nicht",
+        "rendered": "Weiß der <span class=\"chord\">C</span>Geier oder weiß er nicht",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "ob man [G]Herzen ungestraft zerbricht!",
+        "rendered": "ob man <span class=\"chord\">G</span>Herzen ungestraft zerbricht!",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ob die [Am]Liebe wirklich Flügel hat",
+        "rendered": "Ob die <span class=\"chord\">Am</span>Liebe wirklich Flügel hat",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "oder [F]ob sie eines [G]Tages schlappmacht!",
+        "rendered": "oder <span class=\"chord\">F</span>ob sie eines <span class=\"chord\">G</span>Tages schlappmacht!",
+        "seconds": 210.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Weiß der [C]Geier oder weiß er nicht",
+        "rendered": "Weiß der <span class=\"chord\">C</span>Geier oder weiß er nicht",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "warum [G]jeder neue Tag verspricht",
+        "rendered": "warum <span class=\"chord\">G</span>jeder neue Tag verspricht",
+        "seconds": 222.0
+      },
+      {
+        "type": "lyric",
+        "raw": "dass man [Am]irgendwann vergessen kann",
+        "rendered": "dass man <span class=\"chord\">Am</span>irgendwann vergessen kann",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "und dann [F]fängt das ganze [G]Leben wieder von [C]vorne an!",
+        "rendered": "und dann <span class=\"chord\">F</span>fängt das ganze <span class=\"chord\">G</span>Leben wieder von <span class=\"chord\">C</span>vorne an!",
+        "seconds": 234.0
+      },
+      {
+        "type": "section",
+        "content": "🍻 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Und dann [F]fängt das ganze [G]Leben wieder von [C]vorne an!",
+        "rendered": "Und dann <span class=\"chord\">F</span>fängt das ganze <span class=\"chord\">G</span>Leben wieder von <span class=\"chord\">C</span>vorne an!",
+        "seconds": 240.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Weiß der [G]Geier!",
+        "rendered": "Weiß der <span class=\"chord\">G</span>Geier!",
+        "seconds": 246.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ja, das [F]Leben fängt von [G]vorne an! [C]",
+        "rendered": "Ja, das <span class=\"chord\">F</span>Leben fängt von <span class=\"chord\">G</span>vorne an! <span class=\"chord\">C</span>",
+        "seconds": 252.0
       }
     ]
   },

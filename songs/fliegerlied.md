@@ -1,8 +1,16 @@
+---
+title: "Fliegerlied (So a schöner Tag)"
+artist: "Donikkl"
+tags: "oktoberfest, schlager, party, bavaria"
+original_key: "C"
+---
+
 # 🎵 Fliegerlied (So a schöner Tag) — Donikkl
 
 > **Info brano:**  
 > 🎹 **Tonalità Originale:** Do Maggiore (C)  
 > ⏱️ **Tempo:** 4/4 (~134 BPM)  
+> 🏷️ **Tags:** `#oktoberfest` `#schlager` `#party` `#bavaria`  
 > 🍺 **Oktoberfest Anthem:** L'inno per eccellenza della Wiesn e di ogni festa della birra, con la mitica coreografia mimata da tutto il pubblico (volare, ruggire, saltare e nuotare!).  
 > 💡 **Piano Tips:** Giro di Do aperto, festoso e irresistibile (`[C] -> [G] -> [Am] -> [F]`). Sul ritornello apri le ottave e tieni gli accordi brillanti sui tasti alti per guidare il coro di tutto il tendone!
 
