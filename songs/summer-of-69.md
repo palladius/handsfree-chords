@@ -3,6 +3,7 @@ title: "Summer of '69"
 artist: "Bryan Adams"
 tags: "rock, pop-rock, 80s, classic-rock, anthem, party"
 original_key: "D"
+audio: "audio/summer-of-69.mp3"
 ---
 
 # 🎵 Summer of '69 — Bryan Adams

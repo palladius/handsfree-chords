@@ -2307,7 +2307,8 @@
       "title": "Summer of '69",
       "artist": "Bryan Adams",
       "tags": "rock, pop-rock, 80s, classic-rock, anthem, party",
-      "original_key": "D"
+      "original_key": "D",
+      "audio": "audio/summer-of-69.mp3"
     },
     "tips": "Mano destra sul celebre arpeggio/ritmo in ottavi serrati alternando [D] e [A]. Nel bridge modulazione improvvisa sul Fa Maggiore [F] e Sib [Bb] prima della ripartenza a tavoletta!",
     "lines": [
@@ -2674,7 +2675,8 @@
       "title": "The Best (Simply the Best)",
       "artist": "Tina Turner",
       "tags": "rock, pop, 80s, anthem, zurich, goldkueste",
-      "original_key": "F"
+      "original_key": "F",
+      "audio": "audio/the-best.mp3"
     },
     "tips": "Il groove dell'intro si basa sul celebre riff di sintetizzatore in semicrome su ottave fisse di [F]. Nel ritornello le terzine vocali si appoggiano su bassi solidi [F] - [C] - [Bb]. Occhio al cambio di tonalità trionfale in [G] al solo di sax!",
     "lines": [

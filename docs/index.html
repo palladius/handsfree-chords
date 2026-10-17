@@ -337,6 +337,7 @@
   </main>
 
   <video id="webcam-video" autoplay playsinline muted></video>
+  <audio id="audioTrack" preload="auto"></audio>
   <div id="gesture-alert">👤 Head Turn: +20s</div>
 
   <script>
@@ -514,9 +515,18 @@
         <div class="meta-box">
           <h1>${data.meta.title || 'Senza titolo'} — ${data.meta.artist || ''}</h1>
           <div>🎹 <strong>Tonalità:</strong> ${keyDisplay} | ⏱️ <strong>BPM:</strong> ${data.meta.bpm || '~120'} | <strong>Tempo:</strong> ${data.meta.time_signature || '4/4'}</div>
+          ${data.meta.audio ? `<div style="margin-top:8px; color:var(--accent); font-weight:bold;">🔊 <strong>Traccia Audio MP3 Inclusa:</strong> Premi "Avvia" per cantare e suonare sulla traccia originale!</div>` : ''}
           ${data.tips ? `<div style="margin-top:8px; color:var(--chord);">💡 <strong>Piano Tip:</strong> ${data.tips}</div>` : ''}
         </div>
       `;
+
+      // Update Audio element source
+      const audioTrack = document.getElementById('audioTrack');
+      if (data.meta && data.meta.audio) {
+        audioTrack.src = data.meta.audio;
+      } else {
+        audioTrack.removeAttribute('src');
+      }
 
       // Render lines with live transposed chords
       data.lines.forEach((item, idx) => {
@@ -575,6 +585,12 @@
       document.getElementById('playBtn').classList.remove('btn-primary');
       document.getElementById('playBtn').style.background = '#ef476f';
 
+      const audioTrack = document.getElementById('audioTrack');
+      if (audioTrack && audioTrack.src) {
+        audioTrack.currentTime = currentTime;
+        audioTrack.play().catch(e => console.log('Audio autoplay blocked or user gesture required:', e));
+      }
+
       const startPerf = performance.now() - (currentTime * 1000);
       timerInterval = setInterval(() => {
         currentTime = (performance.now() - startPerf) / 1000;
@@ -586,6 +602,10 @@
     function pause() {
       isPlaying = false;
       clearInterval(timerInterval);
+      const audioTrack = document.getElementById('audioTrack');
+      if (audioTrack && audioTrack.src) {
+        audioTrack.pause();
+      }
       document.getElementById('playBtn').innerHTML = '▶️ Avvia';
       document.getElementById('playBtn').classList.add('btn-primary');
       document.getElementById('playBtn').style.background = '';
@@ -593,12 +613,20 @@
 
     function jumpSeconds(delta) {
       currentTime = Math.max(0, currentTime + delta);
+      const audioTrack = document.getElementById('audioTrack');
+      if (audioTrack && audioTrack.src) {
+        audioTrack.currentTime = currentTime;
+      }
       updateTimeDisplay();
       syncScroll();
     }
 
     function jumpToSecond(sec) {
       currentTime = sec;
+      const audioTrack = document.getElementById('audioTrack');
+      if (audioTrack && audioTrack.src) {
+        audioTrack.currentTime = currentTime;
+      }
       updateTimeDisplay();
       syncScroll();
     }
@@ -743,6 +771,19 @@
         changeTranspose(-1);
       }
     });
+
+    // Audio track synchronization & end handler
+    const audioTrack = document.getElementById('audioTrack');
+    audioTrack.ontimeupdate = () => {
+      if (isPlaying && Math.abs(currentTime - audioTrack.currentTime) > 0.4) {
+        currentTime = audioTrack.currentTime;
+        updateTimeDisplay();
+        syncScroll();
+      }
+    };
+    audioTrack.onended = () => {
+      pause();
+    };
 
     init();
   </script>

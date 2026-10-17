@@ -3,6 +3,7 @@ title: "The Best (Simply the Best)"
 artist: "Tina Turner"
 tags: "rock, pop, 80s, anthem, zurich, goldkueste"
 original_key: "F"
+audio: "audio/the-best.mp3"
 ---
 
 # 🎵 The Best (Simply the Best) — Tina Turner
