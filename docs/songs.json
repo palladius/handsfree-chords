@@ -2301,6 +2301,315 @@
       }
     ]
   },
+  "the-best.md": {
+    "filename": "the-best.md",
+    "meta": {
+      "title": "The Best (Simply the Best)",
+      "artist": "Tina Turner",
+      "tags": "rock, pop, 80s, anthem, zurich, goldkueste",
+      "original_key": "F"
+    },
+    "tips": "Il groove dell'intro si basa sul celebre riff di sintetizzatore in semicrome su ottave fisse di [F]. Nel ritornello le terzine vocali si appoggiano su bassi solidi [F] - [C] - [Bb]. Occhio al cambio di tonalità trionfale in [G] al solo di sax!",
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 The Best (Simply the Best) — Tina Turner",
+        "rendered": "# 🎵 The Best (Simply the Best) — Tina Turner",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F] | [F] | [F] | [F] |`",
+        "rendered": "`| <span class=\"chord\">F</span> | <span class=\"chord\">F</span> | <span class=\"chord\">F</span> | <span class=\"chord\">F</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F] | [F] | [F] | [F] |`",
+        "rendered": "`| <span class=\"chord\">F</span> | <span class=\"chord\">F</span> | <span class=\"chord\">F</span> | <span class=\"chord\">F</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]I call you when I need you, my heart's on fire",
+        "rendered": "<span class=\"chord\">F</span>I call you when I need you, my heart's on fire",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]You come to me, come to me wild and wired",
+        "rendered": "<span class=\"chord\">F</span>You come to me, come to me wild and wired",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Mm, you come to [Dm]me, give me everything I need",
+        "rendered": "Mm, you come to <span class=\"chord\">Dm</span>me, give me everything I need",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Give me a [Bb]lifetime of promises and a world of dreams",
+        "rendered": "Give me a <span class=\"chord\">Bb</span>lifetime of promises and a world of dreams",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Speak a [C]language of love like you know what it means",
+        "rendered": "Speak a <span class=\"chord\">C</span>language of love like you know what it means",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Mm, and it [Dm]can't be wrong, take my [C]heart and make it strong, babe",
+        "rendered": "Mm, and it <span class=\"chord\">Dm</span>can't be wrong, take my <span class=\"chord\">C</span>heart and make it strong, babe",
+        "seconds": 54.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "'Cause you're [F]simply the best, better than all the rest",
+        "rendered": "'Cause you're <span class=\"chord\">F</span>simply the best, better than all the rest",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Better than [C]anyone, anyone I've ever [Bb]met",
+        "rendered": "Better than <span class=\"chord\">C</span>anyone, anyone I've ever <span class=\"chord\">Bb</span>met",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I'm [F]stuck on your heart, I hang on every word you say",
+        "rendered": "I'm <span class=\"chord\">F</span>stuck on your heart, I hang on every word you say",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tear us [Dm]apart, baby, [C]I would rather be [Bb]dead",
+        "rendered": "Tear us <span class=\"chord\">Dm</span>apart, baby, <span class=\"chord\">C</span>I would rather be <span class=\"chord\">Bb</span>dead",
+        "seconds": 78.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]In your heart I see the start of every night and every day",
+        "rendered": "<span class=\"chord\">F</span>In your heart I see the start of every night and every day",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]In your eyes I get lost, I get washed away",
+        "rendered": "<span class=\"chord\">F</span>In your eyes I get lost, I get washed away",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Just as [Dm]long as I'm here in your arms I could be in no better place",
+        "rendered": "Just as <span class=\"chord\">Dm</span>long as I'm here in your arms I could be in no better place",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Give me a [Bb]lifetime of promises and a world of dreams",
+        "rendered": "Give me a <span class=\"chord\">Bb</span>lifetime of promises and a world of dreams",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Speak a [C]language of love like you know what it means",
+        "rendered": "Speak a <span class=\"chord\">C</span>language of love like you know what it means",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Mm, and it [Dm]can't be wrong, take my [C]heart and make it strong, babe",
+        "rendered": "Mm, and it <span class=\"chord\">Dm</span>can't be wrong, take my <span class=\"chord\">C</span>heart and make it strong, babe",
+        "seconds": 114.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "'Cause you're [F]simply the best, better than all the rest",
+        "rendered": "'Cause you're <span class=\"chord\">F</span>simply the best, better than all the rest",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Better than [C]anyone, anyone I've ever [Bb]met",
+        "rendered": "Better than <span class=\"chord\">C</span>anyone, anyone I've ever <span class=\"chord\">Bb</span>met",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I'm [F]stuck on your heart, I hang on every word you say",
+        "rendered": "I'm <span class=\"chord\">F</span>stuck on your heart, I hang on every word you say",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tear us [Dm]apart, baby, [C]I would rather be [Bb]dead",
+        "rendered": "Tear us <span class=\"chord\">Dm</span>apart, baby, <span class=\"chord\">C</span>I would rather be <span class=\"chord\">Bb</span>dead",
+        "seconds": 138.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Ab]Each time you leave me I start losing control",
+        "rendered": "<span class=\"chord\">Ab</span>Each time you leave me I start losing control",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Eb]You're walking away with my heart and my soul",
+        "rendered": "<span class=\"chord\">Eb</span>You're walking away with my heart and my soul",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Ab]I can feel you even when I'm alone",
+        "rendered": "<span class=\"chord\">Ab</span>I can feel you even when I'm alone",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Oh baby, don't let [C]go!",
+        "rendered": "<span class=\"chord\">Bb</span>Oh baby, don't let <span class=\"chord\">C</span>go!",
+        "seconds": 162.0
+      },
+      {
+        "type": "section",
+        "content": "🎷 SAX SOLO *(Modulazione in Sol Maggiore - G!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [G] | [G] | [Em] | [Em] |`",
+        "rendered": "`| <span class=\"chord\">G</span> | <span class=\"chord\">G</span> | <span class=\"chord\">Em</span> | <span class=\"chord\">Em</span> |`",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C] | [D] | [Em] [D] | [C] |`",
+        "rendered": "`| <span class=\"chord\">C</span> | <span class=\"chord\">D</span> | <span class=\"chord\">Em</span> <span class=\"chord\">D</span> | <span class=\"chord\">C</span> |`",
+        "seconds": 174.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE *(In Sol Maggiore - Full Energy!)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "'Cause you're [G]simply the best, better than all the rest",
+        "rendered": "'Cause you're <span class=\"chord\">G</span>simply the best, better than all the rest",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Better than [D]anyone, anyone I've ever [C]met",
+        "rendered": "Better than <span class=\"chord\">D</span>anyone, anyone I've ever <span class=\"chord\">C</span>met",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I'm [G]stuck on your heart, I hang on every word you say",
+        "rendered": "I'm <span class=\"chord\">G</span>stuck on your heart, I hang on every word you say",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tear us a[Em]part, baby, [D]I would rather be [C]dead",
+        "rendered": "Tear us a<span class=\"chord\">Em</span>part, baby, <span class=\"chord\">D</span>I would rather be <span class=\"chord\">C</span>dead",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "'Cause you're [G]simply the best, better than all the rest",
+        "rendered": "'Cause you're <span class=\"chord\">G</span>simply the best, better than all the rest",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Better than [D]anyone, anyone I've ever [C]met",
+        "rendered": "Better than <span class=\"chord\">D</span>anyone, anyone I've ever <span class=\"chord\">C</span>met",
+        "seconds": 210.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I'm [G]stuck on your heart, I hang on every word you say",
+        "rendered": "I'm <span class=\"chord\">G</span>stuck on your heart, I hang on every word you say",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tear us a[Em]part, baby, [D]I would rather be [C]dead",
+        "rendered": "Tear us a<span class=\"chord\">Em</span>part, baby, <span class=\"chord\">D</span>I would rather be <span class=\"chord\">C</span>dead",
+        "seconds": 222.0
+      },
+      {
+        "type": "section",
+        "content": "🏁 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Oh, you're the [G]best!",
+        "rendered": "Oh, you're the <span class=\"chord\">G</span>best!",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "(Simply the best)",
+        "rendered": "(Simply the best)",
+        "seconds": 234.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Better than all the [D]rest",
+        "rendered": "Better than all the <span class=\"chord\">D</span>rest",
+        "seconds": 240.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Better than [C]anyone I've ever met...",
+        "rendered": "Better than <span class=\"chord\">C</span>anyone I've ever met...",
+        "seconds": 246.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [G] | [D] [C] | [G] |`",
+        "rendered": "`| <span class=\"chord\">G</span> | <span class=\"chord\">D</span> <span class=\"chord\">C</span> | <span class=\"chord\">G</span> |`",
+        "seconds": 252.0
+      }
+    ]
+  },
   "the-knife.md": {
     "filename": "the-knife.md",
     "meta": {
