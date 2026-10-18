@@ -6,9 +6,21 @@
     "key": ""
   },
   {
+    "filename": "fliegerlied.md",
+    "title": "Fliegerlied (So a schöner Tag)",
+    "artist": "Donikkl",
+    "key": ""
+  },
+  {
     "filename": "gloria.md",
     "title": "Gloria",
     "artist": "Umberto Tozzi",
+    "key": ""
+  },
+  {
+    "filename": "joana.md",
+    "title": "Joana (Du geile Sau)",
+    "artist": "Peter Wackel",
     "key": ""
   },
   {
@@ -46,6 +58,18 @@
     "title": "The Musical Box",
     "artist": "Genesis",
     "key": "F#"
+  },
+  {
+    "filename": "wahnsinn.md",
+    "title": "Wahnsinn (Hölle, Hölle, Hölle)",
+    "artist": "Wolfgang Petry",
+    "key": ""
+  },
+  {
+    "filename": "weiss-der-geier.md",
+    "title": "Weiß der Geier (Tanzbar)",
+    "artist": "Wolfgang Petry",
+    "key": ""
   },
   {
     "filename": "where-the-streets-have-no-name.md",
