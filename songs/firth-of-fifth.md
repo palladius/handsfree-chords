@@ -2,7 +2,7 @@
 
 > **Info brano:**  
 > 🎹 **Tonalità:** Si Maggiore (B) / Mi Minore (Em) modale  
-> ⏱️ **Tempo:** 4/4 / 13/16 (nello stacco classico)  
+> ⏱️ **Tempo:** 4/4 (~65 BPM arpeggiato / 13/16 nello stacco classico)  
 > 💡 **Piano Tips:** Il capolavoro assoluto di Tony Banks. L'intro classica arpeggiata è leggendaria. Sulla strofa ("The path is clear"), la mano sinistra scende sul basso (`[B]` $\to$ `[B7/A]` $\to$ `[E/G#]` $\to$ `[B/F#]`). Voicing aperti ed eleganti.
 
 ---

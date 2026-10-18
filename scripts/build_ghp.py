@@ -51,6 +51,36 @@ def build_docs():
             idx += 1
             meta = parse_frontmatter("\n".join(yaml_lines))
 
+        raw_content = "\n".join(lines)
+        if "bpm" not in meta:
+            bpm_m = re.search(r'bpm:\s*(\d+)', raw_content, re.I)
+            if bpm_m:
+                meta["bpm"] = int(bpm_m.group(1))
+            else:
+                bpm_m2 = re.search(r'[~≈]\s*(\d+)\s*bpm', raw_content, re.I)
+                if bpm_m2:
+                    meta["bpm"] = int(bpm_m2.group(1))
+                else:
+                    bpm_m3 = re.search(r'(\d+)\s*bpm', raw_content, re.I)
+                    if bpm_m3:
+                        meta["bpm"] = int(bpm_m3.group(1))
+        else:
+            try:
+                meta["bpm"] = int(meta["bpm"])
+            except (ValueError, TypeError):
+                pass
+
+        if "time_signature" not in meta:
+            ts_m = re.search(r'time_signature:\s*["\']?(\d+/\d+)', raw_content, re.I)
+            if ts_m:
+                meta["time_signature"] = ts_m.group(1)
+            else:
+                ts_m2 = re.search(r'tempo:\*\*\s*(\d+/\d+)', raw_content, re.I)
+                if ts_m2:
+                    meta["time_signature"] = ts_m2.group(1)
+                else:
+                    meta["time_signature"] = "4/4"
+
         parsed_lines = []
         curr_time = 0.0
         while idx < len(lines):
@@ -108,7 +138,9 @@ def build_docs():
             "filename": f.name,
             "title": meta.get("title", f.stem),
             "artist": meta.get("artist", ""),
-            "key": meta.get("original_key", "")
+            "key": meta.get("original_key", ""),
+            "bpm": meta.get("bpm"),
+            "time_signature": meta.get("time_signature", "4/4"),
         })
 
     # Write songs.json

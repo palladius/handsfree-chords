@@ -3,90 +3,120 @@
     "filename": "firth-of-fifth.md",
     "title": "Firth of Fifth",
     "artist": "Genesis",
-    "key": ""
+    "key": "",
+    "bpm": 65,
+    "time_signature": "4/4"
   },
   {
     "filename": "fliegerlied.md",
     "title": "Fliegerlied (So a schöner Tag)",
     "artist": "Donikkl",
-    "key": "C"
+    "key": "C",
+    "bpm": 134,
+    "time_signature": "4/4"
   },
   {
     "filename": "gloria.md",
     "title": "Gloria",
     "artist": "Umberto Tozzi",
-    "key": ""
+    "key": "",
+    "bpm": 130,
+    "time_signature": "4/4"
   },
   {
     "filename": "joana.md",
     "title": "Joana (Du geile Sau)",
     "artist": "Peter Wackel",
-    "key": "G"
+    "key": "G",
+    "bpm": 132,
+    "time_signature": "4/4"
   },
   {
     "filename": "love-of-my-life.md",
     "title": "Love of My Life",
     "artist": "Queen",
-    "key": ""
+    "key": "",
+    "bpm": 78,
+    "time_signature": "4/4"
   },
   {
     "filename": "solsbury-hill.md",
     "title": "Solsbury Hill",
     "artist": "Peter Gabriel",
-    "key": ""
+    "key": "",
+    "bpm": 102,
+    "time_signature": "7/4"
   },
   {
     "filename": "spread-your-wings.md",
     "title": "Spread Your Wings",
     "artist": "Queen",
-    "key": "D"
+    "key": "D",
+    "bpm": 76,
+    "time_signature": "4/4"
   },
   {
     "filename": "su-di-noi.md",
     "title": "Su di noi",
     "artist": "Pupo",
-    "key": ""
+    "key": "",
+    "bpm": 115,
+    "time_signature": "4/4"
   },
   {
     "filename": "summer-of-69.md",
     "title": "Summer of '69",
     "artist": "Bryan Adams",
-    "key": "D"
+    "key": "D",
+    "bpm": 139,
+    "time_signature": "4/4"
   },
   {
     "filename": "the-best.md",
     "title": "The Best (Simply the Best)",
     "artist": "Tina Turner",
-    "key": "F"
+    "key": "F",
+    "bpm": 104,
+    "time_signature": "4/4"
   },
   {
     "filename": "the-knife.md",
     "title": "The Knife",
     "artist": "Genesis",
-    "key": "G#m"
+    "key": "G#m",
+    "bpm": 132,
+    "time_signature": "4/4"
   },
   {
     "filename": "the-musical-box.md",
     "title": "The Musical Box",
     "artist": "Genesis",
-    "key": "F#"
+    "key": "F#",
+    "bpm": 68,
+    "time_signature": "12/8"
   },
   {
     "filename": "wahnsinn.md",
     "title": "Wahnsinn (Hölle, Hölle, Hölle)",
     "artist": "Wolfgang Petry",
-    "key": "D"
+    "key": "D",
+    "bpm": 128,
+    "time_signature": "4/4"
   },
   {
     "filename": "weiss-der-geier.md",
     "title": "Weiß der Geier (Tanzbar)",
     "artist": "Wolfgang Petry",
-    "key": "C"
+    "key": "C",
+    "bpm": 130,
+    "time_signature": "4/4"
   },
   {
     "filename": "where-the-streets-have-no-name.md",
     "title": "Where the Streets Have No Name",
     "artist": "U2",
-    "key": ""
+    "key": "",
+    "bpm": 126,
+    "time_signature": "4/4"
   }
 ]

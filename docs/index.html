@@ -289,6 +289,119 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Metronome Toolbar */
+    .metronome-bar {
+      background: #14141f;
+      border-bottom: 2px solid #28283c;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      z-index: 90;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .metro-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-metro {
+      background: #252538;
+      color: #bbb;
+      border: 1px solid #444;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-metro.active {
+      background: #ffd166;
+      color: #000;
+      border-color: #ffd166;
+      box-shadow: 0 0 12px rgba(255, 209, 102, 0.4);
+    }
+    .btn-mini {
+      background: #252538;
+      color: #ddd;
+      border: 1px solid #444;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.1s ease;
+    }
+    .btn-mini:hover { background: #383852; }
+    .btn-mini:active { transform: scale(0.95); }
+    .metro-bpm-badge {
+      font-family: monospace;
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #ffd166;
+      background: #090910;
+      border: 1px solid #333;
+      padding: 4px 8px;
+      border-radius: 6px;
+      min-width: 82px;
+      text-align: center;
+    }
+    .metro-slider {
+      accent-color: #ffd166;
+      cursor: pointer;
+      width: 90px;
+    }
+    .metro-select {
+      background: #1e1e2c;
+      color: #e0e0e0;
+      border: 1px solid #444;
+      font-size: 0.85rem;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .metro-dots-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      background: #0d0d15;
+      border-radius: 16px;
+      border: 1px solid #2e2e42;
+      min-height: 28px;
+    }
+    .metro-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #2a2a3e;
+      border: 1px solid #444;
+      transition: transform 0.06s ease, background 0.06s ease, box-shadow 0.06s ease;
+    }
+    .metro-dot.downbeat {
+      width: 16px;
+      height: 16px;
+      border-color: #ef476f;
+    }
+    .metro-dot.flash-accent {
+      background: #ef476f !important;
+      border-color: #fff !important;
+      transform: scale(1.4);
+      box-shadow: 0 0 12px #ef476f;
+    }
+    .metro-dot.flash-beat {
+      background: #06d6a0 !important;
+      border-color: #fff !important;
+      transform: scale(1.3);
+      box-shadow: 0 0 10px #06d6a0;
+    }
   </style>
 </head>
 <body>
@@ -328,6 +441,52 @@
     </div>
   </header>
 
+  <!-- Metronome Toolbar -->
+  <div id="metronome-bar" class="metronome-bar">
+    <div class="metro-group">
+      <button id="metroToggleBtn" class="btn-metro" onclick="toggleMetronome()" title="Attiva/Disattiva Metronomo (Scorciatoia: M)">⏱️ Metronomo: OFF</button>
+    </div>
+
+    <div class="metro-group">
+      <button class="btn-mini" onclick="adjustBpm(-5)" title="Rallenta 5 BPM">-5</button>
+      <button class="btn-mini" onclick="adjustBpm(-1)" title="Rallenta 1 BPM">-1</button>
+      <span id="metroBpmDisplay" class="metro-bpm-badge" title="Velocità in BPM">120 BPM</span>
+      <button class="btn-mini" onclick="adjustBpm(1)" title="Accelera 1 BPM">+1</button>
+      <button class="btn-mini" onclick="adjustBpm(5)" title="Accelera 5 BPM">+5</button>
+      <input type="range" id="metroBpmSlider" class="metro-slider" min="40" max="240" value="120" oninput="setBpm(this.value)" title="Regola BPM">
+    </div>
+
+    <div class="metro-group">
+      <span style="font-size:0.85rem; color:#888;">Tempo:</span>
+      <select id="metroTsSelect" class="metro-select" onchange="setTimeSignature(this.value)" title="Metro / Divisione ritmica">
+        <option value="4/4">4/4 (Zoom-pa-pa-pa)</option>
+        <option value="3/4">3/4 (Zoom-pa-pa Valzer)</option>
+        <option value="2/4">2/4 (Zoom-pa Marcia)</option>
+        <option value="6/8">6/8 (Zoom-pa-pa Zoom-pa-pa)</option>
+        <option value="7/4">7/4 (Solsbury Hill)</option>
+        <option value="12/8">12/8 (Blues / Ballad)</option>
+      </select>
+    </div>
+
+    <div class="metro-group">
+      <select id="metroSoundSelect" class="metro-select" onchange="setMetroSound(this.value)" title="Timbro del Metronomo">
+        <option value="zoom-pa">🚛 Zoom-Pa (Basso & Legno)</option>
+        <option value="woodblock">🪵 Woodblock Classico</option>
+        <option value="beep">🔔 Beep Elettronico</option>
+      </select>
+    </div>
+
+    <div id="metroBeatDots" class="metro-dots-container" title="Visualizzatore battiti">
+      <!-- Dots inseriti dinamicamente -->
+    </div>
+
+    <div class="metro-group">
+      <label style="font-size:0.82rem; color:#aaa; cursor:pointer; display:flex; align-items:center; gap:5px;" title="Avvia e stoppa automaticamente il metronomo assieme al brano">
+        <input type="checkbox" id="metroAutoStartWithPlay" checked> Auto con Play
+      </label>
+    </div>
+  </div>
+
   <main>
     <div id="lyrics-view">
       <div style="text-align:center; padding: 100px 0; color:#777;">
@@ -358,6 +517,214 @@
       if (mode === 'en') document.getElementById('btnNotEn').classList.add('active');
       if (songData) {
         renderSong(songData);
+      }
+    }
+
+    // --- Metronome Engine (Web Audio API with Precise Lookahead Scheduling) ---
+    let metroAudioCtx = null;
+    let isMetroRunning = false;
+    let metroBpm = 120;
+    let metroTimeSignature = '4/4';
+    let metroBeatsPerBar = 4;
+    let currentMetroBeat = 0;
+    let nextMetroNoteTime = 0.0;
+    let metroTimerId = null;
+    let metroSoundType = 'zoom-pa'; // 'zoom-pa', 'woodblock', 'beep'
+
+    function initMetroAudio() {
+      if (!metroAudioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        metroAudioCtx = new AudioContext();
+      }
+      if (metroAudioCtx.state === 'suspended') {
+        metroAudioCtx.resume();
+      }
+    }
+
+    function parseTimeSignature(tsStr) {
+      if (!tsStr) return 4;
+      const m = tsStr.match(/^(\d+)/);
+      return m ? parseInt(m[1], 10) : 4;
+    }
+
+    function setTimeSignature(tsStr) {
+      metroTimeSignature = tsStr || '4/4';
+      metroBeatsPerBar = parseTimeSignature(metroTimeSignature);
+      const sel = document.getElementById('metroTsSelect');
+      if (sel) {
+        let exists = false;
+        for (let opt of sel.options) {
+          if (opt.value === metroTimeSignature) {
+            exists = true;
+            break;
+          }
+        }
+        if (!exists) {
+          const opt = document.createElement('option');
+          opt.value = metroTimeSignature;
+          opt.innerText = `${metroTimeSignature}`;
+          sel.appendChild(opt);
+        }
+        sel.value = metroTimeSignature;
+      }
+      renderBeatDots();
+    }
+
+    function setBpm(val) {
+      const parsed = parseInt(val, 10);
+      if (isNaN(parsed)) return;
+      metroBpm = Math.min(260, Math.max(30, parsed));
+      const disp = document.getElementById('metroBpmDisplay');
+      if (disp) disp.innerText = `${metroBpm} BPM`;
+      const slider = document.getElementById('metroBpmSlider');
+      if (slider) slider.value = metroBpm;
+    }
+
+    function adjustBpm(delta) {
+      setBpm(metroBpm + delta);
+    }
+
+    function setMetroSound(val) {
+      metroSoundType = val;
+    }
+
+    function renderBeatDots() {
+      const container = document.getElementById('metroBeatDots');
+      if (!container) return;
+      let html = '';
+      for (let i = 0; i < metroBeatsPerBar; i++) {
+        const isDownbeat = (i === 0);
+        html += `<div id="metro-dot-${i}" class="metro-dot ${isDownbeat ? 'downbeat' : ''}" title="Battito ${i + 1}"></div>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function flashBeatDot(beatIndex, isAccent) {
+      const dot = document.getElementById(`metro-dot-${beatIndex}`);
+      if (!dot) return;
+      const flashClass = isAccent ? 'flash-accent' : 'flash-beat';
+      dot.classList.add(flashClass);
+      setTimeout(() => {
+        dot.classList.remove(flashClass);
+      }, 100);
+    }
+
+    function playMetroClick(time, beatNumber) {
+      if (!metroAudioCtx) return;
+      const isAccent = (beatNumber === 0);
+
+      // Synthesize Click via Web Audio API
+      const osc = metroAudioCtx.createOscillator();
+      const gainNode = metroAudioCtx.createGain();
+      osc.connect(gainNode);
+      gainNode.connect(metroAudioCtx.destination);
+
+      if (metroSoundType === 'zoom-pa') {
+        if (isAccent) {
+          // 🚛 "ZOOM": Low resonant kick sweep (180Hz -> 50Hz) + punch
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(180, time);
+          osc.frequency.exponentialRampToValueAtTime(50, time + 0.12);
+          gainNode.gain.setValueAtTime(1.0, time);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, time + 0.16);
+          osc.start(time);
+          osc.stop(time + 0.16);
+        } else {
+          // 🥁 "pa": Crisp, snappy woodblock click
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(840, time);
+          osc.frequency.exponentialRampToValueAtTime(420, time + 0.04);
+          gainNode.gain.setValueAtTime(0.65, time);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, time + 0.05);
+          osc.start(time);
+          osc.stop(time + 0.05);
+        }
+      } else if (metroSoundType === 'woodblock') {
+        osc.type = 'sine';
+        const freq = isAccent ? 1200 : 800;
+        osc.frequency.setValueAtTime(freq, time);
+        gainNode.gain.setValueAtTime(isAccent ? 0.9 : 0.5, time);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, time + 0.04);
+        osc.start(time);
+        osc.stop(time + 0.04);
+      } else {
+        // Electronic beep
+        osc.type = 'square';
+        const freq = isAccent ? 1000 : 600;
+        osc.frequency.setValueAtTime(freq, time);
+        gainNode.gain.setValueAtTime(isAccent ? 0.35 : 0.18, time);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, time + 0.04);
+        osc.start(time);
+        osc.stop(time + 0.04);
+      }
+    }
+
+    function metroScheduleAhead() {
+      while (nextMetroNoteTime < metroAudioCtx.currentTime + 0.1) {
+        const beatToPlay = currentMetroBeat;
+        const noteTime = nextMetroNoteTime;
+        playMetroClick(noteTime, beatToPlay);
+
+        // Schedule visual flash synchronized with note time
+        const delayMs = Math.max(0, (noteTime - metroAudioCtx.currentTime) * 1000);
+        setTimeout(() => {
+          flashBeatDot(beatToPlay, beatToPlay === 0);
+        }, delayMs);
+
+        // Advance to next beat
+        const secondsPerBeat = 60.0 / metroBpm;
+        nextMetroNoteTime += secondsPerBeat;
+        currentMetroBeat = (currentMetroBeat + 1) % metroBeatsPerBar;
+      }
+    }
+
+    function startMetronome() {
+      initMetroAudio();
+      if (isMetroRunning) return;
+      isMetroRunning = true;
+      currentMetroBeat = 0;
+      nextMetroNoteTime = metroAudioCtx.currentTime + 0.05;
+
+      const btn = document.getElementById('metroToggleBtn');
+      if (btn) {
+        btn.innerHTML = '⏱️ Metronomo: ON';
+        btn.classList.add('active');
+      }
+
+      metroTimerId = setInterval(metroScheduleAhead, 25);
+    }
+
+    function stopMetronome() {
+      isMetroRunning = false;
+      if (metroTimerId) {
+        clearInterval(metroTimerId);
+        metroTimerId = null;
+      }
+      const btn = document.getElementById('metroToggleBtn');
+      if (btn) {
+        btn.innerHTML = '⏱️ Metronomo: OFF';
+        btn.classList.remove('active');
+      }
+      document.querySelectorAll('.metro-dot').forEach(d => {
+        d.classList.remove('flash-accent', 'flash-beat');
+      });
+    }
+
+    function toggleMetronome() {
+      if (isMetroRunning) {
+        stopMetronome();
+      } else {
+        startMetronome();
+      }
+    }
+
+    function updateMetronomeFromSong(data) {
+      if (!data || !data.meta) return;
+      if (data.meta.bpm) {
+        setBpm(data.meta.bpm);
+      }
+      if (data.meta.time_signature) {
+        setTimeSignature(data.meta.time_signature);
       }
     }
 
@@ -569,6 +936,7 @@
       });
 
       view.innerHTML = html;
+      updateMetronomeFromSong(data);
     }
 
     function togglePlay() {
@@ -584,6 +952,11 @@
       document.getElementById('playBtn').innerHTML = '⏸️ Pausa';
       document.getElementById('playBtn').classList.remove('btn-primary');
       document.getElementById('playBtn').style.background = '#ef476f';
+
+      const autoStart = document.getElementById('metroAutoStartWithPlay');
+      if (autoStart && autoStart.checked) {
+        startMetronome();
+      }
 
       const audioTrack = document.getElementById('audioTrack');
       if (audioTrack && audioTrack.src) {
@@ -602,6 +975,12 @@
     function pause() {
       isPlaying = false;
       clearInterval(timerInterval);
+
+      const autoStart = document.getElementById('metroAutoStartWithPlay');
+      if (autoStart && autoStart.checked && isMetroRunning) {
+        stopMetronome();
+      }
+
       const audioTrack = document.getElementById('audioTrack');
       if (audioTrack && audioTrack.src) {
         audioTrack.pause();
@@ -761,6 +1140,8 @@
       if (e.code === 'Space') {
         e.preventDefault();
         togglePlay();
+      } else if (e.code === 'KeyM') {
+        toggleMetronome();
       } else if (e.code === 'ArrowRight') {
         jumpSeconds(20);
       } else if (e.code === 'ArrowLeft') {

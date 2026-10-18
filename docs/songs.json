@@ -2,6 +2,8 @@
   "firth-of-fifth.md": {
     "filename": "firth-of-fifth.md",
     "meta": {
+      "bpm": 65,
+      "time_signature": "4/4",
       "title": "Firth of Fifth",
       "artist": "Genesis"
     },
@@ -211,7 +213,9 @@
       "title": "Fliegerlied (So a schöner Tag)",
       "artist": "Donikkl",
       "tags": "oktoberfest, schlager, party, bavaria",
-      "original_key": "C"
+      "original_key": "C",
+      "bpm": 134,
+      "time_signature": "4/4"
     },
     "tips": "Giro di Do aperto, festoso e irresistibile (`[C] -> [G] -> [Am] -> [F]`). Sul ritornello apri le ottave e tieni gli accordi brillanti sui tasti alti per guidare il coro di tutto il tendone!",
     "lines": [
@@ -475,6 +479,8 @@
   "gloria.md": {
     "filename": "gloria.md",
     "meta": {
+      "bpm": 130,
+      "time_signature": "4/4",
       "title": "Gloria",
       "artist": "Umberto Tozzi"
     },
@@ -808,7 +814,9 @@
       "title": "Joana (Du geile Sau)",
       "artist": "Peter Wackel",
       "tags": "oktoberfest, schlager, party, bavaria",
-      "original_key": "G"
+      "original_key": "G",
+      "bpm": 132,
+      "time_signature": "4/4"
     },
     "tips": "Basso alternato incalzante alla mano sinistra (G - D) e accordi staccati in levare alla mano destra. Al celebre controcanto urlato della folla (*\"Du geile Sau!\"* e *\"Du Luder!\"*), mantieni il groove solido senza perdere un battito!",
     "lines": [
@@ -1079,6 +1087,8 @@
   "love-of-my-life.md": {
     "filename": "love-of-my-life.md",
     "meta": {
+      "bpm": 78,
+      "time_signature": "4/4",
       "title": "Love of My Life",
       "artist": "Queen"
     },
@@ -1309,6 +1319,8 @@
   "solsbury-hill.md": {
     "filename": "solsbury-hill.md",
     "meta": {
+      "bpm": 102,
+      "time_signature": "7/4",
       "title": "Solsbury Hill",
       "artist": "Peter Gabriel"
     },
@@ -1642,7 +1654,7 @@
       "year": "1977",
       "original_key": "D",
       "time_signature": "4/4",
-      "bpm": "76",
+      "bpm": 76,
       "duration_seconds": "274"
     },
     "tips": "Composta dal bassista John Deacon ma guidata dal pianoforte a coda di Freddie Mercury. La mano destra apre con il celebre arpeggio in `[D]` con ricami melodici (Fa# - La - Re - Do# - Si). Nel passaggio del rimprovero del padrone (\"His boss said to him...\"), prestare massima attenzione alla discesa cromatica del basso al pianoforte con la sinistra: `[Bm] -> [Bm/A] -> [Bm/G#] -> [G] -> [A]`. Nel ritornello le dinamiche esplodono con l'inaspettata risoluzione drammatica sul minore `[Gm] -> [D]` (\"'Cos you know you should do better\").",
@@ -1967,6 +1979,8 @@
   "su-di-noi.md": {
     "filename": "su-di-noi.md",
     "meta": {
+      "bpm": 115,
+      "time_signature": "4/4",
       "title": "Su di noi",
       "artist": "Pupo"
     },
@@ -2308,7 +2322,9 @@
       "artist": "Bryan Adams",
       "tags": "rock, pop-rock, 80s, classic-rock, anthem, party",
       "original_key": "D",
-      "audio": "audio/summer-of-69.mp3"
+      "audio": "audio/summer-of-69.mp3",
+      "bpm": 139,
+      "time_signature": "4/4"
     },
     "tips": "Mano destra sul celebre arpeggio/ritmo in ottavi serrati alternando [D] e [A]. Nel bridge modulazione improvvisa sul Fa Maggiore [F] e Sib [Bb] prima della ripartenza a tavoletta!",
     "lines": [
@@ -2676,7 +2692,9 @@
       "artist": "Tina Turner",
       "tags": "rock, pop, 80s, anthem, zurich, goldkueste",
       "original_key": "F",
-      "audio": "audio/the-best.mp3"
+      "audio": "audio/the-best.mp3",
+      "bpm": 104,
+      "time_signature": "4/4"
     },
     "tips": "Il groove dell'intro si basa sul celebre riff di sintetizzatore in semicrome su ottave fisse di [F]. Nel ritornello le terzine vocali si appoggiano su bassi solidi [F] - [C] - [Bb]. Occhio al cambio di tonalità trionfale in [G] al solo di sax!",
     "lines": [
@@ -2988,7 +3006,7 @@
       "year": "1970",
       "original_key": "G#m",
       "time_signature": "4/4",
-      "bpm": "132",
+      "bpm": 132,
       "duration_seconds": "535"
     },
     "tips": "Riff leggendario di organo Hammond L-122 con saturazione valvolare, ispirato allo stile proto-prog di Keith Emerson (\"Rondo\"). La mano sinistra martella ottavi in staccato sulla fondamentale (G#), mentre la destra crea tensione ritmica con rivolti di `[G#m]`, scendendo poi sulla cadenza frigia `[F#] -> [E] -> [D#]`. Nello special teatrale centrale passare a drawbar morbidi prima del crescendo accelerando chitarra-organo.",
@@ -3364,7 +3382,7 @@
       "year": "1971",
       "original_key": "F#",
       "time_signature": "12/8",
-      "bpm": "68",
+      "bpm": 68,
       "duration_seconds": "629"
     },
     "tips": "Il capolavoro narrativo di *Nursery Cryme*. Tony Banks intreccia il timbro vellutato dell'Hohner Pianet con gli archi maestosi del Mellotron Mark II e l'organo Hammond. Nella prima parte pastorale in 12/8 mantenere un tocco morbido e arpeggiato a crome tra `[F#]`, `[E]` e `[Bm]`. Sulla filastrocca (\"Old King Cole\") l'armonia vira in `[F#m]` con la caratteristica cadenza drammatica verso `[C#]`. Nel celebre finale teatrale (\"Touch me now!\"), sostenere a piena voce con accordi a blocco a due mani alternando `[F#]`, `[E]` e `[B]`.",
@@ -3719,7 +3737,9 @@
       "title": "Wahnsinn (Hölle, Hölle, Hölle)",
       "artist": "Wolfgang Petry",
       "tags": "oktoberfest, schlager, party, bavaria",
-      "original_key": "D"
+      "original_key": "D",
+      "bpm": 128,
+      "time_signature": "4/4"
     },
     "tips": "Ritmo Schlager dritto a martello con accordi pompati in levare e ottave al basso. Nel ritornello, il break e la pausa prima dell'urlo della folla *\"Hölle, Hölle, Hölle!\"* sono il segreto per far esplodere la birreria!",
     "lines": [
@@ -3993,7 +4013,9 @@
       "title": "Weiß der Geier (Tanzbar)",
       "artist": "Wolfgang Petry",
       "tags": "oktoberfest, schlager, party, bavaria",
-      "original_key": "C"
+      "original_key": "C",
+      "bpm": 130,
+      "time_signature": "4/4"
     },
     "tips": "Tipico beat trascinante di Wolle Petry! Basso pulsante in ottave alla mano sinistra e accordi energici e marcati alla mano destra. Nel ritornello (\"Weiß der Geier...\"), apri il volume sugli accordi aperti `[C] -> [G] -> [Am] -> [F] [G]`.",
     "lines": [
@@ -4294,6 +4316,8 @@
   "where-the-streets-have-no-name.md": {
     "filename": "where-the-streets-have-no-name.md",
     "meta": {
+      "bpm": 126,
+      "time_signature": "4/4",
       "title": "Where the Streets Have No Name",
       "artist": "U2"
     },

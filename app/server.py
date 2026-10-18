@@ -62,6 +62,36 @@ def parse_song_file(file_path: Path):
         idx += 1  # Skip closing ---
         meta = parse_frontmatter("\n".join(yaml_lines))
 
+    # Extract BPM and Time Signature if not in frontmatter
+    if "bpm" not in meta:
+        bpm_m = re.search(r'bpm:\s*(\d+)', content, re.I)
+        if bpm_m:
+            meta["bpm"] = int(bpm_m.group(1))
+        else:
+            bpm_m2 = re.search(r'[~≈]\s*(\d+)\s*bpm', content, re.I)
+            if bpm_m2:
+                meta["bpm"] = int(bpm_m2.group(1))
+            else:
+                bpm_m3 = re.search(r'(\d+)\s*bpm', content, re.I)
+                if bpm_m3:
+                    meta["bpm"] = int(bpm_m3.group(1))
+    else:
+        try:
+            meta["bpm"] = int(meta["bpm"])
+        except (ValueError, TypeError):
+            pass
+
+    if "time_signature" not in meta:
+        ts_m = re.search(r'time_signature:\s*["\']?(\d+/\d+)', content, re.I)
+        if ts_m:
+            meta["time_signature"] = ts_m.group(1)
+        else:
+            ts_m2 = re.search(r'tempo:\*\*\s*(\d+/\d+)', content, re.I)
+            if ts_m2:
+                meta["time_signature"] = ts_m2.group(1)
+            else:
+                meta["time_signature"] = "4/4"
+
     # 2. Parse Remaining Markdown
     parsed_lines = []
     current_time_sec = 0.0
@@ -162,6 +192,8 @@ class ChordsHandler(SimpleHTTPRequestHandler):
                         "title": data["meta"].get("title", f.stem),
                         "artist": data["meta"].get("artist", "Sconosciuto"),
                         "key": data["meta"].get("original_key", ""),
+                        "bpm": data["meta"].get("bpm"),
+                        "time_signature": data["meta"].get("time_signature", "4/4"),
                     })
                 except Exception as e:
                     print(f"Errore lettura {f.name}: {e}")

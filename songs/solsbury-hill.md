@@ -2,7 +2,7 @@
 
 > **Info brano:**  
 > 🎹 **Tonalità Originale:** Si Maggiore (B) *(Spesso suonato con capotasto al IV su forme in G, qui trascritto in B reale o per piano/tastiera)*  
-> ⏱️ **Tempo:** 7/4 (suddiviso ritmicamente 4/4 + 3/4 o 1-2-3-4 / 1-2-3)  
+> ⏱️ **Tempo:** 7/4 (~102 BPM, suddiviso ritmicamente 4/4 + 3/4 o 1-2-3-4 / 1-2-3)  
 > 💡 **Piano Tips:** Il tempo dispari in 7/4 è il cuore del pezzo. Mantieni l'ostinato ritmico con la mano sinistra (B - F# - B) o in G con arpeggi costanti a semicrome. Nel ritornello ("boom-boom-boom") la cadenza armonica spinge verso la risoluzione.
 
 ---
