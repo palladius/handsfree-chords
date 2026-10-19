@@ -33,6 +33,32 @@ def parse_seconds(ts_str):
     return int(m.group(1)) * 60 + float(m.group(2)) if m else 0.0
 
 
+def extract_harmonic_summary(raw_lines: list) -> dict:
+    """Extract unique chords for strofa, ritornello, and bridge."""
+    sections = {}
+    curr_sec = None
+    for line in raw_lines:
+        if line.startswith("### "):
+            title = line.replace("### ", "").strip().upper()
+            if any(k in title for k in ["STROFA", "VERSE", "A1", "A2"]):
+                curr_sec = "strofa"
+            elif any(k in title for k in ["RITORNELLO", "CHORUS", "HOOK", "RIT"]):
+                curr_sec = "ritornello"
+            elif any(k in title for k in ["BRIDGE", "SPECIAL", "INCISO"]):
+                curr_sec = "bridge"
+            else:
+                curr_sec = None
+        elif curr_sec and not line.startswith("---") and not line.startswith(">"):
+            chords = re.findall(r"\[([a-zA-Z0-9#b♯♭/]+)\]", line)
+            if chords:
+                if curr_sec not in sections:
+                    sections[curr_sec] = []
+                for c in chords:
+                    if c not in sections[curr_sec]:
+                        sections[curr_sec].append(c)
+    return sections
+
+
 def build_docs():
     all_songs = {}
     song_list = []
@@ -127,10 +153,13 @@ def build_docs():
             rendered = re.sub(r"\[(.*?)\]", r'<span class="chord">\1</span>', line)
             parsed_lines.append({"type": "lyric", "raw": line, "rendered": rendered, "seconds": line_sec})
 
+        summary = extract_harmonic_summary(lines)
+
         song_obj = {
             "filename": f.name,
             "meta": meta,
             "tips": tips,
+            "summary": summary,
             "lines": parsed_lines
         }
         all_songs[f.name] = song_obj
@@ -141,6 +170,7 @@ def build_docs():
             "key": meta.get("original_key", ""),
             "bpm": meta.get("bpm"),
             "time_signature": meta.get("time_signature", "4/4"),
+            "summary": summary
         })
 
     # Write songs.json
@@ -156,15 +186,24 @@ def build_docs():
     let staticSongsMap = {};
 
     async function init() {
+      renderBeatDots();
       try {
         const res = await fetch('songs.json');
         staticSongsMap = await res.json();
         const select = document.getElementById('songSelect');
         const songEntries = Object.values(staticSongsMap);
+        allSongsList = songEntries.map(s => ({
+          filename: s.filename,
+          title: s.meta.title || s.filename,
+          artist: s.meta.artist || 'Sconosciuto',
+          key: s.meta.original_key || '',
+          bpm: s.meta.bpm,
+          time_signature: s.meta.time_signature || '4/4',
+          summary: s.summary || {}
+        }));
         select.innerHTML = songEntries.map(s => `<option value="${s.filename}">${s.meta.title || s.filename} (${s.meta.artist || ''})</option>`).join('');
-        if (songEntries.length > 0) {
-          loadSelectedSong();
-        }
+        renderCatalog();
+        showCatalogView();
       } catch (e) {
         console.error("Errore caricamento songs.json:", e);
       }
@@ -179,11 +218,12 @@ def build_docs():
 
       songData = staticSongsMap[filename];
       renderSong(songData);
+      showPlayerView();
     }
     """
 
     # Replace the fetch block in template
-    fetch_pattern = re.compile(r"// Load available songs[\s\S]*?renderSong\(songData\);\s*}", re.MULTILINE)
+    fetch_pattern = re.compile(r"async function init\(\)[\s\S]*?showPlayerView\(\);\s*}", re.MULTILINE)
     static_html = fetch_pattern.sub(static_js_logic.strip(), template_html)
 
     (DOCS_DIR / "index.html").write_text(static_html, encoding="utf-8")

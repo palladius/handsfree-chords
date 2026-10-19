@@ -8,6 +8,25 @@
       "artist": "Genesis"
     },
     "tips": "Il capolavoro assoluto di Tony Banks. L'intro classica arpeggiata è leggendaria. Sulla strofa (\"The path is clear\"), la mano sinistra scende sul basso (`[B]` $\\to$ `[B7/A]` $\\to$ `[E/G#]` $\\to$ `[B/F#]`). Voicing aperti ed eleganti.",
+    "summary": {
+      "strofa": [
+        "B",
+        "B7/A",
+        "E/G#",
+        "B/F#",
+        "E",
+        "C#m",
+        "F#"
+      ],
+      "ritornello": [
+        "G#m",
+        "D#m",
+        "E",
+        "B",
+        "C#m",
+        "F#"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -218,6 +237,21 @@
       "time_signature": "4/4"
     },
     "tips": "Giro di Do aperto, festoso e irresistibile (`[C] -> [G] -> [Am] -> [F]`). Sul ritornello apri le ottave e tieni gli accordi brillanti sui tasti alti per guidare il coro di tutto il tendone!",
+    "summary": {
+      "strofa": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ],
+      "ritornello": [
+        "Dm",
+        "G",
+        "C",
+        "Am",
+        "F"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -485,6 +519,26 @@
       "artist": "Umberto Tozzi"
     },
     "tips": "Il leggendario riff tastieristico/pianistico batte ottavi dritti e incalzanti tra `[SI]` e `[MI]`. Mano sinistra fa l'ostinato ritmico sul basso (B - E). Attenzione alla discesa armonica verso lo special `[DO#m] -> [FA#7] -> [SI] -> [MImaj7] -> [LA] [SI] -> [MI]`.",
+    "summary": {
+      "strofa": [
+        "SI",
+        "MI",
+        "RE",
+        "LA",
+        "DO#m",
+        "FA#",
+        "MImaj7"
+      ],
+      "ritornello": [
+        "DO#m",
+        "FA#7",
+        "SI",
+        "MImaj7",
+        "LA",
+        "MI",
+        "FA#"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -819,6 +873,21 @@
       "time_signature": "4/4"
     },
     "tips": "Basso alternato incalzante alla mano sinistra (G - D) e accordi staccati in levare alla mano destra. Al celebre controcanto urlato della folla (*\"Du geile Sau!\"* e *\"Du Luder!\"*), mantieni il groove solido senza perdere un battito!",
+    "summary": {
+      "strofa": [
+        "G",
+        "Em",
+        "C",
+        "D"
+      ],
+      "ritornello": [
+        "Am",
+        "Em",
+        "C",
+        "D",
+        "G"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -1093,6 +1162,34 @@
       "artist": "Queen"
     },
     "tips": "Il capolavoro di Freddie Mercury al pianoforte. Abbondanza di arpeggi classicheggianti della mano destra e discese di basso cromatiche con la sinistra. Fondamentale il passaggio `[Cdim]` / `[B]` nello special.",
+    "summary": {
+      "strofa": [
+        "A",
+        "F#m",
+        "Bm",
+        "E",
+        "A7",
+        "D"
+      ],
+      "ritornello": [
+        "Bm",
+        "F#m",
+        "G",
+        "D",
+        "Em",
+        "A"
+      ],
+      "bridge": [
+        "Bm",
+        "F#m",
+        "G",
+        "D",
+        "B",
+        "Cdim",
+        "Em",
+        "A"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -1316,6 +1413,340 @@
       }
     ]
   },
+  "romeo-and-juliet.md": {
+    "filename": "romeo-and-juliet.md",
+    "meta": {
+      "bpm": 78,
+      "time_signature": "4/4",
+      "title": "Romeo and Juliet",
+      "artist": "Dire Straits"
+    },
+    "tips": "",
+    "summary": {
+      "strofa": [
+        "F",
+        "C",
+        "Dm",
+        "Bb"
+      ],
+      "ritornello": [
+        "F",
+        "C",
+        "Dm",
+        "Bb"
+      ],
+      "bridge": [
+        "Dm",
+        "C",
+        "F",
+        "Bb"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Romeo and Juliet — Dire Straits",
+        "rendered": "# 🎵 Romeo and Juliet — Dire Straits",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO *(Arpeggio resofonico / piano lirico)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F] [F/E] | [Dm] [C] | [Bb] | [C] [F] |` *(x2)*",
+        "rendered": "`| <span class=\"chord\">F</span> <span class=\"chord\">F/E</span> | <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> <span class=\"chord\">F</span> |` *(x2)*",
+        "seconds": 12.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "A [F]lovestruck Romeo [C]sings the streets a serenade",
+        "rendered": "A <span class=\"chord\">F</span>lovestruck Romeo <span class=\"chord\">C</span>sings the streets a serenade",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Laying everybody low [C]with a lovesong that he [Bb]made",
+        "rendered": "<span class=\"chord\">Dm</span>Laying everybody low <span class=\"chord\">C</span>with a lovesong that he <span class=\"chord\">Bb</span>made",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Finds a [C]convenient streetlight, [F]steps out of the [Bb]shade",
+        "rendered": "Finds a <span class=\"chord\">C</span>convenient streetlight, <span class=\"chord\">F</span>steps out of the <span class=\"chord\">Bb</span>shade",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Says something like, [C]\"You and me, babe, how 'bout it?\" [Bb] [C]",
+        "rendered": "Says something like, <span class=\"chord\">C</span>\"You and me, babe, how 'bout it?\" <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 36.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Juliet says, \"Hey, it's Romeo, [C]you nearly gave me a heart attack\"",
+        "rendered": "<span class=\"chord\">F</span>Juliet says, \"Hey, it's Romeo, <span class=\"chord\">C</span>you nearly gave me a heart attack\"",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "He's [Dm]underneath the window, [C]she's singing, \"Hey la, my boyfriend's [Bb]back",
+        "rendered": "He's <span class=\"chord\">Dm</span>underneath the window, <span class=\"chord\">C</span>she's singing, \"Hey la, my boyfriend's <span class=\"chord\">Bb</span>back",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "You shouldn't [C]come around here singing [F]up at people like [Bb]that",
+        "rendered": "You shouldn't <span class=\"chord\">C</span>come around here singing <span class=\"chord\">F</span>up at people like <span class=\"chord\">Bb</span>that",
+        "seconds": 54.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Anyway, [C]what you gonna do about it?\" [Bb] [C]",
+        "rendered": "Anyway, <span class=\"chord\">C</span>what you gonna do about it?\" <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 60.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Juliet, [C]the dice was loaded from the [Dm]start",
+        "rendered": "<span class=\"chord\">F</span>Juliet, <span class=\"chord\">C</span>the dice was loaded from the <span class=\"chord\">Dm</span>start",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [F]I bet, and you ex[C]ploded in my [Bb]heart",
+        "rendered": "And <span class=\"chord\">F</span>I bet, and you ex<span class=\"chord\">C</span>ploded in my <span class=\"chord\">Bb</span>heart",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And I for[F]get, I for[C]get the movie [Dm]song",
+        "rendered": "And I for<span class=\"chord\">F</span>get, I for<span class=\"chord\">C</span>get the movie <span class=\"chord\">Dm</span>song",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When you gonna [Bb]realize it was [C]just that the time was [Dm]wrong, [C]Juliet?",
+        "rendered": "When you gonna <span class=\"chord\">Bb</span>realize it was <span class=\"chord\">C</span>just that the time was <span class=\"chord\">Dm</span>wrong, <span class=\"chord\">C</span>Juliet?",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bb] | [C] [F] |`",
+        "rendered": "`| <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> <span class=\"chord\">F</span> |`",
+        "seconds": 90.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Come [F]up on different streets, [C]they both were the streets of shame",
+        "rendered": "Come <span class=\"chord\">F</span>up on different streets, <span class=\"chord\">C</span>they both were the streets of shame",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Both dirty, both mean, [C]yes, and the dream was just the [Bb]same",
+        "rendered": "<span class=\"chord\">Dm</span>Both dirty, both mean, <span class=\"chord\">C</span>yes, and the dream was just the <span class=\"chord\">Bb</span>same",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And I [C]dreamed your dream for you and [F]now your dream is [Bb]real",
+        "rendered": "And I <span class=\"chord\">C</span>dreamed your dream for you and <span class=\"chord\">F</span>now your dream is <span class=\"chord\">Bb</span>real",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "How can you [C]look at me as if I was just one more of your little [Bb]deals? [C]",
+        "rendered": "How can you <span class=\"chord\">C</span>look at me as if I was just one more of your little <span class=\"chord\">Bb</span>deals? <span class=\"chord\">C</span>",
+        "seconds": 114.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 4",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Well, you can [F]fall for chains of silver, [C]you can fall for chains of gold",
+        "rendered": "Well, you can <span class=\"chord\">F</span>fall for chains of silver, <span class=\"chord\">C</span>you can fall for chains of gold",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "You can [Dm]fall for pretty strangers [C]and the promises they [Bb]hold",
+        "rendered": "You can <span class=\"chord\">Dm</span>fall for pretty strangers <span class=\"chord\">C</span>and the promises they <span class=\"chord\">Bb</span>hold",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "You [C]promised me everything, you [F]promised me thick and [Bb]thin, yeah",
+        "rendered": "You <span class=\"chord\">C</span>promised me everything, you <span class=\"chord\">F</span>promised me thick and <span class=\"chord\">Bb</span>thin, yeah",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Now you just say, [C]\"Oh, Romeo, yeah, you know I used to have a scene with [Bb]him\" [C]",
+        "rendered": "Now you just say, <span class=\"chord\">C</span>\"Oh, Romeo, yeah, you know I used to have a scene with <span class=\"chord\">Bb</span>him\" <span class=\"chord\">C</span>",
+        "seconds": 138.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Juliet, [C]the dice was loaded from the [Dm]start",
+        "rendered": "<span class=\"chord\">F</span>Juliet, <span class=\"chord\">C</span>the dice was loaded from the <span class=\"chord\">Dm</span>start",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [F]I bet, and you ex[C]ploded in my [Bb]heart",
+        "rendered": "And <span class=\"chord\">F</span>I bet, and you ex<span class=\"chord\">C</span>ploded in my <span class=\"chord\">Bb</span>heart",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And I for[F]get, I for[C]get the movie [Dm]song",
+        "rendered": "And I for<span class=\"chord\">F</span>get, I for<span class=\"chord\">C</span>get the movie <span class=\"chord\">Dm</span>song",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When you gonna [Bb]realize it was [C]just that the time was [Dm]wrong, [C]Juliet?",
+        "rendered": "When you gonna <span class=\"chord\">Bb</span>realize it was <span class=\"chord\">C</span>just that the time was <span class=\"chord\">Dm</span>wrong, <span class=\"chord\">C</span>Juliet?",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bb] | [C] [F] |`",
+        "rendered": "`| <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> <span class=\"chord\">F</span> |`",
+        "seconds": 168.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]I can't do the [C]talks like they [F]talk on the TV",
+        "rendered": "<span class=\"chord\">Dm</span>I can't do the <span class=\"chord\">C</span>talks like they <span class=\"chord\">F</span>talk on the TV",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]And I can't do a [C]love song the [F]way it's meant to be",
+        "rendered": "<span class=\"chord\">Dm</span>And I can't do a <span class=\"chord\">C</span>love song the <span class=\"chord\">F</span>way it's meant to be",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]I can't do every[C]thing, but I'd do [Bb]anything for you",
+        "rendered": "<span class=\"chord\">Dm</span>I can't do every<span class=\"chord\">C</span>thing, but I'd do <span class=\"chord\">Bb</span>anything for you",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]I can't do [C]anything except be in [Bb]love with [C]you",
+        "rendered": "<span class=\"chord\">Dm</span>I can't do <span class=\"chord\">C</span>anything except be in <span class=\"chord\">Bb</span>love with <span class=\"chord\">C</span>you",
+        "seconds": 192.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 5",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "And [F]all I do is miss you and the [C]way we used to be",
+        "rendered": "And <span class=\"chord\">F</span>all I do is miss you and the <span class=\"chord\">C</span>way we used to be",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]All I do is keep the beat the [C]bad company [Bb]",
+        "rendered": "<span class=\"chord\">Dm</span>All I do is keep the beat the <span class=\"chord\">C</span>bad company <span class=\"chord\">Bb</span>",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [C]all I do is kiss you through the [F]bars of a rhyme [Bb]",
+        "rendered": "And <span class=\"chord\">C</span>all I do is kiss you through the <span class=\"chord\">F</span>bars of a rhyme <span class=\"chord\">Bb</span>",
+        "seconds": 210.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C]Juliet, I'd do the stars with you any [Bb]time [C]",
+        "rendered": "<span class=\"chord\">C</span>Juliet, I'd do the stars with you any <span class=\"chord\">Bb</span>time <span class=\"chord\">C</span>",
+        "seconds": 216.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO & OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Juliet, [C]the dice was loaded from the [Dm]start",
+        "rendered": "<span class=\"chord\">F</span>Juliet, <span class=\"chord\">C</span>the dice was loaded from the <span class=\"chord\">Dm</span>start",
+        "seconds": 222.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [F]I bet, and you ex[C]ploded in my [Bb]heart",
+        "rendered": "And <span class=\"chord\">F</span>I bet, and you ex<span class=\"chord\">C</span>ploded in my <span class=\"chord\">Bb</span>heart",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And I for[F]get, I for[C]get the movie [Dm]song",
+        "rendered": "And I for<span class=\"chord\">F</span>get, I for<span class=\"chord\">C</span>get the movie <span class=\"chord\">Dm</span>song",
+        "seconds": 234.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When you gonna [Bb]realize it was [C]just that the time was [Dm]wrong, [C]Juliet?",
+        "rendered": "When you gonna <span class=\"chord\">Bb</span>realize it was <span class=\"chord\">C</span>just that the time was <span class=\"chord\">Dm</span>wrong, <span class=\"chord\">C</span>Juliet?",
+        "seconds": 240.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bb] | [C] [F] |`",
+        "rendered": "`| <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> <span class=\"chord\">F</span> |`",
+        "seconds": 246.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Juliet, [C] [Bb] it was just that the time was [F]wrong. 🛑",
+        "rendered": "<span class=\"chord\">Dm</span>Juliet, <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> it was just that the time was <span class=\"chord\">F</span>wrong. 🛑",
+        "seconds": 252.0
+      }
+    ]
+  },
   "solsbury-hill.md": {
     "filename": "solsbury-hill.md",
     "meta": {
@@ -1325,6 +1756,21 @@
       "artist": "Peter Gabriel"
     },
     "tips": "Il tempo dispari in 7/4 è il cuore del pezzo. Mantieni l'ostinato ritmico con la mano sinistra (B - F# - B) o in G con arpeggi costanti a semicrome. Nel ritornello (\"boom-boom-boom\") la cadenza armonica spinge verso la risoluzione.",
+    "summary": {
+      "strofa": [
+        "G#m",
+        "F#",
+        "B",
+        "E",
+        "C#m"
+      ],
+      "ritornello": [
+        "E",
+        "C#m",
+        "F#",
+        "B"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -1658,6 +2104,37 @@
       "duration_seconds": "274"
     },
     "tips": "Composta dal bassista John Deacon ma guidata dal pianoforte a coda di Freddie Mercury. La mano destra apre con il celebre arpeggio in `[D]` con ricami melodici (Fa# - La - Re - Do# - Si). Nel passaggio del rimprovero del padrone (\"His boss said to him...\"), prestare massima attenzione alla discesa cromatica del basso al pianoforte con la sinistra: `[Bm] -> [Bm/A] -> [Bm/G#] -> [G] -> [A]`. Nel ritornello le dinamiche esplodono con l'inaspettata risoluzione drammatica sul minore `[Gm] -> [D]` (\"'Cos you know you should do better\").",
+    "summary": {
+      "strofa": [
+        "D",
+        "E7",
+        "G",
+        "Gm",
+        "Bm",
+        "Bm/A",
+        "Bm/G#",
+        "A",
+        "Em7",
+        "C7",
+        "E",
+        "F#sus4",
+        "F#"
+      ],
+      "ritornello": [
+        "D",
+        "Bm",
+        "E7",
+        "A",
+        "Gm",
+        "Bm/A",
+        "Bm/G#",
+        "G",
+        "D7",
+        "Em7",
+        "C7",
+        "E"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -1985,6 +2462,34 @@
       "artist": "Pupo"
     },
     "tips": "Arpeggio pop fluido mano destra + ottave/quinte aperte alla mano sinistra. Occhio alla modulazione sul `[SI7]` che spinge forte verso `[MIm]`.",
+    "summary": {
+      "strofa": [
+        "DO",
+        "MIm",
+        "LA",
+        "REm",
+        "SOL",
+        "MI"
+      ],
+      "ritornello": [
+        "LAm",
+        "FA",
+        "SOL",
+        "MIm",
+        "RE",
+        "SI7",
+        "DO",
+        "SI"
+      ],
+      "bridge": [
+        "SOL",
+        "SI",
+        "MIm",
+        "LAm",
+        "RE",
+        "SI7"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -2315,6 +2820,287 @@
       }
     ]
   },
+  "sultans-of-swing.md": {
+    "filename": "sultans-of-swing.md",
+    "meta": {
+      "bpm": 148,
+      "time_signature": "4/4",
+      "title": "Sultans of Swing",
+      "artist": "Dire Straits"
+    },
+    "tips": "",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "C",
+        "Bb",
+        "A",
+        "F"
+      ],
+      "ritornello": [
+        "Bb",
+        "C",
+        "Dm"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Sultans of Swing — Dire Straits",
+        "rendered": "# 🎵 Sultans of Swing — Dire Straits",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [Dm] [C] [Bb] [A] |` *(x2)*",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">A</span> |` *(x2)*",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] [Bb] [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">A</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]You get a shiver in the dark, it's raining in the [C]park but meantime[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>You get a shiver in the dark, it's raining in the <span class=\"chord\">C</span>park but meantime<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]South of the river you stop and you [C]hold everything[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>South of the river you stop and you <span class=\"chord\">C</span>hold everything<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]A band is blowing Dixie double four [C]time",
+        "rendered": "<span class=\"chord\">F</span>A band is blowing Dixie double four <span class=\"chord\">C</span>time",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]You feel alright when you hear the music [Dm]play [Bb] [C]",
+        "rendered": "<span class=\"chord\">Bb</span>You feel alright when you hear the music <span class=\"chord\">Dm</span>play <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 42.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Now you step inside, but you don't [C]see too many faces[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>Now you step inside, but you don't <span class=\"chord\">C</span>see too many faces<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Coming in out of the rain to hear the [C]jazz go down[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>Coming in out of the rain to hear the <span class=\"chord\">C</span>jazz go down<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 54.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Too much competition in other [C]places",
+        "rendered": "<span class=\"chord\">F</span>Too much competition in other <span class=\"chord\">C</span>places",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Ah, but the horns they're blowing sound so [Dm]fine [Bb] [C]",
+        "rendered": "<span class=\"chord\">Bb</span>Ah, but the horns they're blowing sound so <span class=\"chord\">Dm</span>fine <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Way on downsouth, [Dm] [C] [Bb] way on downsouth, [C] London [Dm]town [C] [Bb] [C]",
+        "rendered": "Way on downsouth, <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> way on downsouth, <span class=\"chord\">C</span> London <span class=\"chord\">Dm</span>town <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 72.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]You check out Guitar George, he knows [C]all the chords[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>You check out Guitar George, he knows <span class=\"chord\">C</span>all the chords<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Mind, he's strictly rhythm, he doesn't want to make it [C]cry or sing[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>Mind, he's strictly rhythm, he doesn't want to make it <span class=\"chord\">C</span>cry or sing<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]And an old guitar is all he can af[C]ford",
+        "rendered": "<span class=\"chord\">F</span>And an old guitar is all he can af<span class=\"chord\">C</span>ford",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]When he gets up under the lights to play his [Dm]thing [Bb] [C]",
+        "rendered": "<span class=\"chord\">Bb</span>When he gets up under the lights to play his <span class=\"chord\">Dm</span>thing <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 96.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "And [Bb]Harry doesn't mind if he [C]doesn't make the scene",
+        "rendered": "And <span class=\"chord\">Bb</span>Harry doesn't mind if he <span class=\"chord\">C</span>doesn't make the scene",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "He's [Bb]got a daytime job, he's doing [Dm]alright",
+        "rendered": "He's <span class=\"chord\">Bb</span>got a daytime job, he's doing <span class=\"chord\">Dm</span>alright",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "He can [Bb]play the honky-tonk like [C]anything",
+        "rendered": "He can <span class=\"chord\">Bb</span>play the honky-tonk like <span class=\"chord\">C</span>anything",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Saving it up for Friday [Dm]night [Bb] [C]",
+        "rendered": "<span class=\"chord\">Bb</span>Saving it up for Friday <span class=\"chord\">Dm</span>night <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "With the Sultans, [Dm] [C] [Bb] with the Sultans of [C]Swing [Dm] [C] [Bb] [C]",
+        "rendered": "With the Sultans, <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> with the Sultans of <span class=\"chord\">C</span>Swing <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 126.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 SOLO 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] [Bb] [A] | [Dm] | [C] [Bb] [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">A</span> | <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">A</span> |`",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F] | [C] | [Bb] | [Dm] [Bb] [C] |`",
+        "rendered": "`| <span class=\"chord\">F</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">Dm</span> <span class=\"chord\">Bb</span> <span class=\"chord\">C</span> |`",
+        "seconds": 138.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 4",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]And then a crowd of young boys, they're fooling a[C]round in the corner[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>And then a crowd of young boys, they're fooling a<span class=\"chord\">C</span>round in the corner<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Drunk and dressed in their best brown baggies and their [C]platform soles[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>Drunk and dressed in their best brown baggies and their <span class=\"chord\">C</span>platform soles<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "They [F]don't give a damn about any trumpet-playing [C]band",
+        "rendered": "They <span class=\"chord\">F</span>don't give a damn about any trumpet-playing <span class=\"chord\">C</span>band",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "It [Bb]ain't what they call rock and [Dm]roll [Bb] [C]",
+        "rendered": "It <span class=\"chord\">Bb</span>ain't what they call rock and <span class=\"chord\">Dm</span>roll <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And the Sultans, [Dm] [C] [Bb] yeah the Sultans played [C]Creole [Dm] [C] [Bb] [C]",
+        "rendered": "And the Sultans, <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> yeah the Sultans played <span class=\"chord\">C</span>Creole <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 168.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 5",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]And then the man, he steps up to the [C]microphone[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>And then the man, he steps up to the <span class=\"chord\">C</span>microphone<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]And says at last, just as the time-bell [C]rings[Bb] [A]",
+        "rendered": "<span class=\"chord\">Dm</span>And says at last, just as the time-bell <span class=\"chord\">C</span>rings<span class=\"chord\">Bb</span> <span class=\"chord\">A</span>",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "\"Good[F]night, now it's time to go [C]home\"",
+        "rendered": "\"Good<span class=\"chord\">F</span>night, now it's time to go <span class=\"chord\">C</span>home\"",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And he [Bb]makes it fast with one more [Dm]thing: [Bb] [C]",
+        "rendered": "And he <span class=\"chord\">Bb</span>makes it fast with one more <span class=\"chord\">Dm</span>thing: <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "\"We are the Sultans, [Dm] [C] [Bb] we are the Sultans of [C]Swing\" [Dm] [C] [Bb] [C]",
+        "rendered": "\"We are the Sultans, <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> we are the Sultans of <span class=\"chord\">C</span>Swing\" <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> <span class=\"chord\">C</span>",
+        "seconds": 198.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 OUTRO SOLO *(Arpeggi veloci a cascata)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] [C] | [Bb] [C] |` *(x8)*",
+        "rendered": "`| <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> <span class=\"chord\">C</span> |` *(x8)*",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] |` 🛑",
+        "rendered": "`| <span class=\"chord\">Dm</span> |` 🛑",
+        "seconds": 210.0
+      }
+    ]
+  },
   "summer-of-69.md": {
     "filename": "summer-of-69.md",
     "meta": {
@@ -2327,6 +3113,23 @@
       "time_signature": "4/4"
     },
     "tips": "Mano destra sul celebre arpeggio/ritmo in ottavi serrati alternando [D] e [A]. Nel bridge modulazione improvvisa sul Fa Maggiore [F] e Sib [Bb] prima della ripartenza a tavoletta!",
+    "summary": {
+      "strofa": [
+        "D",
+        "A"
+      ],
+      "ritornello": [
+        "Bm",
+        "A",
+        "D",
+        "G"
+      ],
+      "bridge": [
+        "F",
+        "Bb",
+        "C"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -2697,6 +3500,29 @@
       "time_signature": "4/4"
     },
     "tips": "Il groove dell'intro si basa sul celebre riff di sintetizzatore in semicrome su ottave fisse di [F]. Nel ritornello le terzine vocali si appoggiano su bassi solidi [F] - [C] - [Bb]. Occhio al cambio di tonalità trionfale in [G] al solo di sax!",
+    "summary": {
+      "strofa": [
+        "F",
+        "Dm",
+        "Bb",
+        "C"
+      ],
+      "ritornello": [
+        "F",
+        "C",
+        "Bb",
+        "Dm",
+        "G",
+        "D",
+        "Em"
+      ],
+      "bridge": [
+        "Ab",
+        "Eb",
+        "Bb",
+        "C"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -3010,6 +3836,26 @@
       "duration_seconds": "535"
     },
     "tips": "Riff leggendario di organo Hammond L-122 con saturazione valvolare, ispirato allo stile proto-prog di Keith Emerson (\"Rondo\"). La mano sinistra martella ottavi in staccato sulla fondamentale (G#), mentre la destra crea tensione ritmica con rivolti di `[G#m]`, scendendo poi sulla cadenza frigia `[F#] -> [E] -> [D#]`. Nello special teatrale centrale passare a drawbar morbidi prima del crescendo accelerando chitarra-organo.",
+    "summary": {
+      "strofa": [
+        "G#m",
+        "F#",
+        "E",
+        "D#"
+      ],
+      "ritornello": [
+        "G#m",
+        "C#m",
+        "D#"
+      ],
+      "bridge": [
+        "C#m",
+        "B",
+        "A",
+        "G#",
+        "F#m"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -3386,6 +4232,27 @@
       "duration_seconds": "629"
     },
     "tips": "Il capolavoro narrativo di *Nursery Cryme*. Tony Banks intreccia il timbro vellutato dell'Hohner Pianet con gli archi maestosi del Mellotron Mark II e l'organo Hammond. Nella prima parte pastorale in 12/8 mantenere un tocco morbido e arpeggiato a crome tra `[F#]`, `[E]` e `[Bm]`. Sulla filastrocca (\"Old King Cole\") l'armonia vira in `[F#m]` con la caratteristica cadenza drammatica verso `[C#]`. Nel celebre finale teatrale (\"Touch me now!\"), sostenere a piena voce con accordi a blocco a due mani alternando `[F#]`, `[E]` e `[B]`.",
+    "summary": {
+      "strofa": [
+        "Bm",
+        "F#",
+        "E",
+        "A",
+        "D"
+      ],
+      "ritornello": [
+        "E",
+        "F#",
+        "B"
+      ],
+      "bridge": [
+        "F#m",
+        "B",
+        "D",
+        "E",
+        "C#"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -3731,6 +4598,321 @@
       }
     ]
   },
+  "tunnel-of-love.md": {
+    "filename": "tunnel-of-love.md",
+    "meta": {
+      "bpm": 128,
+      "time_signature": "4/4",
+      "title": "Tunnel of Love",
+      "artist": "Dire Straits"
+    },
+    "tips": "",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "C",
+        "Bb"
+      ],
+      "ritornello": [
+        "Gm",
+        "C",
+        "Bb",
+        "F",
+        "Dm"
+      ],
+      "bridge": [
+        "Bb",
+        "C",
+        "Dm"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Tunnel of Love — Dire Straits",
+        "rendered": "# 🎵 Tunnel of Love — Dire Straits",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO *(The Carousel Waltz sfuma nel riff rock)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [C] |` *(x2)*",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> |` *(x2)*",
+        "seconds": 12.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Getting crazy on the bus, [C]getting high on the train",
+        "rendered": "<span class=\"chord\">Dm</span>Getting crazy on the bus, <span class=\"chord\">C</span>getting high on the train",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Just another Saturday night [C]standing in the rain",
+        "rendered": "<span class=\"chord\">Bb</span>Just another Saturday night <span class=\"chord\">C</span>standing in the rain",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Now here comes the girl [C]all dressed in blue",
+        "rendered": "<span class=\"chord\">Dm</span>Now here comes the girl <span class=\"chord\">C</span>all dressed in blue",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]She looks like she knows [C]what she wants to do",
+        "rendered": "<span class=\"chord\">Bb</span>She looks like she knows <span class=\"chord\">C</span>what she wants to do",
+        "seconds": 36.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]She said, \"Hey mister, [C]where you going to?\"",
+        "rendered": "<span class=\"chord\">Dm</span>She said, \"Hey mister, <span class=\"chord\">C</span>where you going to?\"",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]I said, \"Nowhere special, [C]how about you?\"",
+        "rendered": "<span class=\"chord\">Bb</span>I said, \"Nowhere special, <span class=\"chord\">C</span>how about you?\"",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]She took me down to the fairground [C]by the sea",
+        "rendered": "<span class=\"chord\">Dm</span>She took me down to the fairground <span class=\"chord\">C</span>by the sea",
+        "seconds": 54.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Said, \"Come on baby, take a [C]ride with me\"",
+        "rendered": "<span class=\"chord\">Bb</span>Said, \"Come on baby, take a <span class=\"chord\">C</span>ride with me\"",
+        "seconds": 60.0
+      },
+      {
+        "type": "section",
+        "content": "🌊 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]And the lights are shining [C]on the boardwalk",
+        "rendered": "<span class=\"chord\">Gm</span>And the lights are shining <span class=\"chord\">C</span>on the boardwalk",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]And the kids are walking [C]in the fair",
+        "rendered": "<span class=\"chord\">Gm</span>And the kids are walking <span class=\"chord\">C</span>in the fair",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]Hear the carousel calling from the [C]darkness",
+        "rendered": "<span class=\"chord\">Gm</span>Hear the carousel calling from the <span class=\"chord\">C</span>darkness",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "There's a [Bb]magic in the summer [C]night air",
+        "rendered": "There's a <span class=\"chord\">Bb</span>magic in the summer <span class=\"chord\">C</span>night air",
+        "seconds": 84.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "And girl it [F]looks so pretty to me, just like it [C]always did",
+        "rendered": "And girl it <span class=\"chord\">F</span>looks so pretty to me, just like it <span class=\"chord\">C</span>always did",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Like the [Bb]Spanish City to what was [C]that kid",
+        "rendered": "Like the <span class=\"chord\">Bb</span>Spanish City to what was <span class=\"chord\">C</span>that kid",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "She took all my [F]pennies and threw them in the [C]wishing well",
+        "rendered": "She took all my <span class=\"chord\">F</span>pennies and threw them in the <span class=\"chord\">C</span>wishing well",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [Bb]walked with me into the [C]tunnel of [Dm]love",
+        "rendered": "And <span class=\"chord\">Bb</span>walked with me into the <span class=\"chord\">C</span>tunnel of <span class=\"chord\">Dm</span>love",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [C] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> |`",
+        "seconds": 114.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]In the carousel spin [C]and the neon glare",
+        "rendered": "<span class=\"chord\">Dm</span>In the carousel spin <span class=\"chord\">C</span>and the neon glare",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]We were laughing out loud in the [C]midnight air",
+        "rendered": "<span class=\"chord\">Bb</span>We were laughing out loud in the <span class=\"chord\">C</span>midnight air",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]She had a cigarette stuck [C]behind her ear",
+        "rendered": "<span class=\"chord\">Dm</span>She had a cigarette stuck <span class=\"chord\">C</span>behind her ear",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Whispered something that I [C]couldn't quite hear",
+        "rendered": "<span class=\"chord\">Bb</span>Whispered something that I <span class=\"chord\">C</span>couldn't quite hear",
+        "seconds": 138.0
+      },
+      {
+        "type": "section",
+        "content": "🌊 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]And the roller coaster's roaring [C]round the bend",
+        "rendered": "<span class=\"chord\">Gm</span>And the roller coaster's roaring <span class=\"chord\">C</span>round the bend",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]Feels like this summer night's [C]never gonna end",
+        "rendered": "<span class=\"chord\">Gm</span>Feels like this summer night's <span class=\"chord\">C</span>never gonna end",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]You can hear the music playing from the [C]arcade hall",
+        "rendered": "<span class=\"chord\">Gm</span>You can hear the music playing from the <span class=\"chord\">C</span>arcade hall",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [Bb]rock 'n' roll was echoing off the [C]wall",
+        "rendered": "And <span class=\"chord\">Bb</span>rock 'n' roll was echoing off the <span class=\"chord\">C</span>wall",
+        "seconds": 162.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "And girl it [F]looks so pretty to me, just like it [C]always did",
+        "rendered": "And girl it <span class=\"chord\">F</span>looks so pretty to me, just like it <span class=\"chord\">C</span>always did",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Like the [Bb]Spanish City to what was [C]that kid",
+        "rendered": "Like the <span class=\"chord\">Bb</span>Spanish City to what was <span class=\"chord\">C</span>that kid",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "She took all my [F]pennies and threw them in the [C]wishing well",
+        "rendered": "She took all my <span class=\"chord\">F</span>pennies and threw them in the <span class=\"chord\">C</span>wishing well",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [Bb]walked with me into the [C]tunnel of [Dm]love",
+        "rendered": "And <span class=\"chord\">Bb</span>walked with me into the <span class=\"chord\">C</span>tunnel of <span class=\"chord\">Dm</span>love",
+        "seconds": 186.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And the girl was gone with the morning light",
+        "rendered": "<span class=\"chord\">Bb</span>And the girl was gone with the morning light",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Just a [C]memory of a summer night",
+        "rendered": "Just a <span class=\"chord\">C</span>memory of a summer night",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]And searchlights looking across the bay",
+        "rendered": "<span class=\"chord\">Dm</span>And searchlights looking across the bay",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Watching the [C]neon fade away",
+        "rendered": "Watching the <span class=\"chord\">C</span>neon fade away",
+        "seconds": 210.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 SOLO & FINALE *(Epico outro rock alla Springsteen / E Street Band)*",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [C] |` *(x4)*",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> |` *(x4)*",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F] | [C] | [Bb] | [C] |` *(x2)*",
+        "rendered": "`| <span class=\"chord\">F</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> |` *(x2)*",
+        "seconds": 222.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Into the [Bb]tunnel of [C]love...",
+        "rendered": "Into the <span class=\"chord\">Bb</span>tunnel of <span class=\"chord\">C</span>love...",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [C] | [Dm] |` 🛑",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Dm</span> |` 🛑",
+        "seconds": 234.0
+      }
+    ]
+  },
   "wahnsinn.md": {
     "filename": "wahnsinn.md",
     "meta": {
@@ -3742,6 +4924,20 @@
       "time_signature": "4/4"
     },
     "tips": "Ritmo Schlager dritto a martello con accordi pompati in levare e ottave al basso. Nel ritornello, il break e la pausa prima dell'urlo della folla *\"Hölle, Hölle, Hölle!\"* sono il segreto per far esplodere la birreria!",
+    "summary": {
+      "strofa": [
+        "D",
+        "A",
+        "G"
+      ],
+      "ritornello": [
+        "Bm",
+        "F#m",
+        "G",
+        "A",
+        "D"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -4018,6 +5214,21 @@
       "time_signature": "4/4"
     },
     "tips": "Tipico beat trascinante di Wolle Petry! Basso pulsante in ottave alla mano sinistra e accordi energici e marcati alla mano destra. Nel ritornello (\"Weiß der Geier...\"), apri il volume sugli accordi aperti `[C] -> [G] -> [Am] -> [F] [G]`.",
+    "summary": {
+      "strofa": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ],
+      "ritornello": [
+        "Dm",
+        "G",
+        "C",
+        "Am",
+        "F"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",
@@ -4322,6 +5533,21 @@
       "artist": "U2"
     },
     "tips": "Sull'iconica intro ambient/organo, tieni il pad di `[D]` e costruisci la ritmica a crome alternate (D - G - Bm - A). Attenzione alla modulazione fugace su `[C]` prima dell'esplosione del titolo (\"Where the streets have no name\"), che crea il classico effetto ipnotico di The Edge ed Eno.",
+    "summary": {
+      "strofa": [
+        "D",
+        "G",
+        "Bm",
+        "A",
+        "C"
+      ],
+      "ritornello": [
+        "D",
+        "G",
+        "Bm",
+        "A"
+      ]
+    },
     "lines": [
       {
         "type": "lyric",

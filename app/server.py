@@ -41,6 +41,32 @@ def parse_frontmatter(yaml_text: str) -> dict:
     return meta
 
 
+def extract_harmonic_summary(raw_lines: list) -> dict:
+    """Extract unique chords for strofa, ritornello, and bridge."""
+    sections = {}
+    curr_sec = None
+    for line in raw_lines:
+        if line.startswith("### "):
+            title = line.replace("### ", "").strip().upper()
+            if any(k in title for k in ["STROFA", "VERSE", "A1", "A2"]):
+                curr_sec = "strofa"
+            elif any(k in title for k in ["RITORNELLO", "CHORUS", "HOOK", "RIT"]):
+                curr_sec = "ritornello"
+            elif any(k in title for k in ["BRIDGE", "SPECIAL", "INCISO"]):
+                curr_sec = "bridge"
+            else:
+                curr_sec = None
+        elif curr_sec and not line.startswith("---") and not line.startswith(">"):
+            chords = re.findall(r"\[([a-zA-Z0-9#b♯♭/]+)\]", line)
+            if chords:
+                if curr_sec not in sections:
+                    sections[curr_sec] = []
+                for c in chords:
+                    if c not in sections[curr_sec]:
+                        sections[curr_sec].append(c)
+    return sections
+
+
 def parse_song_file(file_path: Path):
     """
     Parses a spartiti-md file:
@@ -163,10 +189,13 @@ def parse_song_file(file_path: Path):
             "seconds": line_sec
         })
 
+    summary = extract_harmonic_summary(raw_lines)
+
     return {
         "filename": file_path.name,
         "meta": meta,
         "tips": tips,
+        "summary": summary,
         "lines": parsed_lines
     }
 
@@ -194,6 +223,7 @@ class ChordsHandler(SimpleHTTPRequestHandler):
                         "key": data["meta"].get("original_key", ""),
                         "bpm": data["meta"].get("bpm"),
                         "time_signature": data["meta"].get("time_signature", "4/4"),
+                        "summary": data.get("summary", {}),
                     })
                 except Exception as e:
                     print(f"Errore lettura {f.name}: {e}")

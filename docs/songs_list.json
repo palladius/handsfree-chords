@@ -5,7 +5,26 @@
     "artist": "Genesis",
     "key": "",
     "bpm": 65,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "B",
+        "B7/A",
+        "E/G#",
+        "B/F#",
+        "E",
+        "C#m",
+        "F#"
+      ],
+      "ritornello": [
+        "G#m",
+        "D#m",
+        "E",
+        "B",
+        "C#m",
+        "F#"
+      ]
+    }
   },
   {
     "filename": "fliegerlied.md",
@@ -13,7 +32,22 @@
     "artist": "Donikkl",
     "key": "C",
     "bpm": 134,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ],
+      "ritornello": [
+        "Dm",
+        "G",
+        "C",
+        "Am",
+        "F"
+      ]
+    }
   },
   {
     "filename": "gloria.md",
@@ -21,7 +55,27 @@
     "artist": "Umberto Tozzi",
     "key": "",
     "bpm": 130,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "SI",
+        "MI",
+        "RE",
+        "LA",
+        "DO#m",
+        "FA#",
+        "MImaj7"
+      ],
+      "ritornello": [
+        "DO#m",
+        "FA#7",
+        "SI",
+        "MImaj7",
+        "LA",
+        "MI",
+        "FA#"
+      ]
+    }
   },
   {
     "filename": "joana.md",
@@ -29,7 +83,22 @@
     "artist": "Peter Wackel",
     "key": "G",
     "bpm": 132,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "G",
+        "Em",
+        "C",
+        "D"
+      ],
+      "ritornello": [
+        "Am",
+        "Em",
+        "C",
+        "D",
+        "G"
+      ]
+    }
   },
   {
     "filename": "love-of-my-life.md",
@@ -37,7 +106,63 @@
     "artist": "Queen",
     "key": "",
     "bpm": 78,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "A",
+        "F#m",
+        "Bm",
+        "E",
+        "A7",
+        "D"
+      ],
+      "ritornello": [
+        "Bm",
+        "F#m",
+        "G",
+        "D",
+        "Em",
+        "A"
+      ],
+      "bridge": [
+        "Bm",
+        "F#m",
+        "G",
+        "D",
+        "B",
+        "Cdim",
+        "Em",
+        "A"
+      ]
+    }
+  },
+  {
+    "filename": "romeo-and-juliet.md",
+    "title": "Romeo and Juliet",
+    "artist": "Dire Straits",
+    "key": "",
+    "bpm": 78,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "F",
+        "C",
+        "Dm",
+        "Bb"
+      ],
+      "ritornello": [
+        "F",
+        "C",
+        "Dm",
+        "Bb"
+      ],
+      "bridge": [
+        "Dm",
+        "C",
+        "F",
+        "Bb"
+      ]
+    }
   },
   {
     "filename": "solsbury-hill.md",
@@ -45,7 +170,22 @@
     "artist": "Peter Gabriel",
     "key": "",
     "bpm": 102,
-    "time_signature": "7/4"
+    "time_signature": "7/4",
+    "summary": {
+      "strofa": [
+        "G#m",
+        "F#",
+        "B",
+        "E",
+        "C#m"
+      ],
+      "ritornello": [
+        "E",
+        "C#m",
+        "F#",
+        "B"
+      ]
+    }
   },
   {
     "filename": "spread-your-wings.md",
@@ -53,7 +193,38 @@
     "artist": "Queen",
     "key": "D",
     "bpm": 76,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "D",
+        "E7",
+        "G",
+        "Gm",
+        "Bm",
+        "Bm/A",
+        "Bm/G#",
+        "A",
+        "Em7",
+        "C7",
+        "E",
+        "F#sus4",
+        "F#"
+      ],
+      "ritornello": [
+        "D",
+        "Bm",
+        "E7",
+        "A",
+        "Gm",
+        "Bm/A",
+        "Bm/G#",
+        "G",
+        "D7",
+        "Em7",
+        "C7",
+        "E"
+      ]
+    }
   },
   {
     "filename": "su-di-noi.md",
@@ -61,7 +232,57 @@
     "artist": "Pupo",
     "key": "",
     "bpm": 115,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "DO",
+        "MIm",
+        "LA",
+        "REm",
+        "SOL",
+        "MI"
+      ],
+      "ritornello": [
+        "LAm",
+        "FA",
+        "SOL",
+        "MIm",
+        "RE",
+        "SI7",
+        "DO",
+        "SI"
+      ],
+      "bridge": [
+        "SOL",
+        "SI",
+        "MIm",
+        "LAm",
+        "RE",
+        "SI7"
+      ]
+    }
+  },
+  {
+    "filename": "sultans-of-swing.md",
+    "title": "Sultans of Swing",
+    "artist": "Dire Straits",
+    "key": "",
+    "bpm": 148,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "C",
+        "Bb",
+        "A",
+        "F"
+      ],
+      "ritornello": [
+        "Bb",
+        "C",
+        "Dm"
+      ]
+    }
   },
   {
     "filename": "summer-of-69.md",
@@ -69,7 +290,24 @@
     "artist": "Bryan Adams",
     "key": "D",
     "bpm": 139,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "D",
+        "A"
+      ],
+      "ritornello": [
+        "Bm",
+        "A",
+        "D",
+        "G"
+      ],
+      "bridge": [
+        "F",
+        "Bb",
+        "C"
+      ]
+    }
   },
   {
     "filename": "the-best.md",
@@ -77,7 +315,30 @@
     "artist": "Tina Turner",
     "key": "F",
     "bpm": 104,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "F",
+        "Dm",
+        "Bb",
+        "C"
+      ],
+      "ritornello": [
+        "F",
+        "C",
+        "Bb",
+        "Dm",
+        "G",
+        "D",
+        "Em"
+      ],
+      "bridge": [
+        "Ab",
+        "Eb",
+        "Bb",
+        "C"
+      ]
+    }
   },
   {
     "filename": "the-knife.md",
@@ -85,7 +346,27 @@
     "artist": "Genesis",
     "key": "G#m",
     "bpm": 132,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "G#m",
+        "F#",
+        "E",
+        "D#"
+      ],
+      "ritornello": [
+        "G#m",
+        "C#m",
+        "D#"
+      ],
+      "bridge": [
+        "C#m",
+        "B",
+        "A",
+        "G#",
+        "F#m"
+      ]
+    }
   },
   {
     "filename": "the-musical-box.md",
@@ -93,7 +374,55 @@
     "artist": "Genesis",
     "key": "F#",
     "bpm": 68,
-    "time_signature": "12/8"
+    "time_signature": "12/8",
+    "summary": {
+      "strofa": [
+        "Bm",
+        "F#",
+        "E",
+        "A",
+        "D"
+      ],
+      "ritornello": [
+        "E",
+        "F#",
+        "B"
+      ],
+      "bridge": [
+        "F#m",
+        "B",
+        "D",
+        "E",
+        "C#"
+      ]
+    }
+  },
+  {
+    "filename": "tunnel-of-love.md",
+    "title": "Tunnel of Love",
+    "artist": "Dire Straits",
+    "key": "",
+    "bpm": 128,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "C",
+        "Bb"
+      ],
+      "ritornello": [
+        "Gm",
+        "C",
+        "Bb",
+        "F",
+        "Dm"
+      ],
+      "bridge": [
+        "Bb",
+        "C",
+        "Dm"
+      ]
+    }
   },
   {
     "filename": "wahnsinn.md",
@@ -101,7 +430,21 @@
     "artist": "Wolfgang Petry",
     "key": "D",
     "bpm": 128,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "D",
+        "A",
+        "G"
+      ],
+      "ritornello": [
+        "Bm",
+        "F#m",
+        "G",
+        "A",
+        "D"
+      ]
+    }
   },
   {
     "filename": "weiss-der-geier.md",
@@ -109,7 +452,22 @@
     "artist": "Wolfgang Petry",
     "key": "C",
     "bpm": 130,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "C",
+        "G",
+        "Am",
+        "F"
+      ],
+      "ritornello": [
+        "Dm",
+        "G",
+        "C",
+        "Am",
+        "F"
+      ]
+    }
   },
   {
     "filename": "where-the-streets-have-no-name.md",
@@ -117,6 +475,21 @@
     "artist": "U2",
     "key": "",
     "bpm": 126,
-    "time_signature": "4/4"
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "D",
+        "G",
+        "Bm",
+        "A",
+        "C"
+      ],
+      "ritornello": [
+        "D",
+        "G",
+        "Bm",
+        "A"
+      ]
+    }
   }
 ]

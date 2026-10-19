@@ -402,12 +402,248 @@
       transform: scale(1.3);
       box-shadow: 0 0 10px #06d6a0;
     }
+
+    /* Spotify / YouTube Music Catalog View */
+    .catalog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+      width: 100%;
+    }
+    .catalog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .catalog-search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #1e1e2d;
+      border: 1px solid #363650;
+      border-radius: 9999px;
+      padding: 8px 18px;
+      flex: 1;
+      max-width: 480px;
+    }
+    .catalog-search-bar input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      width: 100%;
+      outline: none;
+    }
+    .catalog-stats {
+      font-size: 0.9rem;
+      color: #8888aa;
+      font-weight: 600;
+    }
+    /* Artist Chips / Tabs */
+    .artist-tabs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      scrollbar-width: thin;
+    }
+    .artist-chip {
+      background: #252538;
+      border: 1px solid #3e3e58;
+      color: #d1d5db;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .artist-chip:hover {
+      background: #363652;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .artist-chip.active {
+      background: var(--accent);
+      color: #0b1e17;
+      border-color: var(--accent);
+      box-shadow: 0 4px 14px rgba(6, 214, 160, 0.35);
+    }
+    .artist-chip .chip-count {
+      background: rgba(0,0,0,0.25);
+      padding: 2px 7px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+    }
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .song-card {
+      background: #181824;
+      border: 1px solid #2b2b40;
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    .song-card:hover {
+      background: #202030;
+      border-color: #4a4a6e;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .card-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, #2a2a40, #161625);
+      border: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .card-meta {
+      flex: 1;
+      min-width: 0;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 3px;
+    }
+    .card-artist {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-badges {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .mini-badge {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 700;
+      background: #26263a;
+      color: #cbd5e1;
+      border: 1px solid #3a3a54;
+    }
+    .mini-badge.key {
+      color: var(--chord);
+      border-color: rgba(255, 209, 102, 0.3);
+    }
+    .mini-badge.bpm {
+      color: var(--accent);
+      border-color: rgba(6, 214, 160, 0.3);
+    }
+    /* Sinottico Accordi */
+    .chord-sinottico {
+      background: #11111a;
+      border-radius: 12px;
+      border: 1px solid #232336;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+    .sinottico-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sin-label {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #71717a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      min-width: 75px;
+    }
+    .sin-chords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+    .chord-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--chord);
+      background: #28283c;
+      padding: 2px 7px;
+      border-radius: 6px;
+      border: 1px solid #3f3f5c;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 4px;
+    }
+    .btn-play-card {
+      background: #252538;
+      border: 1px solid #3e3e5a;
+      color: #f1f5f9;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .song-card:hover .btn-play-card {
+      background: var(--accent);
+      color: #051610;
+      border-color: var(--accent);
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div style="display:flex; align-items:center; gap: 12px;">
+      <button id="btnViewToggle" class="btn" onclick="toggleCatalogView()" style="background:#2d2d44; color:#fff; display:flex; align-items:center; gap:6px;" title="Mostra/Nascondi Catalogo Canzoni">
+        📚 <span id="viewToggleLabel">Catalogo</span>
+      </button>
       <select id="songSelect" class="song-select" onchange="loadSelectedSong()">
         <option value="">Caricamento canzoni...</option>
       </select>
@@ -488,9 +724,31 @@
   </div>
 
   <main>
-    <div id="lyrics-view">
+    <!-- Catalog View (Spotify / YouTube Music style) -->
+    <div id="catalog-view" class="catalog-container">
+      <div class="catalog-header">
+        <div class="catalog-search-bar">
+          <span style="font-size: 1.1rem; color: #888;">🔍</span>
+          <input type="text" id="catalogSearch" placeholder="Cerca canzone, artista o accordo..." oninput="filterCatalog()">
+        </div>
+        <div id="catalogStats" class="catalog-stats">Caricamento canzoni...</div>
+      </div>
+
+      <!-- Artist Filter Tabs (Spotify style chips) -->
+      <div id="artistTabs" class="artist-tabs">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Songs Cards Grid -->
+      <div id="cardsGrid" class="cards-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Live Player / Lyrics View -->
+    <div id="lyrics-view" style="display: none;">
       <div style="text-align:center; padding: 100px 0; color:#777;">
-        Seleziona un brano dal menu in alto per iniziare 🎹
+        Seleziona un brano dal menu in alto o dal catalogo per iniziare 🎹
       </div>
     </div>
   </main>
@@ -517,6 +775,9 @@
       if (mode === 'en') document.getElementById('btnNotEn').classList.add('active');
       if (songData) {
         renderSong(songData);
+      }
+      if (typeof renderCatalog === 'function') {
+        renderCatalog();
       }
     }
 
@@ -827,6 +1088,9 @@
         el.innerText = `${transposeOffset}`;
         el.style.color = '#ff9f1c';
       }
+      if (typeof renderCatalog === 'function') {
+        renderCatalog();
+      }
     }
 
     // Face Tracking State
@@ -837,16 +1101,238 @@
     const GESTURE_COOLDOWN_MS = 1400;
 
     // Load available songs
+    // Artist branding & visual iconography
+    const ARTIST_ICONS = {
+      "Dire Straits": { icon: "🎸", bg: "linear-gradient(135deg, #b91c1c, #450a0a)" },
+      "Genesis": { icon: "🎹", bg: "linear-gradient(135deg, #1d4ed8, #0f172a)" },
+      "Queen": { icon: "👑", bg: "linear-gradient(135deg, #d97706, #451a03)" },
+      "Umberto Tozzi": { icon: "🕶️", bg: "linear-gradient(135deg, #0284c7, #082f49)" },
+      "Pupo": { icon: "🎤", bg: "linear-gradient(135deg, #7c3aed, #2e1065)" },
+      "Tina Turner": { icon: "⚡", bg: "linear-gradient(135deg, #ea580c, #431407)" },
+      "Bryan Adams": { icon: "🎸", bg: "linear-gradient(135deg, #475569, #0f172a)" },
+      "Peter Gabriel": { icon: "🎭", bg: "linear-gradient(135deg, #059669, #064e3b)" },
+      "U2": { icon: "🕶️", bg: "linear-gradient(135deg, #4b5563, #111827)" },
+      "Wolfgang Petry": { icon: "🍺", bg: "linear-gradient(135deg, #854d0e, #361e06)" },
+      "Oktoberfest": { icon: "🍺", bg: "linear-gradient(135deg, #854d0e, #361e06)" },
+      "default": { icon: "🎵", bg: "linear-gradient(135deg, #334155, #0f172a)" }
+    };
+
+    let allSongsList = [];
+    let activeArtistFilter = 'ALL';
+    let catalogSearchQuery = '';
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function escapeJs(str) {
+      if (!str) return '';
+      return String(str).replace(/'/g, "\\'");
+    }
+
+    function formatChordsForSinottico(chordArray) {
+      if (!chordArray || chordArray.length === 0) return '';
+      return chordArray.map(c => {
+        const transposed = transposeChord(c, transposeOffset);
+        return `<span class="chord-pill">${transposed}</span>`;
+      }).join(' ');
+    }
+
+    function filterByArtist(artist) {
+      activeArtistFilter = artist;
+      renderCatalog();
+    }
+
+    function filterCatalog() {
+      const input = document.getElementById('catalogSearch');
+      if (input) {
+        catalogSearchQuery = input.value.trim();
+        renderCatalog();
+      }
+    }
+
+    function showCatalogView() {
+      const cat = document.getElementById('catalog-view');
+      const lyr = document.getElementById('lyrics-view');
+      const met = document.getElementById('metronome-bar');
+      const label = document.getElementById('viewToggleLabel');
+      if (cat) cat.style.display = 'block';
+      if (lyr) lyr.style.display = 'none';
+      if (met) met.style.display = 'none';
+      if (label) label.innerText = 'Player';
+      renderCatalog();
+    }
+
+    function showPlayerView() {
+      const cat = document.getElementById('catalog-view');
+      const lyr = document.getElementById('lyrics-view');
+      const met = document.getElementById('metronome-bar');
+      const label = document.getElementById('viewToggleLabel');
+      if (cat) cat.style.display = 'none';
+      if (lyr) lyr.style.display = 'block';
+      if (met) met.style.display = 'flex';
+      if (label) label.innerText = 'Catalogo';
+    }
+
+    function toggleCatalogView() {
+      const cat = document.getElementById('catalog-view');
+      if (cat && cat.style.display === 'none') {
+        showCatalogView();
+      } else {
+        showPlayerView();
+      }
+    }
+
+    function selectAndPlaySong(filename) {
+      const sel = document.getElementById('songSelect');
+      if (sel) {
+        sel.value = filename;
+      }
+      loadSelectedSong();
+    }
+
+    function renderCatalog() {
+      const tabsContainer = document.getElementById('artistTabs');
+      const cardsContainer = document.getElementById('cardsGrid');
+      const statsContainer = document.getElementById('catalogStats');
+      if (!tabsContainer || !cardsContainer) return;
+
+      // 1. Calculate artist frequency
+      const artistCounts = {};
+      allSongsList.forEach(s => {
+        const a = s.artist || 'Sconosciuto';
+        artistCounts[a] = (artistCounts[a] || 0) + 1;
+      });
+
+      // Filter artists with count >= 3 (e.g. Dire Straits, Genesis)
+      const qualifyingArtists = Object.keys(artistCounts)
+        .filter(a => artistCounts[a] >= 3)
+        .sort((a, b) => artistCounts[b] - artistCounts[a]);
+
+      // 2. Render Artist Filter Tabs (Spotify Chips)
+      let tabsHtml = `
+        <button class="artist-chip ${activeArtistFilter === 'ALL' ? 'active' : ''}" onclick="filterByArtist('ALL')">
+          🎵 Tutte le canzoni <span class="chip-count">${allSongsList.length}</span>
+        </button>
+      `;
+
+      qualifyingArtists.forEach(artist => {
+        const iconObj = ARTIST_ICONS[artist] || ARTIST_ICONS['default'];
+        const count = artistCounts[artist];
+        const isActive = (activeArtistFilter === artist);
+        tabsHtml += `
+          <button class="artist-chip ${isActive ? 'active' : ''}" onclick="filterByArtist('${escapeJs(artist)}')">
+            <span>${iconObj.icon}</span> ${escapeHtml(artist)} <span class="chip-count">${count}</span>
+          </button>
+        `;
+      });
+      tabsContainer.innerHTML = tabsHtml;
+
+      // 3. Filter songs
+      let filtered = allSongsList.filter(s => {
+        const matchesArtist = (activeArtistFilter === 'ALL') || (s.artist === activeArtistFilter);
+        if (!matchesArtist) return false;
+        if (catalogSearchQuery) {
+          const q = catalogSearchQuery.toLowerCase();
+          const matchTitle = (s.title || '').toLowerCase().includes(q);
+          const matchArtist = (s.artist || '').toLowerCase().includes(q);
+          return matchTitle || matchArtist;
+        }
+        return true;
+      });
+
+      if (statsContainer) {
+        statsContainer.innerText = `${filtered.length} di ${allSongsList.length} canzoni`;
+      }
+
+      // 4. Render Song Cards
+      if (filtered.length === 0) {
+        cardsContainer.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: #888;">Nessun brano trovato per la ricerca "${escapeHtml(catalogSearchQuery)}".</div>`;
+        return;
+      }
+
+      let cardsHtml = '';
+      filtered.forEach(s => {
+        const iconObj = ARTIST_ICONS[s.artist] || ARTIST_ICONS['default'];
+        const sum = s.summary || {};
+        const hasVerse = sum.strofa && sum.strofa.length > 0;
+        const hasChorus = sum.ritornello && sum.ritornello.length > 0;
+        const hasBridge = sum.bridge && sum.bridge.length > 0;
+
+        let sinotticoHtml = '';
+        if (hasVerse || hasChorus || hasBridge) {
+          sinotticoHtml += '<div class="chord-sinottico">';
+          if (hasVerse) {
+            sinotticoHtml += `
+              <div class="sinottico-row">
+                <span class="sin-label">🎤 Strofa:</span>
+                <div class="sin-chords">${formatChordsForSinottico(sum.strofa)}</div>
+              </div>
+            `;
+          }
+          if (hasChorus) {
+            sinotticoHtml += `
+              <div class="sinottico-row">
+                <span class="sin-label">💥 Rit:</span>
+                <div class="sin-chords">${formatChordsForSinottico(sum.ritornello)}</div>
+              </div>
+            `;
+          }
+          if (hasBridge) {
+            sinotticoHtml += `
+              <div class="sinottico-row">
+                <span class="sin-label">🌉 Bridge:</span>
+                <div class="sin-chords">${formatChordsForSinottico(sum.bridge)}</div>
+              </div>
+            `;
+          }
+          sinotticoHtml += '</div>';
+        } else {
+          sinotticoHtml += `<div class="chord-sinottico" style="color:#666; font-size:0.8rem; font-style:italic;">Spartito libero / arpeggio continuo</div>`;
+        }
+
+        cardsHtml += `
+          <div class="song-card" onclick="selectAndPlaySong('${escapeJs(s.filename)}')">
+            <div class="card-top">
+              <div class="card-avatar" style="background: ${iconObj.bg};">${iconObj.icon}</div>
+              <div class="card-meta">
+                <div class="card-title" title="${escapeHtml(s.title)}">${escapeHtml(s.title)}</div>
+                <div class="card-artist">${escapeHtml(s.artist)}</div>
+                <div class="card-badges">
+                  ${s.key ? `<span class="mini-badge key">🎹 ${escapeHtml(s.key)}</span>` : ''}
+                  ${s.bpm ? `<span class="mini-badge bpm">⏱️ ${s.bpm} BPM</span>` : ''}
+                  <span class="mini-badge">${escapeHtml(s.time_signature || '4/4')}</span>
+                </div>
+              </div>
+            </div>
+
+            ${sinotticoHtml}
+
+            <div class="card-footer">
+              <span class="btn-play-card">▶️ Apri Spartito</span>
+            </div>
+          </div>
+        `;
+      });
+
+      cardsContainer.innerHTML = cardsHtml;
+    }
+
     async function init() {
       renderBeatDots();
       try {
         const res = await fetch('/api/songs');
         const songs = await res.json();
+        allSongsList = songs;
         const select = document.getElementById('songSelect');
         select.innerHTML = songs.map(s => `<option value="${s.filename}">${s.title} (${s.artist})</option>`).join('');
-        if (songs.length > 0) {
-          loadSelectedSong();
-        }
+        renderCatalog();
+        showCatalogView();
       } catch (e) {
         console.error("Errore caricamento lista brani:", e);
       }
@@ -862,6 +1348,7 @@
       const res = await fetch(`/api/song/${filename}`);
       songData = await res.json();
       renderSong(songData);
+      showPlayerView();
     }
 
     function renderSong(data) {
@@ -876,8 +1363,15 @@
         keyDisplay = `${data.meta.original_key} ➔ <span style="color:var(--accent); font-weight:bold;">${transposedKey}</span>`;
       }
 
-      // Meta box
+      // Top navigation bar & Meta box
       html += `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+          <button class="btn" style="background:#252538; border:1px solid #3e3e58; padding:8px 16px; border-radius:8px; display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-weight:700; color:#fff;" onclick="showCatalogView()">
+            ◀️ <strong>Torna al Catalogo (Home)</strong>
+          </button>
+          <span style="font-size:0.85rem; color:#888;">Tasti: Spazio = Play/Pause | F = Fullscreen | M = Metronomo</span>
+        </div>
+
         <div class="meta-box">
           <h1>${data.meta.title || 'Senza titolo'} — ${data.meta.artist || ''}</h1>
           <div>🎹 <strong>Tonalità:</strong> ${keyDisplay} | ⏱️ <strong>BPM:</strong> ${data.meta.bpm || '~120'} | <strong>Tempo:</strong> ${data.meta.time_signature || '4/4'}</div>
