@@ -515,6 +515,26 @@
       align-items: center;
       gap: 14px;
     }
+    .card-cover-banner {
+      margin: -18px -18px 4px -18px;
+      height: 150px;
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #11111a;
+    }
+    .card-cover-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .song-card:hover .card-cover-banner img {
+      transform: scale(1.04);
+    }
     .card-avatar {
       width: 54px;
       height: 54px;
@@ -1330,12 +1350,16 @@
         }
 
         const coverSrc = s.cover || s.artist_image || '';
+        const bannerHtml = s.cover
+          ? `<div class="card-cover-banner"><img src="${escapeHtml(s.cover)}" alt="${escapeHtml(s.title)}" onerror="this.parentElement.style.display='none'"></div>`
+          : '';
         const avatarInnerHtml = coverSrc
           ? `<img src="${escapeHtml(coverSrc)}" alt="${escapeHtml(s.title)}" onerror="this.outerHTML='${iconObj.icon}'">`
           : `${iconObj.icon}`;
 
         cardsHtml += `
           <div class="song-card" onclick="selectAndPlaySong('${escapeJs(s.filename)}')">
+            ${bannerHtml}
             <div class="card-top">
               <div class="card-avatar" style="background: ${iconObj.bg};">${avatarInnerHtml}</div>
               <div class="card-meta">
