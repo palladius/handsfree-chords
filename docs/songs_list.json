@@ -188,6 +188,38 @@
     }
   },
   {
+    "filename": "space-dye-vest.md",
+    "title": "Space-Dye Vest",
+    "artist": "Dream Theater",
+    "key": "Dm",
+    "bpm": 108,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "Bb",
+        "F",
+        "C",
+        "Gm",
+        "A"
+      ],
+      "ritornello": [
+        "Bb",
+        "C",
+        "Dm",
+        "Am",
+        "A"
+      ],
+      "bridge": [
+        "Gm",
+        "Dm",
+        "Bb",
+        "A",
+        "C"
+      ]
+    }
+  },
+  {
     "filename": "spread-your-wings.md",
     "title": "Spread Your Wings",
     "artist": "Queen",
@@ -341,6 +373,41 @@
     }
   },
   {
+    "filename": "the-count-of-tuscany.md",
+    "title": "The Count of Tuscany",
+    "artist": "Dream Theater",
+    "key": "E",
+    "bpm": 124,
+    "time_signature": "6/8",
+    "summary": {
+      "strofa": [
+        "C#m",
+        "A",
+        "E",
+        "B",
+        "F#m",
+        "G#7"
+      ],
+      "ritornello": [
+        "E",
+        "B",
+        "C#m",
+        "A",
+        "F#m",
+        "G#7"
+      ],
+      "bridge": [
+        "D",
+        "A/C#",
+        "Bm",
+        "G",
+        "A",
+        "D/F#",
+        "Em"
+      ]
+    }
+  },
+  {
     "filename": "the-knife.md",
     "title": "The Knife",
     "artist": "Genesis",
@@ -394,6 +461,86 @@
         "D",
         "E",
         "C#"
+      ]
+    }
+  },
+  {
+    "filename": "the-silent-man.md",
+    "title": "The Silent Man",
+    "artist": "Dream Theater",
+    "key": "A",
+    "bpm": 100,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "F#m",
+        "C#m",
+        "D",
+        "A",
+        "E/G#",
+        "Bm",
+        "C#7"
+      ],
+      "ritornello": [
+        "D",
+        "E",
+        "F#m",
+        "G",
+        "C#7",
+        "A",
+        "E/G#",
+        "A/C#",
+        "Bm7"
+      ],
+      "bridge": [
+        "D",
+        "E",
+        "F#m",
+        "Bm",
+        "G",
+        "C#7"
+      ]
+    }
+  },
+  {
+    "filename": "the-spirit-carries-on.md",
+    "title": "The Spirit Carries On",
+    "artist": "Dream Theater",
+    "key": "D",
+    "bpm": 72,
+    "time_signature": "6/8",
+    "summary": {
+      "strofa": [
+        "D",
+        "Em/D",
+        "Bm",
+        "F#m",
+        "G",
+        "D/F#",
+        "Em",
+        "E7/G#",
+        "A"
+      ],
+      "ritornello": [
+        "G",
+        "A",
+        "D",
+        "F#7",
+        "Bm",
+        "Bm/A",
+        "E/G#",
+        "Em",
+        "F#m",
+        "Gm"
+      ],
+      "bridge": [
+        "Em",
+        "Bm",
+        "C",
+        "G",
+        "F#m",
+        "A",
+        "Bb"
       ]
     }
   },
