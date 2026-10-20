@@ -1190,33 +1190,45 @@
       "artist_image": "images/artists/queen.jpg",
       "audio": "audio/love-of-my-life.mp3"
     },
-    "tips": "Il capolavoro di Freddie Mercury al pianoforte. Abbondanza di arpeggi classicheggianti della mano destra e discese di basso cromatiche con la sinistra. Fondamentale il passaggio `[Cdim]` / `[B]` nello special.",
+    "tips": "Il capolavoro di Freddie Mercury su *A Night at the Opera*. Si apre in Fa maggiore col trillo e la discesa `[C7/Bb] -> [F/A]`, mentre la strofa attacca sulla dominante `[C] -> [Am] -> [Dm] -> [G7]` prima di risolvere a casa in `[F]`. Fondamentale nel bridge il cromatismo `[Am] -> [F#m7b5] -> [F#dim7] -> [Gm7]`.",
     "summary": {
       "strofa": [
-        "A",
-        "F#m",
-        "Bm",
-        "E",
-        "A7",
-        "D"
+        "C",
+        "Am",
+        "Dm",
+        "G7",
+        "F/C",
+        "F",
+        "Bb",
+        "F/A",
+        "C7",
+        "G",
+        "G/B"
       ],
       "ritornello": [
-        "Bm",
-        "F#m",
-        "G",
-        "D",
-        "Em",
-        "A"
+        "Dm",
+        "Am",
+        "Bb",
+        "F",
+        "F/A",
+        "Gm7",
+        "C7",
+        "Gm"
       ],
       "bridge": [
-        "Bm",
-        "F#m",
-        "G",
-        "D",
-        "B",
-        "Cdim",
-        "Em",
-        "A"
+        "Dm",
+        "Am",
+        "Bb",
+        "F",
+        "Gm7/F",
+        "Dm/F",
+        "A7",
+        "F#m7b5",
+        "F#dim7",
+        "Gm7",
+        "C",
+        "F/C",
+        "Gm/C"
       ]
     },
     "lines": [
@@ -1228,217 +1240,275 @@
       },
       {
         "type": "section",
-        "content": "🎹 INTRO",
-        "seconds": null
+        "content": "🎹 INTRO *(Trill & Piano/Harp)*",
+        "seconds": 0.0
       },
       {
         "type": "lyric",
-        "raw": "`| [A] [F#m] | [Bm] [E] | [A] [A7] | [D] [Bm] | [G] [D] | [F#m] [Em] | [A] | [D] |`",
-        "rendered": "`| <span class=\"chord\">A</span> <span class=\"chord\">F#m</span> | <span class=\"chord\">Bm</span> <span class=\"chord\">E</span> | <span class=\"chord\">A</span> <span class=\"chord\">A7</span> | <span class=\"chord\">D</span> <span class=\"chord\">Bm</span> | <span class=\"chord\">G</span> <span class=\"chord\">D</span> | <span class=\"chord\">F#m</span> <span class=\"chord\">Em</span> | <span class=\"chord\">A</span> | <span class=\"chord\">D</span> |`",
-        "seconds": 12.0
+        "raw": "`| [C7/Bb] [F/A] | [C7/Bb] [F/A] | [Gm] [F] [C/E] [Dm] [C] |`",
+        "rendered": "`| <span class=\"chord\">C7/Bb</span> <span class=\"chord\">F/A</span> | <span class=\"chord\">C7/Bb</span> <span class=\"chord\">F/A</span> | <span class=\"chord\">Gm</span> <span class=\"chord\">F</span> <span class=\"chord\">C/E</span> <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> |`",
+        "seconds": 0.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Eb] [Bb/D] [Ebsus4] [Bb] | [Bb] [F/A] [Gm] [F] |`",
+        "rendered": "`| <span class=\"chord\">Eb</span> <span class=\"chord\">Bb/D</span> <span class=\"chord\">Ebsus4</span> <span class=\"chord\">Bb</span> | <span class=\"chord\">Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">Gm</span> <span class=\"chord\">F</span> |`",
+        "seconds": 8.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bb] [F/A] [G] [F/A] | [G/B] [G7] |`",
+        "rendered": "`| <span class=\"chord\">Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">G</span> <span class=\"chord\">F/A</span> | <span class=\"chord\">G/B</span> <span class=\"chord\">G7</span> |`",
+        "seconds": 16.0
       },
       {
         "type": "section",
         "content": "🎤 STROFA 1",
-        "seconds": null
+        "seconds": 23.0
       },
       {
         "type": "lyric",
-        "raw": "[A]Love of my life, you've [F#m]hurt me",
-        "rendered": "<span class=\"chord\">A</span>Love of my life, you've <span class=\"chord\">F#m</span>hurt me",
-        "seconds": 18.0
+        "raw": "[C]Love of my life, you've [Am]hurt me",
+        "rendered": "<span class=\"chord\">C</span>Love of my life, you've <span class=\"chord\">Am</span>hurt me",
+        "seconds": 23.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]You've broken my heart and [E]now you leave me",
-        "rendered": "<span class=\"chord\">Bm</span>You've broken my heart and <span class=\"chord\">E</span>now you leave me",
-        "seconds": 24.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[A]Love of my [A7]life, can't you [D]see?",
-        "rendered": "<span class=\"chord\">A</span>Love of my <span class=\"chord\">A7</span>life, can't you <span class=\"chord\">D</span>see?",
+        "raw": "[Dm]You've broken my heart and [G7]now you leave me",
+        "rendered": "<span class=\"chord\">Dm</span>You've broken my heart and <span class=\"chord\">G7</span>now you leave me",
         "seconds": 30.0
       },
       {
+        "type": "lyric",
+        "raw": "[C]Love of my [F/C]life, [C]can't you [F]see?",
+        "rendered": "<span class=\"chord\">C</span>Love of my <span class=\"chord\">F/C</span>life, <span class=\"chord\">C</span>can't you <span class=\"chord\">F</span>see?",
+        "seconds": 37.0
+      },
+      {
         "type": "section",
-        "content": "💥 RITORNELLO",
-        "seconds": null
+        "content": "💥 RITORNELLO 1",
+        "seconds": 44.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]Bring it back, [F#m]bring it back",
-        "rendered": "<span class=\"chord\">Bm</span>Bring it back, <span class=\"chord\">F#m</span>bring it back",
-        "seconds": 36.0
+        "raw": "[Dm]Bring it back, [Am]bring it back",
+        "rendered": "<span class=\"chord\">Dm</span>Bring it back, <span class=\"chord\">Am</span>bring it back",
+        "seconds": 44.0
       },
       {
         "type": "lyric",
-        "raw": "[G]Don't take it a[D]way from me",
-        "rendered": "<span class=\"chord\">G</span>Don't take it a<span class=\"chord\">D</span>way from me",
-        "seconds": 42.0
-      },
-      {
-        "type": "lyric",
-        "raw": "Because [G]you don't [D]know",
-        "rendered": "Because <span class=\"chord\">G</span>you don't <span class=\"chord\">D</span>know",
+        "raw": "[Bb]Don't take it a[F]way from me",
+        "rendered": "<span class=\"chord\">Bb</span>Don't take it a<span class=\"chord\">F</span>way from me",
         "seconds": 48.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]What it [Em]means to [A]me [D]",
-        "rendered": "<span class=\"chord\">Bm</span>What it <span class=\"chord\">Em</span>means to <span class=\"chord\">A</span>me <span class=\"chord\">D</span>",
-        "seconds": 54.0
+        "raw": "Because [Bb]you [F/A]don't [Am]know [Gm7]",
+        "rendered": "Because <span class=\"chord\">Bb</span>you <span class=\"chord\">F/A</span>don't <span class=\"chord\">Am</span>know <span class=\"chord\">Gm7</span>",
+        "seconds": 52.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm7]What it [C7]means to [F]me",
+        "rendered": "<span class=\"chord\">Gm7</span>What it <span class=\"chord\">C7</span>means to <span class=\"chord\">F</span>me",
+        "seconds": 57.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTERLUDIO 1 *(Between Verse)*",
+        "seconds": 62.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bb] [F/A] [C7] [F] | [Bb] [F/A] [G] [F/A] | [G/B] [G7] |`",
+        "rendered": "`| <span class=\"chord\">Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">C7</span> <span class=\"chord\">F</span> | <span class=\"chord\">Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">G</span> <span class=\"chord\">F/A</span> | <span class=\"chord\">G/B</span> <span class=\"chord\">G7</span> |`",
+        "seconds": 62.0
       },
       {
         "type": "section",
         "content": "🎤 STROFA 2",
-        "seconds": null
-      },
-      {
-        "type": "lyric",
-        "raw": "[A]Love of my life, don't [F#m]leave me",
-        "rendered": "<span class=\"chord\">A</span>Love of my life, don't <span class=\"chord\">F#m</span>leave me",
-        "seconds": 60.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[Bm]You've taken my love and [E]now desert me",
-        "rendered": "<span class=\"chord\">Bm</span>You've taken my love and <span class=\"chord\">E</span>now desert me",
-        "seconds": 66.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[A]Love of my [A7]life, can't you [D]see?",
-        "rendered": "<span class=\"chord\">A</span>Love of my <span class=\"chord\">A7</span>life, can't you <span class=\"chord\">D</span>see?",
         "seconds": 72.0
       },
       {
-        "type": "section",
-        "content": "💥 RITORNELLO",
-        "seconds": null
+        "type": "lyric",
+        "raw": "[C]Love of my life, don't [Am]leave me",
+        "rendered": "<span class=\"chord\">C</span>Love of my life, don't <span class=\"chord\">Am</span>leave me",
+        "seconds": 72.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]Bring it back, [F#m]bring it back",
-        "rendered": "<span class=\"chord\">Bm</span>Bring it back, <span class=\"chord\">F#m</span>bring it back",
-        "seconds": 78.0
+        "raw": "[Dm]You've taken my love, you [G7]now desert me",
+        "rendered": "<span class=\"chord\">Dm</span>You've taken my love, you <span class=\"chord\">G7</span>now desert me",
+        "seconds": 79.0
       },
       {
         "type": "lyric",
-        "raw": "[G]Don't take it a[D]way from me",
-        "rendered": "<span class=\"chord\">G</span>Don't take it a<span class=\"chord\">D</span>way from me",
-        "seconds": 84.0
-      },
-      {
-        "type": "lyric",
-        "raw": "Because [G]you don't [D]know",
-        "rendered": "Because <span class=\"chord\">G</span>you don't <span class=\"chord\">D</span>know",
-        "seconds": 90.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[Bm]What it [Em]means to [A]me [D]",
-        "rendered": "<span class=\"chord\">Bm</span>What it <span class=\"chord\">Em</span>means to <span class=\"chord\">A</span>me <span class=\"chord\">D</span>",
-        "seconds": 96.0
+        "raw": "[C]Love of my [F/C]life, [C]can't you [F]see?",
+        "rendered": "<span class=\"chord\">C</span>Love of my <span class=\"chord\">F/C</span>life, <span class=\"chord\">C</span>can't you <span class=\"chord\">F</span>see?",
+        "seconds": 86.0
       },
       {
         "type": "section",
-        "content": "🚀 SPECIAL / BRIDGE",
-        "seconds": null
+        "content": "💥 RITORNELLO 2",
+        "seconds": 93.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]You will remember [F#m]",
-        "rendered": "<span class=\"chord\">Bm</span>You will remember <span class=\"chord\">F#m</span>",
-        "seconds": 102.0
+        "raw": "[Dm]Bring it back, [Am]bring it back",
+        "rendered": "<span class=\"chord\">Dm</span>Bring it back, <span class=\"chord\">Am</span>bring it back",
+        "seconds": 93.0
       },
       {
         "type": "lyric",
-        "raw": "When this is blown over [G]",
-        "rendered": "When this is blown over <span class=\"chord\">G</span>",
-        "seconds": 108.0
+        "raw": "[Bb]Don't take it a[F]way from me",
+        "rendered": "<span class=\"chord\">Bb</span>Don't take it a<span class=\"chord\">F</span>way from me",
+        "seconds": 97.0
       },
       {
         "type": "lyric",
-        "raw": "And everything's all [D]by the way",
-        "rendered": "And everything's all <span class=\"chord\">D</span>by the way",
-        "seconds": 114.0
+        "raw": "Because [Bb]you [F/A]don't [Am]know [Gm7]",
+        "rendered": "Because <span class=\"chord\">Bb</span>you <span class=\"chord\">F/A</span>don't <span class=\"chord\">Am</span>know <span class=\"chord\">Gm7</span>",
+        "seconds": 101.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]When I grow older [F#m]",
-        "rendered": "<span class=\"chord\">Bm</span>When I grow older <span class=\"chord\">F#m</span>",
-        "seconds": 120.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[B]I will be there at your [Cdim]side to re[B]mind you",
-        "rendered": "<span class=\"chord\">B</span>I will be there at your <span class=\"chord\">Cdim</span>side to re<span class=\"chord\">B</span>mind you",
-        "seconds": 126.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[Em]How I still [A]love you... *(I still love you)*",
-        "rendered": "<span class=\"chord\">Em</span>How I still <span class=\"chord\">A</span>love you... *(I still love you)*",
-        "seconds": 132.0
+        "raw": "[Gm7]What it [C7]means to [F]me",
+        "rendered": "<span class=\"chord\">Gm7</span>What it <span class=\"chord\">C7</span>means to <span class=\"chord\">F</span>me",
+        "seconds": 106.0
       },
       {
         "type": "section",
-        "content": "🎹 ASSOLO PIANOFORTE / HARP PASSAGE",
-        "seconds": null
+        "content": "🎹 INTERLUDIO 2",
+        "seconds": 111.0
       },
       {
         "type": "lyric",
-        "raw": "`| [D] | [Bm] | [G] | [D] | [A] |`",
-        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">Bm</span> | <span class=\"chord\">G</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> |`",
+        "raw": "`| [C7/Bb] [F/A] [C7/Bb] [F/A] | [F] [Gm/Bb] [Bb] |`",
+        "rendered": "`| <span class=\"chord\">C7/Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">C7/Bb</span> <span class=\"chord\">F/A</span> | <span class=\"chord\">F</span> <span class=\"chord\">Gm/Bb</span> <span class=\"chord\">Bb</span> |`",
+        "seconds": 111.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bb] [F/A] [Cm] [Bb] | [F/A] [Gm] [F] [F/E] |`",
+        "rendered": "`| <span class=\"chord\">Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">Cm</span> <span class=\"chord\">Bb</span> | <span class=\"chord\">F/A</span> <span class=\"chord\">Gm</span> <span class=\"chord\">F</span> <span class=\"chord\">F/E</span> |`",
+        "seconds": 117.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL",
+        "seconds": 123.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]You will remember",
+        "rendered": "<span class=\"chord\">Dm</span>You will remember",
+        "seconds": 123.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]When this is blown over",
+        "rendered": "<span class=\"chord\">Am</span>When this is blown over",
+        "seconds": 127.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And everything's all by the [F]way [Gm7/F] [Dm/F] [A7]",
+        "rendered": "<span class=\"chord\">Bb</span>And everything's all by the <span class=\"chord\">F</span>way <span class=\"chord\">Gm7/F</span> <span class=\"chord\">Dm/F</span> <span class=\"chord\">A7</span>",
+        "seconds": 131.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]When I grow older",
+        "rendered": "<span class=\"chord\">Dm</span>When I grow older",
         "seconds": 138.0
       },
       {
-        "type": "section",
-        "content": "💥 RITORNELLO & OUTRO",
-        "seconds": null
+        "type": "lyric",
+        "raw": "[Am]I will be there at your [F#m7b5]side [F#dim7]to remind you",
+        "rendered": "<span class=\"chord\">Am</span>I will be there at your <span class=\"chord\">F#m7b5</span>side <span class=\"chord\">F#dim7</span>to remind you",
+        "seconds": 142.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]Hurry back, [F#m]hurry back",
-        "rendered": "<span class=\"chord\">Bm</span>Hurry back, <span class=\"chord\">F#m</span>hurry back",
-        "seconds": 144.0
-      },
-      {
-        "type": "lyric",
-        "raw": "[G]Please bring it back [D]home to me",
-        "rendered": "<span class=\"chord\">G</span>Please bring it back <span class=\"chord\">D</span>home to me",
+        "raw": "[Gm7]How I still [C]love you, [F/C] [Gm/C] [C]I still love you",
+        "rendered": "<span class=\"chord\">Gm7</span>How I still <span class=\"chord\">C</span>love you, <span class=\"chord\">F/C</span> <span class=\"chord\">Gm/C</span> <span class=\"chord\">C</span>I still love you",
         "seconds": 150.0
       },
       {
-        "type": "lyric",
-        "raw": "Because [G]you don't [D]know",
-        "rendered": "Because <span class=\"chord\">G</span>you don't <span class=\"chord\">D</span>know",
-        "seconds": 156.0
+        "type": "section",
+        "content": "🎹 ASSOLO PIANOFORTE & CHITARRA *(Hybrid Studio/Live)*",
+        "seconds": 160.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]What it [Em]means to [A]me [D]",
-        "rendered": "<span class=\"chord\">Bm</span>What it <span class=\"chord\">Em</span>means to <span class=\"chord\">A</span>me <span class=\"chord\">D</span>",
-        "seconds": 162.0
+        "raw": "`| [F] [C/E] [F] [Gm] | [F] [C/E] [Dm] [C] |`",
+        "rendered": "`| <span class=\"chord\">F</span> <span class=\"chord\">C/E</span> <span class=\"chord\">F</span> <span class=\"chord\">Gm</span> | <span class=\"chord\">F</span> <span class=\"chord\">C/E</span> <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> |`",
+        "seconds": 160.0
       },
       {
         "type": "lyric",
-        "raw": "[Bm]Love of my life...",
-        "rendered": "<span class=\"chord\">Bm</span>Love of my life...",
-        "seconds": 168.0
+        "raw": "`| [Eb] [Bb] [Ebsus2] [Bb] | [Bb] [F/A] [Gm] [F] |`",
+        "rendered": "`| <span class=\"chord\">Eb</span> <span class=\"chord\">Bb</span> <span class=\"chord\">Ebsus2</span> <span class=\"chord\">Bb</span> | <span class=\"chord\">Bb</span> <span class=\"chord\">F/A</span> <span class=\"chord\">Gm</span> <span class=\"chord\">F</span> |`",
+        "seconds": 167.0
       },
       {
         "type": "lyric",
-        "raw": "[F#m]Love of my life...",
-        "rendered": "<span class=\"chord\">F#m</span>Love of my life...",
+        "raw": "`| [Gm7/Bb] [Fsus2/A] [Gm7/Bb] [Fsus2/A] | [Gm7/Bb] [Fsus2/A] |`",
+        "rendered": "`| <span class=\"chord\">Gm7/Bb</span> <span class=\"chord\">Fsus2/A</span> <span class=\"chord\">Gm7/Bb</span> <span class=\"chord\">Fsus2/A</span> | <span class=\"chord\">Gm7/Bb</span> <span class=\"chord\">Fsus2/A</span> |`",
         "seconds": 174.0
       },
       {
         "type": "lyric",
-        "raw": "[G]...Ooh, [D]ooh. 🛑",
-        "rendered": "<span class=\"chord\">G</span>...Ooh, <span class=\"chord\">D</span>ooh. 🛑",
+        "raw": "`| [G] [F/G] [G] [G7] | [C] [Dm] [C] [C7] |`",
+        "rendered": "`| <span class=\"chord\">G</span> <span class=\"chord\">F/G</span> <span class=\"chord\">G</span> <span class=\"chord\">G7</span> | <span class=\"chord\">C</span> <span class=\"chord\">Dm</span> <span class=\"chord\">C</span> <span class=\"chord\">C7</span> |`",
         "seconds": 180.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE & OUTRO",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Back, hurry [Am]back",
+        "rendered": "<span class=\"chord\">Dm</span>Back, hurry <span class=\"chord\">Am</span>back",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Please bring it back [F]home to me",
+        "rendered": "<span class=\"chord\">Bb</span>Please bring it back <span class=\"chord\">F</span>home to me",
+        "seconds": 190.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Because [Bb]you [F/A]don't [Dm]know [Gm7]",
+        "rendered": "Because <span class=\"chord\">Bb</span>you <span class=\"chord\">F/A</span>don't <span class=\"chord\">Dm</span>know <span class=\"chord\">Gm7</span>",
+        "seconds": 194.0
+      },
+      {
+        "type": "lyric",
+        "raw": "What it [C7]means to [F]me",
+        "rendered": "What it <span class=\"chord\">C7</span>means to <span class=\"chord\">F</span>me",
+        "seconds": 199.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Love of my life",
+        "rendered": "<span class=\"chord\">Dm</span>Love of my life",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Am]Love of my life",
+        "rendered": "<span class=\"chord\">Am</span>Love of my life",
+        "seconds": 208.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]Ooooh, [F/A] [Bb]ooooh... [F]Yeah 🛑",
+        "rendered": "<span class=\"chord\">Gm</span>Ooooh, <span class=\"chord\">F/A</span> <span class=\"chord\">Bb</span>ooooh... <span class=\"chord\">F</span>Yeah 🛑",
+        "seconds": 212.0
       }
     ]
   },

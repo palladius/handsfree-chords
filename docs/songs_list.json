@@ -124,30 +124,42 @@
     "audio": "audio/love-of-my-life.mp3",
     "summary": {
       "strofa": [
-        "A",
-        "F#m",
-        "Bm",
-        "E",
-        "A7",
-        "D"
+        "C",
+        "Am",
+        "Dm",
+        "G7",
+        "F/C",
+        "F",
+        "Bb",
+        "F/A",
+        "C7",
+        "G",
+        "G/B"
       ],
       "ritornello": [
-        "Bm",
-        "F#m",
-        "G",
-        "D",
-        "Em",
-        "A"
+        "Dm",
+        "Am",
+        "Bb",
+        "F",
+        "F/A",
+        "Gm7",
+        "C7",
+        "Gm"
       ],
       "bridge": [
-        "Bm",
-        "F#m",
-        "G",
-        "D",
-        "B",
-        "Cdim",
-        "Em",
-        "A"
+        "Dm",
+        "Am",
+        "Bb",
+        "F",
+        "Gm7/F",
+        "Dm/F",
+        "A7",
+        "F#m7b5",
+        "F#dim7",
+        "Gm7",
+        "C",
+        "F/C",
+        "Gm/C"
       ]
     }
   },
