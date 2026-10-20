@@ -3,7 +3,7 @@
     "filename": "firth-of-fifth.md",
     "title": "Firth of Fifth",
     "artist": "Genesis",
-    "key": "",
+    "key": "B",
     "bpm": 65,
     "time_signature": "4/4",
     "summary": {
@@ -53,7 +53,7 @@
     "filename": "gloria.md",
     "title": "Gloria",
     "artist": "Umberto Tozzi",
-    "key": "",
+    "key": "B",
     "bpm": 130,
     "time_signature": "4/4",
     "summary": {
@@ -104,7 +104,7 @@
     "filename": "love-of-my-life.md",
     "title": "Love of My Life",
     "artist": "Queen",
-    "key": "",
+    "key": "F",
     "bpm": 78,
     "time_signature": "4/4",
     "summary": {
@@ -140,7 +140,7 @@
     "filename": "romeo-and-juliet.md",
     "title": "Romeo and Juliet",
     "artist": "Dire Straits",
-    "key": "",
+    "key": "F",
     "bpm": 78,
     "time_signature": "4/4",
     "summary": {
@@ -168,7 +168,7 @@
     "filename": "solsbury-hill.md",
     "title": "Solsbury Hill",
     "artist": "Peter Gabriel",
-    "key": "",
+    "key": "B",
     "bpm": 102,
     "time_signature": "7/4",
     "summary": {
@@ -262,7 +262,7 @@
     "filename": "su-di-noi.md",
     "title": "Su di noi",
     "artist": "Pupo",
-    "key": "",
+    "key": "C",
     "bpm": 115,
     "time_signature": "4/4",
     "summary": {
@@ -298,7 +298,7 @@
     "filename": "sultans-of-swing.md",
     "title": "Sultans of Swing",
     "artist": "Dire Straits",
-    "key": "",
+    "key": "Dm",
     "bpm": 148,
     "time_signature": "4/4",
     "summary": {
@@ -548,7 +548,7 @@
     "filename": "tunnel-of-love.md",
     "title": "Tunnel of Love",
     "artist": "Dire Straits",
-    "key": "",
+    "key": "Dm",
     "bpm": 128,
     "time_signature": "4/4",
     "summary": {
@@ -620,7 +620,7 @@
     "filename": "where-the-streets-have-no-name.md",
     "title": "Where the Streets Have No Name",
     "artist": "U2",
-    "key": "",
+    "key": "D",
     "bpm": 126,
     "time_signature": "4/4",
     "summary": {

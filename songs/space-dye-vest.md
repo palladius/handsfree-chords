@@ -3,7 +3,9 @@ title: Space-Dye Vest
 artist: Dream Theater
 album: Awake
 year: 1994
+key: Dm
 original_key: Dm
+base_chord: Dm
 time_signature: 4/4
 bpm: 108
 duration_seconds: 449

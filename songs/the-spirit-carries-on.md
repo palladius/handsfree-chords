@@ -3,7 +3,9 @@ title: The Spirit Carries On
 artist: Dream Theater
 album: "Metropolis Pt. 2: Scenes from a Memory"
 year: 1999
+key: D
 original_key: D
+base_chord: D
 time_signature: 6/8
 bpm: 72
 duration_seconds: 398

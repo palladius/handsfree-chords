@@ -1103,6 +1103,7 @@
     // Load available songs
     // Artist branding & visual iconography
     const ARTIST_ICONS = {
+      "Dream Theater": { icon: "🎭", bg: "linear-gradient(135deg, #9333ea, #1e1b4b)" },
       "Dire Straits": { icon: "🎸", bg: "linear-gradient(135deg, #b91c1c, #450a0a)" },
       "Genesis": { icon: "🎹", bg: "linear-gradient(135deg, #1d4ed8, #0f172a)" },
       "Queen": { icon: "👑", bg: "linear-gradient(135deg, #d97706, #451a03)" },
@@ -1304,7 +1305,7 @@
                 <div class="card-title" title="${escapeHtml(s.title)}">${escapeHtml(s.title)}</div>
                 <div class="card-artist">${escapeHtml(s.artist)}</div>
                 <div class="card-badges">
-                  ${s.key ? `<span class="mini-badge key">🎹 ${escapeHtml(s.key)}</span>` : ''}
+                  ${s.key ? `<span class="mini-badge key">🎹 ${transposeChord(s.key, transposeOffset)}</span>` : ''}
                   ${s.bpm ? `<span class="mini-badge bpm">⏱️ ${s.bpm} BPM</span>` : ''}
                   <span class="mini-badge">${escapeHtml(s.time_signature || '4/4')}</span>
                 </div>
@@ -1357,10 +1358,11 @@
       let html = '';
 
       // Transpose key display if available
-      let keyDisplay = data.meta.original_key || 'N/D';
-      if (transposeOffset !== 0 && data.meta.original_key) {
-        const transposedKey = transposeChord(data.meta.original_key, transposeOffset);
-        keyDisplay = `${data.meta.original_key} ➔ <span style="color:var(--accent); font-weight:bold;">${transposedKey}</span>`;
+      const baseKey = data.meta.key || data.meta.original_key || data.meta.base_chord;
+      let keyDisplay = baseKey ? transposeChord(baseKey, 0) : 'N/D';
+      if (transposeOffset !== 0 && baseKey) {
+        const transposedKey = transposeChord(baseKey, transposeOffset);
+        keyDisplay = `${transposeChord(baseKey, 0)} ➔ <span style="color:var(--accent); font-weight:bold;">${transposedKey}</span>`;
       }
 
       // Top navigation bar & Meta box

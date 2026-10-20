@@ -2,10 +2,15 @@
   "firth-of-fifth.md": {
     "filename": "firth-of-fifth.md",
     "meta": {
-      "bpm": 65,
-      "time_signature": "4/4",
       "title": "Firth of Fifth",
-      "artist": "Genesis"
+      "artist": "Genesis",
+      "album": "Selling England by the Pound",
+      "year": "1973",
+      "key": "B",
+      "original_key": "B",
+      "base_chord": "B",
+      "time_signature": "4/4",
+      "bpm": 65
     },
     "tips": "Il capolavoro assoluto di Tony Banks. L'intro classica arpeggiata è leggendaria. Sulla strofa (\"The path is clear\"), la mano sinistra scende sul basso (`[B]` $\\to$ `[B7/A]` $\\to$ `[E/G#]` $\\to$ `[B/F#]`). Voicing aperti ed eleganti.",
     "summary": {
@@ -513,10 +518,14 @@
   "gloria.md": {
     "filename": "gloria.md",
     "meta": {
-      "bpm": 130,
-      "time_signature": "4/4",
       "title": "Gloria",
-      "artist": "Umberto Tozzi"
+      "artist": "Umberto Tozzi",
+      "year": "1979",
+      "key": "B",
+      "original_key": "B",
+      "base_chord": "B",
+      "time_signature": "4/4",
+      "bpm": 130
     },
     "tips": "Il leggendario riff tastieristico/pianistico batte ottavi dritti e incalzanti tra `[SI]` e `[MI]`. Mano sinistra fa l'ostinato ritmico sul basso (B - E). Attenzione alla discesa armonica verso lo special `[DO#m] -> [FA#7] -> [SI] -> [MImaj7] -> [LA] [SI] -> [MI]`.",
     "summary": {
@@ -1156,10 +1165,15 @@
   "love-of-my-life.md": {
     "filename": "love-of-my-life.md",
     "meta": {
-      "bpm": 78,
-      "time_signature": "4/4",
       "title": "Love of My Life",
-      "artist": "Queen"
+      "artist": "Queen",
+      "album": "A Night at the Opera",
+      "year": "1975",
+      "key": "F",
+      "original_key": "F",
+      "base_chord": "F",
+      "time_signature": "4/4",
+      "bpm": 78
     },
     "tips": "Il capolavoro di Freddie Mercury al pianoforte. Abbondanza di arpeggi classicheggianti della mano destra e discese di basso cromatiche con la sinistra. Fondamentale il passaggio `[Cdim]` / `[B]` nello special.",
     "summary": {
@@ -1416,10 +1430,15 @@
   "romeo-and-juliet.md": {
     "filename": "romeo-and-juliet.md",
     "meta": {
-      "bpm": 78,
-      "time_signature": "4/4",
       "title": "Romeo and Juliet",
-      "artist": "Dire Straits"
+      "artist": "Dire Straits",
+      "album": "Making Movies",
+      "year": "1980",
+      "key": "F",
+      "original_key": "F",
+      "base_chord": "F",
+      "time_signature": "4/4",
+      "bpm": 78
     },
     "tips": "",
     "summary": {
@@ -1750,10 +1769,14 @@
   "solsbury-hill.md": {
     "filename": "solsbury-hill.md",
     "meta": {
-      "bpm": 102,
-      "time_signature": "7/4",
       "title": "Solsbury Hill",
-      "artist": "Peter Gabriel"
+      "artist": "Peter Gabriel",
+      "year": "1977",
+      "key": "B",
+      "original_key": "B",
+      "base_chord": "B",
+      "time_signature": "7/4",
+      "bpm": 102
     },
     "tips": "Il tempo dispari in 7/4 è il cuore del pezzo. Mantieni l'ostinato ritmico con la mano sinistra (B - F# - B) o in G con arpeggi costanti a semicrome. Nel ritornello (\"boom-boom-boom\") la cadenza armonica spinge verso la risoluzione.",
     "summary": {
@@ -2098,7 +2121,9 @@
       "artist": "Dream Theater",
       "album": "Awake",
       "year": "1994",
+      "key": "Dm",
       "original_key": "Dm",
+      "base_chord": "Dm",
       "time_signature": "4/4",
       "bpm": 108,
       "duration_seconds": "449"
@@ -2792,10 +2817,14 @@
   "su-di-noi.md": {
     "filename": "su-di-noi.md",
     "meta": {
-      "bpm": 115,
-      "time_signature": "4/4",
       "title": "Su di noi",
-      "artist": "Pupo"
+      "artist": "Pupo",
+      "year": "1980",
+      "key": "C",
+      "original_key": "C",
+      "base_chord": "C",
+      "time_signature": "4/4",
+      "bpm": 115
     },
     "tips": "Arpeggio pop fluido mano destra + ottave/quinte aperte alla mano sinistra. Occhio alla modulazione sul `[SI7]` che spinge forte verso `[MIm]`.",
     "summary": {
@@ -3159,10 +3188,15 @@
   "sultans-of-swing.md": {
     "filename": "sultans-of-swing.md",
     "meta": {
-      "bpm": 148,
-      "time_signature": "4/4",
       "title": "Sultans of Swing",
-      "artist": "Dire Straits"
+      "artist": "Dire Straits",
+      "album": "Dire Straits",
+      "year": "1978",
+      "key": "Dm",
+      "original_key": "Dm",
+      "base_chord": "Dm",
+      "time_signature": "4/4",
+      "bpm": 148
     },
     "tips": "",
     "summary": {
@@ -4166,7 +4200,9 @@
       "artist": "Dream Theater",
       "album": "Black Clouds & Silver Linings",
       "year": "2009",
+      "key": "E",
       "original_key": "E",
+      "base_chord": "E",
       "time_signature": "6/8",
       "bpm": 124,
       "duration_seconds": "1156"
@@ -5350,7 +5386,9 @@
       "artist": "Dream Theater",
       "album": "Awake",
       "year": "1994",
+      "key": "A",
       "original_key": "A",
+      "base_chord": "A",
       "time_signature": "4/4",
       "bpm": 100,
       "duration_seconds": "228"
@@ -5662,7 +5700,9 @@
       "artist": "Dream Theater",
       "album": "Metropolis Pt. 2: Scenes from a Memory",
       "year": "1999",
+      "key": "D",
       "original_key": "D",
+      "base_chord": "D",
       "time_signature": "6/8",
       "bpm": 72,
       "duration_seconds": "398"
@@ -6027,10 +6067,15 @@
   "tunnel-of-love.md": {
     "filename": "tunnel-of-love.md",
     "meta": {
-      "bpm": 128,
-      "time_signature": "4/4",
       "title": "Tunnel of Love",
-      "artist": "Dire Straits"
+      "artist": "Dire Straits",
+      "album": "Making Movies",
+      "year": "1980",
+      "key": "Dm",
+      "original_key": "Dm",
+      "base_chord": "Dm",
+      "time_signature": "4/4",
+      "bpm": 128
     },
     "tips": "",
     "summary": {
@@ -6953,10 +6998,15 @@
   "where-the-streets-have-no-name.md": {
     "filename": "where-the-streets-have-no-name.md",
     "meta": {
-      "bpm": 126,
-      "time_signature": "4/4",
       "title": "Where the Streets Have No Name",
-      "artist": "U2"
+      "artist": "U2",
+      "album": "The Joshua Tree",
+      "year": "1987",
+      "key": "D",
+      "original_key": "D",
+      "base_chord": "D",
+      "time_signature": "4/4",
+      "bpm": 126
     },
     "tips": "Sull'iconica intro ambient/organo, tieni il pad di `[D]` e costruisci la ritmica a crome alternate (D - G - Bm - A). Attenzione alla modulazione fugace su `[C]` prima dell'esplosione del titolo (\"Where the streets have no name\"), che crea il classico effetto ipnotico di The Edge ed Eno.",
     "summary": {

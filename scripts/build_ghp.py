@@ -167,7 +167,7 @@ def build_docs():
             "filename": f.name,
             "title": meta.get("title", f.stem),
             "artist": meta.get("artist", ""),
-            "key": meta.get("original_key", ""),
+            "key": meta.get("key") or meta.get("original_key") or meta.get("base_chord", ""),
             "bpm": meta.get("bpm"),
             "time_signature": meta.get("time_signature", "4/4"),
             "summary": summary
@@ -196,7 +196,7 @@ def build_docs():
           filename: s.filename,
           title: s.meta.title || s.filename,
           artist: s.meta.artist || 'Sconosciuto',
-          key: s.meta.original_key || '',
+          key: s.meta.key || s.meta.original_key || s.meta.base_chord || '',
           bpm: s.meta.bpm,
           time_signature: s.meta.time_signature || '4/4',
           summary: s.summary || {}

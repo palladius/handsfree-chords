@@ -1,3 +1,15 @@
+---
+title: Where the Streets Have No Name
+artist: U2
+album: The Joshua Tree
+year: 1987
+key: D
+original_key: D
+base_chord: D
+time_signature: 4/4
+bpm: 126
+---
+
 # 🎵 Where the Streets Have No Name — U2
 
 > **Info brano:**  

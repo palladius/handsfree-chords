@@ -3,7 +3,9 @@ title: The Count of Tuscany
 artist: Dream Theater
 album: Black Clouds & Silver Linings
 year: 2009
+key: E
 original_key: E
+base_chord: E
 time_signature: 6/8
 bpm: 124
 duration_seconds: 1156

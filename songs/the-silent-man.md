@@ -3,7 +3,9 @@ title: The Silent Man
 artist: Dream Theater
 album: Awake
 year: 1994
+key: A
 original_key: A
+base_chord: A
 time_signature: 4/4
 bpm: 100
 duration_seconds: 228

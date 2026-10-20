@@ -220,7 +220,7 @@ class ChordsHandler(SimpleHTTPRequestHandler):
                         "filename": f.name,
                         "title": data["meta"].get("title", f.stem),
                         "artist": data["meta"].get("artist", "Sconosciuto"),
-                        "key": data["meta"].get("original_key", ""),
+                        "key": data["meta"].get("key") or data["meta"].get("original_key") or data["meta"].get("base_chord", ""),
                         "bpm": data["meta"].get("bpm"),
                         "time_signature": data["meta"].get("time_signature", "4/4"),
                         "summary": data.get("summary", {}),
