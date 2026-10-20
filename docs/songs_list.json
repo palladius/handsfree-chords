@@ -137,6 +137,40 @@
     }
   },
   {
+    "filename": "occidentalis-karma.md",
+    "title": "Occidentali's Karma",
+    "artist": "Francesco Gabbani",
+    "key": "",
+    "bpm": 122,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "SIb",
+        "SOLm",
+        "MIb",
+        "DOm7",
+        "FA"
+      ],
+      "ritornello": [
+        "SIb",
+        "DOm",
+        "SOLm",
+        "MIb",
+        "FA",
+        "SOLm7",
+        "REm7",
+        "DOm7"
+      ],
+      "bridge": [
+        "MIb",
+        "SOLm7",
+        "FA",
+        "SOLm",
+        "REm7"
+      ]
+    }
+  },
+  {
     "filename": "romeo-and-juliet.md",
     "title": "Romeo and Juliet",
     "artist": "Dire Straits",
@@ -161,6 +195,39 @@
         "C",
         "F",
         "Bb"
+      ]
+    }
+  },
+  {
+    "filename": "scrivile-scemo.md",
+    "title": "Scrivile Scemo",
+    "artist": "Pinguini Tattici Nucleari",
+    "key": "",
+    "bpm": 128,
+    "time_signature": "4/4",
+    "summary": {
+      "strofa": [
+        "LA",
+        "REadd9",
+        "FA#m7",
+        "MI",
+        "MI4"
+      ],
+      "ritornello": [
+        "RE",
+        "LA",
+        "MI",
+        "FA#m7",
+        "DO#7/FA",
+        "FA#m"
+      ],
+      "bridge": [
+        "SIm7",
+        "MI",
+        "LAadd9/DO#",
+        "FA#m",
+        "DO#m",
+        "FA#m7"
       ]
     }
   },
