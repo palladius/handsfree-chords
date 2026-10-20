@@ -268,12 +268,16 @@ def build_docs():
       activeSongFilename = filename;
       pause();
       currentTime = 0;
+      lastScrolledAnchorIdx = -1;
 
       songData = staticSongsMap[filename];
       renderSong(songData);
       updateTransposeDisplay();
       updateTimeDisplay();
       showPlayerView();
+      const lyr = document.getElementById('lyrics-view');
+      if (lyr) lyr.scrollTop = 0;
+      window.scrollTo(0, 0);
       play();
     }
     """

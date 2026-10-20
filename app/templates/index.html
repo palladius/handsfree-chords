@@ -351,7 +351,8 @@
 
     #lyrics-view {
       flex: 1;
-      padding: 20px 16px calc(var(--footer-h) + 120px) 16px;
+      position: relative;
+      padding: 14px 16px calc(var(--footer-h) + 120px) 16px;
       max-width: 900px;
       width: 100%;
       margin: 0 auto;
@@ -463,37 +464,75 @@
         height: 100%;
         overflow-y: auto;
         max-width: none;
-        padding: 28px 32px 160px 32px;
+        padding: 16px 28px 160px 28px;
+      }
+      .portrait-only-btn {
+        display: none !important;
       }
     }
 
-    .meta-box {
-      background: var(--card-bg);
-      border-left: 4px solid var(--accent);
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-      color: #bbb;
+    .song-bg-watermark {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      opacity: 0.16;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 0 0 0 40px;
+      -webkit-mask-image: radial-gradient(circle at 82% 18%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 76%);
+      mask-image: radial-gradient(circle at 82% 18%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 76%);
+    }
+
+    .song-sheet-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .song-compact-header {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px;
+      margin-bottom: 4px;
     }
-    .meta-box h1 { color: #fff; font-size: 1.35rem; margin-bottom: 2px; }
+    .song-compact-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .song-compact-artist {
+      font-weight: 600;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+    .song-inline-tip {
+      font-style: italic;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #94a3b8;
+      margin-bottom: 8px;
+      max-width: 82ch;
+    }
 
     .section-title {
       color: #fff;
-      font-size: 1.3rem;
-      margin-top: 28px;
-      margin-bottom: 10px;
+      font-size: 1.22rem;
+      margin-top: 22px;
+      margin-bottom: 8px;
       padding-bottom: 4px;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
+    }
+    .section-title.first-section {
+      margin-top: 6px;
     }
 
     .section-desc {
@@ -1168,6 +1207,22 @@
     let timerInterval = null;
     let songData = null;
     let audioTrackVolume = 0.20;
+    let lastScrolledAnchorIdx = -1;
+
+    function formatTipText(rawTip) {
+      if (!rawTip) return '';
+      let t = escapeHtml(rawTip)
+        .replace(/`/g, '')
+        .replace(/\$\\to\$/g, '➔')
+        .replace(/\$\\rightarrow\$/g, '➔')
+        .replace(/-\&gt;/g, '➔');
+      t = t.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      t = t.replace(/\[([a-zA-Z0-9#b♯♭/]+)\]/g, (m, ch) => {
+        const tr = transposeChord(ch, transposeOffset);
+        return `<span class="chord">${tr}</span>`;
+      });
+      return t;
+    }
 
     function setAudioTrackVolume(pct) {
       audioTrackVolume = Math.max(0, Math.min(1, parseFloat(pct) / 100));
@@ -1808,6 +1863,7 @@
       activeSongFilename = filename;
       pause();
       currentTime = 0;
+      lastScrolledAnchorIdx = -1;
 
       const res = await fetch(`/api/song/${filename}`);
       songData = await res.json();
@@ -1815,6 +1871,9 @@
       updateTransposeDisplay();
       updateTimeDisplay();
       showPlayerView();
+      const lyr = document.getElementById('lyrics-view');
+      if (lyr) lyr.scrollTop = 0;
+      window.scrollTo(0, 0);
       play();
     }
 
@@ -1835,26 +1894,24 @@
       timeAnchors = [];
       let html = '';
 
-      const formattedKey = getFormattedCurrentKey();
       const songCover = data.meta.cover || data.meta.artist_image || '';
-      const coverBoxHtml = songCover
-        ? `<img src="${escapeHtml(songCover)}" class="meta-cover-img" alt="${escapeHtml(data.meta.title || '')}" onerror="this.style.display='none'">`
+      const watermarkHtml = songCover
+        ? `<img src="${escapeHtml(songCover)}" class="song-bg-watermark" alt="" onerror="this.style.display='none'">`
         : '';
 
       html += `
-        <div class="meta-box" style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
-          <div style="display:flex; gap:14px; align-items:center; flex:1; min-width:220px;">
-            ${coverBoxHtml}
-            <div>
-              <h1>${escapeHtml(data.meta.title || 'Senza titolo')} — ${escapeHtml(data.meta.artist || '')}</h1>
-              <div>🎹 <strong>Chiave:</strong> <span style="color:var(--chord); font-weight:bold;">${escapeHtml(formattedKey)}</span> | ⏱️ <strong>${data.meta.bpm || 120} BPM</strong> (${escapeHtml(data.meta.time_signature || '4/4')})</div>
-              ${data.tips ? `<div style="margin-top:4px; color:var(--chord); font-size:0.84rem;">💡 ${escapeHtml(data.tips)}</div>` : ''}
+        ${watermarkHtml}
+        <div class="song-sheet-content">
+          <div class="song-compact-header">
+            <div class="song-compact-title">
+              ${escapeHtml(data.meta.title || 'Senza titolo')}
+              <span class="song-compact-artist">— ${escapeHtml(data.meta.artist || '')}</span>
             </div>
+            <button class="btn portrait-only-btn" onclick="showCatalogView()" title="Torna alla lista canzoni" style="height:30px; font-size:0.78rem; padding:0 10px;">
+              📚 Brani
+            </button>
           </div>
-          <button class="btn" onclick="showCatalogView()" title="Torna alla lista canzoni" style="height:34px; font-size:0.8rem;">
-            📚 Brani
-          </button>
-        </div>
+          ${data.tips ? `<div class="song-inline-tip">${formatTipText(data.tips)}</div>` : ''}
       `;
 
       // Update Audio element source & default low volume (20%)
@@ -1867,12 +1924,15 @@
       }
 
       // Render lines with live transposed chords
+      let isFirstSection = true;
       data.lines.forEach((item, idx) => {
         if (item.type === 'section') {
           let cleanTitle = item.content
             .replace(/\*\((.*?)\)\*/g, '<span class="section-desc">($1)</span>')
             .replace(/\*(.*?)\*/g, '<span class="section-desc">($1)</span>');
-          html += `<div class="section-title" id="line-${idx}">${cleanTitle}</div>`;
+          const secClass = isFirstSection ? 'section-title first-section' : 'section-title';
+          isFirstSection = false;
+          html += `<div class="${secClass}" id="line-${idx}">${cleanTitle}</div>`;
         } else if (item.type === 'lyric') {
           let timeTag = '';
           if (item.seconds !== null) {
@@ -1899,6 +1959,7 @@
         }
       });
 
+      html += `</div>`;
       view.innerHTML = html;
       songDuration = computeSongDuration(data);
       updateScrubberBounds();
@@ -1995,6 +2056,7 @@
 
     function jumpToSecond(sec) {
       currentTime = Math.max(0, Math.min(songDuration, sec));
+      lastScrolledAnchorIdx = -1;
       const audioTrack = document.getElementById('audioTrack');
       if (audioTrack && audioTrack.src) {
         audioTrack.currentTime = currentTime;
@@ -2034,7 +2096,7 @@
     function syncScroll() {
       if (timeAnchors.length === 0) return;
 
-      let activeAnchor = timeAnchors[0];
+      let activeAnchor = null;
       for (let i = 0; i < timeAnchors.length; i++) {
         if (currentTime >= timeAnchors[i].seconds) {
           activeAnchor = timeAnchors[i];
@@ -2042,24 +2104,40 @@
           break;
         }
       }
+      if (!activeAnchor) {
+        activeAnchor = timeAnchors[0];
+      }
 
       document.querySelectorAll('.lyric-line.active').forEach(el => el.classList.remove('active'));
       const activeEl = document.getElementById(`line-${activeAnchor.idx}`);
       if (activeEl) {
         activeEl.classList.add('active');
+        if (activeAnchor.idx === lastScrolledAnchorIdx) return;
+        lastScrolledAnchorIdx = activeAnchor.idx;
+
         const lyricsContainer = document.getElementById('lyrics-view');
         const containerStyle = window.getComputedStyle(lyricsContainer);
+
+        // At start of song (first anchor), stay at top = 0 so INTRO / first verse is never occluded
+        if (activeAnchor === timeAnchors[0]) {
+          if (containerStyle.overflowY === 'auto' || containerStyle.overflowY === 'scroll') {
+            lyricsContainer.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          return;
+        }
 
         // In Landscape Split-View, scroll #lyrics-view independently; in Portrait, scroll window
         if (containerStyle.overflowY === 'auto' || containerStyle.overflowY === 'scroll') {
           const containerRect = lyricsContainer.getBoundingClientRect();
           const activeRect = activeEl.getBoundingClientRect();
           const offsetInside = (activeRect.top - containerRect.top) + lyricsContainer.scrollTop;
-          const targetScroll = offsetInside - (lyricsContainer.clientHeight * 0.28);
+          const targetScroll = offsetInside - (lyricsContainer.clientHeight * 0.32);
           lyricsContainer.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
         } else {
           const rect = activeEl.getBoundingClientRect();
-          const targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.28);
+          const targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.32);
           window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
         }
       }
