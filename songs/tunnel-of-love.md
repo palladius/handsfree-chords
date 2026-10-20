@@ -1,3 +1,15 @@
+---
+title: Tunnel of Love
+artist: Dire Straits
+album: Making Movies
+year: 1980
+key: Dm
+original_key: Dm
+base_chord: Dm
+time_signature: 4/4
+bpm: 128
+---
+
 # 🎵 Tunnel of Love — Dire Straits
 
 > **Info brano:**  

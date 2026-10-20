@@ -1,3 +1,15 @@
+---
+title: Love of My Life
+artist: Queen
+album: A Night at the Opera
+year: 1975
+key: F
+original_key: F
+base_chord: F
+time_signature: 4/4
+bpm: 78
+---
+
 # 🎵 Love of My Life — Queen
 
 > **Info brano:**  

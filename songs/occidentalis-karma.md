@@ -1,3 +1,14 @@
+---
+title: "Occidentali's Karma"
+artist: Francesco Gabbani
+year: 2017
+key: Bb
+original_key: Bb
+base_chord: Bb
+time_signature: 4/4
+bpm: 122
+---
+
 # 🎵 Occidentali's Karma — Francesco Gabbani
 
 > **Info brano:**  

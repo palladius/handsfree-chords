@@ -16,6 +16,33 @@ DOCS_DIR = BASE_DIR / "docs"
 DOCS_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def slugify(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
+
+
+def resolve_cover_images(filename: str, meta: dict):
+    stem = Path(filename).stem
+    artist_slug = slugify(meta.get("artist", ""))
+    cover = meta.get("cover") or meta.get("image") or meta.get("song_image") or ""
+    artist_image = meta.get("artist_image") or meta.get("artist_cover") or ""
+    exts = ("jpg", "jpeg", "png", "webp", "svg")
+    if not cover:
+        for ext in exts:
+            for rel in (f"images/songs/{stem}.{ext}", f"images/{stem}.{ext}"):
+                if (DOCS_DIR / rel).exists():
+                    cover = rel
+                    break
+            if cover:
+                break
+    if not artist_image and artist_slug:
+        for ext in exts:
+            rel = f"images/artists/{artist_slug}.{ext}"
+            if (DOCS_DIR / rel).exists():
+                artist_image = rel
+                break
+    return cover, artist_image
+
+
 def parse_frontmatter(yaml_text: str) -> dict:
     meta = {}
     for line in yaml_text.splitlines():
@@ -164,6 +191,11 @@ def build_docs():
             parsed_lines.append({"type": "lyric", "raw": line, "rendered": rendered, "seconds": line_sec})
 
         summary = extract_harmonic_summary(lines)
+        cover, artist_image = resolve_cover_images(f.name, meta)
+        if cover:
+            meta["cover"] = cover
+        if artist_image:
+            meta["artist_image"] = artist_image
 
         song_obj = {
             "filename": f.name,
@@ -177,9 +209,11 @@ def build_docs():
             "filename": f.name,
             "title": meta.get("title", f.stem),
             "artist": meta.get("artist", ""),
-            "key": meta.get("original_key", ""),
+            "key": meta.get("key") or meta.get("original_key") or meta.get("base_chord", ""),
             "bpm": meta.get("bpm"),
             "time_signature": meta.get("time_signature", "4/4"),
+            "cover": meta.get("cover", ""),
+            "artist_image": meta.get("artist_image", ""),
             "summary": summary
         })
 
@@ -207,9 +241,11 @@ def build_docs():
           filename: s.filename,
           title: s.meta.title || s.filename,
           artist: s.meta.artist || 'Sconosciuto',
-          key: s.meta.original_key || '',
+          key: s.meta.key || s.meta.original_key || s.meta.base_chord || '',
           bpm: s.meta.bpm,
           time_signature: s.meta.time_signature || '4/4',
+          cover: s.meta.cover || '',
+          artist_image: s.meta.artist_image || '',
           summary: s.summary || {}
         }));
         select.innerHTML = songEntries.map(s => `<option value="${s.filename}">${s.meta.title || s.filename} (${s.meta.artist || ''})</option>`).join('');

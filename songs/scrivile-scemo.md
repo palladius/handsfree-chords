@@ -1,3 +1,14 @@
+---
+title: Scrivile Scemo
+artist: Pinguini Tattici Nucleari
+year: 2020
+key: A
+original_key: A
+base_chord: A
+time_signature: 4/4
+bpm: 128
+---
+
 # 🎵 Scrivile Scemo — Pinguini Tattici Nucleari
 
 > **Info brano:**  

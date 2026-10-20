@@ -840,6 +840,26 @@
       align-items: center;
       gap: 12px;
     }
+    .card-cover-banner {
+      margin: -18px -18px 4px -18px;
+      height: 150px;
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #11111a;
+    }
+    .card-cover-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .song-card:hover .card-cover-banner img {
+      transform: scale(1.04);
+    }
     .card-avatar {
       width: 48px;
       height: 48px;
@@ -850,6 +870,31 @@
       font-size: 1.5rem;
       background: linear-gradient(135deg, #2a2a40, #161625);
       border: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      overflow: hidden;
+      position: relative;
+    }
+    .card-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .artist-chip-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .meta-cover-img {
+      width: 84px;
+      height: 84px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 2px solid rgba(255, 209, 102, 0.35);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.45);
       flex-shrink: 0;
     }
     .card-meta {
@@ -1530,6 +1575,7 @@
 
     // Artist branding & visual iconography
     const ARTIST_ICONS = {
+      "Dream Theater": { icon: "🎭", bg: "linear-gradient(135deg, #9333ea, #1e1b4b)" },
       "Dire Straits": { icon: "🎸", bg: "linear-gradient(135deg, #b91c1c, #450a0a)" },
       "Genesis": { icon: "🎹", bg: "linear-gradient(135deg, #1d4ed8, #0f172a)" },
       "Queen": { icon: "👑", bg: "linear-gradient(135deg, #d97706, #451a03)" },
@@ -1617,12 +1663,18 @@
       const statsContainer = document.getElementById('catalogStats');
       if (!tabsContainer || !cardsContainer) return;
 
+      // 1. Calculate artist frequency & artist cover image
       const artistCounts = {};
+      const artistImages = {};
       allSongsList.forEach(s => {
         const a = s.artist || 'Sconosciuto';
         artistCounts[a] = (artistCounts[a] || 0) + 1;
+        if (s.artist_image && !artistImages[a]) {
+          artistImages[a] = s.artist_image;
+        }
       });
 
+      // Filter artists with count >= 3 (e.g. Dire Straits, Genesis, Dream Theater)
       const qualifyingArtists = Object.keys(artistCounts)
         .filter(a => artistCounts[a] >= 3)
         .sort((a, b) => artistCounts[b] - artistCounts[a]);
@@ -1637,9 +1689,13 @@
         const iconObj = ARTIST_ICONS[artist] || ARTIST_ICONS['default'];
         const count = artistCounts[artist];
         const isActive = (activeArtistFilter === artist);
+        const artImg = artistImages[artist] || iconObj.image || '';
+        const chipIconHtml = artImg
+          ? `<img src="${escapeHtml(artImg)}" class="artist-chip-avatar" alt="${escapeHtml(artist)}" onerror="this.outerHTML='<span>${iconObj.icon}</span>'">`
+          : `<span>${iconObj.icon}</span>`;
         tabsHtml += `
           <button class="artist-chip ${isActive ? 'active' : ''}" onclick="filterByArtist('${escapeJs(artist)}')">
-            <span>${iconObj.icon}</span> ${escapeHtml(artist)} <span class="chip-count">${count}</span>
+            ${chipIconHtml} ${escapeHtml(artist)} <span class="chip-count">${count}</span>
           </button>
         `;
       });
@@ -1706,11 +1762,19 @@
         }
 
         const displayKey = s.key ? transposeChord(s.key, transposeOffset, notationMode === 'auto' ? null : notationMode) : '';
+        const coverSrc = s.cover || s.artist_image || '';
+        const bannerHtml = s.cover
+          ? `<div class="card-cover-banner"><img src="${escapeHtml(s.cover)}" alt="${escapeHtml(s.title)}" onerror="this.parentElement.style.display='none'"></div>`
+          : '';
+        const avatarInnerHtml = coverSrc
+          ? `<img src="${escapeHtml(coverSrc)}" alt="${escapeHtml(s.title)}" onerror="this.outerHTML='${iconObj.icon}'">`
+          : `${iconObj.icon}`;
 
         cardsHtml += `
           <div class="song-card ${isCurrent ? 'active-song' : ''}" onclick="selectAndPlaySong('${escapeJs(s.filename)}')">
+            ${bannerHtml}
             <div class="card-top">
-              <div class="card-avatar" style="background: ${iconObj.bg};">${iconObj.icon}</div>
+              <div class="card-avatar" style="background: ${iconObj.bg};">${avatarInnerHtml}</div>
               <div class="card-meta">
                 <div class="card-title" title="${escapeHtml(s.title)}">${escapeHtml(s.title)}</div>
                 <div class="card-artist">${escapeHtml(s.artist)}</div>
@@ -1781,13 +1845,20 @@
       let html = '';
 
       const formattedKey = getFormattedCurrentKey();
+      const songCover = data.meta.cover || data.meta.artist_image || '';
+      const coverBoxHtml = songCover
+        ? `<img src="${escapeHtml(songCover)}" class="meta-cover-img" alt="${escapeHtml(data.meta.title || '')}" onerror="this.style.display='none'">`
+        : '';
 
       html += `
-        <div class="meta-box">
-          <div>
-            <h1>${escapeHtml(data.meta.title || 'Senza titolo')} — ${escapeHtml(data.meta.artist || '')}</h1>
-            <div>🎹 <strong>Chiave:</strong> <span style="color:var(--chord); font-weight:bold;">${escapeHtml(formattedKey)}</span> | ⏱️ <strong>${data.meta.bpm || 120} BPM</strong> (${escapeHtml(data.meta.time_signature || '4/4')})</div>
-            ${data.tips ? `<div style="margin-top:4px; color:var(--chord); font-size:0.84rem;">💡 ${escapeHtml(data.tips)}</div>` : ''}
+        <div class="meta-box" style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+          <div style="display:flex; gap:14px; align-items:center; flex:1; min-width:220px;">
+            ${coverBoxHtml}
+            <div>
+              <h1>${escapeHtml(data.meta.title || 'Senza titolo')} — ${escapeHtml(data.meta.artist || '')}</h1>
+              <div>🎹 <strong>Chiave:</strong> <span style="color:var(--chord); font-weight:bold;">${escapeHtml(formattedKey)}</span> | ⏱️ <strong>${data.meta.bpm || 120} BPM</strong> (${escapeHtml(data.meta.time_signature || '4/4')})</div>
+              ${data.tips ? `<div style="margin-top:4px; color:var(--chord); font-size:0.84rem;">💡 ${escapeHtml(data.tips)}</div>` : ''}
+            </div>
           </div>
           <button class="btn" onclick="showCatalogView()" title="Torna alla lista canzoni" style="height:34px; font-size:0.8rem;">
             📚 Brani

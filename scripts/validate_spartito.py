@@ -8,7 +8,7 @@ slash chords, and basic document structure.
 import sys
 import re
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 # Valid root notes in Italian (solfeggio) and English/German notation
 VALID_ROOTS = {
@@ -83,13 +83,46 @@ def parse_single_chord(chord_str: str) -> bool:
     return bool(CHORD_EXT_RE.match(cleaned_suffix))
 
 
-def validate_spartito(content: str) -> List[Tuple[int, str]]:
+def extract_base_chord(content: str) -> Optional[str]:
+    """
+    Extract the base chord (key / original_key / base_chord) from the YAML frontmatter.
+    Returns None if no YAML frontmatter or no base chord field is present.
+    """
+    lines = content.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return None
+
+    idx = 1
+    meta = {}
+    while idx < len(lines) and lines[idx].strip() != "---":
+        line = lines[idx].strip()
+        idx += 1
+        if not line or line.startswith("#") or ":" not in line:
+            continue
+        k, v = line.split(":", 1)
+        meta[k.strip()] = v.strip().strip('"').strip("'")
+
+    # Match closing ---
+    if idx >= len(lines) or lines[idx].strip() != "---":
+        return None
+
+    return meta.get("base_chord") or meta.get("original_key") or meta.get("key")
+
+
+def validate_spartito(content: str, require_base_chord: bool = False) -> List[Tuple[int, str]]:
     """
     Validates the text of a spartito.
     Returns a list of errors: (line_number, error_message).
     """
     errors = []
     lines = content.splitlines()
+
+    if require_base_chord:
+        base_chord = extract_base_chord(content)
+        if not base_chord:
+            errors.append((1, "Manca l'accordo di base nel YAML frontmatter (key / original_key / base_chord)"))
+        elif not parse_single_chord(base_chord):
+            errors.append((1, f"Accordo di base nel YAML non valido: '{base_chord}'"))
 
     for idx, line in enumerate(lines, start=1):
         # Ignore comments or code fence markers
@@ -145,15 +178,16 @@ def main():
         sys.exit(1)
 
     content = file_path.read_text(encoding="utf-8")
-    errors = validate_spartito(content)
+    base_chord = extract_base_chord(content)
+    errors = validate_spartito(content, require_base_chord=True)
 
     if errors:
-        print(f"❌ Errori di validazione trovati in {file_path.name}:")
+        print(f"❌ Errori di validazione trovati in {file_path.name} (accordo base: {base_chord or 'MANCANTE'}):")
         for line_num, msg in errors:
             print(f"  - Linea {line_num}: {msg}")
         sys.exit(1)
     else:
-        print(f"✅ File '{file_path.name}' valido al 100%! Nessun accordo inventato o parentesi rotta.")
+        print(f"✅ File '{file_path.name}' valido al 100%! (🎹 Accordo base: {base_chord})")
         sys.exit(0)
 
 

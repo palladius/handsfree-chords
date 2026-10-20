@@ -6,6 +6,8 @@
     "key": "B",
     "bpm": 65,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "B",
@@ -33,6 +35,8 @@
     "key": "C",
     "bpm": 134,
     "time_signature": "4/4",
+    "cover": "images/songs/fliegerlied.jpg",
+    "artist_image": "images/artists/donikkl.jpg",
     "summary": {
       "strofa": [
         "C",
@@ -56,6 +60,8 @@
     "key": "B",
     "bpm": 130,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "SI",
@@ -84,6 +90,8 @@
     "key": "G",
     "bpm": 132,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "G",
@@ -107,6 +115,8 @@
     "key": "F",
     "bpm": 78,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "A",
@@ -143,6 +153,8 @@
     "key": "Bb",
     "bpm": 122,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "SIb",
@@ -177,6 +189,8 @@
     "key": "F",
     "bpm": 78,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "F",
@@ -205,6 +219,8 @@
     "key": "A",
     "bpm": 128,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "LA",
@@ -238,6 +254,8 @@
     "key": "B",
     "bpm": 102,
     "time_signature": "7/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "G#m",
@@ -255,12 +273,48 @@
     }
   },
   {
+    "filename": "space-dye-vest.md",
+    "title": "Space-Dye Vest",
+    "artist": "Dream Theater",
+    "key": "Dm",
+    "bpm": 108,
+    "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "Bb",
+        "F",
+        "C",
+        "Gm",
+        "A"
+      ],
+      "ritornello": [
+        "Bb",
+        "C",
+        "Dm",
+        "Am",
+        "A"
+      ],
+      "bridge": [
+        "Gm",
+        "Dm",
+        "Bb",
+        "A",
+        "C"
+      ]
+    }
+  },
+  {
     "filename": "spread-your-wings.md",
     "title": "Spread Your Wings",
     "artist": "Queen",
     "key": "D",
     "bpm": 76,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "D",
@@ -300,6 +354,8 @@
     "key": "C",
     "bpm": 115,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "DO",
@@ -336,6 +392,8 @@
     "key": "Dm",
     "bpm": 148,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "Dm",
@@ -358,6 +416,8 @@
     "key": "D",
     "bpm": 139,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "D",
@@ -383,6 +443,8 @@
     "key": "F",
     "bpm": 104,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "F",
@@ -408,12 +470,51 @@
     }
   },
   {
+    "filename": "the-count-of-tuscany.md",
+    "title": "The Count of Tuscany",
+    "artist": "Dream Theater",
+    "key": "E",
+    "bpm": 124,
+    "time_signature": "6/8",
+    "cover": "",
+    "artist_image": "",
+    "summary": {
+      "strofa": [
+        "C#m",
+        "A",
+        "E",
+        "B",
+        "F#m",
+        "G#7"
+      ],
+      "ritornello": [
+        "E",
+        "B",
+        "C#m",
+        "A",
+        "F#m",
+        "G#7"
+      ],
+      "bridge": [
+        "D",
+        "A/C#",
+        "Bm",
+        "G",
+        "A",
+        "D/F#",
+        "Em"
+      ]
+    }
+  },
+  {
     "filename": "the-knife.md",
     "title": "The Knife",
     "artist": "Genesis",
     "key": "G#m",
     "bpm": 132,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "G#m",
@@ -442,6 +543,8 @@
     "key": "F#",
     "bpm": 68,
     "time_signature": "12/8",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "Bm",
@@ -465,12 +568,98 @@
     }
   },
   {
+    "filename": "the-silent-man.md",
+    "title": "The Silent Man",
+    "artist": "Dream Theater",
+    "key": "A",
+    "bpm": 100,
+    "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
+    "summary": {
+      "strofa": [
+        "F#m",
+        "C#m",
+        "D",
+        "A",
+        "E/G#",
+        "Bm",
+        "C#7"
+      ],
+      "ritornello": [
+        "D",
+        "E",
+        "F#m",
+        "G",
+        "C#7",
+        "A",
+        "E/G#",
+        "A/C#",
+        "Bm7"
+      ],
+      "bridge": [
+        "D",
+        "E",
+        "F#m",
+        "Bm",
+        "G",
+        "C#7"
+      ]
+    }
+  },
+  {
+    "filename": "the-spirit-carries-on.md",
+    "title": "The Spirit Carries On",
+    "artist": "Dream Theater",
+    "key": "D",
+    "bpm": 72,
+    "time_signature": "6/8",
+    "cover": "",
+    "artist_image": "",
+    "summary": {
+      "strofa": [
+        "D",
+        "Em/D",
+        "Bm",
+        "F#m",
+        "G",
+        "D/F#",
+        "Em",
+        "E7/G#",
+        "A"
+      ],
+      "ritornello": [
+        "G",
+        "A",
+        "D",
+        "F#7",
+        "Bm",
+        "Bm/A",
+        "E/G#",
+        "Em",
+        "F#m",
+        "Gm"
+      ],
+      "bridge": [
+        "Em",
+        "Bm",
+        "C",
+        "G",
+        "F#m",
+        "A",
+        "Bb"
+      ]
+    }
+  },
+  {
     "filename": "tunnel-of-love.md",
     "title": "Tunnel of Love",
     "artist": "Dire Straits",
     "key": "Dm",
     "bpm": 128,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "Dm",
@@ -498,6 +687,8 @@
     "key": "D",
     "bpm": 128,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "D",
@@ -520,6 +711,8 @@
     "key": "C",
     "bpm": 130,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "C",
@@ -543,6 +736,8 @@
     "key": "D",
     "bpm": 126,
     "time_signature": "4/4",
+    "cover": "",
+    "artist_image": "",
     "summary": {
       "strofa": [
         "D",

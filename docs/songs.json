@@ -2,11 +2,15 @@
   "firth-of-fifth.md": {
     "filename": "firth-of-fifth.md",
     "meta": {
-      "bpm": 65,
-      "time_signature": "4/4",
-      "original_key": "B",
       "title": "Firth of Fifth",
-      "artist": "Genesis"
+      "artist": "Genesis",
+      "album": "Selling England by the Pound",
+      "year": "1973",
+      "key": "B",
+      "original_key": "B",
+      "base_chord": "B",
+      "time_signature": "4/4",
+      "bpm": 65
     },
     "tips": "Il capolavoro assoluto di Tony Banks. L'intro classica arpeggiata è leggendaria. Sulla strofa (\"The path is clear\"), la mano sinistra scende sul basso (`[B]` $\\to$ `[B7/A]` $\\to$ `[E/G#]` $\\to$ `[B/F#]`). Voicing aperti ed eleganti.",
     "summary": {
@@ -234,6 +238,8 @@
       "artist": "Donikkl",
       "tags": "oktoberfest, schlager, party, bavaria",
       "original_key": "C",
+      "cover": "images/songs/fliegerlied.jpg",
+      "artist_image": "images/artists/donikkl.jpg",
       "bpm": 134,
       "time_signature": "4/4"
     },
@@ -514,11 +520,14 @@
   "gloria.md": {
     "filename": "gloria.md",
     "meta": {
-      "bpm": 130,
-      "time_signature": "4/4",
-      "original_key": "B",
       "title": "Gloria",
-      "artist": "Umberto Tozzi"
+      "artist": "Umberto Tozzi",
+      "year": "1979",
+      "key": "B",
+      "original_key": "B",
+      "base_chord": "B",
+      "time_signature": "4/4",
+      "bpm": 130
     },
     "tips": "Il leggendario riff tastieristico/pianistico batte ottavi dritti e incalzanti tra `[SI]` e `[MI]`. Mano sinistra fa l'ostinato ritmico sul basso (B - E). Attenzione alla discesa armonica verso lo special `[DO#m] -> [FA#7] -> [SI] -> [MImaj7] -> [LA] [SI] -> [MI]`.",
     "summary": {
@@ -1158,11 +1167,15 @@
   "love-of-my-life.md": {
     "filename": "love-of-my-life.md",
     "meta": {
-      "bpm": 78,
-      "time_signature": "4/4",
-      "original_key": "F",
       "title": "Love of My Life",
-      "artist": "Queen"
+      "artist": "Queen",
+      "album": "A Night at the Opera",
+      "year": "1975",
+      "key": "F",
+      "original_key": "F",
+      "base_chord": "F",
+      "time_signature": "4/4",
+      "bpm": 78
     },
     "tips": "Il capolavoro di Freddie Mercury al pianoforte. Abbondanza di arpeggi classicheggianti della mano destra e discese di basso cromatiche con la sinistra. Fondamentale il passaggio `[Cdim]` / `[B]` nello special.",
     "summary": {
@@ -1419,11 +1432,14 @@
   "occidentalis-karma.md": {
     "filename": "occidentalis-karma.md",
     "meta": {
-      "bpm": 122,
-      "time_signature": "4/4",
-      "original_key": "Bb",
       "title": "Occidentali's Karma",
-      "artist": "Francesco Gabbani"
+      "artist": "Francesco Gabbani",
+      "year": "2017",
+      "key": "Bb",
+      "original_key": "Bb",
+      "base_chord": "Bb",
+      "time_signature": "4/4",
+      "bpm": 122
     },
     "tips": "",
     "summary": {
@@ -1844,11 +1860,15 @@
   "romeo-and-juliet.md": {
     "filename": "romeo-and-juliet.md",
     "meta": {
-      "bpm": 78,
-      "time_signature": "4/4",
-      "original_key": "F",
       "title": "Romeo and Juliet",
-      "artist": "Dire Straits"
+      "artist": "Dire Straits",
+      "album": "Making Movies",
+      "year": "1980",
+      "key": "F",
+      "original_key": "F",
+      "base_chord": "F",
+      "time_signature": "4/4",
+      "bpm": 78
     },
     "tips": "",
     "summary": {
@@ -2179,11 +2199,14 @@
   "scrivile-scemo.md": {
     "filename": "scrivile-scemo.md",
     "meta": {
-      "bpm": 128,
-      "time_signature": "4/4",
-      "original_key": "A",
       "title": "Scrivile Scemo",
-      "artist": "Pinguini Tattici Nucleari"
+      "artist": "Pinguini Tattici Nucleari",
+      "year": "2020",
+      "key": "A",
+      "original_key": "A",
+      "base_chord": "A",
+      "time_signature": "4/4",
+      "bpm": 128
     },
     "tips": "",
     "summary": {
@@ -2581,11 +2604,14 @@
   "solsbury-hill.md": {
     "filename": "solsbury-hill.md",
     "meta": {
-      "bpm": 102,
-      "time_signature": "7/4",
-      "original_key": "B",
       "title": "Solsbury Hill",
-      "artist": "Peter Gabriel"
+      "artist": "Peter Gabriel",
+      "year": "1977",
+      "key": "B",
+      "original_key": "B",
+      "base_chord": "B",
+      "time_signature": "7/4",
+      "bpm": 102
     },
     "tips": "Il tempo dispari in 7/4 è il cuore del pezzo. Mantieni l'ostinato ritmico con la mano sinistra (B - F# - B) o in G con arpeggi costanti a semicrome. Nel ritornello (\"boom-boom-boom\") la cadenza armonica spinge verso la risoluzione.",
     "summary": {
@@ -2920,6 +2946,344 @@
         "raw": "*(Fade out su riff in 7/4)* 🛑",
         "rendered": "*(Fade out su riff in 7/4)* 🛑",
         "seconds": 252.0
+      }
+    ]
+  },
+  "space-dye-vest.md": {
+    "filename": "space-dye-vest.md",
+    "meta": {
+      "title": "Space-Dye Vest",
+      "artist": "Dream Theater",
+      "album": "Awake",
+      "year": "1994",
+      "key": "Dm",
+      "original_key": "Dm",
+      "base_chord": "Dm",
+      "time_signature": "4/4",
+      "bpm": 108,
+      "duration_seconds": "449"
+    },
+    "tips": "Il canto del cigno di Kevin Moore nei Dream Theater, posto in chiusura di *Awake* (1994). Tutto il brano ruota attorno a un ipnotico ostinato pianistico in Re minore: la mano sinistra arpeggia ottave e quinte profonde (`[Dm] -> [Bb] -> [Gm] -> [A]`), mentre la destra disegna una melodia malinconica e glaciale sulle note `A - F - G - E - F - D`. Mantieni il pedale di risonanza pulito a ogni cambio armonico per preservare l'atmosfera intima e cinematografica.",
+    "summary": {
+      "strofa": [
+        "Dm",
+        "Bb",
+        "F",
+        "C",
+        "Gm",
+        "A"
+      ],
+      "ritornello": [
+        "Bb",
+        "C",
+        "Dm",
+        "Am",
+        "A"
+      ],
+      "bridge": [
+        "Gm",
+        "Dm",
+        "Bb",
+        "A",
+        "C"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Space-Dye Vest — Dream Theater",
+        "rendered": "# 🎵 Space-Dye Vest — Dream Theater",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO *(Tema principale di Pianoforte Solo — Kevin Moore)*",
+        "seconds": 0.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [Bb] | [Gm] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">Gm</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 6.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [Bb] | [Gm] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">Gm</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] [A] | [Dm] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> <span class=\"chord\">A</span> | <span class=\"chord\">Dm</span> |`",
+        "seconds": 24.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Falling through pages of [Bb]martens on angels",
+        "rendered": "<span class=\"chord\">Dm</span>Falling through pages of <span class=\"chord\">Bb</span>martens on angels",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Feeling my heart pull [C]west",
+        "rendered": "<span class=\"chord\">F</span>Feeling my heart pull <span class=\"chord\">C</span>west",
+        "seconds": 56.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]I saw the future [Bb]dressed as a stranger",
+        "rendered": "<span class=\"chord\">Dm</span>I saw the future <span class=\"chord\">Bb</span>dressed as a stranger",
+        "seconds": 64.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]Love in a space-dye [A]vest",
+        "rendered": "<span class=\"chord\">Gm</span>Love in a space-dye <span class=\"chord\">A</span>vest",
+        "seconds": 72.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": 80.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Love is an act of [Bb]blood and I'm bleeding",
+        "rendered": "<span class=\"chord\">Dm</span>Love is an act of <span class=\"chord\">Bb</span>blood and I'm bleeding",
+        "seconds": 80.0
+      },
+      {
+        "type": "lyric",
+        "raw": "A [F]pool in the shape of a [C]heart",
+        "rendered": "A <span class=\"chord\">F</span>pool in the shape of a <span class=\"chord\">C</span>heart",
+        "seconds": 88.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Beauty projection [Bb]in the reflection",
+        "rendered": "<span class=\"chord\">Dm</span>Beauty projection <span class=\"chord\">Bb</span>in the reflection",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]Always the worst way to [A]start",
+        "rendered": "<span class=\"chord\">Gm</span>Always the worst way to <span class=\"chord\">A</span>start",
+        "seconds": 104.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 1",
+        "seconds": 112.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And he'll never [C]have what I [Dm]had [Am]",
+        "rendered": "<span class=\"chord\">Bb</span>And he'll never <span class=\"chord\">C</span>have what I <span class=\"chord\">Dm</span>had <span class=\"chord\">Am</span>",
+        "seconds": 112.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]be open a[Dm]gain [A]",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>be open a<span class=\"chord\">Dm</span>gain <span class=\"chord\">A</span>",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]dream of [Dm]her [Am]",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>dream of <span class=\"chord\">Dm</span>her <span class=\"chord\">Am</span>",
+        "seconds": 128.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]feel this [Dm]pain",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>feel this <span class=\"chord\">Dm</span>pain",
+        "seconds": 136.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTERLUDIO PIANO & SYNTH",
+        "seconds": 146.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [Bb] | [Gm] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">Gm</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 152.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 158.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": 185.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Swallow the darkness, [Bb]ready to turn off",
+        "rendered": "<span class=\"chord\">Dm</span>Swallow the darkness, <span class=\"chord\">Bb</span>ready to turn off",
+        "seconds": 185.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F]Nobody left to [C]blame",
+        "rendered": "<span class=\"chord\">F</span>Nobody left to <span class=\"chord\">C</span>blame",
+        "seconds": 193.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Dm]Watching the signals [Bb]fade in the distance",
+        "rendered": "<span class=\"chord\">Dm</span>Watching the signals <span class=\"chord\">Bb</span>fade in the distance",
+        "seconds": 201.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]Nothing remains the [A]same",
+        "rendered": "<span class=\"chord\">Gm</span>Nothing remains the <span class=\"chord\">A</span>same",
+        "seconds": 209.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL *(Crescendo Band & Mellotron)*",
+        "seconds": 220.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]There's no one to [Dm]take my blame",
+        "rendered": "<span class=\"chord\">Gm</span>There's no one to <span class=\"chord\">Dm</span>take my blame",
+        "seconds": 220.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]If they wanted to [A]",
+        "rendered": "<span class=\"chord\">Bb</span>If they wanted to <span class=\"chord\">A</span>",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]There's nothing to [Dm]keep me sane",
+        "rendered": "<span class=\"chord\">Gm</span>There's nothing to <span class=\"chord\">Dm</span>keep me sane",
+        "seconds": 236.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And it's all the [A]same to you",
+        "rendered": "<span class=\"chord\">Bb</span>And it's all the <span class=\"chord\">A</span>same to you",
+        "seconds": 244.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Gm]There's nowhere to [Dm]set my aim",
+        "rendered": "<span class=\"chord\">Gm</span>There's nowhere to <span class=\"chord\">Dm</span>set my aim",
+        "seconds": 252.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]So I'm everywhere [A]",
+        "rendered": "<span class=\"chord\">Bb</span>So I'm everywhere <span class=\"chord\">A</span>",
+        "seconds": 260.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Never gonna [C]let you [Dm]in",
+        "rendered": "<span class=\"chord\">Bb</span>Never gonna <span class=\"chord\">C</span>let you <span class=\"chord\">Dm</span>in",
+        "seconds": 268.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 2",
+        "seconds": 282.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Now I'm gonna [C]face the [Dm]world [Am]",
+        "rendered": "<span class=\"chord\">Bb</span>Now I'm gonna <span class=\"chord\">C</span>face the <span class=\"chord\">Dm</span>world <span class=\"chord\">Am</span>",
+        "seconds": 282.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Now I'm gonna [C]live a[Dm]lone [A]",
+        "rendered": "<span class=\"chord\">Bb</span>Now I'm gonna <span class=\"chord\">C</span>live a<span class=\"chord\">Dm</span>lone <span class=\"chord\">A</span>",
+        "seconds": 290.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]be open a[Dm]gain [Am]",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>be open a<span class=\"chord\">Dm</span>gain <span class=\"chord\">Am</span>",
+        "seconds": 298.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]have a [Dm]home",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>have a <span class=\"chord\">Dm</span>home",
+        "seconds": 306.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE",
+        "seconds": 318.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]dream of [Dm]you [Am]",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>dream of <span class=\"chord\">Dm</span>you <span class=\"chord\">Am</span>",
+        "seconds": 318.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]feel this [Dm]way [A]",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>feel this <span class=\"chord\">Dm</span>way <span class=\"chord\">A</span>",
+        "seconds": 326.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]be open a[Dm]gain [Am]",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>be open a<span class=\"chord\">Dm</span>gain <span class=\"chord\">Am</span>",
+        "seconds": 334.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]And I'll never [C]walk a[Dm]way",
+        "rendered": "<span class=\"chord\">Bb</span>And I'll never <span class=\"chord\">C</span>walk a<span class=\"chord\">Dm</span>way",
+        "seconds": 342.0
+      },
+      {
+        "type": "section",
+        "content": "🔁 OUTRO *(Ripresa ostinato di Pianoforte Solo in dissolvenza)*",
+        "seconds": 355.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [Bb] | [Gm] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">Gm</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 361.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [C] | [Bb] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">C</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 367.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Dm] | [Bb] | [Gm] | [A] | [Dm] |` 🛑",
+        "rendered": "`| <span class=\"chord\">Dm</span> | <span class=\"chord\">Bb</span> | <span class=\"chord\">Gm</span> | <span class=\"chord\">A</span> | <span class=\"chord\">Dm</span> |` 🛑",
+        "seconds": 373.0
       }
     ]
   },
@@ -3288,11 +3652,14 @@
   "su-di-noi.md": {
     "filename": "su-di-noi.md",
     "meta": {
-      "bpm": 115,
-      "time_signature": "4/4",
-      "original_key": "C",
       "title": "Su di noi",
-      "artist": "Pupo"
+      "artist": "Pupo",
+      "year": "1980",
+      "key": "C",
+      "original_key": "C",
+      "base_chord": "C",
+      "time_signature": "4/4",
+      "bpm": 115
     },
     "tips": "Arpeggio pop fluido mano destra + ottave/quinte aperte alla mano sinistra. Occhio alla modulazione sul `[SI7]` che spinge forte verso `[MIm]`.",
     "summary": {
@@ -3656,11 +4023,15 @@
   "sultans-of-swing.md": {
     "filename": "sultans-of-swing.md",
     "meta": {
-      "bpm": 148,
-      "time_signature": "4/4",
-      "original_key": "Dm",
       "title": "Sultans of Swing",
-      "artist": "Dire Straits"
+      "artist": "Dire Straits",
+      "album": "Dire Straits",
+      "year": "1978",
+      "key": "Dm",
+      "original_key": "Dm",
+      "base_chord": "Dm",
+      "time_signature": "4/4",
+      "bpm": 148
     },
     "tips": "",
     "summary": {
@@ -4657,6 +5028,417 @@
       }
     ]
   },
+  "the-count-of-tuscany.md": {
+    "filename": "the-count-of-tuscany.md",
+    "meta": {
+      "title": "The Count of Tuscany",
+      "artist": "Dream Theater",
+      "album": "Black Clouds & Silver Linings",
+      "year": "2009",
+      "key": "E",
+      "original_key": "E",
+      "base_chord": "E",
+      "time_signature": "6/8",
+      "bpm": 124,
+      "duration_seconds": "1156"
+    },
+    "tips": "Suite prog-metal monumentale di 19 minuti che chiude *Black Clouds & Silver Linings*. Jordan Rudess spazia da arpeggi cristallini in Mi Lidio (`[E] -> [F#]`) all'inizio, ai lead furiosi nella sezione centrale, fino ai celestiali tappeti di Continuum e archi sinfonici nell'interludio ambient. Nel grandioso finale (\"Tell them about my brother!\"), apri gli accordi a due mani con bassi ottavati profondi su `[D] -> [A/C#] -> [Bm] -> [G]` prima della catarsi definitiva in `[E]` con la cadenza plagale minore `[A] -> [Am] -> [E]`.",
+    "summary": {
+      "strofa": [
+        "C#m",
+        "A",
+        "E",
+        "B",
+        "F#m",
+        "G#7"
+      ],
+      "ritornello": [
+        "E",
+        "B",
+        "C#m",
+        "A",
+        "F#m",
+        "G#7"
+      ],
+      "bridge": [
+        "D",
+        "A/C#",
+        "Bm",
+        "G",
+        "A",
+        "D/F#",
+        "Em"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 The Count of Tuscany — Dream Theater",
+        "rendered": "# 🎵 The Count of Tuscany — Dream Theater",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO EPICA *(Arpeggio Lidio / Mixolidio Chitarra & Tastiere)*",
+        "seconds": 0.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [E] | [F#] | [A] | [E] |`",
+        "rendered": "`| <span class=\"chord\">E</span> | <span class=\"chord\">F#</span> | <span class=\"chord\">A</span> | <span class=\"chord\">E</span> |`",
+        "seconds": 6.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [E] | [F#] | [D] [A] | [E] |`",
+        "rendered": "`| <span class=\"chord\">E</span> | <span class=\"chord\">F#</span> | <span class=\"chord\">D</span> <span class=\"chord\">A</span> | <span class=\"chord\">E</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C#m] | [A] | [E] | [B] |`",
+        "rendered": "`| <span class=\"chord\">C#m</span> | <span class=\"chord\">A</span> | <span class=\"chord\">E</span> | <span class=\"chord\">B</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C#m] | [F#] | [A] | [B] |`",
+        "rendered": "`| <span class=\"chord\">C#m</span> | <span class=\"chord\">F#</span> | <span class=\"chord\">A</span> | <span class=\"chord\">B</span> |`",
+        "seconds": 24.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 SEZIONE PROG STRUMENTALE",
+        "seconds": 115.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C#m] | [G#m] | [A] | [E] [B/D#] |`",
+        "rendered": "`| <span class=\"chord\">C#m</span> | <span class=\"chord\">G#m</span> | <span class=\"chord\">A</span> | <span class=\"chord\">E</span> <span class=\"chord\">B/D#</span> |`",
+        "seconds": 121.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C#m] | [F#m] | [G#7] | [C#m] |`",
+        "rendered": "`| <span class=\"chord\">C#m</span> | <span class=\"chord\">F#m</span> | <span class=\"chord\">G#7</span> | <span class=\"chord\">C#m</span> |`",
+        "seconds": 127.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": 225.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Several years ago, [A]in a foreign town",
+        "rendered": "<span class=\"chord\">C#m</span>Several years ago, <span class=\"chord\">A</span>in a foreign town",
+        "seconds": 225.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Far away from home, [B]I met the Count of Tuscany",
+        "rendered": "<span class=\"chord\">E</span>Far away from home, <span class=\"chord\">B</span>I met the Count of Tuscany",
+        "seconds": 233.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]A young eccentric man [A]bred from royal blood",
+        "rendered": "<span class=\"chord\">C#m</span>A young eccentric man <span class=\"chord\">A</span>bred from royal blood",
+        "seconds": 241.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]Took me for a ride [G#7]across the open countryside",
+        "rendered": "<span class=\"chord\">F#m</span>Took me for a ride <span class=\"chord\">G#7</span>across the open countryside",
+        "seconds": 249.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": 258.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Along the winding road, [A]Wait, I'd like to show",
+        "rendered": "<span class=\"chord\">C#m</span>Along the winding road, <span class=\"chord\">A</span>Wait, I'd like to show",
+        "seconds": 258.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Where my ancestors [B]lived centuries ago",
+        "rendered": "<span class=\"chord\">E</span>Where my ancestors <span class=\"chord\">B</span>lived centuries ago",
+        "seconds": 266.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Smoking on his pipe, [A]dressed in military style",
+        "rendered": "<span class=\"chord\">C#m</span>Smoking on his pipe, <span class=\"chord\">A</span>dressed in military style",
+        "seconds": 274.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]His château comes to life [G#7]behind a weathered smile",
+        "rendered": "<span class=\"chord\">F#m</span>His château comes to life <span class=\"chord\">G#7</span>behind a weathered smile",
+        "seconds": 282.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 1",
+        "seconds": 292.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Come and have a taste, [B]a rare vintage",
+        "rendered": "<span class=\"chord\">E</span>Come and have a taste, <span class=\"chord\">B</span>a rare vintage",
+        "seconds": 292.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]All the finest wines [A]improve with age",
+        "rendered": "<span class=\"chord\">C#m</span>All the finest wines <span class=\"chord\">A</span>improve with age",
+        "seconds": 300.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Join me for a drink, [B]let's raise our glasses high",
+        "rendered": "<span class=\"chord\">E</span>Join me for a drink, <span class=\"chord\">B</span>let's raise our glasses high",
+        "seconds": 308.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]To the Count of [B]Tuscany [C#m]",
+        "rendered": "<span class=\"chord\">A</span>To the Count of <span class=\"chord\">B</span>Tuscany <span class=\"chord\">C#m</span>",
+        "seconds": 316.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": 335.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Down the cellar stairs, [A]dark and damp within",
+        "rendered": "<span class=\"chord\">C#m</span>Down the cellar stairs, <span class=\"chord\">A</span>dark and damp within",
+        "seconds": 335.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Barrels lined in rows, [B]stories carved in stone",
+        "rendered": "<span class=\"chord\">E</span>Barrels lined in rows, <span class=\"chord\">B</span>stories carved in stone",
+        "seconds": 343.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Tell you of a tale, [A]legend of the Count",
+        "rendered": "<span class=\"chord\">C#m</span>Tell you of a tale, <span class=\"chord\">A</span>legend of the Count",
+        "seconds": 351.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]Soldiers in the night, [G#7]bodies in the wine",
+        "rendered": "<span class=\"chord\">F#m</span>Soldiers in the night, <span class=\"chord\">G#7</span>bodies in the wine",
+        "seconds": 359.0
+      },
+      {
+        "type": "section",
+        "content": "🌊 PRE-CHORUS",
+        "seconds": 372.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]Could this be the end? [G#7]Is this the way I die?",
+        "rendered": "<span class=\"chord\">F#m</span>Could this be the end? <span class=\"chord\">G#7</span>Is this the way I die?",
+        "seconds": 372.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Sitting here alone, [A]no one by my side",
+        "rendered": "<span class=\"chord\">C#m</span>Sitting here alone, <span class=\"chord\">A</span>no one by my side",
+        "seconds": 380.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]I don't understand, [B]what is going on?",
+        "rendered": "<span class=\"chord\">F#m</span>I don't understand, <span class=\"chord\">B</span>what is going on?",
+        "seconds": 388.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 2",
+        "seconds": 398.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Wait a minute now, [B]something isn't right",
+        "rendered": "<span class=\"chord\">E</span>Wait a minute now, <span class=\"chord\">B</span>something isn't right",
+        "seconds": 398.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Looking for a way [A]to survive the night",
+        "rendered": "<span class=\"chord\">C#m</span>Looking for a way <span class=\"chord\">A</span>to survive the night",
+        "seconds": 406.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Heart is beating fast, [B]running out of time",
+        "rendered": "<span class=\"chord\">E</span>Heart is beating fast, <span class=\"chord\">B</span>running out of time",
+        "seconds": 414.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[A]Save me from this [B]madness! [C#m]",
+        "rendered": "<span class=\"chord\">A</span>Save me from this <span class=\"chord\">B</span>madness! <span class=\"chord\">C#m</span>",
+        "seconds": 422.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 ASSOLO TASTIERE & CHITARRA + INTERLUDIO AMBIENT",
+        "seconds": 440.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [C#m] | [A] | [F#m] | [G#7] |` *(Lead Unisono & Soli)*",
+        "rendered": "`| <span class=\"chord\">C#m</span> | <span class=\"chord\">A</span> | <span class=\"chord\">F#m</span> | <span class=\"chord\">G#7</span> |` *(Lead Unisono & Soli)*",
+        "seconds": 446.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Em] | [C] | [G] | [D] |` *(Oasi Ambient: Chitarra pulita & Continuum)*",
+        "rendered": "`| <span class=\"chord\">Em</span> | <span class=\"chord\">C</span> | <span class=\"chord\">G</span> | <span class=\"chord\">D</span> |` *(Oasi Ambient: Chitarra pulita & Continuum)*",
+        "seconds": 452.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Em] | [Cmaj7] | [Am7] | [B7] |`",
+        "rendered": "`| <span class=\"chord\">Em</span> | <span class=\"chord\">Cmaj7</span> | <span class=\"chord\">Am7</span> | <span class=\"chord\">B7</span> |`",
+        "seconds": 458.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL ACUSTICO",
+        "seconds": 865.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Now wait a minute [A/C#]man",
+        "rendered": "<span class=\"chord\">D</span>Now wait a minute <span class=\"chord\">A/C#</span>man",
+        "seconds": 865.0
+      },
+      {
+        "type": "lyric",
+        "raw": "That's [Bm]not how it [G]is",
+        "rendered": "That's <span class=\"chord\">Bm</span>not how it <span class=\"chord\">G</span>is",
+        "seconds": 872.0
+      },
+      {
+        "type": "lyric",
+        "raw": "You [D]must be con[A]fused",
+        "rendered": "You <span class=\"chord\">D</span>must be con<span class=\"chord\">A</span>fused",
+        "seconds": 879.0
+      },
+      {
+        "type": "lyric",
+        "raw": "That [G]isn't who I [A]am",
+        "rendered": "That <span class=\"chord\">G</span>isn't who I <span class=\"chord\">A</span>am",
+        "seconds": 886.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Please [D]trust in what I [A/C#]say",
+        "rendered": "Please <span class=\"chord\">D</span>trust in what I <span class=\"chord\">A/C#</span>say",
+        "seconds": 893.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Look [Bm]into my [G]eyes",
+        "rendered": "Look <span class=\"chord\">Bm</span>into my <span class=\"chord\">G</span>eyes",
+        "seconds": 900.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Please [D/F#]don't be a[Em]fraid",
+        "rendered": "Please <span class=\"chord\">D/F#</span>don't be a<span class=\"chord\">Em</span>fraid",
+        "seconds": 907.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [G]never meant to [A]scare you",
+        "rendered": "I <span class=\"chord\">G</span>never meant to <span class=\"chord\">A</span>scare you",
+        "seconds": 914.0
+      },
+      {
+        "type": "section",
+        "content": "💥 CLIMAX FINALE *(Grand Finale Sinfonico)*",
+        "seconds": 925.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Tell them about my [A/C#]brother!",
+        "rendered": "<span class=\"chord\">D</span>Tell them about my <span class=\"chord\">A/C#</span>brother!",
+        "seconds": 925.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Tell them about the [G]Count!",
+        "rendered": "<span class=\"chord\">Bm</span>Tell them about the <span class=\"chord\">G</span>Count!",
+        "seconds": 933.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]All the chapel [A]saints",
+        "rendered": "<span class=\"chord\">D</span>All the chapel <span class=\"chord\">A</span>saints",
+        "seconds": 941.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Could [G]never count you [A]out!",
+        "rendered": "Could <span class=\"chord\">G</span>never count you <span class=\"chord\">A</span>out!",
+        "seconds": 948.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]I want to stay a[B/D#]live!",
+        "rendered": "<span class=\"chord\">E</span>I want to stay a<span class=\"chord\">B/D#</span>live!",
+        "seconds": 956.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[C#m]Everything about this [A]place just doesn't feel right",
+        "rendered": "<span class=\"chord\">C#m</span>Everything about this <span class=\"chord\">A</span>place just doesn't feel right",
+        "seconds": 964.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]I— [B]I don't want to [A]die!",
+        "rendered": "<span class=\"chord\">E</span>I— <span class=\"chord\">B</span>I don't want to <span class=\"chord\">A</span>die!",
+        "seconds": 972.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[E]Suddenly I'm [F#]frightened for my [A]life! [Am]",
+        "rendered": "<span class=\"chord\">E</span>Suddenly I'm <span class=\"chord\">F#</span>frightened for my <span class=\"chord\">A</span>life! <span class=\"chord\">Am</span>",
+        "seconds": 980.0
+      },
+      {
+        "type": "section",
+        "content": "🔁 OUTRO SOLENNE *(Assolo Finale & Cadenza Lidia)*",
+        "seconds": 1000.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [E] | [F#] | [A] [Am] | [E] |`",
+        "rendered": "`| <span class=\"chord\">E</span> | <span class=\"chord\">F#</span> | <span class=\"chord\">A</span> <span class=\"chord\">Am</span> | <span class=\"chord\">E</span> |`",
+        "seconds": 1006.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [E] | [F#] | [A] [Am] | [E] |` 🛑",
+        "rendered": "`| <span class=\"chord\">E</span> | <span class=\"chord\">F#</span> | <span class=\"chord\">A</span> <span class=\"chord\">Am</span> | <span class=\"chord\">E</span> |` 🛑",
+        "seconds": 1012.0
+      }
+    ]
+  },
   "the-knife.md": {
     "filename": "the-knife.md",
     "meta": {
@@ -5432,14 +6214,703 @@
       }
     ]
   },
+  "the-silent-man.md": {
+    "filename": "the-silent-man.md",
+    "meta": {
+      "title": "The Silent Man",
+      "artist": "Dream Theater",
+      "album": "Awake",
+      "year": "1994",
+      "key": "A",
+      "original_key": "A",
+      "base_chord": "A",
+      "time_signature": "4/4",
+      "bpm": 100,
+      "duration_seconds": "228"
+    },
+    "tips": "Ballata acustica scritta da John Petrucci su *Awake*, impreziosita dalle armonie vocali e dai tappeti di archi/synth di Kevin Moore. Al pianoforte funziona magnificamente alternando un arpeggio cristallino sul giro ascendente/discendente in `[A]` (`[A] -> [E/G#] -> [F#m] -> [D]`) e accordi più tensivi nella strofa in `[F#m]` con il colore lidio/frigio del passaggio `[G] -> [C#7]`.",
+    "summary": {
+      "strofa": [
+        "F#m",
+        "C#m",
+        "D",
+        "A",
+        "E/G#",
+        "Bm",
+        "C#7"
+      ],
+      "ritornello": [
+        "D",
+        "E",
+        "F#m",
+        "G",
+        "C#7",
+        "A",
+        "E/G#",
+        "A/C#",
+        "Bm7"
+      ],
+      "bridge": [
+        "D",
+        "E",
+        "F#m",
+        "Bm",
+        "G",
+        "C#7"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 The Silent Man — Dream Theater",
+        "rendered": "# 🎵 The Silent Man — Dream Theater",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": 0.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [A] [E/G#] | [F#m] [D] | [A/C#] [Bm7] | [E] |`",
+        "rendered": "`| <span class=\"chord\">A</span> <span class=\"chord\">E/G#</span> | <span class=\"chord\">F#m</span> <span class=\"chord\">D</span> | <span class=\"chord\">A/C#</span> <span class=\"chord\">Bm7</span> | <span class=\"chord\">E</span> |`",
+        "seconds": 6.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [A] [E/G#] | [F#m] [D] | [Bm7] [E] | [F#m] |`",
+        "rendered": "`| <span class=\"chord\">A</span> <span class=\"chord\">E/G#</span> | <span class=\"chord\">F#m</span> <span class=\"chord\">D</span> | <span class=\"chord\">Bm7</span> <span class=\"chord\">E</span> | <span class=\"chord\">F#m</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]A question of faith, [C#m]a matter of trust",
+        "rendered": "<span class=\"chord\">F#m</span>A question of faith, <span class=\"chord\">C#m</span>a matter of trust",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Watch the blindfold trace [A]lines upon our [E/G#]hearts",
+        "rendered": "<span class=\"chord\">D</span>Watch the blindfold trace <span class=\"chord\">A</span>lines upon our <span class=\"chord\">E/G#</span>hearts",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]Before you preach to me, [C#m]hear what I mean",
+        "rendered": "<span class=\"chord\">F#m</span>Before you preach to me, <span class=\"chord\">C#m</span>hear what I mean",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]In the silent space [Bm]between the words un[C#7]spoken",
+        "rendered": "<span class=\"chord\">D</span>In the silent space <span class=\"chord\">Bm</span>between the words un<span class=\"chord\">C#7</span>spoken",
+        "seconds": 36.0
+      },
+      {
+        "type": "section",
+        "content": "🌊 PRE-CHORUS 1",
+        "seconds": 43.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]If there's a reason [E]why we hide behind our [F#m]walls",
+        "rendered": "<span class=\"chord\">D</span>If there's a reason <span class=\"chord\">E</span>why we hide behind our <span class=\"chord\">F#m</span>walls",
+        "seconds": 43.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]Maybe the answer's [C#7]waiting when the curtain falls",
+        "rendered": "<span class=\"chord\">G</span>Maybe the answer's <span class=\"chord\">C#7</span>waiting when the curtain falls",
+        "seconds": 49.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 1",
+        "seconds": 56.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When [A]all is said and [E/G#]done",
+        "rendered": "When <span class=\"chord\">A</span>all is said and <span class=\"chord\">E/G#</span>done",
+        "seconds": 56.0
+      },
+      {
+        "type": "lyric",
+        "raw": "There is [F#m]nothing left to [D]fear",
+        "rendered": "There is <span class=\"chord\">F#m</span>nothing left to <span class=\"chord\">D</span>fear",
+        "seconds": 61.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [A/C#]sun will shine a[Bm7]gain",
+        "rendered": "The <span class=\"chord\">A/C#</span>sun will shine a<span class=\"chord\">Bm7</span>gain",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And the [D]silent man will [E]hear",
+        "rendered": "And the <span class=\"chord\">D</span>silent man will <span class=\"chord\">E</span>hear",
+        "seconds": 71.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]Divide and conquer, [C#m]tear us apart",
+        "rendered": "<span class=\"chord\">F#m</span>Divide and conquer, <span class=\"chord\">C#m</span>tear us apart",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Every word a blade [A]aimed right at the [E/G#]heart",
+        "rendered": "<span class=\"chord\">D</span>Every word a blade <span class=\"chord\">A</span>aimed right at the <span class=\"chord\">E/G#</span>heart",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]With eyes wide open, [C#m]still we refuse to see",
+        "rendered": "<span class=\"chord\">F#m</span>With eyes wide open, <span class=\"chord\">C#m</span>still we refuse to see",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]How the walls we build [Bm]keep us from being [C#7]free",
+        "rendered": "<span class=\"chord\">D</span>How the walls we build <span class=\"chord\">Bm</span>keep us from being <span class=\"chord\">C#7</span>free",
+        "seconds": 96.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 2",
+        "seconds": 104.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When [A]all is said and [E/G#]done",
+        "rendered": "When <span class=\"chord\">A</span>all is said and <span class=\"chord\">E/G#</span>done",
+        "seconds": 104.0
+      },
+      {
+        "type": "lyric",
+        "raw": "There is [F#m]nothing left to [D]fear",
+        "rendered": "There is <span class=\"chord\">F#m</span>nothing left to <span class=\"chord\">D</span>fear",
+        "seconds": 109.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [A/C#]sun will shine a[Bm7]gain",
+        "rendered": "The <span class=\"chord\">A/C#</span>sun will shine a<span class=\"chord\">Bm7</span>gain",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And the [D]silent man will [E]speak",
+        "rendered": "And the <span class=\"chord\">D</span>silent man will <span class=\"chord\">E</span>speak",
+        "seconds": 119.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Without a voice [E]you cannot cry",
+        "rendered": "<span class=\"chord\">D</span>Without a voice <span class=\"chord\">E</span>you cannot cry",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[F#m]Without a truth [D]the spirit dies",
+        "rendered": "<span class=\"chord\">F#m</span>Without a truth <span class=\"chord\">D</span>the spirit dies",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Listen to the wind [F#m]whispering your name",
+        "rendered": "<span class=\"chord\">Bm</span>Listen to the wind <span class=\"chord\">F#m</span>whispering your name",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]Nothing ever [C#7]stays the same",
+        "rendered": "<span class=\"chord\">G</span>Nothing ever <span class=\"chord\">C#7</span>stays the same",
+        "seconds": 144.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 ASSOLO ACUSTICO",
+        "seconds": 152.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F#m] | [C#m] | [D] | [A] [E/G#] |`",
+        "rendered": "`| <span class=\"chord\">F#m</span> | <span class=\"chord\">C#m</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> <span class=\"chord\">E/G#</span> |`",
+        "seconds": 158.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [F#m] | [D] | [G] | [C#7] |`",
+        "rendered": "`| <span class=\"chord\">F#m</span> | <span class=\"chord\">D</span> | <span class=\"chord\">G</span> | <span class=\"chord\">C#7</span> |`",
+        "seconds": 164.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE",
+        "seconds": 176.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When [A]all is said and [E/G#]done",
+        "rendered": "When <span class=\"chord\">A</span>all is said and <span class=\"chord\">E/G#</span>done",
+        "seconds": 176.0
+      },
+      {
+        "type": "lyric",
+        "raw": "There is [F#m]nothing left to [D]fear",
+        "rendered": "There is <span class=\"chord\">F#m</span>nothing left to <span class=\"chord\">D</span>fear",
+        "seconds": 181.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [A/C#]sun will shine a[Bm7]gain",
+        "rendered": "The <span class=\"chord\">A/C#</span>sun will shine a<span class=\"chord\">Bm7</span>gain",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And the [D]silent man is [E]here",
+        "rendered": "And the <span class=\"chord\">D</span>silent man is <span class=\"chord\">E</span>here",
+        "seconds": 191.0
+      },
+      {
+        "type": "lyric",
+        "raw": "When [A]all is said and [E/G#]done",
+        "rendered": "When <span class=\"chord\">A</span>all is said and <span class=\"chord\">E/G#</span>done",
+        "seconds": 197.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [F#m]truth is crystal [D]clear",
+        "rendered": "The <span class=\"chord\">F#m</span>truth is crystal <span class=\"chord\">D</span>clear",
+        "seconds": 202.0
+      },
+      {
+        "type": "lyric",
+        "raw": "No [A/C#]longer in the [Bm7]dark",
+        "rendered": "No <span class=\"chord\">A/C#</span>longer in the <span class=\"chord\">Bm7</span>dark",
+        "seconds": 207.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Now the [E]silent man can [A]hear",
+        "rendered": "Now the <span class=\"chord\">E</span>silent man can <span class=\"chord\">A</span>hear",
+        "seconds": 212.0
+      },
+      {
+        "type": "section",
+        "content": "🔁 OUTRO",
+        "seconds": 218.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [A] [E/G#] | [F#m] [D] | [Bm7] [E] | [A] |` 🛑",
+        "rendered": "`| <span class=\"chord\">A</span> <span class=\"chord\">E/G#</span> | <span class=\"chord\">F#m</span> <span class=\"chord\">D</span> | <span class=\"chord\">Bm7</span> <span class=\"chord\">E</span> | <span class=\"chord\">A</span> |` 🛑",
+        "seconds": 224.0
+      }
+    ]
+  },
+  "the-spirit-carries-on.md": {
+    "filename": "the-spirit-carries-on.md",
+    "meta": {
+      "title": "The Spirit Carries On",
+      "artist": "Dream Theater",
+      "album": "Metropolis Pt. 2: Scenes from a Memory",
+      "year": "1999",
+      "key": "D",
+      "original_key": "D",
+      "base_chord": "D",
+      "time_signature": "6/8",
+      "bpm": 72,
+      "duration_seconds": "398"
+    },
+    "tips": "La grande ballata gospel-rock di *Scenes from a Memory* (Scene Eight). Jordan Rudess apre con un'introduzione pianistica solenne e commovente caratterizzata dal basso cromatico discendente `[D] -> [D/C] -> [G/B] -> [Gm/Bb] -> [D/A]`. Nel bridge (\"Move on, be brave\") il pianoforte resta solo con la voce di James LaBrie: suona accordi morbidi e cantabili prima dell'esplosione orchestrale dell'assolo di John Petrucci e del coro gospel finale.",
+    "summary": {
+      "strofa": [
+        "D",
+        "Em/D",
+        "Bm",
+        "F#m",
+        "G",
+        "D/F#",
+        "Em",
+        "E7/G#",
+        "A"
+      ],
+      "ritornello": [
+        "G",
+        "A",
+        "D",
+        "F#7",
+        "Bm",
+        "Bm/A",
+        "E/G#",
+        "Em",
+        "F#m",
+        "Gm"
+      ],
+      "bridge": [
+        "Em",
+        "Bm",
+        "C",
+        "G",
+        "F#m",
+        "A",
+        "Bb"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 The Spirit Carries On — Dream Theater",
+        "rendered": "# 🎵 The Spirit Carries On — Dream Theater",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO *(Piano solo & Chitarra acustica)*",
+        "seconds": 0.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D] | [D/C] | [G/B] | [Gm/Bb] |`",
+        "rendered": "`| <span class=\"chord\">D</span> | <span class=\"chord\">D/C</span> | <span class=\"chord\">G/B</span> | <span class=\"chord\">Gm/Bb</span> |`",
+        "seconds": 6.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [D/A] | [A] | [G] [D/F#] | [Em] [A] |`",
+        "rendered": "`| <span class=\"chord\">D/A</span> | <span class=\"chord\">A</span> | <span class=\"chord\">G</span> <span class=\"chord\">D/F#</span> | <span class=\"chord\">Em</span> <span class=\"chord\">A</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[D]Where did we come from? [Em/D]Why are we [D]here?",
+        "rendered": "<span class=\"chord\">D</span>Where did we come from? <span class=\"chord\">Em/D</span>Why are we <span class=\"chord\">D</span>here?",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bm]Where do we go when we [F#m]die?",
+        "rendered": "<span class=\"chord\">Bm</span>Where do we go when we <span class=\"chord\">F#m</span>die?",
+        "seconds": 50.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[G]What lies be[D/F#]yond and [Em]what lay be[D]fore?",
+        "rendered": "<span class=\"chord\">G</span>What lies be<span class=\"chord\">D/F#</span>yond and <span class=\"chord\">Em</span>what lay be<span class=\"chord\">D</span>fore?",
+        "seconds": 58.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Is [Em]anything [E7/G#]certain in [A]life?",
+        "rendered": "Is <span class=\"chord\">Em</span>anything <span class=\"chord\">E7/G#</span>certain in <span class=\"chord\">A</span>life?",
+        "seconds": 66.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": 74.0
+      },
+      {
+        "type": "lyric",
+        "raw": "They [D]say, \"Life is too short,\" [Em/D]\"The here and the [D]now\"",
+        "rendered": "They <span class=\"chord\">D</span>say, \"Life is too short,\" <span class=\"chord\">Em/D</span>\"The here and the <span class=\"chord\">D</span>now\"",
+        "seconds": 74.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [Bm]\"You're only given one [F#m]shot\"",
+        "rendered": "And <span class=\"chord\">Bm</span>\"You're only given one <span class=\"chord\">F#m</span>shot\"",
+        "seconds": 82.0
+      },
+      {
+        "type": "lyric",
+        "raw": "But [G]could there be [D/F#]more, have I [Em]lived be[D]fore",
+        "rendered": "But <span class=\"chord\">G</span>could there be <span class=\"chord\">D/F#</span>more, have I <span class=\"chord\">Em</span>lived be<span class=\"chord\">D</span>fore",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Or [Em]could this be [A]all that we've [D]got?",
+        "rendered": "Or <span class=\"chord\">Em</span>could this be <span class=\"chord\">A</span>all that we've <span class=\"chord\">D</span>got?",
+        "seconds": 98.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 1",
+        "seconds": 106.0
+      },
+      {
+        "type": "lyric",
+        "raw": "If I [G]die to[A]morrow, I'd [D]be all right",
+        "rendered": "If I <span class=\"chord\">G</span>die to<span class=\"chord\">A</span>morrow, I'd <span class=\"chord\">D</span>be all right",
+        "seconds": 106.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Because I [G]believe that [F#7]after we're [Bm]gone [Bm/A]",
+        "rendered": "Because I <span class=\"chord\">G</span>believe that <span class=\"chord\">F#7</span>after we're <span class=\"chord\">Bm</span>gone <span class=\"chord\">Bm/A</span>",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [E/G#]spirit [G]carries [A]on [D]",
+        "rendered": "The <span class=\"chord\">E/G#</span>spirit <span class=\"chord\">G</span>carries <span class=\"chord\">A</span>on <span class=\"chord\">D</span>",
+        "seconds": 122.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 3",
+        "seconds": 134.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [D]used to be frightened of [Em/D]dying [D]",
+        "rendered": "I <span class=\"chord\">D</span>used to be frightened of <span class=\"chord\">Em/D</span>dying <span class=\"chord\">D</span>",
+        "seconds": 134.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [Bm]used to think death was the [F#m]end",
+        "rendered": "I <span class=\"chord\">Bm</span>used to think death was the <span class=\"chord\">F#m</span>end",
+        "seconds": 142.0
+      },
+      {
+        "type": "lyric",
+        "raw": "But [G]that was be[D/F#]fore, I'm not [Em]scared any[D]more",
+        "rendered": "But <span class=\"chord\">G</span>that was be<span class=\"chord\">D/F#</span>fore, I'm not <span class=\"chord\">Em</span>scared any<span class=\"chord\">D</span>more",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [Em]know that my [A]soul will tran[D]scend",
+        "rendered": "I <span class=\"chord\">Em</span>know that my <span class=\"chord\">A</span>soul will tran<span class=\"chord\">D</span>scend",
+        "seconds": 158.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 4",
+        "seconds": 166.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [D]may never find all the [Em/D]answers [D]",
+        "rendered": "I <span class=\"chord\">D</span>may never find all the <span class=\"chord\">Em/D</span>answers <span class=\"chord\">D</span>",
+        "seconds": 166.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [Bm]may never understand [F#m]why",
+        "rendered": "I <span class=\"chord\">Bm</span>may never understand <span class=\"chord\">F#m</span>why",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I [G]may never [D/F#]prove what I [Em]know to be [D]true",
+        "rendered": "I <span class=\"chord\">G</span>may never <span class=\"chord\">D/F#</span>prove what I <span class=\"chord\">Em</span>know to be <span class=\"chord\">D</span>true",
+        "seconds": 182.0
+      },
+      {
+        "type": "lyric",
+        "raw": "But I [Em]know that I [A]still have to [D]try",
+        "rendered": "But I <span class=\"chord\">Em</span>know that I <span class=\"chord\">A</span>still have to <span class=\"chord\">D</span>try",
+        "seconds": 190.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO 2",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "If I [G]die to[A]morrow, I'd [D]be all right",
+        "rendered": "If I <span class=\"chord\">G</span>die to<span class=\"chord\">A</span>morrow, I'd <span class=\"chord\">D</span>be all right",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Because I [G]believe that [F#7]after we're [Bm]gone [Bm/A]",
+        "rendered": "Because I <span class=\"chord\">G</span>believe that <span class=\"chord\">F#7</span>after we're <span class=\"chord\">Bm</span>gone <span class=\"chord\">Bm/A</span>",
+        "seconds": 206.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [E/G#]spirit [G]carries [A]on [D]",
+        "rendered": "The <span class=\"chord\">E/G#</span>spirit <span class=\"chord\">G</span>carries <span class=\"chord\">A</span>on <span class=\"chord\">D</span>",
+        "seconds": 214.0
+      },
+      {
+        "type": "section",
+        "content": "🌉 BRIDGE / SPECIAL *(Piano & Voce)*",
+        "seconds": 225.0
+      },
+      {
+        "type": "lyric",
+        "raw": "\"[Em]Move on, be [Bm]brave, don't [C]weep at my [G]grave",
+        "rendered": "\"<span class=\"chord\">Em</span>Move on, be <span class=\"chord\">Bm</span>brave, don't <span class=\"chord\">C</span>weep at my <span class=\"chord\">G</span>grave",
+        "seconds": 225.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Because [Em]I am no [F#m]longer [G]here [A]",
+        "rendered": "Because <span class=\"chord\">Em</span>I am no <span class=\"chord\">F#m</span>longer <span class=\"chord\">G</span>here <span class=\"chord\">A</span>",
+        "seconds": 233.0
+      },
+      {
+        "type": "lyric",
+        "raw": "But please [Em]never [Bm]let your [C]memory of [G]me",
+        "rendered": "But please <span class=\"chord\">Em</span>never <span class=\"chord\">Bm</span>let your <span class=\"chord\">C</span>memory of <span class=\"chord\">G</span>me",
+        "seconds": 241.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[Bb]Fade a[A]way\"",
+        "rendered": "<span class=\"chord\">Bb</span>Fade a<span class=\"chord\">A</span>way\"",
+        "seconds": 249.0
+      },
+      {
+        "type": "section",
+        "content": "🎸 ASSOLO EPICO JOHN PETRUCCI",
+        "seconds": 258.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bm] | [G] | [D] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Bm</span> | <span class=\"chord\">G</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 264.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bm] | [G] | [D] | [F#7] |`",
+        "rendered": "`| <span class=\"chord\">Bm</span> | <span class=\"chord\">G</span> | <span class=\"chord\">D</span> | <span class=\"chord\">F#7</span> |`",
+        "seconds": 270.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Bm] | [G] | [D] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Bm</span> | <span class=\"chord\">G</span> | <span class=\"chord\">D</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 276.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [Em] | [D/F#] | [G] | [A] |`",
+        "rendered": "`| <span class=\"chord\">Em</span> | <span class=\"chord\">D/F#</span> | <span class=\"chord\">G</span> | <span class=\"chord\">A</span> |`",
+        "seconds": 282.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE & CORO GOSPEL",
+        "seconds": 322.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Safe in the [G]light that sur[A]rounds me [D]",
+        "rendered": "Safe in the <span class=\"chord\">G</span>light that sur<span class=\"chord\">A</span>rounds me <span class=\"chord\">D</span>",
+        "seconds": 322.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Free of the [G]fear and the [F#7]pain [Bm] [Bm/A]",
+        "rendered": "Free of the <span class=\"chord\">G</span>fear and the <span class=\"chord\">F#7</span>pain <span class=\"chord\">Bm</span> <span class=\"chord\">Bm/A</span>",
+        "seconds": 330.0
+      },
+      {
+        "type": "lyric",
+        "raw": "My [E/G#]questioning [G]mind has [A]helped me to [Bm]find",
+        "rendered": "My <span class=\"chord\">E/G#</span>questioning <span class=\"chord\">G</span>mind has <span class=\"chord\">A</span>helped me to <span class=\"chord\">Bm</span>find",
+        "seconds": 338.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [G]meaning in [Em]living a[A]gain",
+        "rendered": "The <span class=\"chord\">G</span>meaning in <span class=\"chord\">Em</span>living a<span class=\"chord\">A</span>gain",
+        "seconds": 346.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Victoria's [G]real, I [A]finally [D]feel",
+        "rendered": "Victoria's <span class=\"chord\">G</span>real, I <span class=\"chord\">A</span>finally <span class=\"chord\">D</span>feel",
+        "seconds": 354.0
+      },
+      {
+        "type": "lyric",
+        "raw": "At [G]peace with the [F#7]girl in my [Bm]dreams [Bm/A]",
+        "rendered": "At <span class=\"chord\">G</span>peace with the <span class=\"chord\">F#7</span>girl in my <span class=\"chord\">Bm</span>dreams <span class=\"chord\">Bm/A</span>",
+        "seconds": 362.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And [E/G#]now that I'm [G]here, it's [A]perfectly [D]clear",
+        "rendered": "And <span class=\"chord\">E/G#</span>now that I'm <span class=\"chord\">G</span>here, it's <span class=\"chord\">A</span>perfectly <span class=\"chord\">D</span>clear",
+        "seconds": 370.0
+      },
+      {
+        "type": "lyric",
+        "raw": "I found [Em]out what [F#m]all of this [G]means [Gm]",
+        "rendered": "I found <span class=\"chord\">Em</span>out what <span class=\"chord\">F#m</span>all of this <span class=\"chord\">G</span>means <span class=\"chord\">Gm</span>",
+        "seconds": 378.0
+      },
+      {
+        "type": "section",
+        "content": "🔁 OUTRO *(Cadenza cromatica finale)*",
+        "seconds": 384.0
+      },
+      {
+        "type": "lyric",
+        "raw": "If I [D]die to[D/C]morrow, I'd [G/B]be all [Gm/Bb]right",
+        "rendered": "If I <span class=\"chord\">D</span>die to<span class=\"chord\">D/C</span>morrow, I'd <span class=\"chord\">G/B</span>be all <span class=\"chord\">Gm/Bb</span>right",
+        "seconds": 384.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Because I [D/A]believe that [A]after we're [Bm]gone [G]",
+        "rendered": "Because I <span class=\"chord\">D/A</span>believe that <span class=\"chord\">A</span>after we're <span class=\"chord\">Bm</span>gone <span class=\"chord\">G</span>",
+        "seconds": 390.0
+      },
+      {
+        "type": "lyric",
+        "raw": "The [D/A]spirit [A]carries [D]on... 🛑",
+        "rendered": "The <span class=\"chord\">D/A</span>spirit <span class=\"chord\">A</span>carries <span class=\"chord\">D</span>on... 🛑",
+        "seconds": 395.0
+      }
+    ]
+  },
   "tunnel-of-love.md": {
     "filename": "tunnel-of-love.md",
     "meta": {
-      "bpm": 128,
-      "time_signature": "4/4",
-      "original_key": "Dm",
       "title": "Tunnel of Love",
-      "artist": "Dire Straits"
+      "artist": "Dire Straits",
+      "album": "Making Movies",
+      "year": "1980",
+      "key": "Dm",
+      "original_key": "Dm",
+      "base_chord": "Dm",
+      "time_signature": "4/4",
+      "bpm": 128
     },
     "tips": "",
     "summary": {
@@ -6362,11 +7833,15 @@
   "where-the-streets-have-no-name.md": {
     "filename": "where-the-streets-have-no-name.md",
     "meta": {
-      "bpm": 126,
-      "time_signature": "4/4",
-      "original_key": "D",
       "title": "Where the Streets Have No Name",
-      "artist": "U2"
+      "artist": "U2",
+      "album": "The Joshua Tree",
+      "year": "1987",
+      "key": "D",
+      "original_key": "D",
+      "base_chord": "D",
+      "time_signature": "4/4",
+      "bpm": 126
     },
     "tips": "Sull'iconica intro ambient/organo, tieni il pad di `[D]` e costruisci la ritmica a crome alternate (D - G - Bm - A). Attenzione alla modulazione fugace su `[C]` prima dell'esplosione del titolo (\"Where the streets have no name\"), che crea il classico effetto ipnotico di The Edge ed Eno.",
     "summary": {
