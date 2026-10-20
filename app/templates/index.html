@@ -1490,9 +1490,11 @@
       }
     }
 
-    // --- Musical Transposition & Key Display Engine ---
-    const CHROMATIC_ENG = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
-    const CHROMATIC_ITA = ['DO', 'REb', 'RE', 'MIb', 'MI', 'FA', 'FA#', 'SOL', 'LAb', 'LA', 'SIb', 'SI'];
+    // --- Musical Transposition & Context-Aware Enharmonic Engine ---
+    const CHROMATIC_SHARP_ENG = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const CHROMATIC_FLAT_ENG  = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
+    const CHROMATIC_SHARP_ITA = ['DO', 'DO#', 'RE', 'RE#', 'MI', 'FA', 'FA#', 'SOL', 'SOL#', 'LA', 'LA#', 'SI'];
+    const CHROMATIC_FLAT_ITA  = ['DO', 'REb', 'RE', 'MIb', 'MI', 'FA', 'FA#', 'SOL', 'LAb', 'LA', 'SIb', 'SI'];
 
     const SEMITONE_MAP = {
       'C': 0, 'B#': 0, 'DO': 0,
@@ -1511,6 +1513,14 @@
 
     const ROOT_KEYS = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI', 'C', 'D', 'E', 'F', 'G', 'A', 'B'];
 
+    // Major/Minor keys that naturally use sharps (#)
+    const SHARP_KEYS = new Set([
+      'G', 'D', 'A', 'E', 'B', 'F#', 'C#',
+      'EM', 'BM', 'F#M', 'C#M', 'G#M', 'D#M',
+      'SOL', 'RE', 'LA', 'MI', 'SI', 'FA#', 'DO#',
+      'MIM', 'SIM', 'FA#M', 'DO#M', 'SOL#M', 'RE#M'
+    ]);
+
     function songUsesItalianChords(data) {
       if (!data || !data.lines) return true; // default to DO when no song loaded
       for (const l of data.lines) {
@@ -1525,28 +1535,46 @@
       return true;
     }
 
-    function transposeSingleNote(noteStr, semitones, forceLang = null) {
-      const clean = noteStr.trim();
-      const upper = clean.toUpperCase();
-      const val = SEMITONE_MAP[upper];
-      if (val === undefined) return clean;
-
-      const isOriginalItalian = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'].some(r => upper.startsWith(r));
-      const effectiveNotation = forceLang || (notationMode === 'auto' ? (isOriginalItalian ? 'it' : 'en') : notationMode);
-
-      const targetVal = (val + semitones + 1200) % 12;
-      return effectiveNotation === 'it' ? CHROMATIC_ITA[targetVal] : CHROMATIC_ENG[targetVal];
-    }
-
-    function transposeChord(chordStr, semitones, forceLang = null) {
-      const clean = chordStr.trim();
-      if (!clean || clean.toUpperCase() === 'N.C.' || clean === '%') return clean;
-
-      if (clean.includes('/')) {
-        const parts = clean.split('/');
-        return `${transposeChord(parts[0], semitones, forceLang)}/${transposeChord(parts[1], semitones, forceLang)}`;
+    function shouldUseSharpsForContext(originalNote, targetVal, semitones, suffix = '', parentChordVal = null) {
+      // 1. If not transposing (semitones === 0), preserve explicit # or b from the score
+      if (semitones === 0) {
+        if (originalNote.includes('#') || originalNote.includes('♯')) return true;
+        if (originalNote.endsWith('b') || originalNote.endsWith('♭')) return false;
       }
 
+      // 2. If this is the bass note of a slash chord (e.g. E/G#, A/C#, B/D#, D/F#):
+      //    When the bass is a major 3rd (+4 semitones) or 5th (+7) or 7th (+11) of a sharp-key chord root (D, E, G, A, B, F#, C#),
+      //    spell it in context of the parent chord's scale!
+      if (parentChordVal !== null) {
+        const sharpParentRoots = new Set([1, 2, 4, 6, 7, 9, 11]); // C#, D, E, F#, G, A, B
+        const interval = (targetVal - parentChordVal + 12) % 12;
+        if (sharpParentRoots.has(parentChordVal) && (interval === 4 || interval === 7 || interval === 11 || interval === 2 || interval === 9)) {
+          return true;
+        }
+      }
+
+      // 3. Minor chords on C#m (1), F#m (6), G#m (8) are universally written with sharps in rock/pop/prog
+      if (suffix && suffix.startsWith('m') && !suffix.startsWith('maj')) {
+        if (targetVal === 1 || targetVal === 6 || targetVal === 8) return true;
+      }
+
+      // 4. Dominant 7th chords on C#7 (1), F#7 (6), G#7 (8) (e.g. V7 of F#m, Bm, C#m)
+      if (suffix && suffix.startsWith('7')) {
+        if (targetVal === 1 || targetVal === 6 || targetVal === 8) return true;
+      }
+
+      // 5. Check active song's transposed key signature
+      if (songData && songData.meta) {
+        const rawKey = (songData.meta.original_key || songData.meta.key || '').trim().toUpperCase();
+        if (semitones === 0 && SHARP_KEYS.has(rawKey)) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    function parseNoteAndSuffix(clean) {
       const upper = clean.toUpperCase();
       let matchedRoot = null;
       const sortedRoots = [...ROOT_KEYS].sort((a,b) => b.length - a.length);
@@ -1556,18 +1584,65 @@
           break;
         }
       }
-
-      if (!matchedRoot) return clean;
-
+      if (!matchedRoot) return null;
       let suffix = clean.substring(matchedRoot.length);
       let noteWithAccidental = matchedRoot;
       if (suffix && (suffix[0] === '#' || suffix[0] === 'b' || suffix[0] === '♯' || suffix[0] === '♭')) {
         noteWithAccidental += suffix[0];
         suffix = suffix.substring(1);
       }
+      const val = SEMITONE_MAP[noteWithAccidental.toUpperCase()];
+      if (val === undefined) return null;
+      return { noteWithAccidental, suffix, val };
+    }
 
-      const transposedRoot = transposeSingleNote(noteWithAccidental, semitones, forceLang);
-      return transposedRoot + suffix;
+    function transposeSingleNote(noteStr, semitones, forceLang = null, suffix = '', parentChordVal = null) {
+      const clean = noteStr.trim();
+      const upper = clean.toUpperCase();
+      const val = SEMITONE_MAP[upper];
+      if (val === undefined) return clean;
+
+      const isOriginalItalian = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'].some(r => upper.startsWith(r));
+      const effectiveNotation = forceLang || (notationMode === 'auto' ? (isOriginalItalian ? 'it' : 'en') : notationMode);
+
+      const targetVal = (val + semitones + 1200) % 12;
+      const useSharps = shouldUseSharpsForContext(clean, targetVal, semitones, suffix, parentChordVal);
+
+      if (effectiveNotation === 'it') {
+        return useSharps ? CHROMATIC_SHARP_ITA[targetVal] : CHROMATIC_FLAT_ITA[targetVal];
+      } else {
+        return useSharps ? CHROMATIC_SHARP_ENG[targetVal] : CHROMATIC_FLAT_ENG[targetVal];
+      }
+    }
+
+    function transposeChord(chordStr, semitones, forceLang = null) {
+      const clean = chordStr.trim();
+      if (!clean || clean.toUpperCase() === 'N.C.' || clean === '%') return clean;
+
+      if (clean.includes('/')) {
+        const parts = clean.split('/');
+        const rootParsed = parseNoteAndSuffix(parts[0].trim());
+        const parentTargetVal = rootParsed ? ((rootParsed.val + semitones + 1200) % 12) : null;
+        const transposedChordPart = transposeChord(parts[0], semitones, forceLang);
+        const bassParsed = parseNoteAndSuffix(parts[1].trim());
+        if (!bassParsed) {
+          return `${transposedChordPart}/${parts[1].trim()}`;
+        }
+        const transposedBass = transposeSingleNote(
+          bassParsed.noteWithAccidental,
+          semitones,
+          forceLang,
+          bassParsed.suffix,
+          parentTargetVal
+        ) + bassParsed.suffix;
+        return `${transposedChordPart}/${transposedBass}`;
+      }
+
+      const parsed = parseNoteAndSuffix(clean);
+      if (!parsed) return clean;
+
+      const transposedRoot = transposeSingleNote(parsed.noteWithAccidental, semitones, forceLang, parsed.suffix, null);
+      return transposedRoot + parsed.suffix;
     }
 
     function changeTranspose(delta) {
