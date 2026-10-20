@@ -531,7 +531,8 @@
       "time_signature": "4/4",
       "bpm": 130,
       "cover": "images/songs/gloria.jpg",
-      "artist_image": "images/artists/umberto-tozzi.jpg"
+      "artist_image": "images/artists/umberto-tozzi.jpg",
+      "audio": "audio/gloria.mp3"
     },
     "tips": "Il leggendario riff tastieristico/pianistico batte ottavi dritti e incalzanti tra `[SI]` e `[MI]`. Mano sinistra fa l'ostinato ritmico sul basso (B - E). Attenzione alla discesa armonica verso lo special `[DO#m] -> [FA#7] -> [SI] -> [MImaj7] -> [LA] [SI] -> [MI]`.",
     "summary": {

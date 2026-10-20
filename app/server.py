@@ -242,6 +242,10 @@ def parse_song_file(file_path: Path):
         meta["cover"] = cover
     if artist_image:
         meta["artist_image"] = artist_image
+    if "audio" not in meta:
+        audio_rel = f"audio/{file_path.stem}.mp3"
+        if (DOCS_DIR / audio_rel).is_file():
+            meta["audio"] = audio_rel
 
     return {
         "filename": file_path.name,
@@ -293,6 +297,7 @@ class ChordsHandler(SimpleHTTPRequestHandler):
                         "time_signature": data["meta"].get("time_signature", "4/4"),
                         "cover": data["meta"].get("cover", ""),
                         "artist_image": data["meta"].get("artist_image", ""),
+                        "audio": data["meta"].get("audio", ""),
                         "summary": data.get("summary", {}),
                     })
                 except Exception as e:

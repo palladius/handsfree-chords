@@ -8,6 +8,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/firth-of-fifth.jpg",
     "artist_image": "images/artists/genesis.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "B",
@@ -37,6 +38,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/fliegerlied.jpg",
     "artist_image": "images/artists/donikkl.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "C",
@@ -62,6 +64,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/gloria.jpg",
     "artist_image": "images/artists/umberto-tozzi.jpg",
+    "audio": "audio/gloria.mp3",
     "summary": {
       "strofa": [
         "SI",
@@ -92,6 +95,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/joana.jpg",
     "artist_image": "images/artists/peter-wackel.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "G",
@@ -117,6 +121,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/love-of-my-life.jpg",
     "artist_image": "images/artists/queen.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "A",
@@ -155,6 +160,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/occidentalis-karma.jpg",
     "artist_image": "images/artists/francesco-gabbani.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "SIb",
@@ -191,6 +197,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/romeo-and-juliet.jpg",
     "artist_image": "images/artists/dire-straits.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "F",
@@ -221,6 +228,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/scrivile-scemo.jpg",
     "artist_image": "images/artists/pinguini-tattici-nucleari.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "LA",
@@ -256,6 +264,7 @@
     "time_signature": "7/4",
     "cover": "images/songs/solsbury-hill.jpg",
     "artist_image": "images/artists/peter-gabriel.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "G#m",
@@ -281,6 +290,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/space-dye-vest.jpg",
     "artist_image": "images/artists/dream-theater.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "Dm",
@@ -315,6 +325,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/spread-your-wings.jpg",
     "artist_image": "images/artists/queen.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "D",
@@ -356,6 +367,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/su-di-noi.jpg",
     "artist_image": "images/artists/pupo.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "DO",
@@ -394,6 +406,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/sultans-of-swing.jpg",
     "artist_image": "images/artists/dire-straits.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "Dm",
@@ -418,6 +431,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/summer-of-69.jpg",
     "artist_image": "images/artists/bryan-adams.jpg",
+    "audio": "audio/summer-of-69.mp3",
     "summary": {
       "strofa": [
         "D",
@@ -445,6 +459,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/the-best.jpg",
     "artist_image": "images/artists/tina-turner.jpg",
+    "audio": "audio/the-best.mp3",
     "summary": {
       "strofa": [
         "F",
@@ -478,6 +493,7 @@
     "time_signature": "6/8",
     "cover": "images/songs/the-count-of-tuscany.jpg",
     "artist_image": "images/artists/dream-theater.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "C#m",
@@ -515,6 +531,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/the-knife.jpg",
     "artist_image": "images/artists/genesis.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "G#m",
@@ -545,6 +562,7 @@
     "time_signature": "12/8",
     "cover": "images/songs/the-musical-box.jpg",
     "artist_image": "images/artists/genesis.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "Bm",
@@ -576,6 +594,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/the-silent-man.jpg",
     "artist_image": "images/artists/dream-theater.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "F#m",
@@ -616,6 +635,7 @@
     "time_signature": "6/8",
     "cover": "images/songs/the-spirit-carries-on.jpg",
     "artist_image": "images/artists/dream-theater.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "D",
@@ -660,6 +680,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/tunnel-of-love.jpg",
     "artist_image": "images/artists/dire-straits.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "Dm",
@@ -689,6 +710,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/wahnsinn.jpg",
     "artist_image": "images/artists/wolfgang-petry.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "D",
@@ -713,6 +735,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/weiss-der-geier.jpg",
     "artist_image": "images/artists/wolfgang-petry.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "C",
@@ -738,6 +761,7 @@
     "time_signature": "4/4",
     "cover": "images/songs/where-the-streets-have-no-name.jpg",
     "artist_image": "images/artists/u2.jpg",
+    "audio": "",
     "summary": {
       "strofa": [
         "D",

@@ -1083,6 +1083,10 @@
       <label style="font-size:0.84rem; color:#bbb; cursor:pointer; display:flex; align-items:center; gap:6px;">
         <input type="checkbox" id="metroAutoStartWithPlay" checked> Avvia/Ferma metronomo automaticamente con Play
       </label>
+      <div class="dialog-row" style="margin-top:8px;">
+        <span style="font-size:0.84rem; color:#ccc;">🔉 Volume Base MP3: <strong id="audioVolLabel">20%</strong></span>
+        <input type="range" id="audioVolumeSlider" class="metro-slider" min="0" max="100" value="20" oninput="setAudioTrackVolume(this.value)">
+      </div>
     </div>
 
     <!-- 4. Switch Song (for Portrait Phone mode where catalog is hidden during song) -->
@@ -1163,6 +1167,15 @@
     let isPlaying = false;
     let timerInterval = null;
     let songData = null;
+    let audioTrackVolume = 0.20;
+
+    function setAudioTrackVolume(pct) {
+      audioTrackVolume = Math.max(0, Math.min(1, parseFloat(pct) / 100));
+      const lbl = document.getElementById('audioVolLabel');
+      if (lbl) lbl.innerText = `${Math.round(audioTrackVolume * 100)}%`;
+      const audioTrack = document.getElementById('audioTrack');
+      if (audioTrack) audioTrack.volume = audioTrackVolume;
+    }
     let activeSongFilename = '';
     let timeAnchors = [];
     let transposeOffset = 0; // Transpose in semitones
@@ -1758,6 +1771,7 @@
                   ${displayKey ? `<span class="mini-badge key">🎹 ${escapeHtml(displayKey)}</span>` : ''}
                   ${s.bpm ? `<span class="mini-badge bpm">⏱️ ${s.bpm}</span>` : ''}
                   <span class="mini-badge">${escapeHtml(s.time_signature || '4/4')}</span>
+                  ${s.audio ? `<span class="mini-badge" title="Base audio MP3 a basso volume inclusa">🔉 MP3</span>` : ''}
                 </div>
               </div>
             </div>
@@ -1801,6 +1815,7 @@
       updateTransposeDisplay();
       updateTimeDisplay();
       showPlayerView();
+      play();
     }
 
     function computeSongDuration(data) {
@@ -1842,10 +1857,11 @@
         </div>
       `;
 
-      // Update Audio element source
+      // Update Audio element source & default low volume (20%)
       const audioTrack = document.getElementById('audioTrack');
       if (data.meta && data.meta.audio) {
         audioTrack.src = data.meta.audio;
+        audioTrack.volume = audioTrackVolume;
       } else {
         audioTrack.removeAttribute('src');
       }
@@ -1933,6 +1949,7 @@
 
       const audioTrack = document.getElementById('audioTrack');
       if (audioTrack && audioTrack.src) {
+        audioTrack.volume = audioTrackVolume;
         audioTrack.currentTime = currentTime;
         audioTrack.play().catch(e => console.log('Audio autoplay blocked or user gesture required:', e));
       }

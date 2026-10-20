@@ -196,6 +196,10 @@ def build_docs():
             meta["cover"] = cover
         if artist_image:
             meta["artist_image"] = artist_image
+        if "audio" not in meta:
+            audio_rel = f"audio/{f.stem}.mp3"
+            if (DOCS_DIR / audio_rel).is_file():
+                meta["audio"] = audio_rel
 
         song_obj = {
             "filename": f.name,
@@ -214,6 +218,7 @@ def build_docs():
             "time_signature": meta.get("time_signature", "4/4"),
             "cover": meta.get("cover", ""),
             "artist_image": meta.get("artist_image", ""),
+            "audio": meta.get("audio", ""),
             "summary": summary
         })
 
@@ -246,6 +251,7 @@ def build_docs():
           time_signature: s.meta.time_signature || '4/4',
           cover: s.meta.cover || '',
           artist_image: s.meta.artist_image || '',
+          audio: s.meta.audio || '',
           summary: s.summary || {}
         }));
         select.innerHTML = songEntries.map(s => `<option value="${s.filename}">${s.meta.title || s.filename} (${s.meta.artist || ''})</option>`).join('');
@@ -268,11 +274,12 @@ def build_docs():
       updateTransposeDisplay();
       updateTimeDisplay();
       showPlayerView();
+      play();
     }
     """
 
     # Replace the fetch block in template
-    fetch_pattern = re.compile(r"async function init\(\)[\s\S]*?showPlayerView\(\);\s*}", re.MULTILINE)
+    fetch_pattern = re.compile(r"async function init\(\)[\s\S]*?showPlayerView\(\);\s*play\(\);\s*}", re.MULTILINE)
     static_html = fetch_pattern.sub(static_js_logic.strip(), template_html)
 
     (DOCS_DIR / "index.html").write_text(static_html, encoding="utf-8")
