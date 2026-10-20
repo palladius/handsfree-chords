@@ -3,6 +3,8 @@ title: "Fliegerlied (So a schöner Tag)"
 artist: "Donikkl"
 tags: "oktoberfest, schlager, party, bavaria"
 original_key: "C"
+cover: "images/songs/fliegerlied.jpg"
+artist_image: "images/artists/donikkl.jpg"
 ---
 
 # 🎵 Fliegerlied (So a schöner Tag) — Donikkl

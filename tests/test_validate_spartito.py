@@ -2,11 +2,13 @@ import unittest
 from pathlib import Path
 import sys
 
-# Add scripts directory to path
+# Add scripts and app directories to path
 SKILL_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(SKILL_DIR / "scripts"))
+sys.path.insert(0, str(SKILL_DIR / "app"))
 
 from validate_spartito import validate_spartito, parse_single_chord, extract_base_chord
+from server import resolve_cover_images
 
 
 class TestChordParsing(unittest.TestCase):
@@ -114,6 +116,19 @@ original_key: A
             [],
             f"Canzoni senza accordo base valido nel YAML: {', '.join(missing_or_invalid)}"
         )
+
+
+class TestCoverImages(unittest.TestCase):
+    def test_resolve_cover_images_from_yaml(self):
+        meta = {
+            "title": "Fliegerlied",
+            "artist": "Donikkl",
+            "cover": "images/songs/fliegerlied.jpg",
+            "artist_image": "images/artists/donikkl.jpg",
+        }
+        cover, artist_img = resolve_cover_images("fliegerlied.md", meta)
+        self.assertEqual(cover, "images/songs/fliegerlied.jpg")
+        self.assertEqual(artist_img, "images/artists/donikkl.jpg")
 
 
 if __name__ == "__main__":

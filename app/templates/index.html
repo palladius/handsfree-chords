@@ -527,6 +527,30 @@
       border: 1px solid rgba(255,255,255,0.08);
       flex-shrink: 0;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      overflow: hidden;
+      position: relative;
+    }
+    .card-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .artist-chip-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .meta-cover-img {
+      width: 84px;
+      height: 84px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 2px solid rgba(255, 209, 102, 0.35);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+      flex-shrink: 0;
     }
     .card-meta {
       flex: 1;
@@ -1203,14 +1227,18 @@
       const statsContainer = document.getElementById('catalogStats');
       if (!tabsContainer || !cardsContainer) return;
 
-      // 1. Calculate artist frequency
+      // 1. Calculate artist frequency & artist cover image
       const artistCounts = {};
+      const artistImages = {};
       allSongsList.forEach(s => {
         const a = s.artist || 'Sconosciuto';
         artistCounts[a] = (artistCounts[a] || 0) + 1;
+        if (s.artist_image && !artistImages[a]) {
+          artistImages[a] = s.artist_image;
+        }
       });
 
-      // Filter artists with count >= 3 (e.g. Dire Straits, Genesis)
+      // Filter artists with count >= 3 (e.g. Dire Straits, Genesis, Dream Theater)
       const qualifyingArtists = Object.keys(artistCounts)
         .filter(a => artistCounts[a] >= 3)
         .sort((a, b) => artistCounts[b] - artistCounts[a]);
@@ -1226,9 +1254,13 @@
         const iconObj = ARTIST_ICONS[artist] || ARTIST_ICONS['default'];
         const count = artistCounts[artist];
         const isActive = (activeArtistFilter === artist);
+        const artImg = artistImages[artist] || iconObj.image || '';
+        const chipIconHtml = artImg
+          ? `<img src="${escapeHtml(artImg)}" class="artist-chip-avatar" alt="${escapeHtml(artist)}" onerror="this.outerHTML='<span>${iconObj.icon}</span>'">`
+          : `<span>${iconObj.icon}</span>`;
         tabsHtml += `
           <button class="artist-chip ${isActive ? 'active' : ''}" onclick="filterByArtist('${escapeJs(artist)}')">
-            <span>${iconObj.icon}</span> ${escapeHtml(artist)} <span class="chip-count">${count}</span>
+            ${chipIconHtml} ${escapeHtml(artist)} <span class="chip-count">${count}</span>
           </button>
         `;
       });
@@ -1297,10 +1329,15 @@
           sinotticoHtml += `<div class="chord-sinottico" style="color:#666; font-size:0.8rem; font-style:italic;">Spartito libero / arpeggio continuo</div>`;
         }
 
+        const coverSrc = s.cover || s.artist_image || '';
+        const avatarInnerHtml = coverSrc
+          ? `<img src="${escapeHtml(coverSrc)}" alt="${escapeHtml(s.title)}" onerror="this.outerHTML='${iconObj.icon}'">`
+          : `${iconObj.icon}`;
+
         cardsHtml += `
           <div class="song-card" onclick="selectAndPlaySong('${escapeJs(s.filename)}')">
             <div class="card-top">
-              <div class="card-avatar" style="background: ${iconObj.bg};">${iconObj.icon}</div>
+              <div class="card-avatar" style="background: ${iconObj.bg};">${avatarInnerHtml}</div>
               <div class="card-meta">
                 <div class="card-title" title="${escapeHtml(s.title)}">${escapeHtml(s.title)}</div>
                 <div class="card-artist">${escapeHtml(s.artist)}</div>
@@ -1365,6 +1402,11 @@
         keyDisplay = `${transposeChord(baseKey, 0)} ➔ <span style="color:var(--accent); font-weight:bold;">${transposedKey}</span>`;
       }
 
+      const songCover = data.meta.cover || data.meta.artist_image || '';
+      const coverBoxHtml = songCover
+        ? `<img src="${escapeHtml(songCover)}" class="meta-cover-img" alt="${escapeHtml(data.meta.title || '')}" onerror="this.style.display='none'">`
+        : '';
+
       // Top navigation bar & Meta box
       html += `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
@@ -1374,11 +1416,14 @@
           <span style="font-size:0.85rem; color:#888;">Tasti: Spazio = Play/Pause | F = Fullscreen | M = Metronomo</span>
         </div>
 
-        <div class="meta-box">
-          <h1>${data.meta.title || 'Senza titolo'} — ${data.meta.artist || ''}</h1>
-          <div>🎹 <strong>Tonalità:</strong> ${keyDisplay} | ⏱️ <strong>BPM:</strong> ${data.meta.bpm || '~120'} | <strong>Tempo:</strong> ${data.meta.time_signature || '4/4'}</div>
-          ${data.meta.audio ? `<div style="margin-top:8px; color:var(--accent); font-weight:bold;">🔊 <strong>Traccia Audio MP3 Inclusa:</strong> Premi "Avvia" per cantare e suonare sulla traccia originale!</div>` : ''}
-          ${data.tips ? `<div style="margin-top:8px; color:var(--chord);">💡 <strong>Piano Tip:</strong> ${data.tips}</div>` : ''}
+        <div class="meta-box" style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+          ${coverBoxHtml}
+          <div style="flex:1; min-width:240px;">
+            <h1>${data.meta.title || 'Senza titolo'} — ${data.meta.artist || ''}</h1>
+            <div>🎹 <strong>Tonalità:</strong> ${keyDisplay} | ⏱️ <strong>BPM:</strong> ${data.meta.bpm || '~120'} | <strong>Tempo:</strong> ${data.meta.time_signature || '4/4'}</div>
+            ${data.meta.audio ? `<div style="margin-top:8px; color:var(--accent); font-weight:bold;">🔊 <strong>Traccia Audio MP3 Inclusa:</strong> Premi "Avvia" per cantare e suonare sulla traccia originale!</div>` : ''}
+            ${data.tips ? `<div style="margin-top:8px; color:var(--chord);">💡 <strong>Piano Tip:</strong> ${data.tips}</div>` : ''}
+          </div>
         </div>
       `;
 

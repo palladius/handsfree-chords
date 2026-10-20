@@ -233,6 +233,8 @@
       "artist": "Donikkl",
       "tags": "oktoberfest, schlager, party, bavaria",
       "original_key": "C",
+      "cover": "images/songs/fliegerlied.jpg",
+      "artist_image": "images/artists/donikkl.jpg",
       "bpm": 134,
       "time_signature": "4/4"
     },

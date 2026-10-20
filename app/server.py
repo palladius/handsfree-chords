@@ -13,7 +13,43 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 BASE_DIR = Path(__file__).resolve().parent
 SONGS_DIR = BASE_DIR.parent / "songs"
+DOCS_DIR = BASE_DIR.parent / "docs"
 TEMPLATES_DIR = BASE_DIR / "templates"
+
+
+def slugify(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
+
+
+def resolve_cover_images(filename: str, meta: dict):
+    """
+    Resolve song cover image and artist cover image from YAML frontmatter
+    or auto-discover from docs/images/{songs,artists}/.
+    """
+    stem = Path(filename).stem
+    artist_slug = slugify(meta.get("artist", ""))
+
+    cover = meta.get("cover") or meta.get("image") or meta.get("song_image") or ""
+    artist_image = meta.get("artist_image") or meta.get("artist_cover") or ""
+
+    exts = ("jpg", "jpeg", "png", "webp", "svg")
+    if not cover:
+        for ext in exts:
+            for rel in (f"images/songs/{stem}.{ext}", f"images/{stem}.{ext}"):
+                if (DOCS_DIR / rel).exists():
+                    cover = rel
+                    break
+            if cover:
+                break
+
+    if not artist_image and artist_slug:
+        for ext in exts:
+            rel = f"images/artists/{artist_slug}.{ext}"
+            if (DOCS_DIR / rel).exists():
+                artist_image = rel
+                break
+
+    return cover, artist_image
 
 
 def parse_timestamp_to_seconds(ts_str: str) -> float:
@@ -190,6 +226,11 @@ def parse_song_file(file_path: Path):
         })
 
     summary = extract_harmonic_summary(raw_lines)
+    cover, artist_image = resolve_cover_images(file_path.name, meta)
+    if cover:
+        meta["cover"] = cover
+    if artist_image:
+        meta["artist_image"] = artist_image
 
     return {
         "filename": file_path.name,
@@ -210,6 +251,22 @@ class ChordsHandler(SimpleHTTPRequestHandler):
             self.wfile.write(index_path.read_bytes())
             return
 
+        # Serve static assets (images/ and audio/) from docs/
+        if self.path.startswith("/images/") or self.path.startswith("/audio/"):
+            rel_path = self.path.lstrip("/").split("?")[0]
+            asset_path = (DOCS_DIR / rel_path).resolve()
+            if str(asset_path).startswith(str(DOCS_DIR.resolve())) and asset_path.is_file():
+                self.send_response(200)
+                ext = asset_path.suffix.lower()
+                mime_map = {
+                    ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
+                    ".webp": "image/webp", ".svg": "image/svg+xml", ".mp3": "audio/mpeg"
+                }
+                self.send_header("Content-Type", mime_map.get(ext, "application/octet-stream"))
+                self.end_headers()
+                self.wfile.write(asset_path.read_bytes())
+                return
+
         # API: List all songs
         if self.path == "/api/songs":
             songs = []
@@ -223,6 +280,8 @@ class ChordsHandler(SimpleHTTPRequestHandler):
                         "key": data["meta"].get("key") or data["meta"].get("original_key") or data["meta"].get("base_chord", ""),
                         "bpm": data["meta"].get("bpm"),
                         "time_signature": data["meta"].get("time_signature", "4/4"),
+                        "cover": data["meta"].get("cover", ""),
+                        "artist_image": data["meta"].get("artist_image", ""),
                         "summary": data.get("summary", {}),
                     })
                 except Exception as e:
