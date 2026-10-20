@@ -10,6 +10,7 @@ time_signature: 4/4
 bpm: 78
 cover: "images/songs/romeo-and-juliet.jpg"
 artist_image: "images/artists/dire-straits.jpg"
+audio: "audio/romeo-and-juliet.mp3"
 ---
 
 # 🎵 Romeo and Juliet — Dire Straits

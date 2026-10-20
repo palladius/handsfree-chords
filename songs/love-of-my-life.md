@@ -10,6 +10,7 @@ time_signature: 4/4
 bpm: 78
 cover: "images/songs/love-of-my-life.jpg"
 artist_image: "images/artists/queen.jpg"
+audio: "audio/love-of-my-life.mp3"
 ---
 
 # 🎵 Love of My Life — Queen

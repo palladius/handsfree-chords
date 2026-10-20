@@ -9,6 +9,7 @@ bpm: 68
 duration_seconds: 629
 cover: "images/songs/the-musical-box.jpg"
 artist_image: "images/artists/genesis.jpg"
+audio: "audio/the-musical-box.mp3"
 ---
 
 # 🎵 The Musical Box — Genesis

@@ -10,6 +10,7 @@ time_signature: 4/4
 bpm: 148
 cover: "images/songs/sultans-of-swing.jpg"
 artist_image: "images/artists/dire-straits.jpg"
+audio: "audio/sultans-of-swing.mp3"
 ---
 
 # 🎵 Sultans of Swing — Dire Straits

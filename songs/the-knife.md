@@ -9,6 +9,7 @@ bpm: 132
 duration_seconds: 535
 cover: "images/songs/the-knife.jpg"
 artist_image: "images/artists/genesis.jpg"
+audio: "audio/the-knife.mp3"
 ---
 
 # 🎵 The Knife — Genesis

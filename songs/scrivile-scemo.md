@@ -9,6 +9,7 @@ time_signature: 4/4
 bpm: 128
 cover: "images/songs/scrivile-scemo.jpg"
 artist_image: "images/artists/pinguini-tattici-nucleari.jpg"
+audio: "audio/scrivile-scemo.mp3"
 ---
 
 # 🎵 Scrivile Scemo — Pinguini Tattici Nucleari

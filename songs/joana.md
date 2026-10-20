@@ -5,6 +5,7 @@ tags: "oktoberfest, schlager, party, bavaria"
 original_key: "G"
 cover: "images/songs/joana.jpg"
 artist_image: "images/artists/peter-wackel.jpg"
+audio: "audio/joana.mp3"
 ---
 
 # 🎵 Joana (Du geile Sau) — Peter Wackel

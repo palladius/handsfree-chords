@@ -5,6 +5,7 @@ tags: "oktoberfest, schlager, party, bavaria"
 original_key: "C"
 cover: "images/songs/weiss-der-geier.jpg"
 artist_image: "images/artists/wolfgang-petry.jpg"
+audio: "audio/weiss-der-geier.mp3"
 ---
 
 # 🎵 Weiß der Geier (Tanzbar) — Wolfgang Petry

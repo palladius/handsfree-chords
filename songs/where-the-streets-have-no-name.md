@@ -10,6 +10,7 @@ time_signature: 4/4
 bpm: 126
 cover: "images/songs/where-the-streets-have-no-name.jpg"
 artist_image: "images/artists/u2.jpg"
+audio: "audio/where-the-streets-have-no-name.mp3"
 ---
 
 # 🎵 Where the Streets Have No Name — U2

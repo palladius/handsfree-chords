@@ -9,6 +9,7 @@ time_signature: 4/4
 bpm: 130
 cover: "images/songs/gloria.jpg"
 artist_image: "images/artists/umberto-tozzi.jpg"
+audio: "audio/gloria.mp3"
 ---
 
 # 🎵 Gloria — Umberto Tozzi

@@ -9,6 +9,7 @@ time_signature: 7/4
 bpm: 102
 cover: "images/songs/solsbury-hill.jpg"
 artist_image: "images/artists/peter-gabriel.jpg"
+audio: "audio/solsbury-hill.mp3"
 ---
 
 # 🎵 Solsbury Hill — Peter Gabriel

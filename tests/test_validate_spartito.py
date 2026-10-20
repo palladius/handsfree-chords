@@ -159,6 +159,15 @@ class TestCoverImages(unittest.TestCase):
             self.assertTrue((docs_dir / cover).is_file(), f"Cover file not found on disk: {cover}")
             self.assertTrue((docs_dir / artist_img).is_file(), f"Artist image not found on disk: {artist_img}")
 
+    def test_all_songs_have_existing_audio_mp3(self):
+        from server import parse_song_file
+        docs_dir = SKILL_DIR / "docs"
+        for song_path in sorted((SKILL_DIR / "songs").glob("*.md")):
+            parsed = parse_song_file(song_path)
+            audio = parsed["meta"].get("audio")
+            self.assertTrue(audio, f"Missing audio in {song_path.name}")
+            self.assertTrue((docs_dir / audio).is_file(), f"Audio file not found on disk: {audio}")
+
 
 if __name__ == "__main__":
     unittest.main()

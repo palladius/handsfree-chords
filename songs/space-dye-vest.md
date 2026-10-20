@@ -11,6 +11,7 @@ bpm: 108
 duration_seconds: 449
 cover: "images/songs/space-dye-vest.jpg"
 artist_image: "images/artists/dream-theater.jpg"
+audio: "audio/space-dye-vest.mp3"
 ---
 
 # 🎵 Space-Dye Vest — Dream Theater

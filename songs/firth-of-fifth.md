@@ -10,6 +10,7 @@ time_signature: 4/4
 bpm: 65
 cover: "images/songs/firth-of-fifth.jpg"
 artist_image: "images/artists/genesis.jpg"
+audio: "audio/firth-of-fifth.mp3"
 ---
 
 # 🎵 Firth of Fifth — Genesis

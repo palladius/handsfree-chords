@@ -5,6 +5,7 @@ tags: "oktoberfest, schlager, party, bavaria"
 original_key: "D"
 cover: "images/songs/wahnsinn.jpg"
 artist_image: "images/artists/wolfgang-petry.jpg"
+audio: "audio/wahnsinn.mp3"
 ---
 
 # 🎵 Wahnsinn (Hölle, Hölle, Hölle) — Wolfgang Petry

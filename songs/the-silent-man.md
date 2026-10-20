@@ -11,6 +11,7 @@ bpm: 100
 duration_seconds: 228
 cover: "images/songs/the-silent-man.jpg"
 artist_image: "images/artists/dream-theater.jpg"
+audio: "audio/the-silent-man.mp3"
 ---
 
 # 🎵 The Silent Man — Dream Theater

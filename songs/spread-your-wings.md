@@ -9,6 +9,7 @@ bpm: 76
 duration_seconds: 274
 cover: "images/songs/spread-your-wings.jpg"
 artist_image: "images/artists/queen.jpg"
+audio: "audio/spread-your-wings.mp3"
 ---
 
 # 🎵 Spread Your Wings — Queen
