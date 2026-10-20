@@ -9,6 +9,8 @@ base_chord: D
 time_signature: 6/8
 bpm: 72
 duration_seconds: 398
+cover: "images/songs/the-spirit-carries-on.jpg"
+artist_image: "images/artists/dream-theater.jpg"
 ---
 
 # 🎵 The Spirit Carries On — Dream Theater

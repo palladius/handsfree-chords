@@ -10,7 +10,9 @@
       "original_key": "B",
       "base_chord": "B",
       "time_signature": "4/4",
-      "bpm": 65
+      "bpm": 65,
+      "cover": "images/songs/firth-of-fifth.jpg",
+      "artist_image": "images/artists/genesis.jpg"
     },
     "tips": "Il capolavoro assoluto di Tony Banks. L'intro classica arpeggiata è leggendaria. Sulla strofa (\"The path is clear\"), la mano sinistra scende sul basso (`[B]` $\\to$ `[B7/A]` $\\to$ `[E/G#]` $\\to$ `[B/F#]`). Voicing aperti ed eleganti.",
     "summary": {
@@ -527,7 +529,9 @@
       "original_key": "B",
       "base_chord": "B",
       "time_signature": "4/4",
-      "bpm": 130
+      "bpm": 130,
+      "cover": "images/songs/gloria.jpg",
+      "artist_image": "images/artists/umberto-tozzi.jpg"
     },
     "tips": "Il leggendario riff tastieristico/pianistico batte ottavi dritti e incalzanti tra `[SI]` e `[MI]`. Mano sinistra fa l'ostinato ritmico sul basso (B - E). Attenzione alla discesa armonica verso lo special `[DO#m] -> [FA#7] -> [SI] -> [MImaj7] -> [LA] [SI] -> [MI]`.",
     "summary": {
@@ -880,6 +884,8 @@
       "artist": "Peter Wackel",
       "tags": "oktoberfest, schlager, party, bavaria",
       "original_key": "G",
+      "cover": "images/songs/joana.jpg",
+      "artist_image": "images/artists/peter-wackel.jpg",
       "bpm": 132,
       "time_signature": "4/4"
     },
@@ -1175,7 +1181,9 @@
       "original_key": "F",
       "base_chord": "F",
       "time_signature": "4/4",
-      "bpm": 78
+      "bpm": 78,
+      "cover": "images/songs/love-of-my-life.jpg",
+      "artist_image": "images/artists/queen.jpg"
     },
     "tips": "Il capolavoro di Freddie Mercury al pianoforte. Abbondanza di arpeggi classicheggianti della mano destra e discese di basso cromatiche con la sinistra. Fondamentale il passaggio `[Cdim]` / `[B]` nello special.",
     "summary": {
@@ -1439,7 +1447,9 @@
       "original_key": "Bb",
       "base_chord": "Bb",
       "time_signature": "4/4",
-      "bpm": 122
+      "bpm": 122,
+      "cover": "images/songs/occidentalis-karma.jpg",
+      "artist_image": "images/artists/francesco-gabbani.jpg"
     },
     "tips": "",
     "summary": {
@@ -1868,7 +1878,9 @@
       "original_key": "F",
       "base_chord": "F",
       "time_signature": "4/4",
-      "bpm": 78
+      "bpm": 78,
+      "cover": "images/songs/romeo-and-juliet.jpg",
+      "artist_image": "images/artists/dire-straits.jpg"
     },
     "tips": "",
     "summary": {
@@ -2206,7 +2218,9 @@
       "original_key": "A",
       "base_chord": "A",
       "time_signature": "4/4",
-      "bpm": 128
+      "bpm": 128,
+      "cover": "images/songs/scrivile-scemo.jpg",
+      "artist_image": "images/artists/pinguini-tattici-nucleari.jpg"
     },
     "tips": "",
     "summary": {
@@ -2611,7 +2625,9 @@
       "original_key": "B",
       "base_chord": "B",
       "time_signature": "7/4",
-      "bpm": 102
+      "bpm": 102,
+      "cover": "images/songs/solsbury-hill.jpg",
+      "artist_image": "images/artists/peter-gabriel.jpg"
     },
     "tips": "Il tempo dispari in 7/4 è il cuore del pezzo. Mantieni l'ostinato ritmico con la mano sinistra (B - F# - B) o in G con arpeggi costanti a semicrome. Nel ritornello (\"boom-boom-boom\") la cadenza armonica spinge verso la risoluzione.",
     "summary": {
@@ -2961,7 +2977,9 @@
       "base_chord": "Dm",
       "time_signature": "4/4",
       "bpm": 108,
-      "duration_seconds": "449"
+      "duration_seconds": "449",
+      "cover": "images/songs/space-dye-vest.jpg",
+      "artist_image": "images/artists/dream-theater.jpg"
     },
     "tips": "Il canto del cigno di Kevin Moore nei Dream Theater, posto in chiusura di *Awake* (1994). Tutto il brano ruota attorno a un ipnotico ostinato pianistico in Re minore: la mano sinistra arpeggia ottave e quinte profonde (`[Dm] -> [Bb] -> [Gm] -> [A]`), mentre la destra disegna una melodia malinconica e glaciale sulle note `A - F - G - E - F - D`. Mantieni il pedale di risonanza pulito a ogni cambio armonico per preservare l'atmosfera intima e cinematografica.",
     "summary": {
@@ -3297,7 +3315,9 @@
       "original_key": "D",
       "time_signature": "4/4",
       "bpm": 76,
-      "duration_seconds": "274"
+      "duration_seconds": "274",
+      "cover": "images/songs/spread-your-wings.jpg",
+      "artist_image": "images/artists/queen.jpg"
     },
     "tips": "Composta dal bassista John Deacon ma guidata dal pianoforte a coda di Freddie Mercury. La mano destra apre con il celebre arpeggio in `[D]` con ricami melodici (Fa# - La - Re - Do# - Si). Nel passaggio del rimprovero del padrone (\"His boss said to him...\"), prestare massima attenzione alla discesa cromatica del basso al pianoforte con la sinistra: `[Bm] -> [Bm/A] -> [Bm/G#] -> [G] -> [A]`. Nel ritornello le dinamiche esplodono con l'inaspettata risoluzione drammatica sul minore `[Gm] -> [D]` (\"'Cos you know you should do better\").",
     "summary": {
@@ -3659,7 +3679,9 @@
       "original_key": "C",
       "base_chord": "C",
       "time_signature": "4/4",
-      "bpm": 115
+      "bpm": 115,
+      "cover": "images/songs/su-di-noi.jpg",
+      "artist_image": "images/artists/pupo.jpg"
     },
     "tips": "Arpeggio pop fluido mano destra + ottave/quinte aperte alla mano sinistra. Occhio alla modulazione sul `[SI7]` che spinge forte verso `[MIm]`.",
     "summary": {
@@ -4031,7 +4053,9 @@
       "original_key": "Dm",
       "base_chord": "Dm",
       "time_signature": "4/4",
-      "bpm": 148
+      "bpm": 148,
+      "cover": "images/songs/sultans-of-swing.jpg",
+      "artist_image": "images/artists/dire-straits.jpg"
     },
     "tips": "",
     "summary": {
@@ -4314,6 +4338,8 @@
       "tags": "rock, pop-rock, 80s, classic-rock, anthem, party",
       "original_key": "D",
       "audio": "audio/summer-of-69.mp3",
+      "cover": "images/songs/summer-of-69.jpg",
+      "artist_image": "images/artists/bryan-adams.jpg",
       "bpm": 139,
       "time_signature": "4/4"
     },
@@ -4701,6 +4727,8 @@
       "tags": "rock, pop, 80s, anthem, zurich, goldkueste",
       "original_key": "F",
       "audio": "audio/the-best.mp3",
+      "cover": "images/songs/the-best.jpg",
+      "artist_image": "images/artists/tina-turner.jpg",
       "bpm": 104,
       "time_signature": "4/4"
     },
@@ -5040,7 +5068,9 @@
       "base_chord": "E",
       "time_signature": "6/8",
       "bpm": 124,
-      "duration_seconds": "1156"
+      "duration_seconds": "1156",
+      "cover": "images/songs/the-count-of-tuscany.jpg",
+      "artist_image": "images/artists/dream-theater.jpg"
     },
     "tips": "Suite prog-metal monumentale di 19 minuti che chiude *Black Clouds & Silver Linings*. Jordan Rudess spazia da arpeggi cristallini in Mi Lidio (`[E] -> [F#]`) all'inizio, ai lead furiosi nella sezione centrale, fino ai celestiali tappeti di Continuum e archi sinfonici nell'interludio ambient. Nel grandioso finale (\"Tell them about my brother!\"), apri gli accordi a due mani con bassi ottavati profondi su `[D] -> [A/C#] -> [Bm] -> [G]` prima della catarsi definitiva in `[E]` con la cadenza plagale minore `[A] -> [Am] -> [E]`.",
     "summary": {
@@ -5449,7 +5479,9 @@
       "original_key": "G#m",
       "time_signature": "4/4",
       "bpm": 132,
-      "duration_seconds": "535"
+      "duration_seconds": "535",
+      "cover": "images/songs/the-knife.jpg",
+      "artist_image": "images/artists/genesis.jpg"
     },
     "tips": "Riff leggendario di organo Hammond L-122 con saturazione valvolare, ispirato allo stile proto-prog di Keith Emerson (\"Rondo\"). La mano sinistra martella ottavi in staccato sulla fondamentale (G#), mentre la destra crea tensione ritmica con rivolti di `[G#m]`, scendendo poi sulla cadenza frigia `[F#] -> [E] -> [D#]`. Nello special teatrale centrale passare a drawbar morbidi prima del crescendo accelerando chitarra-organo.",
     "summary": {
@@ -5845,7 +5877,9 @@
       "original_key": "F#",
       "time_signature": "12/8",
       "bpm": 68,
-      "duration_seconds": "629"
+      "duration_seconds": "629",
+      "cover": "images/songs/the-musical-box.jpg",
+      "artist_image": "images/artists/genesis.jpg"
     },
     "tips": "Il capolavoro narrativo di *Nursery Cryme*. Tony Banks intreccia il timbro vellutato dell'Hohner Pianet con gli archi maestosi del Mellotron Mark II e l'organo Hammond. Nella prima parte pastorale in 12/8 mantenere un tocco morbido e arpeggiato a crome tra `[F#]`, `[E]` e `[Bm]`. Sulla filastrocca (\"Old King Cole\") l'armonia vira in `[F#m]` con la caratteristica cadenza drammatica verso `[C#]`. Nel celebre finale teatrale (\"Touch me now!\"), sostenere a piena voce con accordi a blocco a due mani alternando `[F#]`, `[E]` e `[B]`.",
     "summary": {
@@ -6226,7 +6260,9 @@
       "base_chord": "A",
       "time_signature": "4/4",
       "bpm": 100,
-      "duration_seconds": "228"
+      "duration_seconds": "228",
+      "cover": "images/songs/the-silent-man.jpg",
+      "artist_image": "images/artists/dream-theater.jpg"
     },
     "tips": "Ballata acustica scritta da John Petrucci su *Awake*, impreziosita dalle armonie vocali e dai tappeti di archi/synth di Kevin Moore. Al pianoforte funziona magnificamente alternando un arpeggio cristallino sul giro ascendente/discendente in `[A]` (`[A] -> [E/G#] -> [F#m] -> [D]`) e accordi più tensivi nella strofa in `[F#m]` con il colore lidio/frigio del passaggio `[G] -> [C#7]`.",
     "summary": {
@@ -6540,7 +6576,9 @@
       "base_chord": "D",
       "time_signature": "6/8",
       "bpm": 72,
-      "duration_seconds": "398"
+      "duration_seconds": "398",
+      "cover": "images/songs/the-spirit-carries-on.jpg",
+      "artist_image": "images/artists/dream-theater.jpg"
     },
     "tips": "La grande ballata gospel-rock di *Scenes from a Memory* (Scene Eight). Jordan Rudess apre con un'introduzione pianistica solenne e commovente caratterizzata dal basso cromatico discendente `[D] -> [D/C] -> [G/B] -> [Gm/Bb] -> [D/A]`. Nel bridge (\"Move on, be brave\") il pianoforte resta solo con la voce di James LaBrie: suona accordi morbidi e cantabili prima dell'esplosione orchestrale dell'assolo di John Petrucci e del coro gospel finale.",
     "summary": {
@@ -6910,7 +6948,9 @@
       "original_key": "Dm",
       "base_chord": "Dm",
       "time_signature": "4/4",
-      "bpm": 128
+      "bpm": 128,
+      "cover": "images/songs/tunnel-of-love.jpg",
+      "artist_image": "images/artists/dire-straits.jpg"
     },
     "tips": "",
     "summary": {
@@ -7226,6 +7266,8 @@
       "artist": "Wolfgang Petry",
       "tags": "oktoberfest, schlager, party, bavaria",
       "original_key": "D",
+      "cover": "images/songs/wahnsinn.jpg",
+      "artist_image": "images/artists/wolfgang-petry.jpg",
       "bpm": 128,
       "time_signature": "4/4"
     },
@@ -7516,6 +7558,8 @@
       "artist": "Wolfgang Petry",
       "tags": "oktoberfest, schlager, party, bavaria",
       "original_key": "C",
+      "cover": "images/songs/weiss-der-geier.jpg",
+      "artist_image": "images/artists/wolfgang-petry.jpg",
       "bpm": 130,
       "time_signature": "4/4"
     },
@@ -7841,7 +7885,9 @@
       "original_key": "D",
       "base_chord": "D",
       "time_signature": "4/4",
-      "bpm": 126
+      "bpm": 126,
+      "cover": "images/songs/where-the-streets-have-no-name.jpg",
+      "artist_image": "images/artists/u2.jpg"
     },
     "tips": "Sull'iconica intro ambient/organo, tieni il pad di `[D]` e costruisci la ritmica a crome alternate (D - G - Bm - A). Attenzione alla modulazione fugace su `[C]` prima dell'esplosione del titolo (\"Where the streets have no name\"), che crea il classico effetto ipnotico di The Edge ed Eno.",
     "summary": {

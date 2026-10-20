@@ -7,6 +7,8 @@ original_key: B
 base_chord: B
 time_signature: 7/4
 bpm: 102
+cover: "images/songs/solsbury-hill.jpg"
+artist_image: "images/artists/peter-gabriel.jpg"
 ---
 
 # 🎵 Solsbury Hill — Peter Gabriel

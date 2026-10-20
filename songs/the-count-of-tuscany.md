@@ -9,6 +9,8 @@ base_chord: E
 time_signature: 6/8
 bpm: 124
 duration_seconds: 1156
+cover: "images/songs/the-count-of-tuscany.jpg"
+artist_image: "images/artists/dream-theater.jpg"
 ---
 
 # 🎵 The Count of Tuscany — Dream Theater

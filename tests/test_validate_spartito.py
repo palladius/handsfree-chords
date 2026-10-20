@@ -147,6 +147,18 @@ class TestCoverImages(unittest.TestCase):
         self.assertEqual(cover, "images/songs/fliegerlied.jpg")
         self.assertEqual(artist_img, "images/artists/donikkl.jpg")
 
+    def test_all_songs_have_existing_cover_and_artist_images(self):
+        from server import parse_song_file
+        docs_dir = SKILL_DIR / "docs"
+        for song_path in sorted((SKILL_DIR / "songs").glob("*.md")):
+            parsed = parse_song_file(song_path)
+            cover = parsed["meta"].get("cover")
+            artist_img = parsed["meta"].get("artist_image")
+            self.assertTrue(cover, f"Missing cover in {song_path.name}")
+            self.assertTrue(artist_img, f"Missing artist_image in {song_path.name}")
+            self.assertTrue((docs_dir / cover).is_file(), f"Cover file not found on disk: {cover}")
+            self.assertTrue((docs_dir / artist_img).is_file(), f"Artist image not found on disk: {artist_img}")
+
 
 if __name__ == "__main__":
     unittest.main()

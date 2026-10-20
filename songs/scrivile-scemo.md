@@ -7,6 +7,8 @@ original_key: A
 base_chord: A
 time_signature: 4/4
 bpm: 128
+cover: "images/songs/scrivile-scemo.jpg"
+artist_image: "images/artists/pinguini-tattici-nucleari.jpg"
 ---
 
 # 🎵 Scrivile Scemo — Pinguini Tattici Nucleari

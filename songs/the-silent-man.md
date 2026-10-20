@@ -9,6 +9,8 @@ base_chord: A
 time_signature: 4/4
 bpm: 100
 duration_seconds: 228
+cover: "images/songs/the-silent-man.jpg"
+artist_image: "images/artists/dream-theater.jpg"
 ---
 
 # 🎵 The Silent Man — Dream Theater

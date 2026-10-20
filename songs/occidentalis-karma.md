@@ -7,6 +7,8 @@ original_key: Bb
 base_chord: Bb
 time_signature: 4/4
 bpm: 122
+cover: "images/songs/occidentalis-karma.jpg"
+artist_image: "images/artists/francesco-gabbani.jpg"
 ---
 
 # 🎵 Occidentali's Karma — Francesco Gabbani

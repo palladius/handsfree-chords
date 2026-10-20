@@ -7,6 +7,8 @@ original_key: G#m
 time_signature: 4/4
 bpm: 132
 duration_seconds: 535
+cover: "images/songs/the-knife.jpg"
+artist_image: "images/artists/genesis.jpg"
 ---
 
 # 🎵 The Knife — Genesis

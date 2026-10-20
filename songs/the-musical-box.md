@@ -7,6 +7,8 @@ original_key: F#
 time_signature: 12/8
 bpm: 68
 duration_seconds: 629
+cover: "images/songs/the-musical-box.jpg"
+artist_image: "images/artists/genesis.jpg"
 ---
 
 # 🎵 The Musical Box — Genesis

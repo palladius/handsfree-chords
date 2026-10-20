@@ -7,6 +7,8 @@ original_key: C
 base_chord: C
 time_signature: 4/4
 bpm: 115
+cover: "images/songs/su-di-noi.jpg"
+artist_image: "images/artists/pupo.jpg"
 ---
 
 # 🎵 Su di noi — Pupo

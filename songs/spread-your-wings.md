@@ -7,6 +7,8 @@ original_key: D
 time_signature: 4/4
 bpm: 76
 duration_seconds: 274
+cover: "images/songs/spread-your-wings.jpg"
+artist_image: "images/artists/queen.jpg"
 ---
 
 # 🎵 Spread Your Wings — Queen

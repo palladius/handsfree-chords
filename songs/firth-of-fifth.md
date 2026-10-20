@@ -8,6 +8,8 @@ original_key: B
 base_chord: B
 time_signature: 4/4
 bpm: 65
+cover: "images/songs/firth-of-fifth.jpg"
+artist_image: "images/artists/genesis.jpg"
 ---
 
 # 🎵 Firth of Fifth — Genesis

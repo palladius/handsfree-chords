@@ -6,8 +6,8 @@
     "key": "B",
     "bpm": 65,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/firth-of-fifth.jpg",
+    "artist_image": "images/artists/genesis.jpg",
     "summary": {
       "strofa": [
         "B",
@@ -60,8 +60,8 @@
     "key": "B",
     "bpm": 130,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/gloria.jpg",
+    "artist_image": "images/artists/umberto-tozzi.jpg",
     "summary": {
       "strofa": [
         "SI",
@@ -90,8 +90,8 @@
     "key": "G",
     "bpm": 132,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/joana.jpg",
+    "artist_image": "images/artists/peter-wackel.jpg",
     "summary": {
       "strofa": [
         "G",
@@ -115,8 +115,8 @@
     "key": "F",
     "bpm": 78,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/love-of-my-life.jpg",
+    "artist_image": "images/artists/queen.jpg",
     "summary": {
       "strofa": [
         "A",
@@ -153,8 +153,8 @@
     "key": "Bb",
     "bpm": 122,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/occidentalis-karma.jpg",
+    "artist_image": "images/artists/francesco-gabbani.jpg",
     "summary": {
       "strofa": [
         "SIb",
@@ -189,8 +189,8 @@
     "key": "F",
     "bpm": 78,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/romeo-and-juliet.jpg",
+    "artist_image": "images/artists/dire-straits.jpg",
     "summary": {
       "strofa": [
         "F",
@@ -219,8 +219,8 @@
     "key": "A",
     "bpm": 128,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/scrivile-scemo.jpg",
+    "artist_image": "images/artists/pinguini-tattici-nucleari.jpg",
     "summary": {
       "strofa": [
         "LA",
@@ -254,8 +254,8 @@
     "key": "B",
     "bpm": 102,
     "time_signature": "7/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/solsbury-hill.jpg",
+    "artist_image": "images/artists/peter-gabriel.jpg",
     "summary": {
       "strofa": [
         "G#m",
@@ -279,8 +279,8 @@
     "key": "Dm",
     "bpm": 108,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/space-dye-vest.jpg",
+    "artist_image": "images/artists/dream-theater.jpg",
     "summary": {
       "strofa": [
         "Dm",
@@ -313,8 +313,8 @@
     "key": "D",
     "bpm": 76,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/spread-your-wings.jpg",
+    "artist_image": "images/artists/queen.jpg",
     "summary": {
       "strofa": [
         "D",
@@ -354,8 +354,8 @@
     "key": "C",
     "bpm": 115,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/su-di-noi.jpg",
+    "artist_image": "images/artists/pupo.jpg",
     "summary": {
       "strofa": [
         "DO",
@@ -392,8 +392,8 @@
     "key": "Dm",
     "bpm": 148,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/sultans-of-swing.jpg",
+    "artist_image": "images/artists/dire-straits.jpg",
     "summary": {
       "strofa": [
         "Dm",
@@ -416,8 +416,8 @@
     "key": "D",
     "bpm": 139,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/summer-of-69.jpg",
+    "artist_image": "images/artists/bryan-adams.jpg",
     "summary": {
       "strofa": [
         "D",
@@ -443,8 +443,8 @@
     "key": "F",
     "bpm": 104,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/the-best.jpg",
+    "artist_image": "images/artists/tina-turner.jpg",
     "summary": {
       "strofa": [
         "F",
@@ -476,8 +476,8 @@
     "key": "E",
     "bpm": 124,
     "time_signature": "6/8",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/the-count-of-tuscany.jpg",
+    "artist_image": "images/artists/dream-theater.jpg",
     "summary": {
       "strofa": [
         "C#m",
@@ -513,8 +513,8 @@
     "key": "G#m",
     "bpm": 132,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/the-knife.jpg",
+    "artist_image": "images/artists/genesis.jpg",
     "summary": {
       "strofa": [
         "G#m",
@@ -543,8 +543,8 @@
     "key": "F#",
     "bpm": 68,
     "time_signature": "12/8",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/the-musical-box.jpg",
+    "artist_image": "images/artists/genesis.jpg",
     "summary": {
       "strofa": [
         "Bm",
@@ -574,8 +574,8 @@
     "key": "A",
     "bpm": 100,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/the-silent-man.jpg",
+    "artist_image": "images/artists/dream-theater.jpg",
     "summary": {
       "strofa": [
         "F#m",
@@ -614,8 +614,8 @@
     "key": "D",
     "bpm": 72,
     "time_signature": "6/8",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/the-spirit-carries-on.jpg",
+    "artist_image": "images/artists/dream-theater.jpg",
     "summary": {
       "strofa": [
         "D",
@@ -658,8 +658,8 @@
     "key": "Dm",
     "bpm": 128,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/tunnel-of-love.jpg",
+    "artist_image": "images/artists/dire-straits.jpg",
     "summary": {
       "strofa": [
         "Dm",
@@ -687,8 +687,8 @@
     "key": "D",
     "bpm": 128,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/wahnsinn.jpg",
+    "artist_image": "images/artists/wolfgang-petry.jpg",
     "summary": {
       "strofa": [
         "D",
@@ -711,8 +711,8 @@
     "key": "C",
     "bpm": 130,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/weiss-der-geier.jpg",
+    "artist_image": "images/artists/wolfgang-petry.jpg",
     "summary": {
       "strofa": [
         "C",
@@ -736,8 +736,8 @@
     "key": "D",
     "bpm": 126,
     "time_signature": "4/4",
-    "cover": "",
-    "artist_image": "",
+    "cover": "images/songs/where-the-streets-have-no-name.jpg",
+    "artist_image": "images/artists/u2.jpg",
     "summary": {
       "strofa": [
         "D",

@@ -8,6 +8,8 @@ original_key: F
 base_chord: F
 time_signature: 4/4
 bpm: 78
+cover: "images/songs/romeo-and-juliet.jpg"
+artist_image: "images/artists/dire-straits.jpg"
 ---
 
 # 🎵 Romeo and Juliet — Dire Straits

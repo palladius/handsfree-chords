@@ -8,6 +8,8 @@ original_key: F
 base_chord: F
 time_signature: 4/4
 bpm: 78
+cover: "images/songs/love-of-my-life.jpg"
+artist_image: "images/artists/queen.jpg"
 ---
 
 # 🎵 Love of My Life — Queen

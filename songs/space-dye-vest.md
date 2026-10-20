@@ -9,6 +9,8 @@ base_chord: Dm
 time_signature: 4/4
 bpm: 108
 duration_seconds: 449
+cover: "images/songs/space-dye-vest.jpg"
+artist_image: "images/artists/dream-theater.jpg"
 ---
 
 # 🎵 Space-Dye Vest — Dream Theater

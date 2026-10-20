@@ -8,6 +8,8 @@ original_key: Dm
 base_chord: Dm
 time_signature: 4/4
 bpm: 128
+cover: "images/songs/tunnel-of-love.jpg"
+artist_image: "images/artists/dire-straits.jpg"
 ---
 
 # 🎵 Tunnel of Love — Dire Straits

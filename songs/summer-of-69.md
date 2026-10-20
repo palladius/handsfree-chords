@@ -4,6 +4,8 @@ artist: "Bryan Adams"
 tags: "rock, pop-rock, 80s, classic-rock, anthem, party"
 original_key: "D"
 audio: "audio/summer-of-69.mp3"
+cover: "images/songs/summer-of-69.jpg"
+artist_image: "images/artists/bryan-adams.jpg"
 ---
 
 # 🎵 Summer of '69 — Bryan Adams

@@ -8,6 +8,8 @@ original_key: Dm
 base_chord: Dm
 time_signature: 4/4
 bpm: 148
+cover: "images/songs/sultans-of-swing.jpg"
+artist_image: "images/artists/dire-straits.jpg"
 ---
 
 # 🎵 Sultans of Swing — Dire Straits
