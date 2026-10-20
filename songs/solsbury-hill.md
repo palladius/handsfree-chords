@@ -1,3 +1,14 @@
+---
+title: Solsbury Hill
+artist: Peter Gabriel
+year: 1977
+key: B
+original_key: B
+base_chord: B
+time_signature: 7/4
+bpm: 102
+---
+
 # 🎵 Solsbury Hill — Peter Gabriel
 
 > **Info brano:**  

@@ -1,3 +1,15 @@
+---
+title: Romeo and Juliet
+artist: Dire Straits
+album: Making Movies
+year: 1980
+key: F
+original_key: F
+base_chord: F
+time_signature: 4/4
+bpm: 78
+---
+
 # 🎵 Romeo and Juliet — Dire Straits
 
 > **Info brano:**  

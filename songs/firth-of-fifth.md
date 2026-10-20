@@ -1,3 +1,15 @@
+---
+title: Firth of Fifth
+artist: Genesis
+album: Selling England by the Pound
+year: 1973
+key: B
+original_key: B
+base_chord: B
+time_signature: 4/4
+bpm: 65
+---
+
 # 🎵 Firth of Fifth — Genesis
 
 > **Info brano:**  

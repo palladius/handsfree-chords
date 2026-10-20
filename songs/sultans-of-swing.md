@@ -1,3 +1,15 @@
+---
+title: Sultans of Swing
+artist: Dire Straits
+album: Dire Straits
+year: 1978
+key: Dm
+original_key: Dm
+base_chord: Dm
+time_signature: 4/4
+bpm: 148
+---
+
 # 🎵 Sultans of Swing — Dire Straits
 
 > **Info brano:**  
