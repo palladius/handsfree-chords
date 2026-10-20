@@ -6,7 +6,7 @@ import sys
 SKILL_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(SKILL_DIR / "scripts"))
 
-from validate_spartito import validate_spartito, parse_single_chord
+from validate_spartito import validate_spartito, parse_single_chord, extract_base_chord
 
 
 class TestChordParsing(unittest.TestCase):
@@ -66,6 +66,54 @@ noi due respi[RE]rando lo stesso momento per fare l'a[SOL]more qua e [SI7]là
         self.assertTrue(example_path.exists())
         errors = validate_spartito(example_path.read_text(encoding="utf-8"))
         self.assertEqual(errors, [], f"Validation errors found in sample: {errors}")
+
+    def test_missing_yaml_base_chord_detected(self):
+        no_yaml = """# 🎵 Test Song
+### 🎤 STROFA 1
+[C]Hello [G]world
+"""
+        errors = validate_spartito(no_yaml, require_base_chord=True)
+        self.assertGreater(len(errors), 0)
+        self.assertTrue(any("accordo di base" in err[1].lower() or "original_key" in err[1].lower() for err in errors))
+
+    def test_invalid_yaml_base_chord_detected(self):
+        bad_yaml = """---
+title: Test Song
+original_key: PIPPO
+---
+### 🎤 STROFA 1
+[C]Hello [G]world
+"""
+        errors = validate_spartito(bad_yaml, require_base_chord=True)
+        self.assertGreater(len(errors), 0)
+        self.assertTrue(any("PIPPO" in err[1] for err in errors))
+
+    def test_valid_yaml_base_chord_passes(self):
+        good_yaml = """---
+title: The Silent Man
+artist: Dream Theater
+original_key: A
+---
+### 🎤 STROFA 1
+[F#m]A question of faith
+"""
+        self.assertEqual(extract_base_chord(good_yaml), "A")
+        errors = validate_spartito(good_yaml, require_base_chord=True)
+        self.assertEqual(errors, [])
+
+    def test_all_songs_have_valid_base_chord_in_yaml(self):
+        songs_dir = SKILL_DIR / "songs"
+        missing_or_invalid = []
+        for song_file in sorted(songs_dir.glob("*.md")):
+            content = song_file.read_text(encoding="utf-8")
+            base_chord = extract_base_chord(content)
+            if not base_chord or not parse_single_chord(base_chord):
+                missing_or_invalid.append(f"{song_file.name} (base_chord={base_chord!r})")
+        self.assertEqual(
+            missing_or_invalid,
+            [],
+            f"Canzoni senza accordo base valido nel YAML: {', '.join(missing_or_invalid)}"
+        )
 
 
 if __name__ == "__main__":

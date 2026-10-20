@@ -1,14 +1,3 @@
----
-title: Gloria
-artist: Umberto Tozzi
-year: 1979
-key: B
-original_key: B
-base_chord: B
-time_signature: 4/4
-bpm: 130
----
-
 # 🎵 Gloria — Umberto Tozzi
 
 > **Info brano:**  

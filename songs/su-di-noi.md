@@ -1,14 +1,3 @@
----
-title: Su di noi
-artist: Pupo
-year: 1980
-key: C
-original_key: C
-base_chord: C
-time_signature: 4/4
-bpm: 115
----
-
 # 🎵 Su di noi — Pupo
 
 > **Info brano:**  
