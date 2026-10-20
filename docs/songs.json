@@ -1413,6 +1413,430 @@
       }
     ]
   },
+  "occidentalis-karma.md": {
+    "filename": "occidentalis-karma.md",
+    "meta": {
+      "bpm": 122,
+      "time_signature": "4/4",
+      "title": "Occidentali's Karma",
+      "artist": "Francesco Gabbani"
+    },
+    "tips": "",
+    "summary": {
+      "strofa": [
+        "SIb",
+        "SOLm",
+        "MIb",
+        "DOm7",
+        "FA"
+      ],
+      "ritornello": [
+        "SIb",
+        "DOm",
+        "SOLm",
+        "MIb",
+        "FA",
+        "SOLm7",
+        "REm7",
+        "DOm7"
+      ],
+      "bridge": [
+        "MIb",
+        "SOLm7",
+        "FA",
+        "SOLm",
+        "REm7"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Occidentali's Karma — Francesco Gabbani",
+        "rendered": "# 🎵 Occidentali's Karma — Francesco Gabbani",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [SIb] | [SOLm] | [MIb] | [SIb] |`",
+        "rendered": "`| <span class=\"chord\">SIb</span> | <span class=\"chord\">SOLm</span> | <span class=\"chord\">MIb</span> | <span class=\"chord\">SIb</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[SIb]Essere o dover essere, il dubbio amletico contemporaneo",
+        "rendered": "<span class=\"chord\">SIb</span>Essere o dover essere, il dubbio amletico contemporaneo",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Come l'uomo del neo[SOLm]litico",
+        "rendered": "Come l'uomo del neo<span class=\"chord\">SOLm</span>litico",
+        "seconds": 24.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Nella tua gabbia due per tre [MIb]mettiti comodo",
+        "rendered": "Nella tua gabbia due per tre <span class=\"chord\">MIb</span>mettiti comodo",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[SIb]Intellettuali nei caffè, internettologi",
+        "rendered": "<span class=\"chord\">SIb</span>Intellettuali nei caffè, internettologi",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Soci onorari del gruppo dei selfisti a[SOLm]nonimi",
+        "rendered": "Soci onorari del gruppo dei selfisti a<span class=\"chord\">SOLm</span>nonimi",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "L'intelligenza è demo[MIb]dé",
+        "rendered": "L'intelligenza è demo<span class=\"chord\">MIb</span>dé",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Risposte [DOm7]facili, dilemmi i[FA]nutili",
+        "rendered": "Risposte <span class=\"chord\">DOm7</span>facili, dilemmi i<span class=\"chord\">FA</span>nutili",
+        "seconds": 54.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "AAA [SIb]cercasi (cercasi) storie dal [DOm]gran finale",
+        "rendered": "AAA <span class=\"chord\">SIb</span>cercasi (cercasi) storie dal <span class=\"chord\">DOm</span>gran finale",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[SOLm]Sperasi (sperasi) [MIb]",
+        "rendered": "<span class=\"chord\">SOLm</span>Sperasi (sperasi) <span class=\"chord\">MIb</span>",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Comunque vada panta [DOm]rei",
+        "rendered": "Comunque vada panta <span class=\"chord\">DOm</span>rei",
+        "seconds": 72.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And singing in the [FA]rain",
+        "rendered": "And singing in the <span class=\"chord\">FA</span>rain",
+        "seconds": 78.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Lezioni di Nir[MIb]vana [FA]",
+        "rendered": "Lezioni di Nir<span class=\"chord\">MIb</span>vana <span class=\"chord\">FA</span>",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "C'è il Buddha in fila in[SOLm7]diana",
+        "rendered": "C'è il Buddha in fila in<span class=\"chord\">SOLm7</span>diana",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Per tutti un'ora d'[FA]aria, di [REm7]gloria",
+        "rendered": "Per tutti un'ora d'<span class=\"chord\">FA</span>aria, di <span class=\"chord\">REm7</span>gloria",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La folla grida un [MIb]mantra [FA]",
+        "rendered": "La folla grida un <span class=\"chord\">MIb</span>mantra <span class=\"chord\">FA</span>",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "L'evoluzione in[SOLm]ciampa, la scimmia nuda [FA]balla",
+        "rendered": "L'evoluzione in<span class=\"chord\">SOLm</span>ciampa, la scimmia nuda <span class=\"chord\">FA</span>balla",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[REm7]Occidentali's [MIb]karma [FA] [SOLm]",
+        "rendered": "<span class=\"chord\">REm7</span>Occidentali's <span class=\"chord\">MIb</span>karma <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [FA]karma [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">FA</span>karma <span class=\"chord\">REm7</span>",
+        "seconds": 120.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La scimmia nuda [MIb]balla [FA] [SOLm]",
+        "rendered": "La scimmia nuda <span class=\"chord\">MIb</span>balla <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [FA]karma [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">FA</span>karma <span class=\"chord\">REm7</span>",
+        "seconds": 132.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[MIb]Piovono gocce di Chanel [SIb]su corpi asettici",
+        "rendered": "<span class=\"chord\">MIb</span>Piovono gocce di Chanel <span class=\"chord\">SIb</span>su corpi asettici",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[SOLm]Mettiti in salvo dall'o[FA]dore dei tuoi simili",
+        "rendered": "<span class=\"chord\">SOLm</span>Mettiti in salvo dall'o<span class=\"chord\">FA</span>dore dei tuoi simili",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[DOm7]Tutti tuttologi col [MIb]web",
+        "rendered": "<span class=\"chord\">DOm7</span>Tutti tuttologi col <span class=\"chord\">MIb</span>web",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Coca dei [SIb]popoli, oppio dei poveri",
+        "rendered": "Coca dei <span class=\"chord\">SIb</span>popoli, oppio dei poveri",
+        "seconds": 156.0
+      },
+      {
+        "type": "section",
+        "content": "🌈 PRE-CHORUS",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "AAA [SIb]cercasi (cercasi) umanità vir[DOm]tuale",
+        "rendered": "AAA <span class=\"chord\">SIb</span>cercasi (cercasi) umanità vir<span class=\"chord\">DOm</span>tuale",
+        "seconds": 162.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[SOLm]Sex appeal (sex appeal) [MIb]",
+        "rendered": "<span class=\"chord\">SOLm</span>Sex appeal (sex appeal) <span class=\"chord\">MIb</span>",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Comunque vada panta [DOm7]rei",
+        "rendered": "Comunque vada panta <span class=\"chord\">DOm7</span>rei",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "And singing in the [FA]rain",
+        "rendered": "And singing in the <span class=\"chord\">FA</span>rain",
+        "seconds": 180.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Lezioni di Nir[MIb]vana [FA]",
+        "rendered": "Lezioni di Nir<span class=\"chord\">MIb</span>vana <span class=\"chord\">FA</span>",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "C'è il Buddha in fila in[SOLm7]diana",
+        "rendered": "C'è il Buddha in fila in<span class=\"chord\">SOLm7</span>diana",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Per tutti un'ora d'[FA]aria, di [REm7]gloria",
+        "rendered": "Per tutti un'ora d'<span class=\"chord\">FA</span>aria, di <span class=\"chord\">REm7</span>gloria",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La folla grida un [MIb]mantra [FA]",
+        "rendered": "La folla grida un <span class=\"chord\">MIb</span>mantra <span class=\"chord\">FA</span>",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "L'evoluzione in[SOLm]ciampa, la scimmia nuda [FA]balla",
+        "rendered": "L'evoluzione in<span class=\"chord\">SOLm</span>ciampa, la scimmia nuda <span class=\"chord\">FA</span>balla",
+        "seconds": 210.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[REm7]Occidentali's [MIb]karma [FA] [SOLm]",
+        "rendered": "<span class=\"chord\">REm7</span>Occidentali's <span class=\"chord\">MIb</span>karma <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [FA]karma [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">FA</span>karma <span class=\"chord\">REm7</span>",
+        "seconds": 222.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La scimmia nuda [MIb]balla [FA] [SOLm]",
+        "rendered": "La scimmia nuda <span class=\"chord\">MIb</span>balla <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [FA]karma [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">FA</span>karma <span class=\"chord\">REm7</span>",
+        "seconds": 234.0
+      },
+      {
+        "type": "section",
+        "content": "🚀 BRIDGE / SPECIAL",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[MIb]Quando la vita si dis[SOLm7]trae",
+        "rendered": "<span class=\"chord\">MIb</span>Quando la vita si dis<span class=\"chord\">SOLm7</span>trae",
+        "seconds": 240.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Cadono gli [FA]uomini",
+        "rendered": "Cadono gli <span class=\"chord\">FA</span>uomini",
+        "seconds": 246.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [MIb]karma [FA] [SOLm] [FA] [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">MIb</span>karma <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span> <span class=\"chord\">FA</span> <span class=\"chord\">REm7</span>",
+        "seconds": 252.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [MIb]karma [FA] [SOLm]",
+        "rendered": "Occidentali's <span class=\"chord\">MIb</span>karma <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 258.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La scimmia si ri[FA]alza [REm7]",
+        "rendered": "La scimmia si ri<span class=\"chord\">FA</span>alza <span class=\"chord\">REm7</span>",
+        "seconds": 264.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Namastè! A[SOLm7]lè! [FA] [REm7]",
+        "rendered": "Namastè! A<span class=\"chord\">SOLm7</span>lè! <span class=\"chord\">FA</span> <span class=\"chord\">REm7</span>",
+        "seconds": 270.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Lezioni di Nir[MIb]vana [FA]",
+        "rendered": "Lezioni di Nir<span class=\"chord\">MIb</span>vana <span class=\"chord\">FA</span>",
+        "seconds": 276.0
+      },
+      {
+        "type": "lyric",
+        "raw": "C'è il Buddha in fila in[SOLm7]diana",
+        "rendered": "C'è il Buddha in fila in<span class=\"chord\">SOLm7</span>diana",
+        "seconds": 282.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Per tutti un'ora d'[FA]aria, di [REm7]gloria",
+        "rendered": "Per tutti un'ora d'<span class=\"chord\">FA</span>aria, di <span class=\"chord\">REm7</span>gloria",
+        "seconds": 288.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La folla grida un [MIb]mantra [FA]",
+        "rendered": "La folla grida un <span class=\"chord\">MIb</span>mantra <span class=\"chord\">FA</span>",
+        "seconds": 294.0
+      },
+      {
+        "type": "lyric",
+        "raw": "L'evoluzione in[SOLm]ciampa, la scimmia nuda [FA]balla",
+        "rendered": "L'evoluzione in<span class=\"chord\">SOLm</span>ciampa, la scimmia nuda <span class=\"chord\">FA</span>balla",
+        "seconds": 300.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[REm7]Occidentali's [MIb]karma [FA] [SOLm]",
+        "rendered": "<span class=\"chord\">REm7</span>Occidentali's <span class=\"chord\">MIb</span>karma <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 306.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [FA]karma [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">FA</span>karma <span class=\"chord\">REm7</span>",
+        "seconds": 312.0
+      },
+      {
+        "type": "lyric",
+        "raw": "La scimmia nuda [MIb]balla [FA] [SOLm]",
+        "rendered": "La scimmia nuda <span class=\"chord\">MIb</span>balla <span class=\"chord\">FA</span> <span class=\"chord\">SOLm</span>",
+        "seconds": 318.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Occidentali's [FA]karma [REm7]",
+        "rendered": "Occidentali's <span class=\"chord\">FA</span>karma <span class=\"chord\">REm7</span>",
+        "seconds": 324.0
+      },
+      {
+        "type": "section",
+        "content": "🧘 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [SIb] |`",
+        "rendered": "`| <span class=\"chord\">SIb</span> |`",
+        "seconds": 330.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Ohmmm...",
+        "rendered": "Ohmmm...",
+        "seconds": 336.0
+      }
+    ]
+  },
   "romeo-and-juliet.md": {
     "filename": "romeo-and-juliet.md",
     "meta": {
@@ -1744,6 +2168,407 @@
         "raw": "[Dm]Juliet, [C] [Bb] it was just that the time was [F]wrong. 🛑",
         "rendered": "<span class=\"chord\">Dm</span>Juliet, <span class=\"chord\">C</span> <span class=\"chord\">Bb</span> it was just that the time was <span class=\"chord\">F</span>wrong. 🛑",
         "seconds": 252.0
+      }
+    ]
+  },
+  "scrivile-scemo.md": {
+    "filename": "scrivile-scemo.md",
+    "meta": {
+      "bpm": 128,
+      "time_signature": "4/4",
+      "title": "Scrivile Scemo",
+      "artist": "Pinguini Tattici Nucleari"
+    },
+    "tips": "",
+    "summary": {
+      "strofa": [
+        "LA",
+        "REadd9",
+        "FA#m7",
+        "MI",
+        "MI4"
+      ],
+      "ritornello": [
+        "RE",
+        "LA",
+        "MI",
+        "FA#m7",
+        "DO#7/FA",
+        "FA#m"
+      ],
+      "bridge": [
+        "SIm7",
+        "MI",
+        "LAadd9/DO#",
+        "FA#m",
+        "DO#m",
+        "FA#m7"
+      ]
+    },
+    "lines": [
+      {
+        "type": "lyric",
+        "raw": "# 🎵 Scrivile Scemo — Pinguini Tattici Nucleari",
+        "rendered": "# 🎵 Scrivile Scemo — Pinguini Tattici Nucleari",
+        "seconds": 6.0
+      },
+      {
+        "type": "section",
+        "content": "🎹 INTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [LA] | [MI] |`",
+        "rendered": "`| <span class=\"chord\">LA</span> | <span class=\"chord\">MI</span> |`",
+        "seconds": 12.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [LA] | [REadd9] | [FA#m7] [MI] | [LA] [REadd9] |`",
+        "rendered": "`| <span class=\"chord\">LA</span> | <span class=\"chord\">REadd9</span> | <span class=\"chord\">FA#m7</span> <span class=\"chord\">MI</span> | <span class=\"chord\">LA</span> <span class=\"chord\">REadd9</span> |`",
+        "seconds": 18.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [FA#m7] [MI] |`",
+        "rendered": "`| <span class=\"chord\">FA#m7</span> <span class=\"chord\">MI</span> |`",
+        "seconds": 24.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 1",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[LA]Scrivile, scemo, [REadd9]stanotte non dormi",
+        "rendered": "<span class=\"chord\">LA</span>Scrivile, scemo, <span class=\"chord\">REadd9</span>stanotte non dormi",
+        "seconds": 30.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tu [FA#m7]chiamali sogni, [MI]ma sono ri[LA]cordi [REadd9]",
+        "rendered": "Tu <span class=\"chord\">FA#m7</span>chiamali sogni, <span class=\"chord\">MI</span>ma sono ri<span class=\"chord\">LA</span>cordi <span class=\"chord\">REadd9</span>",
+        "seconds": 36.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [FA#m7] [MI] |`",
+        "rendered": "`| <span class=\"chord\">FA#m7</span> <span class=\"chord\">MI</span> |`",
+        "seconds": 42.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[LA]Scrivile, scemo, [REadd9]è colpa del vino",
+        "rendered": "<span class=\"chord\">LA</span>Scrivile, scemo, <span class=\"chord\">REadd9</span>è colpa del vino",
+        "seconds": 48.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Se [FA#m7]basta uno sguardo e [MI]ritorni bam[LA]bino [REadd9]",
+        "rendered": "Se <span class=\"chord\">FA#m7</span>basta uno sguardo e <span class=\"chord\">MI</span>ritorni bam<span class=\"chord\">LA</span>bino <span class=\"chord\">REadd9</span>",
+        "seconds": 54.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [FA#m7] [MI] |`",
+        "rendered": "`| <span class=\"chord\">FA#m7</span> <span class=\"chord\">MI</span> |`",
+        "seconds": 60.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[LA]Scrivile, scemo, ci [REadd9]vuole coraggio",
+        "rendered": "<span class=\"chord\">LA</span>Scrivile, scemo, ci <span class=\"chord\">REadd9</span>vuole coraggio",
+        "seconds": 66.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Nel [FA#m7]'94 ad [MI]essere [LA]Baggio [REadd9] [MI4] [MI]",
+        "rendered": "Nel <span class=\"chord\">FA#m7</span>'94 ad <span class=\"chord\">MI</span>essere <span class=\"chord\">LA</span>Baggio <span class=\"chord\">REadd9</span> <span class=\"chord\">MI4</span> <span class=\"chord\">MI</span>",
+        "seconds": 72.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Ma dove [RE]sei? [LA]",
+        "rendered": "Ma dove <span class=\"chord\">RE</span>sei? <span class=\"chord\">LA</span>",
+        "seconds": 78.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Dicono [MI]che sei un po' cresciuta ora[FA#m7]mai",
+        "rendered": "Dicono <span class=\"chord\">MI</span>che sei un po' cresciuta ora<span class=\"chord\">FA#m7</span>mai",
+        "seconds": 84.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E non sei [RE]più [LA]",
+        "rendered": "E non sei <span class=\"chord\">RE</span>più <span class=\"chord\">LA</span>",
+        "seconds": 90.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Quella bam[MI]bina che baciava Harry [DO#7/FA]Styles in [FA#m]TV",
+        "rendered": "Quella bam<span class=\"chord\">MI</span>bina che baciava Harry <span class=\"chord\">DO#7/FA</span>Styles in <span class=\"chord\">FA#m</span>TV",
+        "seconds": 96.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E [RE]pesano, uccidono, 'sti [LA]cazzo di \"ti amo\"",
+        "rendered": "E <span class=\"chord\">RE</span>pesano, uccidono, 'sti <span class=\"chord\">LA</span>cazzo di \"ti amo\"",
+        "seconds": 102.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[MI]Ballano dentro la bocca un [FA#m]ritmo cubano",
+        "rendered": "<span class=\"chord\">MI</span>Ballano dentro la bocca un <span class=\"chord\">FA#m</span>ritmo cubano",
+        "seconds": 108.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Il [RE]sangue, le lacrime, [LA]un grido blasfemo",
+        "rendered": "Il <span class=\"chord\">RE</span>sangue, le lacrime, <span class=\"chord\">LA</span>un grido blasfemo",
+        "seconds": 114.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tu [MI]fatti coraggio, poi [DO#7/FA]scrivile, [FA#m]scemo [LA]",
+        "rendered": "Tu <span class=\"chord\">MI</span>fatti coraggio, poi <span class=\"chord\">DO#7/FA</span>scrivile, <span class=\"chord\">FA#m</span>scemo <span class=\"chord\">LA</span>",
+        "seconds": 120.0
+      },
+      {
+        "type": "section",
+        "content": "🎤 STROFA 2",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[LA]Scrivile, scemo, [REadd9]tre parole in croce",
+        "rendered": "<span class=\"chord\">LA</span>Scrivile, scemo, <span class=\"chord\">REadd9</span>tre parole in croce",
+        "seconds": 126.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Poi [FA#m7]scappa lontano, [MI]poi perdi la [LA]voce [REadd9]",
+        "rendered": "Poi <span class=\"chord\">FA#m7</span>scappa lontano, <span class=\"chord\">MI</span>poi perdi la <span class=\"chord\">LA</span>voce <span class=\"chord\">REadd9</span>",
+        "seconds": 132.0
+      },
+      {
+        "type": "lyric",
+        "raw": "`| [FA#m7] [MI] |`",
+        "rendered": "`| <span class=\"chord\">FA#m7</span> <span class=\"chord\">MI</span> |`",
+        "seconds": 138.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[LA]Scrivile, scemo, un fi[REadd9]nale migliore",
+        "rendered": "<span class=\"chord\">LA</span>Scrivile, scemo, un fi<span class=\"chord\">REadd9</span>nale migliore",
+        "seconds": 144.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Per [FA#m7]quella puntata della [MI]Melevisione",
+        "rendered": "Per <span class=\"chord\">FA#m7</span>quella puntata della <span class=\"chord\">MI</span>Melevisione",
+        "seconds": 150.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Inter[LA]rotta da torri che an[REadd9]darono in fiamme",
+        "rendered": "Inter<span class=\"chord\">LA</span>rotta da torri che an<span class=\"chord\">REadd9</span>darono in fiamme",
+        "seconds": 156.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E [MI4]bimbi che facevano do[MI]mande",
+        "rendered": "E <span class=\"chord\">MI4</span>bimbi che facevano do<span class=\"chord\">MI</span>mande",
+        "seconds": 162.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Ma dove [RE]sei? [LA]",
+        "rendered": "Ma dove <span class=\"chord\">RE</span>sei? <span class=\"chord\">LA</span>",
+        "seconds": 168.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Dicono [MI]che sei un po' cresciuta ora[FA#m7]mai",
+        "rendered": "Dicono <span class=\"chord\">MI</span>che sei un po' cresciuta ora<span class=\"chord\">FA#m7</span>mai",
+        "seconds": 174.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E non sei [RE]più [LA]",
+        "rendered": "E non sei <span class=\"chord\">RE</span>più <span class=\"chord\">LA</span>",
+        "seconds": 180.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Quella bam[MI]bina che baciava Harry [DO#7/FA]Styles in [FA#m]TV",
+        "rendered": "Quella bam<span class=\"chord\">MI</span>bina che baciava Harry <span class=\"chord\">DO#7/FA</span>Styles in <span class=\"chord\">FA#m</span>TV",
+        "seconds": 186.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E [RE]pesano, uccidono, 'sti [LA]cazzo di \"ti amo\"",
+        "rendered": "E <span class=\"chord\">RE</span>pesano, uccidono, 'sti <span class=\"chord\">LA</span>cazzo di \"ti amo\"",
+        "seconds": 192.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[MI]Ballano dentro la bocca un [FA#m]ritmo cubano",
+        "rendered": "<span class=\"chord\">MI</span>Ballano dentro la bocca un <span class=\"chord\">FA#m</span>ritmo cubano",
+        "seconds": 198.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Il [RE]sangue, le lacrime, [LA]un grido blasfemo",
+        "rendered": "Il <span class=\"chord\">RE</span>sangue, le lacrime, <span class=\"chord\">LA</span>un grido blasfemo",
+        "seconds": 204.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tu [MI]fatti coraggio, poi [DO#7/FA]scrivile, [FA#m]scemo",
+        "rendered": "Tu <span class=\"chord\">MI</span>fatti coraggio, poi <span class=\"chord\">DO#7/FA</span>scrivile, <span class=\"chord\">FA#m</span>scemo",
+        "seconds": 210.0
+      },
+      {
+        "type": "section",
+        "content": "🚀 BRIDGE / SPECIAL",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[SIm7]E metto Bon I[MI]ver se sono [LAadd9/DO#]giù",
+        "rendered": "<span class=\"chord\">SIm7</span>E metto Bon I<span class=\"chord\">MI</span>ver se sono <span class=\"chord\">LAadd9/DO#</span>giù",
+        "seconds": 216.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E lo pronuncio sba[FA#m]gliato proprio come fai [SIm7]tu",
+        "rendered": "E lo pronuncio sba<span class=\"chord\">FA#m</span>gliato proprio come fai <span class=\"chord\">SIm7</span>tu",
+        "seconds": 222.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E scusa per l'[MI]ansia, mi mangia da [DO#m]dentro",
+        "rendered": "E scusa per l'<span class=\"chord\">MI</span>ansia, mi mangia da <span class=\"chord\">DO#m</span>dentro",
+        "seconds": 228.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E per il cane che [FA#m]scappa con il cancello a[SIm7]perto",
+        "rendered": "E per il cane che <span class=\"chord\">FA#m</span>scappa con il cancello a<span class=\"chord\">SIm7</span>perto",
+        "seconds": 234.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Vedi, non sono [MI]bravo a fare res[LAadd9/DO#]tare",
+        "rendered": "Vedi, non sono <span class=\"chord\">MI</span>bravo a fare res<span class=\"chord\">LAadd9/DO#</span>tare",
+        "seconds": 240.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Chi mi vuole [FA#m7]bene, però so aspet[SIm7]tare",
+        "rendered": "Chi mi vuole <span class=\"chord\">FA#m7</span>bene, però so aspet<span class=\"chord\">SIm7</span>tare",
+        "seconds": 246.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E con [MI]te mi sa che lo fa[LAadd9/DO#]rò... [FA#m7]",
+        "rendered": "E con <span class=\"chord\">MI</span>te mi sa che lo fa<span class=\"chord\">LAadd9/DO#</span>rò... <span class=\"chord\">FA#m7</span>",
+        "seconds": 252.0
+      },
+      {
+        "type": "section",
+        "content": "💥 RITORNELLO FINALE",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "Ma dove [RE]sei? [LA]",
+        "rendered": "Ma dove <span class=\"chord\">RE</span>sei? <span class=\"chord\">LA</span>",
+        "seconds": 258.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Dicono [MI]che sei un po' cresciuta ora[FA#m7]mai",
+        "rendered": "Dicono <span class=\"chord\">MI</span>che sei un po' cresciuta ora<span class=\"chord\">FA#m7</span>mai",
+        "seconds": 264.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E non sei [RE]più [LA]",
+        "rendered": "E non sei <span class=\"chord\">RE</span>più <span class=\"chord\">LA</span>",
+        "seconds": 270.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Quella bam[MI]bina che baciava Harry [DO#7/FA]Styles in [FA#m]TV",
+        "rendered": "Quella bam<span class=\"chord\">MI</span>bina che baciava Harry <span class=\"chord\">DO#7/FA</span>Styles in <span class=\"chord\">FA#m</span>TV",
+        "seconds": 276.0
+      },
+      {
+        "type": "lyric",
+        "raw": "E [RE]pesano, uccidono, 'sti [LA]cazzo di \"ti amo\"",
+        "rendered": "E <span class=\"chord\">RE</span>pesano, uccidono, 'sti <span class=\"chord\">LA</span>cazzo di \"ti amo\"",
+        "seconds": 282.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[MI]Ballano dentro la bocca un [FA#m]ritmo cubano",
+        "rendered": "<span class=\"chord\">MI</span>Ballano dentro la bocca un <span class=\"chord\">FA#m</span>ritmo cubano",
+        "seconds": 288.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Il [RE]sangue, le lacrime, [LA]un grido blasfemo",
+        "rendered": "Il <span class=\"chord\">RE</span>sangue, le lacrime, <span class=\"chord\">LA</span>un grido blasfemo",
+        "seconds": 294.0
+      },
+      {
+        "type": "lyric",
+        "raw": "Tu [MI]fatti coraggio, poi [DO#7/FA]scrivile, [FA#m]scemo [LA]",
+        "rendered": "Tu <span class=\"chord\">MI</span>fatti coraggio, poi <span class=\"chord\">DO#7/FA</span>scrivile, <span class=\"chord\">FA#m</span>scemo <span class=\"chord\">LA</span>",
+        "seconds": 300.0
+      },
+      {
+        "type": "section",
+        "content": "🪝 OUTRO",
+        "seconds": null
+      },
+      {
+        "type": "lyric",
+        "raw": "[RE]Scrivile, scrivile, [LA]scrivile, scrivile",
+        "rendered": "<span class=\"chord\">RE</span>Scrivile, scrivile, <span class=\"chord\">LA</span>scrivile, scrivile",
+        "seconds": 306.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[MI]Scrivile, scrivile, [FA#m]scrivile, scrivile",
+        "rendered": "<span class=\"chord\">MI</span>Scrivile, scrivile, <span class=\"chord\">FA#m</span>scrivile, scrivile",
+        "seconds": 312.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[REadd9]Scrivile, scrivile, [LA]scrivile, scrivile",
+        "rendered": "<span class=\"chord\">REadd9</span>Scrivile, scrivile, <span class=\"chord\">LA</span>scrivile, scrivile",
+        "seconds": 318.0
+      },
+      {
+        "type": "lyric",
+        "raw": "[MI]Scrivile, [DO#7/FA]scrivile, [FA#m7]scrivile, scemo!",
+        "rendered": "<span class=\"chord\">MI</span>Scrivile, <span class=\"chord\">DO#7/FA</span>scrivile, <span class=\"chord\">FA#m7</span>scrivile, scemo!",
+        "seconds": 324.0
       }
     ]
   },
