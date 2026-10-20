@@ -107,6 +107,16 @@ def build_docs():
                 else:
                     meta["time_signature"] = "4/4"
 
+        if not meta.get("original_key"):
+            if meta.get("key"):
+                meta["original_key"] = meta["key"]
+            else:
+                key_m = re.search(r"Tonalit[àa][^:\n]*:\*\*\s*[^(\n]*\(([A-G][#b♯♭]?m?)\)", raw_content)
+                if key_m:
+                    meta["original_key"] = key_m.group(1)
+                else:
+                    meta["original_key"] = "C"
+
         parsed_lines = []
         curr_time = 0.0
         while idx < len(lines):
@@ -187,6 +197,7 @@ def build_docs():
 
     async function init() {
       renderBeatDots();
+      updateTransposeDisplay();
       try {
         const res = await fetch('songs.json');
         staticSongsMap = await res.json();
@@ -210,14 +221,16 @@ def build_docs():
     }
 
     async function loadSelectedSong() {
-      const filename = document.getElementById('songSelect').value;
+      const filename = document.getElementById('songSelect').value || activeSongFilename;
       if (!filename || !staticSongsMap[filename]) return;
+      activeSongFilename = filename;
       pause();
       currentTime = 0;
-      updateTimeDisplay();
 
       songData = staticSongsMap[filename];
       renderSong(songData);
+      updateTransposeDisplay();
+      updateTimeDisplay();
       showPlayerView();
     }
     """

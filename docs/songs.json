@@ -4,6 +4,7 @@
     "meta": {
       "bpm": 65,
       "time_signature": "4/4",
+      "original_key": "B",
       "title": "Firth of Fifth",
       "artist": "Genesis"
     },
@@ -515,6 +516,7 @@
     "meta": {
       "bpm": 130,
       "time_signature": "4/4",
+      "original_key": "B",
       "title": "Gloria",
       "artist": "Umberto Tozzi"
     },
@@ -1158,6 +1160,7 @@
     "meta": {
       "bpm": 78,
       "time_signature": "4/4",
+      "original_key": "F",
       "title": "Love of My Life",
       "artist": "Queen"
     },
@@ -1418,6 +1421,7 @@
     "meta": {
       "bpm": 122,
       "time_signature": "4/4",
+      "original_key": "Bb",
       "title": "Occidentali's Karma",
       "artist": "Francesco Gabbani"
     },
@@ -1842,6 +1846,7 @@
     "meta": {
       "bpm": 78,
       "time_signature": "4/4",
+      "original_key": "F",
       "title": "Romeo and Juliet",
       "artist": "Dire Straits"
     },
@@ -2176,6 +2181,7 @@
     "meta": {
       "bpm": 128,
       "time_signature": "4/4",
+      "original_key": "A",
       "title": "Scrivile Scemo",
       "artist": "Pinguini Tattici Nucleari"
     },
@@ -2577,6 +2583,7 @@
     "meta": {
       "bpm": 102,
       "time_signature": "7/4",
+      "original_key": "B",
       "title": "Solsbury Hill",
       "artist": "Peter Gabriel"
     },
@@ -3283,6 +3290,7 @@
     "meta": {
       "bpm": 115,
       "time_signature": "4/4",
+      "original_key": "C",
       "title": "Su di noi",
       "artist": "Pupo"
     },
@@ -3650,6 +3658,7 @@
     "meta": {
       "bpm": 148,
       "time_signature": "4/4",
+      "original_key": "Dm",
       "title": "Sultans of Swing",
       "artist": "Dire Straits"
     },
@@ -5428,6 +5437,7 @@
     "meta": {
       "bpm": 128,
       "time_signature": "4/4",
+      "original_key": "Dm",
       "title": "Tunnel of Love",
       "artist": "Dire Straits"
     },
@@ -6354,6 +6364,7 @@
     "meta": {
       "bpm": 126,
       "time_signature": "4/4",
+      "original_key": "D",
       "title": "Where the Streets Have No Name",
       "artist": "U2"
     },

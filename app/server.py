@@ -118,6 +118,17 @@ def parse_song_file(file_path: Path):
             else:
                 meta["time_signature"] = "4/4"
 
+    # Extract original_key if not explicitly in YAML frontmatter
+    if not meta.get("original_key"):
+        if meta.get("key"):
+            meta["original_key"] = meta["key"]
+        else:
+            key_m = re.search(r"Tonalit[àa][^:\n]*:\*\*\s*[^(\n]*\(([A-G][#b♯♭]?m?)\)", content)
+            if key_m:
+                meta["original_key"] = key_m.group(1)
+            else:
+                meta["original_key"] = "C"
+
     # 2. Parse Remaining Markdown
     parsed_lines = []
     current_time_sec = 0.0

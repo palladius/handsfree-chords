@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Handsfree-Chords 🎹 Live Player</title>
   <!-- Load MediaPipe Face Mesh & Camera Utils from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
@@ -17,91 +17,237 @@
       --danger: #ef476f;
       --highlight: #2a2a38;
       --time: #888899;
+      --header-h: 56px;
+      --footer-h: 54px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    html, body {
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      min-height: 100vh;
+      min-height: 100dvh;
+      max-width: 100vw;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
     }
 
-    /* Top Control Bar */
+    /* Ultra-clean Single-Row Top Header (Pixel 10 & iPad ready) */
     header {
       position: sticky;
       top: 0;
+      height: var(--header-h);
       background: #181822;
       border-bottom: 2px solid #2e2e42;
-      padding: 10px 16px;
+      padding: 6px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 6px;
+      flex-wrap: nowrap;
       z-index: 100;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      user-select: none;
     }
 
-    .song-select {
-      background: var(--card-bg);
+    .header-left, .header-center, .header-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Compact Stepper Pill: "- C +" and "- 120 +" */
+    .pill-stepper {
+      display: inline-flex;
+      align-items: center;
+      background: #252538;
+      border: 1px solid #3e3e58;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 38px;
+    }
+    .btn-step {
+      background: transparent;
       color: #fff;
-      border: 1px solid #444;
-      font-size: 1.05rem;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      max-width: 280px;
+      border: none;
+      width: 32px;
+      height: 100%;
+      font-size: 1.15rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s ease;
+      touch-action: manipulation;
+    }
+    .btn-step:hover { background: #383852; }
+    .btn-step:active { background: #4a4a6a; }
+
+    .step-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.95rem;
+      font-weight: 800;
+      padding: 0 8px;
+      min-width: 44px;
+      text-align: center;
+      cursor: pointer;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid #34344c;
+      border-right: 1px solid #34344c;
+      transition: all 0.15s ease;
+    }
+    .step-val.key-val {
+      color: var(--chord);
+    }
+    .step-val.bpm-val {
+      color: #e2e8f0;
+      min-width: 46px;
+    }
+    .step-val.bpm-val.metro-on {
+      background: rgba(255, 209, 102, 0.2);
+      color: var(--chord);
+      box-shadow: inset 0 0 8px rgba(255, 209, 102, 0.35);
     }
 
-    .controls {
+    /* Center Transport Controls (-20s / Play / +20s) - Only visible AFTER song selection */
+    #transportControls {
+      display: none;
+      align-items: center;
+      gap: 5px;
+    }
+    body.has-song #transportControls {
+      display: flex;
+    }
+
+    button.btn {
+      background: #2b2b3d;
+      color: #fff;
+      border: 1px solid #3e3e58;
+      padding: 7px 11px;
+      height: 38px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      touch-action: manipulation;
+      white-space: nowrap;
+    }
+    button.btn:active { transform: scale(0.95); }
+    button.btn-primary {
+      background: var(--accent);
+      color: #051b14;
+      border-color: var(--accent);
+      min-width: 42px;
+    }
+    button.btn-jump {
+      background: #2d2d44;
+      font-family: ui-monospace, monospace;
+      font-size: 0.82rem;
+      padding: 0 9px;
+    }
+    button.btn-icon {
+      padding: 0 10px;
+      position: relative;
+    }
+
+    /* Tiny status dot on Settings button for AI Camera */
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #555;
+      display: inline-block;
+    }
+    .status-dot.active { background: #06d6a0; box-shadow: 0 0 8px #06d6a0; }
+    .status-dot.tilt { background: #ffd166; transform: scale(1.3); }
+
+    /* Native Light-Dismiss Options Dialog */
+    dialog#settingsDialog {
+      margin: auto;
+      background: #1a1a28;
+      color: var(--text);
+      border: 1px solid #3e3e5c;
+      border-radius: 18px;
+      padding: 20px;
+      width: min(92vw, 430px);
+      max-height: 88dvh;
+      overflow-y: auto;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+    }
+    dialog#settingsDialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(3px);
+    }
+    .dialog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #2e2e46;
+    }
+    .dialog-header h2 {
+      font-size: 1.15rem;
+      color: #fff;
       display: flex;
       align-items: center;
       gap: 8px;
     }
-
-    /* Transpose group */
-    .transpose-group {
+    .dialog-section {
+      background: #12121c;
+      border: 1px solid #28283e;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .dialog-section-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #8888aa;
+    }
+    .dialog-row {
       display: flex;
       align-items: center;
-      background: #252538;
-      border-radius: 8px;
-      border: 1px solid #444;
-      overflow: hidden;
-    }
-    .transpose-badge {
-      font-family: monospace;
-      font-size: 0.95rem;
-      font-weight: bold;
-      padding: 6px 10px;
-      color: var(--chord);
-      min-width: 44px;
-      text-align: center;
-      cursor: pointer;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
-    /* Notation selector group (IT vs EN) */
+    /* Notation selector group (IT vs EN) inside Options */
     .notation-group {
       display: flex;
-      align-items: center;
+      width: 100%;
       background: #252538;
       border-radius: 8px;
       border: 1px solid #444;
       overflow: hidden;
     }
     .btn-not {
+      flex: 1;
       background: transparent;
       border: none;
       color: #aaa;
-      padding: 7px 11px;
-      font-size: 0.9rem;
+      padding: 8px 10px;
+      font-size: 0.88rem;
       font-weight: bold;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+      text-align: center;
       transition: all 0.15s ease;
     }
     .btn-not:hover { background: #383852; color: #fff; }
@@ -110,211 +256,14 @@
       color: #000;
     }
 
-    button.btn {
-      background: #2b2b3d;
-      color: #fff;
-      border: none;
-      padding: 9px 14px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: bold;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    button.btn:active { transform: scale(0.96); }
-    button.btn-primary { background: var(--accent); color: #000; }
-    button.btn-jump { background: #3d3d52; }
-    button.btn-tp { background: transparent; border-radius: 0; padding: 7px 11px; }
-    button.btn-tp:hover { background: #383852; }
-
-    .timer-badge {
-      font-family: monospace;
-      font-size: 1.3rem;
-      background: #000;
-      padding: 6px 12px;
-      border-radius: 8px;
-      color: var(--accent);
-      border: 1px solid #333;
-    }
-
-    /* Vision / Cam Widget */
-    .cam-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      background: #0d0d14;
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid #333;
-    }
-    .status-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #555;
-    }
-    .status-dot.active { background: #06d6a0; box-shadow: 0 0 8px #06d6a0; }
-    .status-dot.tilt { background: #ffd166; transform: scale(1.3); }
-
-    /* Main Stage Layout */
-    main {
-      flex: 1;
-      display: flex;
-      position: relative;
-    }
-
-    #lyrics-view {
-      flex: 1;
-      padding: 40px 24px 250px 24px;
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 2.2;
-      font-size: 1.35rem;
-    }
-
-    .meta-box {
-      background: var(--card-bg);
-      border-left: 4px solid var(--accent);
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      font-size: 0.95rem;
-      color: #bbb;
-    }
-    .meta-box h1 { color: #fff; font-size: 1.8rem; margin-bottom: 6px; }
-
-    .section-title {
-      color: #fff;
-      font-size: 1.5rem;
-      margin-top: 36px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #333;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-desc {
-      color: #8888aa;
-      font-size: 1.05rem;
-      font-style: italic;
-      font-weight: normal;
-      margin-left: 4px;
-    }
-
-    .lyric-note {
-      color: #9999bb;
-      font-style: italic;
-      opacity: 0.9;
-    }
-
-    .bar-line {
-      color: #555577;
-      font-weight: bold;
-      padding: 0 4px;
-      user-select: none;
-    }
-
-    .lyric-line {
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-      position: relative;
-    }
-    .lyric-line:hover { background: #1f1f2e; }
-    .lyric-line.active {
-      background: var(--highlight);
-      border-left: 4px solid var(--accent);
-      color: #fff;
-      font-weight: 500;
-    }
-
-    .chord {
-      color: var(--chord);
-      font-weight: 800;
-      font-family: monospace;
-      background: rgba(255, 209, 102, 0.12);
-      padding: 2px 5px;
-      border-radius: 4px;
-      margin-right: 1px;
-    }
-
-    .line-time {
-      color: var(--time);
-      font-size: 0.8rem;
-      font-family: monospace;
-      margin-right: 10px;
-      user-select: none;
-    }
-
-    /* Video element hidden or in small corner */
-    #webcam-video {
-      position: fixed;
-      bottom: 12px;
-      right: 12px;
-      width: 140px;
-      height: 105px;
-      border-radius: 8px;
-      border: 2px solid #333;
-      object-fit: cover;
-      transform: scaleX(-1); /* mirror */
-      opacity: 0.7;
-      z-index: 50;
-      background: #000;
-    }
-
-    /* Stage HUD alert */
-    #gesture-alert {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      background: rgba(6, 214, 160, 0.9);
-      color: #000;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 20px;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: all 0.2s ease;
-      z-index: 200;
-      pointer-events: none;
-    }
-    #gesture-alert.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Metronome Toolbar */
-    .metronome-bar {
-      background: #14141f;
-      border-bottom: 2px solid #28283c;
-      padding: 8px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      z-index: 90;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    .metro-group {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+    /* Metronome controls inside Dialog */
     .btn-metro {
       background: #252538;
       color: #bbb;
       border: 1px solid #444;
       padding: 7px 12px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: bold;
       cursor: pointer;
       display: inline-flex;
@@ -332,31 +281,16 @@
       background: #252538;
       color: #ddd;
       border: 1px solid #444;
-      padding: 4px 8px;
+      padding: 5px 9px;
       border-radius: 6px;
       font-size: 0.8rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.1s ease;
-    }
-    .btn-mini:hover { background: #383852; }
-    .btn-mini:active { transform: scale(0.95); }
-    .metro-bpm-badge {
-      font-family: monospace;
-      font-size: 1.05rem;
-      font-weight: bold;
-      color: #ffd166;
-      background: #090910;
-      border: 1px solid #333;
-      padding: 4px 8px;
-      border-radius: 6px;
-      min-width: 82px;
-      text-align: center;
     }
     .metro-slider {
       accent-color: #ffd166;
       cursor: pointer;
-      width: 90px;
+      flex: 1;
     }
     .metro-select {
       background: #1e1e2c;
@@ -378,67 +312,455 @@
       min-height: 28px;
     }
     .metro-dot {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: #2a2a3e;
       border: 1px solid #444;
       transition: transform 0.06s ease, background 0.06s ease, box-shadow 0.06s ease;
     }
     .metro-dot.downbeat {
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
       border-color: #ef476f;
     }
     .metro-dot.flash-accent {
       background: #ef476f !important;
       border-color: #fff !important;
-      transform: scale(1.4);
-      box-shadow: 0 0 12px #ef476f;
+      transform: scale(1.35);
+      box-shadow: 0 0 10px #ef476f;
     }
     .metro-dot.flash-beat {
       background: #06d6a0 !important;
       border-color: #fff !important;
+      transform: scale(1.25);
+      box-shadow: 0 0 8px #06d6a0;
+    }
+
+    /* Main Stage Layout: Responsive Portrait vs Landscape Split-View */
+    main {
+      flex: 1;
+      display: flex;
+      position: relative;
+      width: 100%;
+    }
+
+    #split-divider {
+      display: none;
+    }
+
+    #lyrics-view {
+      flex: 1;
+      padding: 20px 16px calc(var(--footer-h) + 120px) 16px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      line-height: 2.15;
+      font-size: 1.25rem;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* PORTRAIT / PHONE MODE:
+       - Before song chosen: catalog is visible.
+       - After song chosen: catalog DISAPPEARS, user is constrained to the song only! */
+    @media (orientation: portrait), (max-width: 700px) {
+      body:not(.has-song) #catalog-view {
+        display: block !important;
+      }
+      body:not(.has-song) #lyrics-view {
+        display: none !important;
+      }
+      body.has-song:not(.catalog-open-portrait) #catalog-view {
+        display: none !important;
+      }
+      body.has-song:not(.catalog-open-portrait) #lyrics-view {
+        display: block !important;
+        max-width: 100vw;
+        padding: 16px 12px calc(var(--footer-h) + 90px) 12px;
+        font-size: 1.15rem;
+      }
+      body.has-song.catalog-open-portrait #catalog-view {
+        display: block !important;
+      }
+      body.has-song.catalog-open-portrait #lyrics-view {
+        display: none !important;
+      }
+      header {
+        padding: 6px 8px;
+        gap: 4px;
+      }
+      .btn-step { width: 28px; }
+      .step-val { min-width: 38px; padding: 0 5px; font-size: 0.88rem; }
+      button.btn-jump { padding: 0 7px; font-size: 0.78rem; }
+    }
+
+    /* LANDSCAPE / IPAD MODE:
+       - Left: Song list sidebar
+       - Center: Vertical bar divider
+       - Right: Active song view */
+    @media (orientation: landscape) and (min-width: 701px) {
+      html, body {
+        height: 100dvh;
+        overflow: hidden;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        height: calc(100dvh - var(--header-h) - var(--footer-h));
+        overflow: hidden;
+      }
+      #catalog-view {
+        display: flex !important;
+        flex-direction: column;
+        width: 330px;
+        min-width: 270px;
+        max-width: 36vw;
+        height: 100%;
+        overflow-y: auto;
+        padding: 14px 12px 40px 12px;
+        margin: 0;
+        background: #151520;
+        flex-shrink: 0;
+      }
+      #catalog-view .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      #catalog-view .song-card {
+        padding: 12px;
+        gap: 8px;
+        border-radius: 12px;
+      }
+      #catalog-view .card-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        border-radius: 10px;
+      }
+      #catalog-view .card-title {
+        font-size: 0.98rem;
+      }
+      #catalog-view .card-artist {
+        font-size: 0.82rem;
+      }
+      #catalog-view .chord-sinottico,
+      #catalog-view .card-footer {
+        display: none;
+      }
+      #split-divider {
+        display: block;
+        width: 3px;
+        background: linear-gradient(180deg, #2e2e46 0%, #06d6a0 50%, #2e2e46 100%);
+        opacity: 0.65;
+        flex-shrink: 0;
+         height: 100%;
+      }
+      #lyrics-view {
+        display: block !important;
+        flex: 1;
+        height: 100%;
+        overflow-y: auto;
+        max-width: none;
+        padding: 28px 32px 160px 32px;
+      }
+    }
+
+    .meta-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .meta-box h1 { color: #fff; font-size: 1.35rem; margin-bottom: 2px; }
+
+    .section-title {
+      color: #fff;
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .section-desc {
+      color: #8888aa;
+      font-size: 0.95rem;
+      font-style: italic;
+      font-weight: normal;
+      margin-left: 4px;
+    }
+
+    .lyric-note {
+      color: #9999bb;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .bar-line {
+      color: #555577;
+      font-weight: bold;
+      padding: 0 4px;
+      user-select: none;
+    }
+
+    .lyric-line {
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      position: relative;
+    }
+    .lyric-line:hover { background: #1f1f2e; }
+    .lyric-line.active {
+      background: var(--highlight);
+      border-left: 4px solid var(--accent);
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .chord {
+      color: var(--chord);
+      font-weight: 800;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: rgba(255, 209, 102, 0.12);
+      padding: 2px 5px;
+      border-radius: 4px;
+      margin-right: 1px;
+    }
+
+    .line-time {
+      color: var(--time);
+      font-size: 0.76rem;
+      font-family: ui-monospace, monospace;
+      margin-right: 8px;
+      user-select: none;
+    }
+
+    /* Video element in small corner when active */
+    #webcam-video {
+      position: fixed;
+      bottom: calc(var(--footer-h) + 10px);
+      right: 12px;
+      width: 110px;
+      height: 82px;
+      border-radius: 8px;
+      border: 2px solid #333;
+      object-fit: cover;
+      transform: scaleX(-1);
+      opacity: 0.65;
+      z-index: 50;
+      background: #000;
+      display: none;
+      pointer-events: none;
+    }
+    #webcam-video.cam-visible {
+      display: block;
+    }
+
+    /* =====================================================================
+       HEAD GESTURE VISUAL HUD OVERLAY (2 Arrows SX / 2 Arrows DX, 2s Fade)
+       ===================================================================== */
+    #head-gesture-hud {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 250;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4vw;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    #head-gesture-hud.show {
+      opacity: 1;
+    }
+    .hud-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(18, 18, 28, 0.55);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      border-radius: 24px;
+      padding: 18px 22px;
+      min-width: 110px;
+      color: rgba(255, 255, 255, 0.4);
+      transform: scale(0.92);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hud-side.active-dir {
+      background: rgba(6, 214, 160, 0.28);
+      border-color: var(--accent);
+      color: #fff;
+      transform: scale(1.08);
+      box-shadow: 0 0 32px rgba(6, 214, 160, 0.5);
+    }
+    .hud-arrows {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -4px;
+      color: inherit;
+    }
+    .hud-side.active-dir .hud-arrows {
+      color: var(--chord);
+      text-shadow: 0 0 14px rgba(255, 209, 102, 0.8);
+    }
+    .hud-sub {
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-top: 6px;
+      font-family: ui-monospace, monospace;
+    }
+    .hud-center-badge {
+      background: rgba(18, 18, 28, 0.82);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 800;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    /* =====================================================================
+       FOOTER PROGRESS BAR (Google Play / Netflix Scrubber)
+       ===================================================================== */
+    footer#player-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--footer-h);
+      background: rgba(20, 20, 32, 0.96);
+      border-top: 1px solid #2e2e46;
+      backdrop-filter: blur(8px);
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 120;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.45);
+      user-select: none;
+    }
+    body:not(.has-song) footer#player-footer {
+      display: none;
+    }
+    .footer-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      min-width: 44px;
+      text-align: center;
+    }
+    #timeDisplay {
+      color: var(--accent);
+    }
+    .scrubber-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 100%;
+    }
+    input[type="range"].scrubber-range {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--danger) 0%, var(--accent) var(--progress-pct, 0%), #2d2d44 var(--progress-pct, 0%), #2d2d44 100%);
+      outline: none;
+      cursor: pointer;
+      transition: height 0.15s ease;
+      touch-action: none;
+    }
+    input[type="range"].scrubber-range:hover,
+    input[type="range"].scrubber-range:active {
+      height: 11px;
+    }
+    input[type="range"].scrubber-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--chord);
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(255, 209, 102, 0.8);
+      cursor: grab;
+      transition: transform 0.15s ease;
+    }
+    input[type="range"].scrubber-range::-webkit-slider-thumb:active {
       transform: scale(1.3);
-      box-shadow: 0 0 10px #06d6a0;
+      cursor: grabbing;
+    }
+    input[type="range"].scrubber-range::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--chord);
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(255, 209, 102, 0.8);
+      cursor: grab;
+      transition: transform 0.15s ease;
     }
 
     /* Spotify / YouTube Music Catalog View */
     .catalog-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 20px 80px;
+      padding: 18px 16px 80px;
       width: 100%;
     }
     .catalog-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
     .catalog-search-bar {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       background: #1e1e2d;
       border: 1px solid #363650;
       border-radius: 9999px;
-      padding: 8px 18px;
+      padding: 7px 14px;
       flex: 1;
-      max-width: 480px;
+      min-width: 180px;
     }
     .catalog-search-bar input {
       background: transparent;
       border: none;
       color: #fff;
-      font-size: 1rem;
+      font-size: 0.95rem;
       width: 100%;
       outline: none;
     }
     .catalog-stats {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       color: #8888aa;
       font-weight: 600;
     }
@@ -446,31 +768,31 @@
     .artist-tabs {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       overflow-x: auto;
-      padding-bottom: 12px;
-      margin-bottom: 24px;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
       scrollbar-width: thin;
+      flex-shrink: 0;
     }
     .artist-chip {
       background: #252538;
       border: 1px solid #3e3e58;
       color: #d1d5db;
-      padding: 8px 18px;
+      padding: 6px 13px;
       border-radius: 9999px;
-      font-size: 0.92rem;
+      font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
       transition: all 0.2s ease;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
     .artist-chip:hover {
       background: #363652;
       color: #fff;
-      transform: translateY(-1px);
     }
     .artist-chip.active {
       background: var(--accent);
@@ -480,69 +802,71 @@
     }
     .artist-chip .chip-count {
       background: rgba(0,0,0,0.25);
-      padding: 2px 7px;
+      padding: 1px 6px;
       border-radius: 9999px;
-      font-size: 0.78rem;
+      font-size: 0.74rem;
     }
     /* Cards Grid */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px;
     }
     .song-card {
       background: #181824;
       border: 1px solid #2b2b40;
-      border-radius: 16px;
-      padding: 18px;
+      border-radius: 14px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 14px;
-      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      gap: 10px;
+      transition: all 0.2s ease;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
     .song-card:hover {
       background: #202030;
       border-color: #4a4a6e;
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+    }
+    .song-card.active-song {
+      background: #222238;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent), 0 6px 18px rgba(6, 214, 160, 0.2);
     }
     .card-top {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
     .card-avatar {
-      width: 54px;
-      height: 54px;
+      width: 48px;
+      height: 48px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       background: linear-gradient(135deg, #2a2a40, #161625);
       border: 1px solid rgba(255,255,255,0.08);
       flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     .card-meta {
       flex: 1;
       min-width: 0;
     }
     .card-title {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: #fff;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .card-artist {
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       color: #94a3b8;
       font-weight: 600;
       white-space: nowrap;
@@ -551,12 +875,13 @@
     }
     .card-badges {
       display: flex;
-      gap: 6px;
-      margin-top: 6px;
+      gap: 5px;
+      margin-top: 5px;
+      flex-wrap: wrap;
     }
     .mini-badge {
-      font-size: 0.72rem;
-      padding: 2px 7px;
+      font-size: 0.7rem;
+      padding: 2px 6px;
       border-radius: 6px;
       font-weight: 700;
       background: #26263a;
@@ -574,61 +899,58 @@
     /* Sinottico Accordi */
     .chord-sinottico {
       background: #11111a;
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid #232336;
-      padding: 10px 14px;
+      padding: 8px 12px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      font-size: 0.88rem;
+      gap: 5px;
+      font-size: 0.84rem;
     }
     .sinottico-row {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
     .sin-label {
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       font-weight: 800;
       color: #71717a;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      min-width: 75px;
+      min-width: 68px;
     }
     .sin-chords {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 4px;
       align-items: center;
     }
     .chord-pill {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: ui-monospace, monospace;
       font-weight: 800;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: var(--chord);
       background: #28283c;
-      padding: 2px 7px;
-      border-radius: 6px;
+      padding: 1px 6px;
+      border-radius: 5px;
       border: 1px solid #3f3f5c;
     }
     .card-footer {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding-top: 4px;
     }
     .btn-play-card {
       background: #252538;
       border: 1px solid #3e3e5a;
       color: #f1f5f9;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 8px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      transition: all 0.15s ease;
+      gap: 5px;
     }
     .song-card:hover .btn-play-card {
       background: var(--accent);
@@ -639,133 +961,219 @@
 </head>
 <body>
 
+  <!-- Hidden select kept for state & script compatibility -->
+  <select id="songSelect" style="display:none;" onchange="loadSelectedSong()"></select>
+
+  <!-- LEAN SINGLE-ROW HEADER -->
   <header>
-    <div style="display:flex; align-items:center; gap: 12px;">
-      <button id="btnViewToggle" class="btn" onclick="toggleCatalogView()" style="background:#2d2d44; color:#fff; display:flex; align-items:center; gap:6px;" title="Mostra/Nascondi Catalogo Canzoni">
-        📚 <span id="viewToggleLabel">Catalogo</span>
+    <!-- SX: Key / Transpose Stepper "- C +" / "- DO +" -->
+    <div class="header-left">
+      <div class="pill-stepper" title="Cambia Tonalità (Tocca al centro per resettare la tonalità originale)">
+        <button class="btn-step" onclick="changeTranspose(-1)" aria-label="Abbassa tonalità di 1 semitono">−</button>
+        <span id="transposeDisplay" class="step-val key-val" onclick="resetTranspose()">DO</span>
+        <button class="btn-step" onclick="changeTranspose(1)" aria-label="Alza tonalità di 1 semitono">+</button>
+      </div>
+    </div>
+
+    <!-- CENTER: Transport Controls (Only visible AFTER choosing a song!) -->
+    <div id="transportControls" class="header-center">
+      <button class="btn btn-jump" onclick="jumpSeconds(-20)" title="Salta indietro 20 secondi">-20s</button>
+      <button id="playBtn" class="btn btn-primary" onclick="togglePlay()" title="Play / Pausa (Spazio)">▶️</button>
+      <button class="btn btn-jump" onclick="jumpSeconds(20)" title="Salta avanti 20 secondi">+20s</button>
+    </div>
+
+    <!-- DX: Tempo Stepper "- 120 +" + Clean Options Button -->
+    <div class="header-right">
+      <div class="pill-stepper" title="Cambia Tempo BPM (Tocca il numero per avviare/fermare il Metronomo)">
+        <button class="btn-step" onclick="adjustBpm(-1)" aria-label="Rallenta 1 BPM">−</button>
+        <span id="metroBpmDisplay" class="step-val bpm-val" onclick="toggleMetronome()">120</span>
+        <button class="btn-step" onclick="adjustBpm(1)" aria-label="Accelera 1 BPM">+</button>
+      </div>
+      <button id="btnSettings" class="btn btn-icon" onclick="openSettingsDialog()" title="Opzioni, Notazione Do/C, Telecamera AI e Catalogo" aria-label="Opzioni">
+        ⚙️ <span id="camDot" class="status-dot" title="Stato Telecamera AI"></span>
       </button>
-      <select id="songSelect" class="song-select" onchange="loadSelectedSong()">
-        <option value="">Caricamento canzoni...</option>
-      </select>
-    </div>
-
-    <!-- Notation Mode Switcher: IT vs EN -->
-    <div class="notation-group" title="Seleziona notazione accordi: Italiano (DO RE MI) o Inglese (C D E)">
-      <button id="btnNotAuto" class="btn-not active" onclick="setNotationMode('auto')">Auto</button>
-      <button id="btnNotIt" class="btn-not" onclick="setNotationMode('it')">🇮🇹 IT (DO)</button>
-      <button id="btnNotEn" class="btn-not" onclick="setNotationMode('en')">🇬🇧 EN (C)</button>
-    </div>
-
-    <!-- Transpose controls -->
-    <div class="transpose-group">
-      <button class="btn btn-tp" onclick="changeTranspose(-1)" title="Abbassa di 1 semitono">♭ -1</button>
-      <div id="transposeDisplay" class="transpose-badge" onclick="resetTranspose()" title="Clicca per resettare">0</div>
-      <button class="btn btn-tp" onclick="changeTranspose(1)" title="Alza di 1 semitono">♯ +1</button>
-    </div>
-
-    <div class="controls">
-      <button class="btn btn-jump" onclick="jumpSeconds(-20)" title="Salta indietro 20s">⏪ -20s</button>
-      <button id="playBtn" class="btn btn-primary" onclick="togglePlay()">▶️ Avvia</button>
-      <button class="btn btn-jump" onclick="jumpSeconds(20)" title="Salta avanti 20s">⏩ +20s</button>
-      <div id="timeDisplay" class="timer-badge">00:00</div>
-    </div>
-
-    <div class="cam-status">
-      <div id="camDot" class="status-dot"></div>
-      <span id="camLabel">Cam Offline</span>
-      <button class="btn" style="padding:4px 8px; font-size:0.8rem;" onclick="toggleCamera()">📷 Attiva</button>
     </div>
   </header>
 
-  <!-- Metronome Toolbar -->
-  <div id="metronome-bar" class="metronome-bar">
-    <div class="metro-group">
-      <button id="metroToggleBtn" class="btn-metro" onclick="toggleMetronome()" title="Attiva/Disattiva Metronomo (Scorciatoia: M)">⏱️ Metronomo: OFF</button>
+  <!-- NATIVE LIGHT-DISMISS OPTIONS DIALOG -->
+  <dialog id="settingsDialog" closedby="any" aria-labelledby="settingsTitle">
+    <div class="dialog-header">
+      <h2 id="settingsTitle">⚙️ Opzioni & Preferenze</h2>
+      <button class="btn" onclick="document.getElementById('settingsDialog').close()" style="height:32px; padding:0 10px;">✕</button>
     </div>
 
-    <div class="metro-group">
-      <button class="btn-mini" onclick="adjustBpm(-5)" title="Rallenta 5 BPM">-5</button>
-      <button class="btn-mini" onclick="adjustBpm(-1)" title="Rallenta 1 BPM">-1</button>
-      <span id="metroBpmDisplay" class="metro-bpm-badge" title="Velocità in BPM">120 BPM</span>
-      <button class="btn-mini" onclick="adjustBpm(1)" title="Accelera 1 BPM">+1</button>
-      <button class="btn-mini" onclick="adjustBpm(5)" title="Accelera 5 BPM">+5</button>
-      <input type="range" id="metroBpmSlider" class="metro-slider" min="40" max="240" value="120" oninput="setBpm(this.value)" title="Regola BPM">
+    <!-- 1. Notation Preference (IT DO vs EN C) -->
+    <div class="dialog-section">
+      <div class="dialog-section-title">🎵 Notazione Accordi & Tonalità (Do / C)</div>
+      <div class="notation-group">
+        <button id="btnNotAuto" class="btn-not active" onclick="setNotationMode('auto')">Auto</button>
+        <button id="btnNotIt" class="btn-not" onclick="setNotationMode('it')">🇮🇹 IT (DO)</button>
+        <button id="btnNotEn" class="btn-not" onclick="setNotationMode('en')">🇬🇧 EN (C)</button>
+      </div>
     </div>
 
-    <div class="metro-group">
-      <span style="font-size:0.85rem; color:#888;">Tempo:</span>
-      <select id="metroTsSelect" class="metro-select" onchange="setTimeSignature(this.value)" title="Metro / Divisione ritmica">
-        <option value="4/4">4/4 (Zoom-pa-pa-pa)</option>
-        <option value="3/4">3/4 (Zoom-pa-pa Valzer)</option>
-        <option value="2/4">2/4 (Zoom-pa Marcia)</option>
-        <option value="6/8">6/8 (Zoom-pa-pa Zoom-pa-pa)</option>
-        <option value="7/4">7/4 (Solsbury Hill)</option>
-        <option value="12/8">12/8 (Blues / Ballad)</option>
-      </select>
+    <!-- 2. Hands-Free AI Head Tracking -->
+    <div class="dialog-section">
+      <div class="dialog-section-title">👤 Controllo Testa Hands-Free (AI Camera)</div>
+      <div class="dialog-row">
+        <span id="camLabel" style="font-size:0.88rem; color:#ccc;">Cam Spenta</span>
+        <button id="camToggleBtn" class="btn" onclick="toggleCamera()" style="height:34px;">📷 Attiva Cam</button>
+      </div>
+      <div class="dialog-row" style="margin-top:4px;">
+        <span style="font-size:0.78rem; color:#888;">Prova HUD Frecce (2s fade):</span>
+        <div style="display:flex; gap:6px;">
+          <button class="btn-mini" onclick="triggerHeadGesture('Testa a SX (-20s)', -20)">« SX (-20s)</button>
+          <button class="btn-mini" onclick="triggerHeadGesture('Testa a DX (+20s)', 20)">DX (+20s) »</button>
+        </div>
+      </div>
     </div>
 
-    <div class="metro-group">
-      <select id="metroSoundSelect" class="metro-select" onchange="setMetroSound(this.value)" title="Timbro del Metronomo">
-        <option value="zoom-pa">🚛 Zoom-Pa (Basso & Legno)</option>
-        <option value="woodblock">🪵 Woodblock Classico</option>
-        <option value="beep">🔔 Beep Elettronico</option>
-      </select>
-    </div>
-
-    <div id="metroBeatDots" class="metro-dots-container" title="Visualizzatore battiti">
-      <!-- Dots inseriti dinamicamente -->
-    </div>
-
-    <div class="metro-group">
-      <label style="font-size:0.82rem; color:#aaa; cursor:pointer; display:flex; align-items:center; gap:5px;" title="Avvia e stoppa automaticamente il metronomo assieme al brano">
-        <input type="checkbox" id="metroAutoStartWithPlay" checked> Auto con Play
+    <!-- 3. Metronome & Rhythm Details -->
+    <div class="dialog-section">
+      <div class="dialog-section-title">⏱️ Metronomo & Tempo</div>
+      <div class="dialog-row">
+        <button id="metroToggleBtn" class="btn-metro" onclick="toggleMetronome()">⏱️ Metronomo: OFF</button>
+        <div id="metroBeatDots" class="metro-dots-container" title="Visualizzatore battiti"></div>
+      </div>
+      <div class="dialog-row">
+        <button class="btn-mini" onclick="adjustBpm(-5)">-5</button>
+        <input type="range" id="metroBpmSlider" class="metro-slider" min="40" max="240" value="120" oninput="setBpm(this.value)">
+        <button class="btn-mini" onclick="adjustBpm(5)">+5</button>
+      </div>
+      <div class="dialog-row">
+        <select id="metroTsSelect" class="metro-select" onchange="setTimeSignature(this.value)">
+          <option value="4/4">4/4 (Quarti)</option>
+          <option value="3/4">3/4 (Valzer)</option>
+          <option value="2/4">2/4 (Marcia)</option>
+          <option value="6/8">6/8 (Terzinato)</option>
+          <option value="7/4">7/4 (Solsbury Hill)</option>
+          <option value="12/8">12/8 (Blues)</option>
+        </select>
+        <select id="metroSoundSelect" class="metro-select" onchange="setMetroSound(this.value)">
+          <option value="zoom-pa">🚛 Zoom-Pa</option>
+          <option value="woodblock">🪵 Woodblock</option>
+          <option value="beep">🔔 Beep</option>
+        </select>
+      </div>
+      <label style="font-size:0.84rem; color:#bbb; cursor:pointer; display:flex; align-items:center; gap:6px;">
+        <input type="checkbox" id="metroAutoStartWithPlay" checked> Avvia/Ferma metronomo automaticamente con Play
       </label>
+    </div>
+
+    <!-- 4. Switch Song (for Portrait Phone mode where catalog is hidden during song) -->
+    <div class="dialog-section" style="margin-bottom:0;">
+      <button class="btn" style="width:100%; justify-content:center; background:#2d2d46;" onclick="openCatalogFromSettings()">
+        📚 Cambia Canzone (Apri Lista Brani)
+      </button>
+    </div>
+  </dialog>
+
+  <main>
+    <!-- LEFT SIDEBAR IN LANDSCAPE / INITIAL PICKER IN PORTRAIT -->
+    <aside id="catalog-view" class="catalog-container">
+      <div class="catalog-header">
+        <div class="catalog-search-bar">
+          <span style="font-size: 1rem; color: #888;">🔍</span>
+          <input type="text" id="catalogSearch" placeholder="Cerca canzone o artista..." oninput="filterCatalog()">
+        </div>
+        <div id="catalogStats" class="catalog-stats">Caricamento...</div>
+      </div>
+
+      <!-- Artist Filter Tabs -->
+      <div id="artistTabs" class="artist-tabs"></div>
+
+      <!-- Songs Cards List/Grid -->
+      <div id="cardsGrid" class="cards-grid"></div>
+    </aside>
+
+    <!-- VERTICAL DIVIDER (Visible in Horizontal/iPad Split-View) -->
+    <div id="split-divider"></div>
+
+    <!-- LIVE PLAYER / LYRICS VIEW -->
+    <section id="lyrics-view">
+      <div style="text-align:center; padding: 80px 20px; color:#777;">
+        👈 Seleziona una canzone dalla lista per iniziare a suonare 🎹
+      </div>
+    </section>
+  </main>
+
+  <!-- TRANSPARENT HEAD GESTURE HUD OVERLAY (2 Arrows SX / 2 Arrows DX, 2s Fade-Out) -->
+  <div id="head-gesture-hud" aria-live="polite">
+    <div id="hudLeft" class="hud-side">
+      <div class="hud-arrows">«</div>
+      <div class="hud-sub">-20s</div>
+    </div>
+    <div id="hudCenterMsg" class="hud-center-badge">👤 Head Tracking</div>
+    <div id="hudRight" class="hud-side">
+      <div class="hud-arrows">»</div>
+      <div class="hud-sub">+20s</div>
     </div>
   </div>
 
-  <main>
-    <!-- Catalog View (Spotify / YouTube Music style) -->
-    <div id="catalog-view" class="catalog-container">
-      <div class="catalog-header">
-        <div class="catalog-search-bar">
-          <span style="font-size: 1.1rem; color: #888;">🔍</span>
-          <input type="text" id="catalogSearch" placeholder="Cerca canzone, artista o accordo..." oninput="filterCatalog()">
-        </div>
-        <div id="catalogStats" class="catalog-stats">Caricamento canzoni...</div>
-      </div>
-
-      <!-- Artist Filter Tabs (Spotify style chips) -->
-      <div id="artistTabs" class="artist-tabs">
-        <!-- Rendered dynamically -->
-      </div>
-
-      <!-- Songs Cards Grid -->
-      <div id="cardsGrid" class="cards-grid">
-        <!-- Rendered dynamically -->
-      </div>
+  <!-- FOOTER PROGRESS SCRUBBER BAR (Google Play / Netflix style, Portrait & Landscape) -->
+  <footer id="player-footer">
+    <span id="timeDisplay" class="footer-time">00:00</span>
+    <div class="scrubber-container">
+      <input
+        type="range"
+        id="songProgressSlider"
+        class="scrubber-range"
+        min="0"
+        max="180"
+        step="0.5"
+        value="0"
+        oninput="onScrubInput(this.value)"
+        aria-label="Posizione nella canzone"
+      >
     </div>
-
-    <!-- Live Player / Lyrics View -->
-    <div id="lyrics-view" style="display: none;">
-      <div style="text-align:center; padding: 100px 0; color:#777;">
-        Seleziona un brano dal menu in alto o dal catalogo per iniziare 🎹
-      </div>
-    </div>
-  </main>
+    <span id="durationDisplay" class="footer-time">03:00</span>
+  </footer>
 
   <video id="webcam-video" autoplay playsinline muted></video>
   <audio id="audioTrack" preload="auto"></audio>
-  <div id="gesture-alert">👤 Head Turn: +20s</div>
 
   <script>
     let currentTime = 0;
+    let songDuration = 180;
     let isPlaying = false;
     let timerInterval = null;
     let songData = null;
+    let activeSongFilename = '';
     let timeAnchors = [];
     let transposeOffset = 0; // Transpose in semitones
-
     let notationMode = 'auto'; // 'auto', 'it', 'en'
+    let hudFadeTimeout = null;
+
+    // Dialog light-dismiss fallback for browsers without native <dialog closedby="any">
+    const settingsDialog = document.getElementById('settingsDialog');
+    if (settingsDialog && !('closedBy' in HTMLDialogElement.prototype)) {
+      settingsDialog.addEventListener('click', (event) => {
+        if (event.target !== settingsDialog) return;
+        const rect = settingsDialog.getBoundingClientRect();
+        const isDialogContent = (
+          rect.top <= event.clientY &&
+          event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX &&
+          event.clientX <= rect.left + rect.width
+        );
+        if (!isDialogContent) {
+          settingsDialog.close();
+        }
+      });
+    }
+
+    function openSettingsDialog() {
+      if (settingsDialog && typeof settingsDialog.showModal === 'function') {
+        settingsDialog.showModal();
+      }
+    }
+
+    function openCatalogFromSettings() {
+      if (settingsDialog && settingsDialog.open) {
+        settingsDialog.close();
+      }
+      showCatalogView();
+    }
 
     function setNotationMode(mode) {
       notationMode = mode;
@@ -773,6 +1181,7 @@
       if (mode === 'auto') document.getElementById('btnNotAuto').classList.add('active');
       if (mode === 'it') document.getElementById('btnNotIt').classList.add('active');
       if (mode === 'en') document.getElementById('btnNotEn').classList.add('active');
+      updateTransposeDisplay();
       if (songData) {
         renderSong(songData);
       }
@@ -790,7 +1199,7 @@
     let currentMetroBeat = 0;
     let nextMetroNoteTime = 0.0;
     let metroTimerId = null;
-    let metroSoundType = 'zoom-pa'; // 'zoom-pa', 'woodblock', 'beep'
+    let metroSoundType = 'zoom-pa';
 
     function initMetroAudio() {
       if (!metroAudioCtx) {
@@ -836,7 +1245,7 @@
       if (isNaN(parsed)) return;
       metroBpm = Math.min(260, Math.max(30, parsed));
       const disp = document.getElementById('metroBpmDisplay');
-      if (disp) disp.innerText = `${metroBpm} BPM`;
+      if (disp) disp.innerText = `${metroBpm}`;
       const slider = document.getElementById('metroBpmSlider');
       if (slider) slider.value = metroBpm;
     }
@@ -874,7 +1283,6 @@
       if (!metroAudioCtx) return;
       const isAccent = (beatNumber === 0);
 
-      // Synthesize Click via Web Audio API
       const osc = metroAudioCtx.createOscillator();
       const gainNode = metroAudioCtx.createGain();
       osc.connect(gainNode);
@@ -882,7 +1290,6 @@
 
       if (metroSoundType === 'zoom-pa') {
         if (isAccent) {
-          // 🚛 "ZOOM": Low resonant kick sweep (180Hz -> 50Hz) + punch
           osc.type = 'triangle';
           osc.frequency.setValueAtTime(180, time);
           osc.frequency.exponentialRampToValueAtTime(50, time + 0.12);
@@ -891,7 +1298,6 @@
           osc.start(time);
           osc.stop(time + 0.16);
         } else {
-          // 🥁 "pa": Crisp, snappy woodblock click
           osc.type = 'sine';
           osc.frequency.setValueAtTime(840, time);
           osc.frequency.exponentialRampToValueAtTime(420, time + 0.04);
@@ -909,7 +1315,6 @@
         osc.start(time);
         osc.stop(time + 0.04);
       } else {
-        // Electronic beep
         osc.type = 'square';
         const freq = isAccent ? 1000 : 600;
         osc.frequency.setValueAtTime(freq, time);
@@ -926,13 +1331,11 @@
         const noteTime = nextMetroNoteTime;
         playMetroClick(noteTime, beatToPlay);
 
-        // Schedule visual flash synchronized with note time
         const delayMs = Math.max(0, (noteTime - metroAudioCtx.currentTime) * 1000);
         setTimeout(() => {
           flashBeatDot(beatToPlay, beatToPlay === 0);
         }, delayMs);
 
-        // Advance to next beat
         const secondsPerBeat = 60.0 / metroBpm;
         nextMetroNoteTime += secondsPerBeat;
         currentMetroBeat = (currentMetroBeat + 1) % metroBeatsPerBar;
@@ -951,6 +1354,8 @@
         btn.innerHTML = '⏱️ Metronomo: ON';
         btn.classList.add('active');
       }
+      const bpmDisp = document.getElementById('metroBpmDisplay');
+      if (bpmDisp) bpmDisp.classList.add('metro-on');
 
       metroTimerId = setInterval(metroScheduleAhead, 25);
     }
@@ -966,6 +1371,9 @@
         btn.innerHTML = '⏱️ Metronomo: OFF';
         btn.classList.remove('active');
       }
+      const bpmDisp = document.getElementById('metroBpmDisplay');
+      if (bpmDisp) bpmDisp.classList.remove('metro-on');
+
       document.querySelectorAll('.metro-dot').forEach(d => {
         d.classList.remove('flash-accent', 'flash-beat');
       });
@@ -989,9 +1397,7 @@
       }
     }
 
-    // --- Musical Transposition & Normalization Engine ---
-    // Normalized Chromatic Scales (Italian & English)
-    // Enharmonic preference: D# -> Eb (closer to C / standard pianistic flat key)
+    // --- Musical Transposition & Key Display Engine ---
     const CHROMATIC_ENG = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
     const CHROMATIC_ITA = ['DO', 'REb', 'RE', 'MIb', 'MI', 'FA', 'FA#', 'SOL', 'LAb', 'LA', 'SIb', 'SI'];
 
@@ -1012,33 +1418,44 @@
 
     const ROOT_KEYS = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI', 'C', 'D', 'E', 'F', 'G', 'A', 'B'];
 
-    function transposeSingleNote(noteStr, semitones) {
+    function songUsesItalianChords(data) {
+      if (!data || !data.lines) return true; // default to DO when no song loaded
+      for (const l of data.lines) {
+        if (l.raw) {
+          const m = l.raw.match(/\[([A-Za-z]+)/);
+          if (m) {
+            const root = m[1].toUpperCase();
+            return ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'].some(r => root.startsWith(r));
+          }
+        }
+      }
+      return true;
+    }
+
+    function transposeSingleNote(noteStr, semitones, forceLang = null) {
       const clean = noteStr.trim();
       const upper = clean.toUpperCase();
       const val = SEMITONE_MAP[upper];
       if (val === undefined) return clean;
 
       const isOriginalItalian = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'].some(r => upper.startsWith(r));
-      const effectiveNotation = notationMode === 'auto' ? (isOriginalItalian ? 'it' : 'en') : notationMode;
+      const effectiveNotation = forceLang || (notationMode === 'auto' ? (isOriginalItalian ? 'it' : 'en') : notationMode);
 
       const targetVal = (val + semitones + 1200) % 12;
       return effectiveNotation === 'it' ? CHROMATIC_ITA[targetVal] : CHROMATIC_ENG[targetVal];
     }
 
-    function transposeChord(chordStr, semitones) {
+    function transposeChord(chordStr, semitones, forceLang = null) {
       const clean = chordStr.trim();
       if (!clean || clean.toUpperCase() === 'N.C.' || clean === '%') return clean;
 
-      // Handle slash chords (e.g. DO/MI or C/G)
       if (clean.includes('/')) {
         const parts = clean.split('/');
-        return `${transposeChord(parts[0], semitones)}/${transposeChord(parts[1], semitones)}`;
+        return `${transposeChord(parts[0], semitones, forceLang)}/${transposeChord(parts[1], semitones, forceLang)}`;
       }
 
-      // Find root note
       const upper = clean.toUpperCase();
       let matchedRoot = null;
-      // Sort roots by length desc so 'SOL' matches before 'SO'
       const sortedRoots = [...ROOT_KEYS].sort((a,b) => b.length - a.length);
       for (const r of sortedRoots) {
         if (upper.startsWith(r)) {
@@ -1056,7 +1473,7 @@
         suffix = suffix.substring(1);
       }
 
-      const transposedRoot = transposeSingleNote(noteWithAccidental, semitones);
+      const transposedRoot = transposeSingleNote(noteWithAccidental, semitones, forceLang);
       return transposedRoot + suffix;
     }
 
@@ -1076,16 +1493,27 @@
       }
     }
 
+    function getFormattedCurrentKey() {
+      const rawKey = (songData && songData.meta && (songData.meta.original_key || songData.meta.key))
+        ? (songData.meta.original_key || songData.meta.key)
+        : 'C';
+      let lang = notationMode;
+      if (lang === 'auto') {
+        lang = songUsesItalianChords(songData) ? 'it' : 'en';
+      }
+      return transposeChord(rawKey, transposeOffset, lang);
+    }
+
     function updateTransposeDisplay() {
       const el = document.getElementById('transposeDisplay');
+      if (!el) return;
+      const currentKeyStr = getFormattedCurrentKey();
+      el.innerText = currentKeyStr;
       if (transposeOffset === 0) {
-        el.innerText = '0';
         el.style.color = 'var(--chord)';
       } else if (transposeOffset > 0) {
-        el.innerText = `+${transposeOffset}`;
         el.style.color = 'var(--accent)';
       } else {
-        el.innerText = `${transposeOffset}`;
         el.style.color = '#ff9f1c';
       }
       if (typeof renderCatalog === 'function') {
@@ -1100,7 +1528,6 @@
     let lastGestureTime = 0;
     const GESTURE_COOLDOWN_MS = 1400;
 
-    // Load available songs
     // Artist branding & visual iconography
     const ARTIST_ICONS = {
       "Dire Straits": { icon: "🎸", bg: "linear-gradient(135deg, #b91c1c, #450a0a)" },
@@ -1157,38 +1584,26 @@
     }
 
     function showCatalogView() {
-      const cat = document.getElementById('catalog-view');
-      const lyr = document.getElementById('lyrics-view');
-      const met = document.getElementById('metronome-bar');
-      const label = document.getElementById('viewToggleLabel');
-      if (cat) cat.style.display = 'block';
-      if (lyr) lyr.style.display = 'none';
-      if (met) met.style.display = 'none';
-      if (label) label.innerText = 'Player';
+      document.body.classList.add('catalog-open-portrait');
       renderCatalog();
     }
 
     function showPlayerView() {
-      const cat = document.getElementById('catalog-view');
-      const lyr = document.getElementById('lyrics-view');
-      const met = document.getElementById('metronome-bar');
-      const label = document.getElementById('viewToggleLabel');
-      if (cat) cat.style.display = 'none';
-      if (lyr) lyr.style.display = 'block';
-      if (met) met.style.display = 'flex';
-      if (label) label.innerText = 'Catalogo';
+      document.body.classList.add('has-song');
+      document.body.classList.remove('catalog-open-portrait');
+      renderCatalog();
     }
 
     function toggleCatalogView() {
-      const cat = document.getElementById('catalog-view');
-      if (cat && cat.style.display === 'none') {
-        showCatalogView();
-      } else {
+      if (document.body.classList.contains('catalog-open-portrait')) {
         showPlayerView();
+      } else {
+        showCatalogView();
       }
     }
 
     function selectAndPlaySong(filename) {
+      activeSongFilename = filename;
       const sel = document.getElementById('songSelect');
       if (sel) {
         sel.value = filename;
@@ -1202,22 +1617,19 @@
       const statsContainer = document.getElementById('catalogStats');
       if (!tabsContainer || !cardsContainer) return;
 
-      // 1. Calculate artist frequency
       const artistCounts = {};
       allSongsList.forEach(s => {
         const a = s.artist || 'Sconosciuto';
         artistCounts[a] = (artistCounts[a] || 0) + 1;
       });
 
-      // Filter artists with count >= 3 (e.g. Dire Straits, Genesis)
       const qualifyingArtists = Object.keys(artistCounts)
         .filter(a => artistCounts[a] >= 3)
         .sort((a, b) => artistCounts[b] - artistCounts[a]);
 
-      // 2. Render Artist Filter Tabs (Spotify Chips)
       let tabsHtml = `
         <button class="artist-chip ${activeArtistFilter === 'ALL' ? 'active' : ''}" onclick="filterByArtist('ALL')">
-          🎵 Tutte le canzoni <span class="chip-count">${allSongsList.length}</span>
+          🎵 Tutte <span class="chip-count">${allSongsList.length}</span>
         </button>
       `;
 
@@ -1233,7 +1645,6 @@
       });
       tabsContainer.innerHTML = tabsHtml;
 
-      // 3. Filter songs
       let filtered = allSongsList.filter(s => {
         const matchesArtist = (activeArtistFilter === 'ALL') || (s.artist === activeArtistFilter);
         if (!matchesArtist) return false;
@@ -1247,18 +1658,18 @@
       });
 
       if (statsContainer) {
-        statsContainer.innerText = `${filtered.length} di ${allSongsList.length} canzoni`;
+        statsContainer.innerText = `${filtered.length}/${allSongsList.length} brani`;
       }
 
-      // 4. Render Song Cards
       if (filtered.length === 0) {
-        cardsContainer.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: #888;">Nessun brano trovato per la ricerca "${escapeHtml(catalogSearchQuery)}".</div>`;
+        cardsContainer.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 30px 12px; color: #888;">Nessun brano trovato per "${escapeHtml(catalogSearchQuery)}".</div>`;
         return;
       }
 
       let cardsHtml = '';
       filtered.forEach(s => {
         const iconObj = ARTIST_ICONS[s.artist] || ARTIST_ICONS['default'];
+        const isCurrent = (s.filename === activeSongFilename);
         const sum = s.summary || {};
         const hasVerse = sum.strofa && sum.strofa.length > 0;
         const hasChorus = sum.ritornello && sum.ritornello.length > 0;
@@ -1292,29 +1703,27 @@
             `;
           }
           sinotticoHtml += '</div>';
-        } else {
-          sinotticoHtml += `<div class="chord-sinottico" style="color:#666; font-size:0.8rem; font-style:italic;">Spartito libero / arpeggio continuo</div>`;
         }
 
+        const displayKey = s.key ? transposeChord(s.key, transposeOffset, notationMode === 'auto' ? null : notationMode) : '';
+
         cardsHtml += `
-          <div class="song-card" onclick="selectAndPlaySong('${escapeJs(s.filename)}')">
+          <div class="song-card ${isCurrent ? 'active-song' : ''}" onclick="selectAndPlaySong('${escapeJs(s.filename)}')">
             <div class="card-top">
               <div class="card-avatar" style="background: ${iconObj.bg};">${iconObj.icon}</div>
               <div class="card-meta">
                 <div class="card-title" title="${escapeHtml(s.title)}">${escapeHtml(s.title)}</div>
                 <div class="card-artist">${escapeHtml(s.artist)}</div>
                 <div class="card-badges">
-                  ${s.key ? `<span class="mini-badge key">🎹 ${escapeHtml(s.key)}</span>` : ''}
-                  ${s.bpm ? `<span class="mini-badge bpm">⏱️ ${s.bpm} BPM</span>` : ''}
+                  ${displayKey ? `<span class="mini-badge key">🎹 ${escapeHtml(displayKey)}</span>` : ''}
+                  ${s.bpm ? `<span class="mini-badge bpm">⏱️ ${s.bpm}</span>` : ''}
                   <span class="mini-badge">${escapeHtml(s.time_signature || '4/4')}</span>
                 </div>
               </div>
             </div>
-
             ${sinotticoHtml}
-
             <div class="card-footer">
-              <span class="btn-play-card">▶️ Apri Spartito</span>
+              <span class="btn-play-card">▶️ Suona</span>
             </div>
           </div>
         `;
@@ -1325,6 +1734,7 @@
 
     async function init() {
       renderBeatDots();
+      updateTransposeDisplay();
       try {
         const res = await fetch('/api/songs');
         const songs = await res.json();
@@ -1339,16 +1749,30 @@
     }
 
     async function loadSelectedSong() {
-      const filename = document.getElementById('songSelect').value;
+      const filename = document.getElementById('songSelect').value || activeSongFilename;
       if (!filename) return;
+      activeSongFilename = filename;
       pause();
       currentTime = 0;
-      updateTimeDisplay();
 
       const res = await fetch(`/api/song/${filename}`);
       songData = await res.json();
       renderSong(songData);
+      updateTransposeDisplay();
+      updateTimeDisplay();
       showPlayerView();
+    }
+
+    function computeSongDuration(data) {
+      if (data && data.meta && data.meta.duration) {
+        const d = parseFloat(data.meta.duration);
+        if (!isNaN(d) && d > 0) return d;
+      }
+      if (timeAnchors.length > 0) {
+        const maxSec = Math.max(...timeAnchors.map(a => a.seconds || 0));
+        return Math.max(60, Math.ceil(maxSec + 12));
+      }
+      return 180;
     }
 
     function renderSong(data) {
@@ -1356,27 +1780,18 @@
       timeAnchors = [];
       let html = '';
 
-      // Transpose key display if available
-      let keyDisplay = data.meta.original_key || 'N/D';
-      if (transposeOffset !== 0 && data.meta.original_key) {
-        const transposedKey = transposeChord(data.meta.original_key, transposeOffset);
-        keyDisplay = `${data.meta.original_key} ➔ <span style="color:var(--accent); font-weight:bold;">${transposedKey}</span>`;
-      }
+      const formattedKey = getFormattedCurrentKey();
 
-      // Top navigation bar & Meta box
       html += `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
-          <button class="btn" style="background:#252538; border:1px solid #3e3e58; padding:8px 16px; border-radius:8px; display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-weight:700; color:#fff;" onclick="showCatalogView()">
-            ◀️ <strong>Torna al Catalogo (Home)</strong>
-          </button>
-          <span style="font-size:0.85rem; color:#888;">Tasti: Spazio = Play/Pause | F = Fullscreen | M = Metronomo</span>
-        </div>
-
         <div class="meta-box">
-          <h1>${data.meta.title || 'Senza titolo'} — ${data.meta.artist || ''}</h1>
-          <div>🎹 <strong>Tonalità:</strong> ${keyDisplay} | ⏱️ <strong>BPM:</strong> ${data.meta.bpm || '~120'} | <strong>Tempo:</strong> ${data.meta.time_signature || '4/4'}</div>
-          ${data.meta.audio ? `<div style="margin-top:8px; color:var(--accent); font-weight:bold;">🔊 <strong>Traccia Audio MP3 Inclusa:</strong> Premi "Avvia" per cantare e suonare sulla traccia originale!</div>` : ''}
-          ${data.tips ? `<div style="margin-top:8px; color:var(--chord);">💡 <strong>Piano Tip:</strong> ${data.tips}</div>` : ''}
+          <div>
+            <h1>${escapeHtml(data.meta.title || 'Senza titolo')} — ${escapeHtml(data.meta.artist || '')}</h1>
+            <div>🎹 <strong>Chiave:</strong> <span style="color:var(--chord); font-weight:bold;">${escapeHtml(formattedKey)}</span> | ⏱️ <strong>${data.meta.bpm || 120} BPM</strong> (${escapeHtml(data.meta.time_signature || '4/4')})</div>
+            ${data.tips ? `<div style="margin-top:4px; color:var(--chord); font-size:0.84rem;">💡 ${escapeHtml(data.tips)}</div>` : ''}
+          </div>
+          <button class="btn" onclick="showCatalogView()" title="Torna alla lista canzoni" style="height:34px; font-size:0.8rem;">
+            📚 Brani
+          </button>
         </div>
       `;
 
@@ -1391,7 +1806,6 @@
       // Render lines with live transposed chords
       data.lines.forEach((item, idx) => {
         if (item.type === 'section') {
-          // Format section titles: clean *(Description)* and *Description* into elegant styled span
           let cleanTitle = item.content
             .replace(/\*\((.*?)\)\*/g, '<span class="section-desc">($1)</span>')
             .replace(/\*(.*?)\*/g, '<span class="section-desc">($1)</span>');
@@ -1403,18 +1817,12 @@
             timeTag = `<span class="line-time">${formatTime(item.seconds)}</span>`;
           }
 
-          // 1. Strip raw markdown backticks `
           let lineContent = item.raw.replace(/`/g, '');
-
-          // 2. Format *italic notes* or *(echoes)* like *(Gloria)*
           lineContent = lineContent
             .replace(/\*\((.*?)\)\*/g, '<span class="lyric-note">($1)</span>')
             .replace(/\*(.*?)\*/g, '<span class="lyric-note">$1</span>');
-
-          // 3. Format bar separators | into elegant visual dividers
           lineContent = lineContent.replace(/\|/g, '<span class="bar-line">|</span>');
 
-          // 4. Transpose chords [Chord] and render as badges
           const lineWithTransposedChords = lineContent.replace(/\[(.*?)\]/g, (match, rawChord) => {
             const transposed = transposeChord(rawChord, transposeOffset);
             return `<span class="chord">${transposed}</span>`;
@@ -1429,10 +1837,31 @@
       });
 
       view.innerHTML = html;
+      songDuration = computeSongDuration(data);
+      updateScrubberBounds();
       updateMetronomeFromSong(data);
     }
 
+    function updateScrubberBounds() {
+      const slider = document.getElementById('songProgressSlider');
+      const durEl = document.getElementById('durationDisplay');
+      if (slider) {
+        slider.max = songDuration;
+      }
+      if (durEl) {
+        durEl.innerText = formatTime(songDuration);
+      }
+      updateTimeDisplay();
+    }
+
+    function onScrubInput(val) {
+      const targetSec = parseFloat(val);
+      if (isNaN(targetSec)) return;
+      jumpToSecond(targetSec);
+    }
+
     function togglePlay() {
+      if (!songData) return;
       if (isPlaying) {
         pause();
       } else {
@@ -1441,10 +1870,14 @@
     }
 
     function play() {
+      if (!songData) return;
       isPlaying = true;
-      document.getElementById('playBtn').innerHTML = '⏸️ Pausa';
-      document.getElementById('playBtn').classList.remove('btn-primary');
-      document.getElementById('playBtn').style.background = '#ef476f';
+      const playBtn = document.getElementById('playBtn');
+      playBtn.innerHTML = '⏸️';
+      playBtn.classList.remove('btn-primary');
+      playBtn.style.background = '#ef476f';
+      playBtn.style.borderColor = '#ef476f';
+      playBtn.style.color = '#fff';
 
       const autoStart = document.getElementById('metroAutoStartWithPlay');
       if (autoStart && autoStart.checked) {
@@ -1459,9 +1892,12 @@
 
       const startPerf = performance.now() - (currentTime * 1000);
       timerInterval = setInterval(() => {
-        currentTime = (performance.now() - startPerf) / 1000;
+        currentTime = Math.min(songDuration, (performance.now() - startPerf) / 1000);
         updateTimeDisplay();
         syncScroll();
+        if (currentTime >= songDuration) {
+          pause();
+        }
       }, 100);
     }
 
@@ -1478,33 +1914,51 @@
       if (audioTrack && audioTrack.src) {
         audioTrack.pause();
       }
-      document.getElementById('playBtn').innerHTML = '▶️ Avvia';
-      document.getElementById('playBtn').classList.add('btn-primary');
-      document.getElementById('playBtn').style.background = '';
+      const playBtn = document.getElementById('playBtn');
+      if (playBtn) {
+        playBtn.innerHTML = '▶️';
+        playBtn.classList.add('btn-primary');
+        playBtn.style.background = '';
+        playBtn.style.borderColor = '';
+        playBtn.style.color = '';
+      }
     }
 
     function jumpSeconds(delta) {
-      currentTime = Math.max(0, currentTime + delta);
+      if (!songData) return;
+      jumpToSecond(Math.max(0, Math.min(songDuration, currentTime + delta)));
+    }
+
+    function jumpToSecond(sec) {
+      currentTime = Math.max(0, Math.min(songDuration, sec));
       const audioTrack = document.getElementById('audioTrack');
       if (audioTrack && audioTrack.src) {
         audioTrack.currentTime = currentTime;
       }
-      updateTimeDisplay();
-      syncScroll();
-    }
-
-    function jumpToSecond(sec) {
-      currentTime = sec;
-      const audioTrack = document.getElementById('audioTrack');
-      if (audioTrack && audioTrack.src) {
-        audioTrack.currentTime = currentTime;
+      if (isPlaying) {
+        clearInterval(timerInterval);
+        const startPerf = performance.now() - (currentTime * 1000);
+        timerInterval = setInterval(() => {
+          currentTime = Math.min(songDuration, (performance.now() - startPerf) / 1000);
+          updateTimeDisplay();
+          syncScroll();
+        }, 100);
       }
       updateTimeDisplay();
       syncScroll();
     }
 
     function updateTimeDisplay() {
-      document.getElementById('timeDisplay').innerText = formatTime(currentTime);
+      const timeEl = document.getElementById('timeDisplay');
+      if (timeEl) {
+        timeEl.innerText = formatTime(currentTime);
+      }
+      const slider = document.getElementById('songProgressSlider');
+      if (slider) {
+        slider.value = currentTime;
+        const pct = songDuration > 0 ? Math.min(100, Math.max(0, (currentTime / songDuration) * 100)) : 0;
+        slider.style.setProperty('--progress-pct', `${pct.toFixed(1)}%`);
+      }
     }
 
     function formatTime(totalSec) {
@@ -1529,9 +1983,21 @@
       const activeEl = document.getElementById(`line-${activeAnchor.idx}`);
       if (activeEl) {
         activeEl.classList.add('active');
-        const rect = activeEl.getBoundingClientRect();
-        const targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.28);
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
+        const lyricsContainer = document.getElementById('lyrics-view');
+        const containerStyle = window.getComputedStyle(lyricsContainer);
+
+        // In Landscape Split-View, scroll #lyrics-view independently; in Portrait, scroll window
+        if (containerStyle.overflowY === 'auto' || containerStyle.overflowY === 'scroll') {
+          const containerRect = lyricsContainer.getBoundingClientRect();
+          const activeRect = activeEl.getBoundingClientRect();
+          const offsetInside = (activeRect.top - containerRect.top) + lyricsContainer.scrollTop;
+          const targetScroll = offsetInside - (lyricsContainer.clientHeight * 0.28);
+          lyricsContainer.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+        } else {
+          const rect = activeEl.getBoundingClientRect();
+          const targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.28);
+          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+        }
       }
     }
 
@@ -1546,7 +2012,9 @@
 
     async function startCamera() {
       const videoElement = document.getElementById('webcam-video');
-      document.getElementById('camLabel').innerText = "Caricamento AI...";
+      const camLabel = document.getElementById('camLabel');
+      const camBtn = document.getElementById('camToggleBtn');
+      if (camLabel) camLabel.innerText = "Caricamento AI...";
 
       faceMesh = new FaceMesh({
         locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`
@@ -1573,14 +2041,21 @@
 
       await camera.start();
       camActive = true;
-      document.getElementById('camLabel').innerText = "AI Tracking Attivo";
+      videoElement.classList.add('cam-visible');
+      if (camLabel) camLabel.innerText = "🟢 AI Tracking Attivo";
+      if (camBtn) camBtn.innerText = "⏹️ Disattiva Cam";
       document.getElementById('camDot').classList.add('active');
     }
 
     function stopCamera() {
       if (camera) camera.stop();
       camActive = false;
-      document.getElementById('camLabel').innerText = "Cam Spenta";
+      const videoElement = document.getElementById('webcam-video');
+      videoElement.classList.remove('cam-visible');
+      const camLabel = document.getElementById('camLabel');
+      const camBtn = document.getElementById('camToggleBtn');
+      if (camLabel) camLabel.innerText = "Cam Spenta";
+      if (camBtn) camBtn.innerText = "📷 Attiva Cam";
       document.getElementById('camDot').classList.remove('active', 'tilt');
     }
 
@@ -1593,7 +2068,6 @@
       document.getElementById('camDot').classList.add('active');
       const landmarks = results.multiFaceLandmarks[0];
 
-      // Nose tip: 1, Left cheek/ear: 234, Right cheek/ear: 454
       const nose = landmarks[1];
       const leftEar = landmarks[234];
       const rightEar = landmarks[454];
@@ -1605,40 +2079,62 @@
       const now = performance.now();
       if (now - lastGestureTime > GESTURE_COOLDOWN_MS) {
         if (ratio > 2.0) {
-          triggerHeadGesture("➡️ Gira a destra (+20s)", 20);
+          triggerHeadGesture("Testa a DX (+20s)", 20);
           lastGestureTime = now;
         } else if (ratio < 0.5) {
-          triggerHeadGesture("⬅️ Gira a sinistra (-20s)", -20);
+          triggerHeadGesture("Testa a SX (-20s)", -20);
           lastGestureTime = now;
         }
       }
     }
 
+    // Transparent 2-Arrow SX / 2-Arrow DX HUD with 2-second fade-out
     function triggerHeadGesture(msg, delta) {
-      const alertEl = document.getElementById('gesture-alert');
-      alertEl.innerText = msg;
-      alertEl.classList.add('show');
-      document.getElementById('camDot').classList.add('tilt');
+      const hud = document.getElementById('head-gesture-hud');
+      const leftSide = document.getElementById('hudLeft');
+      const rightSide = document.getElementById('hudRight');
+      const centerMsg = document.getElementById('hudCenterMsg');
+      const camDot = document.getElementById('camDot');
+
+      if (centerMsg) {
+        centerMsg.innerText = delta < 0 ? `« ${msg}` : `${msg} »`;
+      }
+      if (leftSide && rightSide) {
+        leftSide.classList.toggle('active-dir', delta < 0);
+        rightSide.classList.toggle('active-dir', delta > 0);
+      }
+      if (hud) {
+        hud.classList.add('show');
+      }
+      if (camDot) {
+        camDot.classList.add('tilt');
+      }
 
       jumpSeconds(delta);
 
-      setTimeout(() => {
-        alertEl.classList.remove('show');
-        document.getElementById('camDot').classList.remove('tilt');
-      }, 900);
+      if (hudFadeTimeout) {
+        clearTimeout(hudFadeTimeout);
+      }
+      hudFadeTimeout = setTimeout(() => {
+        if (hud) hud.classList.remove('show');
+        if (leftSide) leftSide.classList.remove('active-dir');
+        if (rightSide) rightSide.classList.remove('active-dir');
+        if (camDot) camDot.classList.remove('tilt');
+      }, 2000);
     }
 
     // Keyboard Shortcuts for stage
     window.addEventListener('keydown', (e) => {
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT')) return;
       if (e.code === 'Space') {
         e.preventDefault();
         togglePlay();
       } else if (e.code === 'KeyM') {
         toggleMetronome();
       } else if (e.code === 'ArrowRight') {
-        jumpSeconds(20);
+        triggerHeadGesture("Freccia DX (+20s)", 20);
       } else if (e.code === 'ArrowLeft') {
-        jumpSeconds(-20);
+        triggerHeadGesture("Freccia SX (-20s)", -20);
       } else if (e.key === '+' || e.key === '=') {
         changeTranspose(1);
       } else if (e.key === '-' || e.key === '_') {
@@ -1646,8 +2142,14 @@
       }
     });
 
-    // Audio track synchronization & end handler
+    // Audio track synchronization & duration discovery
     const audioTrack = document.getElementById('audioTrack');
+    audioTrack.onloadedmetadata = () => {
+      if (audioTrack.duration && !isNaN(audioTrack.duration) && isFinite(audioTrack.duration)) {
+        songDuration = Math.ceil(audioTrack.duration);
+        updateScrubberBounds();
+      }
+    };
     audioTrack.ontimeupdate = () => {
       if (isPlaying && Math.abs(currentTime - audioTrack.currentTime) > 0.4) {
         currentTime = audioTrack.currentTime;

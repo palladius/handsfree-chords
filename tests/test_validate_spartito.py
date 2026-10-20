@@ -67,6 +67,23 @@ noi due respi[RE]rando lo stesso momento per fare l'a[SOL]more qua e [SI7]là
         errors = validate_spartito(example_path.read_text(encoding="utf-8"))
         self.assertEqual(errors, [], f"Validation errors found in sample: {errors}")
 
+    def test_all_songs_have_extracted_key_and_bpm(self):
+        sys.path.insert(0, str(SKILL_DIR / "app"))
+        from server import parse_song_file
+        for song_path in sorted((SKILL_DIR / "songs").glob("*.md")):
+            parsed = parse_song_file(song_path)
+            key = parsed["meta"].get("original_key")
+            bpm = parsed["meta"].get("bpm")
+            self.assertTrue(key, f"Missing original_key for {song_path.name}")
+            self.assertTrue(bpm, f"Missing bpm for {song_path.name}")
+
+    def test_ui_template_contains_streamlined_controls_and_hud(self):
+        html = (SKILL_DIR / "app" / "templates" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('id="settingsDialog" closedby="any"', html)
+        self.assertIn('id="songProgressSlider"', html)
+        self.assertIn('id="head-gesture-hud"', html)
+        self.assertIn('id="split-divider"', html)
+
 
 if __name__ == "__main__":
     unittest.main()
