@@ -283,8 +283,13 @@ def build_docs():
     """
 
     # Replace the fetch block in template
-    fetch_pattern = re.compile(r"async function init\(\)[\s\S]*?showPlayerView\(\);\s*play\(\);\s*}", re.MULTILINE)
-    static_html = fetch_pattern.sub(static_js_logic.strip(), template_html)
+    fetch_pattern = re.compile(r"async function init\(\)[\s\S]*?play\(\);\s*}", re.MULTILINE)
+    static_html, num_subs = fetch_pattern.subn(static_js_logic.strip(), template_html, count=1)
+    if num_subs == 0 or "/api/songs" in static_html:
+        raise RuntimeError(
+            "ERRORE CRITICO in build_ghp.py: la sostituzione regex di init()/loadSelectedSong() "
+            "non ha trovato corrispondenza in app/templates/index.html!"
+        )
 
     (DOCS_DIR / "index.html").write_text(static_html, encoding="utf-8")
     print(f"✅ GitHub Pages static site generato con successo in docs/ ({len(song_list)} brani)!")

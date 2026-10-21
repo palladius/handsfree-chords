@@ -1916,32 +1916,46 @@
       cardsContainer.innerHTML = cardsHtml;
     }
 
+    // Static GitHub Pages Data Loading
+    let staticSongsMap = {};
+
     async function init() {
       renderBeatDots();
       updateTransposeDisplay();
       try {
-        const res = await fetch('/api/songs');
-        const songs = await res.json();
-        allSongsList = songs;
+        const res = await fetch('songs.json');
+        staticSongsMap = await res.json();
         const select = document.getElementById('songSelect');
-        select.innerHTML = songs.map(s => `<option value="${s.filename}">${s.title} (${s.artist})</option>`).join('');
+        const songEntries = Object.values(staticSongsMap);
+        allSongsList = songEntries.map(s => ({
+          filename: s.filename,
+          title: s.meta.title || s.filename,
+          artist: s.meta.artist || 'Sconosciuto',
+          key: s.meta.key || s.meta.original_key || s.meta.base_chord || '',
+          bpm: s.meta.bpm,
+          time_signature: s.meta.time_signature || '4/4',
+          cover: s.meta.cover || '',
+          artist_image: s.meta.artist_image || '',
+          audio: s.meta.audio || '',
+          summary: s.summary || {}
+        }));
+        select.innerHTML = songEntries.map(s => `<option value="${s.filename}">${s.meta.title || s.filename} (${s.meta.artist || ''})</option>`).join('');
         renderCatalog();
         showCatalogView();
       } catch (e) {
-        console.error("Errore caricamento lista brani:", e);
+        console.error("Errore caricamento songs.json:", e);
       }
     }
 
     async function loadSelectedSong() {
       const filename = document.getElementById('songSelect').value || activeSongFilename;
-      if (!filename) return;
+      if (!filename || !staticSongsMap[filename]) return;
       activeSongFilename = filename;
       pause();
       currentTime = 0;
       lastScrolledAnchorIdx = -1;
 
-      const res = await fetch(`/api/song/${filename}`);
-      songData = await res.json();
+      songData = staticSongsMap[filename];
       renderSong(songData);
       updateTransposeDisplay();
       updateTimeDisplay();

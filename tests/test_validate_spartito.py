@@ -86,6 +86,16 @@ noi due respi[RE]rando lo stesso momento per fare l'a[SOL]more qua e [SI7]là
         self.assertIn('id="head-gesture-hud"', html)
         self.assertIn('id="split-divider"', html)
 
+    def test_static_ghp_build_uses_static_songs_json(self):
+        from build_ghp import build_docs
+        import json
+        build_docs()
+        docs_html = (SKILL_DIR / "docs" / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("fetch('/api/songs')", docs_html, "docs/index.html must not fetch /api/songs on GitHub Pages!")
+        self.assertIn("fetch('songs.json')", docs_html, "docs/index.html must fetch static songs.json!")
+        songs_data = json.loads((SKILL_DIR / "docs" / "songs.json").read_text(encoding="utf-8"))
+        self.assertGreater(len(songs_data), 0, "docs/songs.json must not be empty!")
+
     def test_missing_yaml_base_chord_detected(self):
         no_yaml = """# 🎵 Test Song
 ### 🎤 STROFA 1
