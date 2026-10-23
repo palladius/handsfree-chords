@@ -11,6 +11,12 @@ run:
 build:
     python3 scripts/build_ghp.py
 
+# Compila, testa, pusha e forza il deploy su GitHub Pages (che altrimenti è pigro!)
+deploy: build test
+    git push origin main
+    gh api -X POST repos/palladius/handsfree-chords/pages/builds
+    @echo "🚀 Build GitHub Pages richiesto! Verifica stato con: gh run list -L 3"
+
 # Valida tutti gli spartiti nella cartella songs/ e lancia gli unit test
 test:
     @echo "🧪 Validazione spartiti in songs/..."
