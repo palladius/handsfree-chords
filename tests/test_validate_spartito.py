@@ -85,6 +85,8 @@ noi due respi[RE]rando lo stesso momento per fare l'a[SOL]more qua e [SI7]là
         self.assertIn('id="songProgressSlider"', html)
         self.assertIn('id="head-gesture-hud"', html)
         self.assertIn('id="split-divider"', html)
+        self.assertIn('id="metroHeaderBtn"', html)
+        self.assertIn('class="metro-slash"', html)
 
     def test_static_ghp_build_uses_static_songs_json(self):
         from build_ghp import build_docs

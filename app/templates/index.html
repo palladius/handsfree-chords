@@ -161,6 +161,43 @@
       position: relative;
     }
 
+    /* Header Metronome Toggle Icon Button (ON vs OFF with Red Slash) */
+    button.btn-metro-icon {
+      padding: 0 8px;
+      width: 38px;
+      height: 38px;
+      position: relative;
+      color: #94a3b8;
+    }
+    button.btn-metro-icon.active {
+      background: rgba(255, 209, 102, 0.18);
+      border-color: var(--chord);
+      color: var(--chord);
+      box-shadow: 0 0 10px rgba(255, 209, 102, 0.35);
+    }
+    .metro-svg {
+      width: 21px;
+      height: 21px;
+      display: block;
+      overflow: visible;
+    }
+    .metro-svg .metro-slash {
+      opacity: 1;
+      transition: opacity 0.15s ease;
+    }
+    button.btn-metro-icon.active .metro-svg .metro-slash,
+    button.btn-metro.active .metro-svg .metro-slash {
+      opacity: 0;
+    }
+    button.btn-metro-icon.active .metro-svg .metro-arm {
+      transform-origin: 12px 18px;
+      animation: metro-swing 0.6s ease-in-out infinite alternate;
+    }
+    @keyframes metro-swing {
+      from { transform: rotate(-18deg); }
+      to   { transform: rotate(18deg); }
+    }
+
     /* Tiny status dot on Settings button for AI Camera */
     .status-dot {
       width: 9px;
@@ -1046,13 +1083,31 @@
       <button class="btn btn-jump" onclick="jumpSeconds(20)" title="Salta avanti 20 secondi">+20s</button>
     </div>
 
-    <!-- DX: Tempo Stepper "- 120 +" + Clean Options Button -->
+    <!-- DX: Tempo Stepper "- 120 +" + Metronome Toggle Icon + Clean Options Button -->
     <div class="header-right">
       <div class="pill-stepper" title="Cambia Tempo BPM (Tocca il numero per avviare/fermare il Metronomo)">
         <button class="btn-step" onclick="adjustBpm(-1)" aria-label="Rallenta 1 BPM">−</button>
         <span id="metroBpmDisplay" class="step-val bpm-val" onclick="toggleMetronome()">120</span>
         <button class="btn-step" onclick="adjustBpm(1)" aria-label="Accelera 1 BPM">+</button>
       </div>
+      <button id="metroHeaderBtn" class="btn btn-metro-icon" onclick="toggleMetronome()" aria-pressed="false" title="Metronomo: OFF (Tocca o premi M per attivare/disattivare)" aria-label="Metronomo ON/OFF">
+        <svg class="metro-svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <!-- Corpo piramidale del metronomo -->
+          <path d="M8.5 3.5H15.5L19 20.5H5L8.5 3.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <!-- Base orizzontale -->
+          <line x1="6" y1="17" x2="18" y2="17" stroke="currentColor" stroke-width="1.6"/>
+          <!-- Astina / Pendolo con peso -->
+          <g class="metro-arm">
+            <line x1="12" y1="17.5" x2="17" y2="5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="15.2" cy="9.8" r="1.7" fill="currentColor"/>
+          </g>
+          <!-- Barra rossa diagonale (visibile quando il metronomo è OFF) -->
+          <g class="metro-slash">
+            <line x1="3.5" y1="3.5" x2="20.5" y2="20.5" stroke="#181822" stroke-width="4.2" stroke-linecap="round"/>
+            <line x1="3.5" y1="3.5" x2="20.5" y2="20.5" stroke="#ef476f" stroke-width="2.6" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </button>
       <button id="btnSettings" class="btn btn-icon" onclick="openSettingsDialog()" title="Opzioni, Notazione Do/C, Telecamera AI e Catalogo" aria-label="Opzioni">
         ⚙️ <span id="camDot" class="status-dot" title="Stato Telecamera AI"></span>
       </button>
@@ -1446,6 +1501,13 @@
       if (btn) {
         btn.innerHTML = '⏱️ Metronomo: ON';
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+      }
+      const headerMetroBtn = document.getElementById('metroHeaderBtn');
+      if (headerMetroBtn) {
+        headerMetroBtn.classList.add('active');
+        headerMetroBtn.setAttribute('aria-pressed', 'true');
+        headerMetroBtn.title = 'Metronomo: ON (Tocca o premi M per spegnere)';
       }
       const bpmDisp = document.getElementById('metroBpmDisplay');
       if (bpmDisp) bpmDisp.classList.add('metro-on');
@@ -1463,6 +1525,13 @@
       if (btn) {
         btn.innerHTML = '⏱️ Metronomo: OFF';
         btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      }
+      const headerMetroBtn = document.getElementById('metroHeaderBtn');
+      if (headerMetroBtn) {
+        headerMetroBtn.classList.remove('active');
+        headerMetroBtn.setAttribute('aria-pressed', 'false');
+        headerMetroBtn.title = 'Metronomo: OFF (Tocca o premi M per attivare)';
       }
       const bpmDisp = document.getElementById('metroBpmDisplay');
       if (bpmDisp) bpmDisp.classList.remove('metro-on');
